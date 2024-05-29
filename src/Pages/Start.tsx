@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       {/* Wrapper */}
-      <div className="flex flex-col justify-center mobile:p-2 tablet:p-10 font-mono">
+      <div className="flex flex-col justify-center mobile:p-2 tablet:p-10 font-mono bg-[#161616]">
         {/* Start Page Layout */}
         <Heading heading="Lorem Ipsum dolor sit consectetur adipisicing elit." />
         <TextAndButton
