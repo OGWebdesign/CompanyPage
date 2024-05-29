@@ -1,6 +1,5 @@
 # Componets
 
-
 ### Navbar
 
 ### Headline
@@ -16,3 +15,7 @@
 ### LongCard
 
 ### SubscriptionCard
+
+# Farben
+
+### Grün : [#0FF54C]
