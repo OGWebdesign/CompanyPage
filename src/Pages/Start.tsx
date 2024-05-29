@@ -2,9 +2,15 @@ function App() {
   return (
 
     <>
-    <div className="flex w-full h-screen justify-start items-center font-bold text-[#f7f7f7] bg-[#030303]">
-     <div className="mobile:w-[10rem] tablet:w-[20rem] h-full border">
-      Webdesign
+    {/* Wrapper */}
+    <div className="w-full flex justify-center">
+
+
+
+
+      {/* Start Page Layout */}
+     <div className="w-full p-10 border">
+
      </div>
     </div>
     </>
