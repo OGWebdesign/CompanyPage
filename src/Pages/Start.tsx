@@ -1,3 +1,5 @@
+import { Navbar } from "../components/Navbar"
+
 function App() {
   return (
 
@@ -9,7 +11,12 @@ function App() {
 
 
       {/* Start Page Layout */}
-     <div className="w-full p-10 border">
+     <div className="w-full mobile:p-2 tablet:p-10 bg-[#202020] flex justify-center items-center">
+      <div className="mobile:w-full tablet:w-full desktop:w-[70%]">
+      <Navbar>
+        
+      </Navbar>
+      </div>
 
      </div>
     </div>
