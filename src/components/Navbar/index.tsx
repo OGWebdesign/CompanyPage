@@ -55,13 +55,13 @@ export const Navbar = () => {
             {/* Croll Bar Wrapper */}
             <div className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle:notVisibleStyle} duration-300 bg-[#202020]`}>
                  {/* Croll Bar Item I */}
-                <a className="my-5 mr-3 text-[#747474]  font-mono font-bold text-[1.2rem] hover:text-[#98f144] overflow-hidden hover:underline"
+                <a className="my-5 mr-3 text-[#747474]  font-mono font-bold text-[1.2rem] hover:text-[#98f144] overflow-hidden"
                  href="/"> Start</a>
                  {/* Croll Bar Item II */}
-                <a className="my-5 mr-3 text-[#747474]  font-mono font-bold text-[1.2rem] hover:text-[#98f144] overflow-hidden hover:underline"
+                <a className="my-5 mr-3 text-[#747474]  font-mono font-bold text-[1.2rem] hover:text-[#98f144] overflow-hidden"
                  href="/">Company</a>
                  {/* Croll Bar Item III */}
-                <a className="my-5 mr-3 text-[#747474]  font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:underline overflow-hidden"
+                <a className="my-5 mr-3 text-[#747474]  font-mono font-bold text-[1.2rem] hover:text-[#98f144] overflow-hidden"
                  href="/">Offer</a> 
             </div>
         </div> // End
