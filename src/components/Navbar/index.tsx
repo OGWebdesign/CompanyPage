@@ -55,13 +55,13 @@ export const Navbar = () => {
             {/* Croll Bar Wrapper */}
             <div className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle : notVisibleStyle} duration-300 bg-[#202020]`}>
                 {/* Croll Bar Item I */}
-                <a className="my-5 text-[#747474] w-[15rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-pulse border-[#202020] border-2 hover:border-[#98f144] rounded-lg overflow-hidden"
+                <a className="my-5 text-[#747474] w-[15rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#202020] border-2 hover:border-[#98f144] rounded-lg overflow-hidden"
                     href="/">START</a>
                 {/* Croll Bar Item II */}
-                <a className="my-5 text-[#747474] w-[15rem] text-center  font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-pulse border-[#202020] border-2 hover:border-[#98f144] rounded-lg overflow-hidden"
+                <a className="my-5 text-[#747474] w-[15rem] text-center  font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#202020] border-2 hover:border-[#98f144] rounded-lg overflow-hidden"
                     href="/">COMPANY</a>
                 {/* Croll Bar Item III */}
-                <a className="my-5  text-[#747474] w-[15rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-pulse border-[#202020] border-2 hover:border-[#98f144] rounded-lg overflow-hidden"
+                <a className="my-5  text-[#747474] w-[15rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#202020] border-2 hover:border-[#98f144] rounded-lg overflow-hidden"
                     href="/">OFFER</a>
                 <div className="w-full h-5  flex justify-center mt-10 items-center text-[#858585] overflow-hidden font-mono">
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="">Imprint</a>

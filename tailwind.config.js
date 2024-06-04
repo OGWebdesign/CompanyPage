@@ -22,6 +22,16 @@ export default {
         'desktop-xxl': "3840px",
         // => @media (min-width: 1280px) { ... }
       },
+      animation:{
+        ownpulse:'ownpulse 0.4s ease-in-out infinite'
+      },
+      keyframes: {
+        ownpulse:{
+          '0%':{opacity:'100%'}, 
+          '50%':{opacity:'30%'},
+          '100%':{opacity:'100%'}
+        },
+      },
     },
   },
   plugins: [],
