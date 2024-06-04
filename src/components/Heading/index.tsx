@@ -4,14 +4,15 @@ type HeadingProps = {
 
 export const Heading = (props: HeadingProps) => {
   return (
-    <div className="w-full px-8 pt-8">
+    <div className="w-full px-8 pt-8 mt-10">
+      <div className="w-1/2">
       <h1
-        className="mobile:w-full tablet:w-[90%] mobile:text-[1.7rem] 
-      tablet:text-[2rem] desktop:w-[43%] desktop-l:w-[] desktop-xl:w-[] desktop-xxl:w-[]
-      font-bold inline "
+        className="font-mono text-[#dadada] tablet:w-[90%] mobile:text-[1.7rem] 
+                   mobile:w-3/4 tablet:text-[2rem] desktop:w-[20rem] desktop-l:w-1/2 desktop-xl:w-[] desktop-xxl:w-[]"
       >
         {props.heading}
       </h1>
+      </div>
     </div>
   );
 };
