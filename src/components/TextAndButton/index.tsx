@@ -16,7 +16,7 @@ export const TextAndButton = (props: TextAndButtonProps) => {
         {props.text}
       </p>
       <div
-        className="text-[#161616] border-none bg-[#e2e2e2] font-semibold mt-8 py-2 px-4 rounded-md shadow-xl 
+        className="text-[#161616] border-none bg-[#e2e2e2] font-semibold mt-8 py-2 px-4 rounded-lg shadow-xl 
       hover:bg-[#98f144] cursor-pointer font-mono transition duration-500 ease-in-out"
       >
         {props.buttonText}
