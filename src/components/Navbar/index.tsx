@@ -37,7 +37,7 @@ export const Navbar = () => {
                     {/* Navbar Logo */}
                     <img
                         className="mobile:w-28 mobile:h-28 tablet:w-36 mobile:m-4 mobile:scale-110 tablet:h-36 desktop:w-36 desktop:h-36 duration-500"
-                        src="src/assets/logo.png" alt="logoGraphic" />
+                        src="public/logo.png" alt="logoGraphic" />
                 </div>
 
 
