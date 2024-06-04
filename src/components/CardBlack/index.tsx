@@ -29,7 +29,7 @@ export const CardBlack = (props:{
             </div>
 
 
-            <div className={`w-1/2 h-full duration-300 text-[0.95rem] mobile:text-[0.9rem] text-slate-200 p-3 flex items-center font-mono font-semibold `}>
+            <div className={`w-1/2 h-full duration-300 text-[0.95rem] mobile:text-[0.9rem] desktop:text-[1rem] text-slate-200 p-3 flex items-center font-mono font-semibold `}>
             <article>
                     {props.discription}
                 </article>
