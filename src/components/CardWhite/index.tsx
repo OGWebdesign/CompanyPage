@@ -1,4 +1,4 @@
-import { useState } from "react"
+
 import { ArrowIcon } from "../Icons"
 
 export const CardWhite = (props:{

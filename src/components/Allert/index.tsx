@@ -1,6 +1,4 @@
-export const Allert = (props: {
-
-}) => {
+export const Allert = () => {
     return (
         <div className="w-[100%] h-[5rem] my-10 flex justify-center items-center">
             <div className="w-[10rem] flex flex-row items-center">
