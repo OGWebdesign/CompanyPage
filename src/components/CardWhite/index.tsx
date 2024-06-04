@@ -21,7 +21,7 @@ export const CardWhite = (props:{
 
 
                 <div className="w-full h-1/2 flex justify-center items-center">
-                    <div className="w-10 h-10 rounded-full hover:cursor-pointer border-2 border-white duration-300 group hover:border-[#151515] bg-[#151515] hover:bg-[#98f144] flex justify-center items-center">
+                    <div className="w-10 h-10 rounded-full hover:cursor-pointer border-2 border-slate-200 duration-300 group hover:border-[#151515] bg-[#151515] hover:bg-[#98f144] flex justify-center items-center">
                         <ArrowIcon className="w-6 h-6 fill-slate-200 duration-300 group-hover:translate-x-10 group-hover:fill-black  "></ArrowIcon>        
                     </div>
                 </div>
