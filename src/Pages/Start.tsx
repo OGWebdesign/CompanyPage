@@ -1,5 +1,6 @@
 import { Heading } from "../components/Heading";
 import { Navbar } from "../components/Navbar"
+import { TechStripe } from "../components/TechStripe";
 import { TextAndButton } from "../components/TextAndButton";
 
 
@@ -22,7 +23,10 @@ function App() {
         
       </TextAndButton>
 
-      </div>
+      <TechStripe>
+
+      </TechStripe>
+      </div >
 
      </div>
     </div>
