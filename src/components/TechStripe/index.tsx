@@ -2,8 +2,12 @@ import { DockerIcon, GithubIcon, JSIcon, ReactIcon, TSIcon, TailwindIcon } from 
 
 export const TechStripe = () => {
     return (
+        <>
+        <div className="w-full text-[#777777] mt-[10rem] font-mono flex justify-center items-center">
+            <p>Best technologies for great products.</p>
+        </div>
         <div className="w-full flex justify-center items-center">
-                    <div className="w-full p-8 my-[10rem] gap-20 grid desktop:grid-rows-1 desktop:grid-cols-6
+                    <div className="w-full p-8 mt-4 gap-20 grid desktop:grid-rows-1 desktop:grid-cols-6
         tablet:grid-rows-2 tablet:grid-cols-3 mobile:grid-rows-3 mobile:grid-cols-2">
 
 
@@ -41,5 +45,6 @@ export const TechStripe = () => {
             </div>
         </div>
         </div>
+        </>
     )
 }

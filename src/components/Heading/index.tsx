@@ -8,7 +8,7 @@ export const Heading = (props: HeadingProps) => {
       <div className="w-1/2">
       <h1
         className="font-mono text-[#e6e6e6] tablet:w-[90%] mobile:text-[1.7rem] 
-                   mobile:w-3/4 tablet:text-[2rem] desktop:w-[20rem] desktop-l:w-1/2 desktop-xl:w-[] desktop-xxl:w-[]"
+                   mobile:w-3/4 tablet:text-[2.5rem] desktop:w-[20rem] desktop-l:w-1/2 desktop-xl:w-[] desktop-xxl:w-[]"
       >
         {props.heading}
       </h1>
