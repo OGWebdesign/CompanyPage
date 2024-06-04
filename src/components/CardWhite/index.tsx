@@ -13,9 +13,9 @@ export const CardWhite = (props:{
             
             <div className="flex flex-col w-1/2">
 
-                <div className="p-4 w-full h-1/2 text-[#151515] ">
-                    <p className="inline-block p-1 font-mono font-semibold text-[1.3rem]">{props.text1}</p>
-                    <p className="inline-block p-1 font-mono font-semibold text-[1.3rem]" >{props.text2}</p>
+                <div className="mobile:p-2 p-4 w-full h-1/2 text-[#151515] ">
+                    <p className="inline-block p-1 font-mono font-semibold mobile:text-[1.1rem] text-[1.3rem]">{props.text1}</p>
+                    <p className="inline-block p-1 font-mono font-semibold mobile:text-[1.1rem] text-[1.3rem]" >{props.text2}</p>
                 </div>
 
 
@@ -29,7 +29,7 @@ export const CardWhite = (props:{
 
 
 
-            <div className={`w-1/2 h-full  duration-300 text-[0.95rem] p-3 flex items-center font-mono font-semibold`}>
+            <div className={`w-1/2 h-full duration-300 text-[0.95rem] mobile:text-[0.9rem] p-3 flex items-center font-mono font-semibold`}>
                 <article>
                     {props.description}
                 </article>
