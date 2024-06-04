@@ -1,6 +1,6 @@
 export const LargeCard = () =>{
     return (
-        <div className="w-full  flex justify-center items-center mt-[15%] desktop:mt-[10%]">
+        <div className="w-full  flex justify-center items-center mt-[15%] desktop:mt-[5%]">
             <div className="w-[80%] max-w-[60rem] bg-slate-200 border rounded-2xl flex">
                 <div className="w-1/2 h-full flex flex-col">
                     <div className="w-full h-1/2">
