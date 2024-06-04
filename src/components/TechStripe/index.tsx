@@ -9,35 +9,35 @@ export const TechStripe = () => {
 
             <div className="flex flex-col justify-center group items-center">
                 <ReactIcon className="w-12 h-12 fill-[#494949] duration-300 hover:fill-[#98f144]"></ReactIcon>
-                <p className="text-[#777777] mt-4 duration-300 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">React</p>
+                <p className="text-[#777777] mt-4 duration-1000 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">React</p>
             </div>
 
 
 
             <div className="flex flex-col justify-center group items-center">
                 <GithubIcon className="w-12 h-12 fill-[#494949] duration-300 group-hover:fill-[#98f144]"></GithubIcon>
-                <p className="text-[#777777] mt-4 duration-300 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Git</p>
+                <p className="text-[#777777] mt-4 duration-1000 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Git</p>
             </div>
 
 
             <div className="flex flex-col justify-center group items-center">
                 <DockerIcon className="w-12 h-12 fill-[#494949] duration-300 group-hover:fill-[#98f144]"></DockerIcon>
-                <p className="text-[#777777] mt-4 duration-300 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Docker</p>
+                <p className="text-[#777777] mt-4 duration-1000 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Docker</p>
             </div>
 
             <div className="flex flex-col justify-center group items-center">
                 <TSIcon className="w-12 h-12 fill-[#494949] duration-300 group-hover:fill-[#98f144]"></TSIcon>
-                <p className="text-[#777777] mt-4 duration-300 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Type Script</p>
+                <p className="text-[#777777] mt-4 duration-1000 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Typescript</p>
             </div>
 
             <div className="flex flex-col justify-center group items-center">
                 <JSIcon className="w-12 h-12 fill-[#494949] duration-300 group-hover:fill-[#98f144]"></JSIcon>
-                <p className="text-[#777777] mt-4 duration-300 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Java Script</p>
+                <p className="text-[#777777] mt-4 duration-1000 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Javascript</p>
             </div>
 
             <div className="flex flex-col group justify-center items-center">
                 <TailwindIcon className="w-12 h-12 fill-[#494949] duration-300 group-hover:fill-[#98f144]"></TailwindIcon>
-                <p className="text-[#777777] mt-4 duration-300 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Tailwind</p>
+                <p className="text-[#777777] mt-4 duration-1000 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Tailwind</p>
             </div>
         </div>
         </div>
