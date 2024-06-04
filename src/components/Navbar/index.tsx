@@ -10,21 +10,22 @@ export const Navbar = () => {
     // tailwind css for notvisible style sheet
     const notVisibleStyle = "h-0"
     const rotation = visible ? "fill-[#98f144]" : "rotate-90 fill-slate-300"
-
+    const indicator = visible ? "on":"off"
+    const textindicator = visible ? "text-slate-200":"text-[#777777]"
     // start component build
     return (
         // Navbar extansion for scroll out (scroll out wrapper) <-- auto hight
-        <div className="w-full duration-300 flex flex-col ">
+        <div className="w-full duration-500 flex flex-col ">
 
             {/* Navbar Item Wrapper */}
-            <div className="w-full flex justify-between duration-300">
+            <div className="w-full flex justify-between duration-500">
 
                 {/* Navbar Logo Wrapper */}
-                <div className="tablet:w-1/2 duration-300">
+                <div className="tablet:w-1/2 duration-500">
 
                     {/* Navbar Logo */}
                     <img
-                        className="mobile:w-28 mobile:h-28 tablet:w-36 us tablet:h-36 duration-300"
+                        className="mobile:w-28 mobile:h-28 tablet:w-36 us tablet:h-36 duration-500"
                         src="src\assets\logo.png" alt="logo graphic" />
                 </div>
 
@@ -45,8 +46,9 @@ export const Navbar = () => {
                      mobile:opacity-0 desktop:opacity-100 text-[#747474] border-[#202020] hover:text-white hover:border-2 hover:border-b-[#98f144] rounded-lg duration-300" href="/">Offer</a>
 
                     {/* Burger Menu Button */}
-                    <div onClick={() => setVisible(!visible)} className="w-20 h-16 rounded-xl duration-300 mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 flex justify-center items-center hover:cursor-pointer ">
-                        <HomeIcon className={`w-12 h-12 ${rotation} duration-300  hover:fill-[#98f144] flex`}></HomeIcon>
+                    <div onClick={() => setVisible(!visible)} className=" w-20 h-16 rounded-xl duration-300 mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 flex flex-col justify-center items-center hover:cursor-pointer ">
+                        <HomeIcon className={`w-8 h-8 ${rotation} duration-300  hover:fill-[#98f144] flex`}></HomeIcon>
+                        <p className={` ${textindicator} text-[#777777] font-mono`}>{indicator}</p>
                     </div>
                 </div>
             </div>
@@ -56,13 +58,13 @@ export const Navbar = () => {
             <div className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle : notVisibleStyle} duration-300 bg-[#202020]`}>
                 {/* Croll Bar Item I */}
                 <a className="my-5 text-[#747474] w-[15rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#202020] border-2 hover:border-[#98f144] rounded-lg overflow-hidden"
-                    href="/">START</a>
+                    href="/">Start</a>
                 {/* Croll Bar Item II */}
                 <a className="my-5 text-[#747474] w-[15rem] text-center  font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#202020] border-2 hover:border-[#98f144] rounded-lg overflow-hidden"
-                    href="/">COMPANY</a>
+                    href="/">Company</a>
                 {/* Croll Bar Item III */}
                 <a className="my-5  text-[#747474] w-[15rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#202020] border-2 hover:border-[#98f144] rounded-lg overflow-hidden"
-                    href="/">OFFER</a>
+                    href="/">Offer</a>
                 <div className="w-full h-5  flex justify-center mt-10 items-center text-[#858585] overflow-hidden font-mono">
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="">Imprint</a>
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="">Privacy Policy</a>
