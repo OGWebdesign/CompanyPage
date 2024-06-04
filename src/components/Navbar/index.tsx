@@ -16,7 +16,7 @@ export const Navbar = () => {
     // Text color indicator change per state
     const textindicator = visible ? "text-slate-200":"text-[#777777]"
     // make border unvisible in unwrap state
-    const bordervisibility = visible ? "opacity-100 border-b-2":"opacity-0 border-none"
+    const bordervisibility = visible ? "opacity-100 border-2":"opacity-0 border-none"
 
 
 
@@ -35,7 +35,7 @@ export const Navbar = () => {
 
                     {/* Navbar Logo */}
                     <img
-                        className="mobile:w-28 mobile:h-28 tablet:w-36 us tablet:h-36 duration-500"
+                        className="mobile:w-28 mobile:h-28 tablet:w-36 mobile:m-4 mobile:scale-110 tablet:h-36 duration-500"
                         src="src\assets\logo.png" alt="logo graphic" />
                 </div>
 
@@ -45,15 +45,15 @@ export const Navbar = () => {
 
                     {/* Navbar Item I */}
                     <a className="flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
-                    mobile:opacity-0 desktop:opacity-100 text-[#747474] border-[#202020] hover:text-white hover:border-2 hover:border-b-[#98f144] rounded-lg duration-300" href="/">Start</a>
+                    mobile:opacity-0 desktop:opacity-100 text-[#747474] border-[#151515] hover:text-white hover:border-2 hover:border-b-[#98f144] rounded-lg duration-300" href="/">Home</a>
 
                     {/* Navbar Item II */}
                     <a className="flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
-                    mobile:opacity-0 desktop:opacity-100 text-[#747474] border-[#202020] hover:text-white hover:border-2 hover:border-b-[#98f144] rounded-lg duration-300" href="/">Company</a>
+                    mobile:opacity-0 desktop:opacity-100 text-[#747474] border-[#151515] hover:text-white hover:border-2 hover:border-b-[#98f144] rounded-lg duration-300" href="/">Company</a>
 
                     {/* Navbar Item III */}
                     <a className="flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
-                     mobile:opacity-0 desktop:opacity-100 text-[#747474] border-[#202020] hover:text-white hover:border-2 hover:border-b-[#98f144] rounded-lg duration-300" href="/">Offer</a>
+                     mobile:opacity-0 desktop:opacity-100 text-[#747474] border-[#151515] hover:text-white hover:border-2 hover:border-b-[#98f144] rounded-lg duration-300" href="/">Offer</a>
 
                     {/* Burger Menu Button */}
                     <div onClick={() => setVisible(!visible)} className=" w-20 h-16 rounded-xl duration-300 mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 flex flex-col justify-center items-center hover:cursor-pointer ">
@@ -65,19 +65,19 @@ export const Navbar = () => {
 
 
             {/* Croll Bar Wrapper */}
-            <div className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle : notVisibleStyle} duration-300 bg-[#202020]`}>
+            <div className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle : notVisibleStyle} duration-300 bg-[#151515]`}>
                 {/* Croll Bar Item I */}
-                <a className={`my-5 ${bordervisibility} text-[#747474] w-[10rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#202020] hover:border-[#98f144] rounded-lg overflow-hidden`}
+                <a className={`my-5 ${bordervisibility} text-[#747474] w-[10rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
                     href="/">Start</a>
                 {/* Croll Bar Item II */}
-                <a className={`my-5 ${bordervisibility} text-[#747474] w-[10rem] text-center  font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#202020] hover:border-[#98f144] rounded-lg overflow-hidden`}
+                <a className={`my-5 ${bordervisibility} text-[#747474] w-[10rem] text-center  font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
                     href="/">Company</a>
                 {/* Croll Bar Item III */}
-                <a className={`my-5 ${bordervisibility}  text-[#747474] w-[10rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#202020] hover:border-[#98f144] rounded-lg overflow-hidden`}
+                <a className={`my-5 ${bordervisibility}  text-[#747474] w-[10rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
                     href="/">Offer</a>
                 <div className="w-full h-5  flex justify-center mt-10 items-center text-[#858585] overflow-hidden font-mono">
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="">Imprint</a>
-                    <a className="p-3 mx-3 hover:text-[#98f144]" href="">Privacy Policy</a>
+                    <a className="p-3 mx-3 hover:text-[#98f144]" href="">Privacy</a>
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="">Contact</a>
                 </div>
             </div>
