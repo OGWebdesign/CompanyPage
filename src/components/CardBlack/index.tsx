@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { ArrowIcon } from "../Icons"
 
 export const CardBlack = (props:{
@@ -7,6 +8,7 @@ export const CardBlack = (props:{
     classname?:string
     
 })=>{
+    
     return(
         <div className={`w-full ${props.classname} max-w-[30rem] h-[15rem] border rounded-2xl flex border-b-8 `}>
             
@@ -18,7 +20,7 @@ export const CardBlack = (props:{
                 </div>
 
                 <div className="w-full h-1/2 flex justify-center items-center">
-                    <div className="w-10 h-10 rounded-full duration-300 group bg-slate-100 flex justify-center items-center">
+                    <div  className="w-10 h-10  hover:cursor-pointer rounded-full duration-300 group bg-slate-100 flex justify-center items-center">
                         <ArrowIcon className="w-6 h-6 duration-300 group-hover:translate-x-10 group-hover:fill-slate-200  "></ArrowIcon>
                         
                     </div>
@@ -27,7 +29,7 @@ export const CardBlack = (props:{
             </div>
 
 
-            <div className="w-1/2 h-full text-[0.95rem] text-slate-200 p-3 flex items-center font-mono font-semibold">
+            <div className={`w-1/2 h-full duration-300 text-[0.95rem] text-slate-200 p-3 flex items-center font-mono font-semibold `}>
             <article>
                     {props.discription}
                 </article>

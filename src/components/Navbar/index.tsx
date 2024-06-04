@@ -18,6 +18,7 @@ export const Navbar = () => {
     const textindicator = visible ? "text-slate-200":"text-[#777777]"
     // make border unvisible in unwrap state
     const bordervisibility = visible ? "opacity-100 border-2":"opacity-0 border-none"
+    
 
 
 
@@ -57,7 +58,7 @@ export const Navbar = () => {
                      mobile:opacity-0 desktop:opacity-100 text-[#747474] border-[#151515] hover:text-white hover:border-2 hover:border-b-[#98f144] rounded-lg duration-300" href="/">Offer</a>
 
                     {/* Burger Menu Button */}
-                    <div onClick={() => setVisible(!visible)} className=" w-20 h-16 rounded-xl duration-300 mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 flex flex-col justify-center items-center hover:cursor-pointer ">
+                    <div  onClick={() => setVisible(!visible)} className=" w-20 h-16 rounded-xl duration-300 mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 flex flex-col justify-center items-center hover:cursor-pointer ">
                         <HomeIcon className={`w-8 h-8 ${rotation} duration-300  hover:fill-[#98f144] flex`}></HomeIcon>
                         <p className={` ${textindicator} text-[#777777] font-mono`}>{indicator}</p>
                     </div>
