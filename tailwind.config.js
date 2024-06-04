@@ -23,7 +23,7 @@ export default {
         // => @media (min-width: 1280px) { ... }
       },
       animation:{
-        ownpulse:'ownpulse 0.6s ease-in-out infinite'
+        ownpulse:'ownpulse 0.7s ease-in-out infinite'
       },
       keyframes: {
         ownpulse:{
