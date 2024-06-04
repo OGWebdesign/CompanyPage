@@ -37,7 +37,7 @@ function App() {
         <CardBlack classname="tablet:-translate-x-20" text1="Search enginge" text2="optimization" discription="A huge part of users ignore the second page of search results. Let's make your site visible and drive traffic."></CardBlack>
         <CardWhite classname="tablet:translate-x-20" text1="Webdesign &" text2="programming" description="50% of all website visitors leave after a loading time of just 3 seconds. Be the owner of a website that finishes loading in 200ms."></CardWhite>
         <CardWhite classname="tablet:-translate-x-20" text1="Consulting &" text2="administration" description="Even if you need advice on your content management system, we are happy to advise you or administer your existing website."></CardWhite>
-        <CardBlack classname="tablet:translate-x-20" text1="Artificial" text2="intelligence" discription="AI created images and text with custom AI, perfect for clients with limited budgets. Delivers quality content without the price tag of traditional creators."></CardBlack>
+        <CardBlack classname="tablet:translate-x-20" text1="Artificial" text2="intelligence" discription="AI created images and text, perfect for clients with limited budgets. Delivers quality content without the price tag of traditional creators."></CardBlack>
       </div>
       <LargeCard></LargeCard>
       </div >
