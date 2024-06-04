@@ -3,7 +3,6 @@ import { Navbar } from "../components/Navbar"
 
 function App() {
   return (
-
     <>
     {/* Wrapper */}
     <div className="w-full flex justify-center">
@@ -24,6 +23,6 @@ function App() {
      </div>
     </div>
     </>
-  )
+  );
 }
-export default App
+export default App;
