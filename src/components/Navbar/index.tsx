@@ -9,7 +9,7 @@ export const Navbar = () => {
     const visibleStyle = "h-[20rem]"
     // tailwind css for notvisible style sheet
     const notVisibleStyle = "h-0"
-    const rotation = visible ? "fill-[#98f144]" : "rotate-90"
+    const rotation = visible ? "fill-green-300" : "rotate-90"
 
     // start component build
     return (
@@ -30,7 +30,7 @@ export const Navbar = () => {
 
 
                 {/* Navbar Item Layout */}
-                <div className="mobile:w-[7rem] tablet:w-[40rem] desktop:w-[40rem] flex justify-between items-center">
+                <div className="mobile:w-[7rem] tablet:w-[20rem] desktop:w-[40rem] flex justify-between items-center">
 
                     {/* Navbar Item I */}
                     <a className="flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
@@ -55,13 +55,13 @@ export const Navbar = () => {
             {/* Croll Bar Wrapper */}
             <div className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle : notVisibleStyle} duration-300 bg-[#202020]`}>
                 {/* Croll Bar Item I */}
-                <a className="my-5 mr-3 text-[#747474]  font-mono font-bold text-[1.2rem] hover:text-[#98f144] overflow-hidden"
+                <a className="my-5 text-[#747474] w-[15rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-pulse hover:border rounded-md overflow-hidden"
                     href="/">START</a>
                 {/* Croll Bar Item II */}
-                <a className="my-5 mr-3 text-[#747474]  font-mono font-bold text-[1.2rem] hover:text-[#98f144] overflow-hidden"
+                <a className="my-5 text-[#747474] w-[15rem] text-center  font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-pulse hover:border rounded-md overflow-hidden"
                     href="/">COMPANY</a>
                 {/* Croll Bar Item III */}
-                <a className="my-5 mr-3 text-[#747474]  font-mono font-bold text-[1.2rem] hover:text-[#98f144] overflow-hidden"
+                <a className="my-5  text-[#747474] w-[15rem] text-center font-mono font-bold text-[1.2rem] hover:text-[#98f144] hover:animate-pulse hover:border rounded-md overflow-hidden"
                     href="/">OFFER</a>
                 <div className="w-full h-5  flex justify-center mt-10 items-center text-[#858585] overflow-hidden font-mono">
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="">Impressum</a>
