@@ -2,16 +2,19 @@ import { ArrowIcon } from "../Icons"
 
 export const CardBlack = (props:{
     text1 : string,
-    text2 : string
+    text2 : string,
+    discription:string,
+    classname?:string
+    
 })=>{
     return(
-        <div className="w-full h-[15rem] border rounded-2xl flex border-b-8 ">
+        <div className={`w-full ${props.classname} max-w-[30rem] h-[15rem] border rounded-2xl flex border-b-8 `}>
             
-            <div className="flex flex-col w-1/2">
+            <div className="flex flex-col w-1/2 text-[#151515]">
 
                 <div className="p-4 w-full h-1/2 ">
-                    <p className="inline-block bg-[#98f144] p-1 rounded font-mono font-semibold text-[1.3rem]">{props.text1}</p>
-                    <p className="inline-block bg-[#98f144] p-1 rounded font-mono font-semibold text-[1.3rem]" >{props.text2}</p>
+                    <p className="inline-block bg-[#98f144] p-1 font-mono font-semibold text-[1.3rem]">{props.text1}</p>
+                    <p className="inline-block bg-[#98f144] p-1 font-mono font-semibold text-[1.3rem]" >{props.text2}</p>
                 </div>
 
                 <div className="w-full h-1/2 flex justify-center items-center">
@@ -24,8 +27,10 @@ export const CardBlack = (props:{
             </div>
 
 
-            <div className="w-1/2 h-full">
-
+            <div className="w-1/2 h-full text-[0.95rem] text-slate-200 p-3 flex items-center font-mono font-semibold">
+            <article>
+                    {props.discription}
+                </article>
             </div>
         </div>
     )
