@@ -2,6 +2,7 @@ type TextAndButtonProps = {
   text: string;
   buttonText: string;
   classNameContainer?: string;
+  reference?: string;
 };
 
 export const TextAndButton = (props: TextAndButtonProps) => {
@@ -15,12 +16,12 @@ export const TextAndButton = (props: TextAndButtonProps) => {
       >
         {props.text}
       </p>
-      <div
+      <a
         className="text-[#161616] select-none border-none bg-[#98f144] font-semibold mt-8 py-2 px-4 rounded-lg shadow-xl 
-      hover:bg-[#6ba039] cursor-pointer font-mono transition duration-300 ease-in-out"
+      hover:bg-[#6ba039] cursor-pointer font-mono transition duration-300 ease-in-out" href={props.reference}
       >
         {props.buttonText}
-      </div>
+      </a>
     </div>
   );
 };
