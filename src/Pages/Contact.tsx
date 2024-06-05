@@ -18,8 +18,8 @@ function App() {
               <Heading heading="Your professional Partner to reach your goals" />
 
               <Description
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consectetur nulla esse laborum, quae, 
-            officiis est id veniam rerum commodi libero. Ex maiores reprehenderit quibusdam, vero sapiente laboriosam autem voluptatem!"
+                text="Contact us today to make your webdesign plan come true. 
+                We offer you professional advice and always our full attention. Starting together, finishing together."
               />
 
               {/* Steps of Contact */}
