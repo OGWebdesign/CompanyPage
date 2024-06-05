@@ -12,7 +12,7 @@ export const TechStripe = () => {
 
 
             <div className="flex flex-col justify-center group items-center">
-                <ReactIcon className="w-12 h-12 fill-[#494949] duration-300 hover:fill-[#98f144]"></ReactIcon>
+                <ReactIcon className="w-12 h-12 fill-[#494949] duration-300 group-hover:fill-[#98f144]"></ReactIcon>
                 <p className="text-[#777777] mt-4 duration-1000 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">React</p>
             </div>
 

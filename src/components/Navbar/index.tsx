@@ -20,9 +20,7 @@ export const Navbar = (props:{
     const textindicator = visible ? "text-slate-200":"text-[#777777]"
     // make border unvisible in unwrap state
     const bordervisibility = visible ? "opacity-100 border-2":"opacity-0 border-none"
-
     const stroke = visible ? "w-[20rem] opacity-100":"w-0 opacity-0"
-
     const homeActive = props.indicator == 1 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
     const companyActive = props.indicator == 2 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
     const offerActive = props.indicator == 3 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
@@ -56,7 +54,7 @@ export const Navbar = (props:{
                 <div className="mobile:w-[7rem] tablet:w-[20rem] desktop:w-[40rem] flex justify-between items-center">
 
                     {/* Navbar Item I */}
-                    <a className={`${homeActive}2mobile:-z-10 tablet:-z-10 desktop:z-0 flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
+                    <a className={`${homeActive} mobile:-z-10 tablet:-z-10 desktop:z-0 flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
                     mobile:opacity-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`} href="/">Home</a>
 
                     {/* Navbar Item II */}
