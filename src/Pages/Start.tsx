@@ -2,6 +2,7 @@ import { Allert } from "../components/Allert";
 import { CardBlack } from "../components/CardBlack";
 import { CardWhite } from "../components/CardWhite";
 import { Footer } from "../components/Footer";
+
 import { Heading } from "../components/Heading";
 import { LargeCard } from "../components/LargeCard";
 import { Navbar } from "../components/Navbar";
@@ -27,7 +28,7 @@ function App() {
             />
 
             <TechStripe />
-            <Allert />
+            <Allert head="Services" text="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services inlude:"/>
 
             {/* WrapperLayout */}
             <div className="w-full flex justify-center items-center">
