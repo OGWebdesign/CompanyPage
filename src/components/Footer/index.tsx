@@ -23,7 +23,7 @@ export const Footer = () => {
                     <div className="w-1/2 flex desktop:gap-10 tablet:gap-6 mobile:gap-4 justify-start" >
                         <a className="inline-block hover:bg-[#98f144] duration-300 hover:font-bold" href="">Imprint</a>
                         <a className="inline-block hover:bg-[#98f144] duration-300 hover:font-bold" href="">Privacy</a>
-                        <a className="inline-block hover:bg-[#98f144] duration-300 hover:font-bold" href="">Contact</a>
+                        <a className="inline-block hover:bg-[#98f144] duration-300 hover:font-bold" href="/contact">Contact</a>
                     </div>
                     <div className="w-1/2 flex desktop:gap-8 tablet:gap-6 mobile:gap-4 items-center justify-end">
                         <p className="inline-block bg-[#98f144] mobile:opacity-0 ">Social Media</p>
