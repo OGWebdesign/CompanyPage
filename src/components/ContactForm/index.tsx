@@ -15,7 +15,7 @@ export const ContactForm = () => {
   }
 
   const blurHandler = () => {
-    if(textAreaRef.current?.value === ""){
+    if(textAreaRef.current!.value === ""){
       setCheck(false);
       setHTextBox(false);
     }
@@ -26,7 +26,7 @@ export const ContactForm = () => {
   <div className="w-full flex flex-col mt-5 
   mobile:px-2 tablet:px-8
   font-mono">
-    <h1 className={`text-white mobile:text-[2rem] tablet:text-[2.3rem] mobile:ml-[4rem] laptop:ml-[15rem] font-bold font-mono transition-all duration-700 ease-in-out ${check && "-translate-y-14"}`}>HELLO,</h1>
+    <h1 className={`text-white mobile:text-[2rem] tablet:text-[2.3rem] laptop:text-[3rem] mobile:ml-[4rem] laptop:ml-[15rem] font-bold font-mono transition-all duration-700 ease-in-out ${check && "-translate-y-14"}`}>HELLO,</h1>
     <form className="flex flex-col items-start">
 
     {/* MY NAME IS ______ */}
@@ -37,16 +37,19 @@ export const ContactForm = () => {
 
         <span className="text-white 
 
-        mobile:w-full tablet:w-[60%] tablet-contact:ml-[3rem] laptop:ml-[10rem] mobile:text-[1.8rem] tablet:text-[2rem] 
+        mobile:w-full tablet:w-[65%] tablet-contact:ml-[3rem] laptop:ml-[10rem] mobile:text-[1.8rem] tablet:text-[2rem] laptop:text-[2.3rem]
 
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">NAME</span> IS </span>
 
         <input type="input" placeholder="Name" className="
 
-        mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[10rem] laptop:w-[50rem] desktop:w-[60rem] 
+        mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem] 
 
         text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
-        placeholder-[#777777] "/>
+        placeholder-[#777777] "
+        
+        required
+        />
 
       </div>
 
@@ -55,17 +58,20 @@ export const ContactForm = () => {
 
         <span className="text-white 
         
-        mobile:w-full tablet:w-[60%]  tablet-contact:ml-[3rem] laptop:ml-[10rem] desktop:ml-[10rem] 
-        mobile:text-[1.8rem] tablet:text-[2rem] 
+        mobile:w-full tablet:w-[65%]  tablet-contact:ml-[3rem] laptop:ml-[10rem] 
+        mobile:text-[1.8rem] tablet:text-[2rem] laptop:text-[2.3rem] 
         
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">MAIL</span> IS </span>
        
         <input type="input" placeholder="Email" className="
 
-        mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[10rem] laptop:w-[50rem] desktop:w-[60rem]
+        mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
          text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
-        placeholder-[#777777] flex justify-center items-center "/>
+        placeholder-[#777777] flex justify-center items-center "
+        
+        required
+        />
 
       </div>
 
@@ -74,7 +80,7 @@ export const ContactForm = () => {
 
         <span className={`text-white 
           
-          mobile:w-full tablet:w-[60%] mobile:text-[1.8rem] tablet:text-[2rem] laptop:ml-[10rem] 
+          mobile:w-full tablet:w-[60%] mobile:text-[1.8rem] tablet-contact:ml-[3rem] tablet:text-[2rem] laptop:text-[2.3rem] laptop:ml-[10rem] 
           
           leading-none ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>MY <span className="bg-[#98f144] text-[#151515]">MESSAGE</span> IS.. </span>
 
@@ -87,7 +93,9 @@ export const ContactForm = () => {
         placeholder-[#777777] transition-all duration-700 ease-in-out p-2  ${check && "-translate-y-14"} ${hTextBox && "h-[8rem]"}`}
         onClick={() => messageHandler()} 
         onBlur={() =>blurHandler()}
-        ref={textAreaRef}/>
+        ref={textAreaRef}
+        required
+        />
       </div>
     </div>
     {/* BUTTON */}

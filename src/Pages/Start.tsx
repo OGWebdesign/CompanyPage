@@ -25,6 +25,7 @@ function App() {
             <TextAndButton
               buttonText="Book a consultation"
               text="Our digital marketing agency helps businesses grow and succeed online througth a range of services including SEO, programming, consulting, and content creation."
+              reference="/contact"
             />
 
             <TechStripe />
