@@ -12,7 +12,7 @@ export const Footer = () => {
                 <article className="desktop:text-[7rem] tablet:text-[4rem] mobile:text-[2rem] inline-block text-[#151515] leading-none">DESERVES BETTER.</article>
                 <div className="w-full flex items-center">
 
-                    <article className="desktop:text-[7rem] tablet:text-[4rem] mobile:text-[2rem]  desktop:w-[50rem] tablet:w-[35rem] mobile:w-[13rem] inline-block bg-[#98f144] text-[#151515] leading-none">TALK TO US! </article>
+                    <article className="desktop:text-[7rem] tablet:text-[4rem] mobile:text-[2rem]  desktop:w-[50rem] tablet:w-[35rem] mobile:w-[13rem] inline-block bg-[#98f144] text-[#151515] font-bold leading-none">TALK TO US! </article>
                     <a className="desktop:w-[13rem] tablet:w-[8rem] tablet:h-[3rem] desktop:h-[4rem] desktop:text-[2rem] mobile:w-[6rem] mobile:h-[2rem] mobile:rounded-lg mobile:ml-[1rem] mobile:text-[1rem] font-mono ml-[2rem] duration-300 border-[#151515] mobile:hover:border-2 desktop:hover:border-4 hover:bg-[#98f144] hover:font-bold hover:text-[#151515] rounded-2xl bg-[#151515] flex justify-center items-center" href="">
                         Lets talk
                     </a>
@@ -24,6 +24,7 @@ export const Footer = () => {
                         <a className="inline-block hover:bg-[#98f144] duration-300 hover:font-bold" href="">Imprint</a>
                         <a className="inline-block hover:bg-[#98f144] duration-300 hover:font-bold" href="">Privacy</a>
                         <a className="inline-block hover:bg-[#98f144] duration-300 hover:font-bold" href="/contact">Contact</a>
+                        <a className="inline-block hover:bg-[#98f144] duration-300 hover:font-bold" href="/contact">Offer</a>
                     </div>
                     <div className="w-1/2 flex desktop:gap-8 tablet:gap-6 mobile:gap-4 items-center justify-end">
                         <p className="inline-block bg-[#98f144] mobile:opacity-0 ">Social Media</p>
