@@ -6,6 +6,7 @@ import { Footer } from "../components/Footer";
 import { Heading } from "../components/Heading";
 import { LargeCard } from "../components/LargeCard";
 import { Navbar } from "../components/Navbar";
+import { ParagraphOG } from "../components/ParagraphOG";
 import { TechStripe } from "../components/TechStripe";
 import { TextAndButton } from "../components/TextAndButton";
 
@@ -60,7 +61,7 @@ function App() {
               </div>
             </div>
             <LargeCard />
-
+            <ParagraphOG></ParagraphOG>
             
           </div>
           

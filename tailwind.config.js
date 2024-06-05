@@ -1,3 +1,5 @@
+import { transform } from 'typescript';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -23,7 +25,8 @@ export default {
         // => @media (min-width: 1280px) { ... }
       },
       animation:{
-        ownpulse:'ownpulse 0.9s ease-in-out infinite'
+        ownpulse:'ownpulse 0.9s ease-in infinite',
+        loading:'loading 6.5s ease-in-out infinite'
       },
       keyframes: {
         ownpulse:{
@@ -31,6 +34,10 @@ export default {
           '50%':{opacity:'30%'},
           '100%':{opacity:'100%'}
         },
+        loading:{
+          '0%':{transform:'translateX(-2rem)'},
+          '50%':{transform:'translateX(-60rem)'},
+        }
       },
     },
   },
