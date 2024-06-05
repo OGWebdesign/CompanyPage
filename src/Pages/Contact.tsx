@@ -1,3 +1,4 @@
+import { ContactForm } from "../components/ContactForm";
 import { ContactStripe } from "../components/ContactStripe";
 import { Description } from "../components/Description";
 import { Heading } from "../components/Heading";
@@ -23,6 +24,7 @@ function App() {
             <ContactStripe/>
 
             {/* Contact Formular */} 
+            <ContactForm />
           </div>
         </div>
       </div>

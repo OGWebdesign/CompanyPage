@@ -16,7 +16,7 @@ export const ContactStripe = () => {
 
         {/* ITEM I */}
             <div className="flex flex-col justify-center group items-center">
-                <Number1Icon className="w-12 h-12 fill-[#494949] duration-300 hover:fill-[#98f144]"/>
+                <Number1Icon className="w-12 h-12 fill-[#494949] duration-300 group-hover:fill-[#98f144]"/>
                 <p className="text-[#777777] pt-4 mobile:w-[70%] tablet:w-full duration-1000 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Send your request to our team and we receive an email.</p>
             </div>
 
