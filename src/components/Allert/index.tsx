@@ -1,6 +1,6 @@
 export const Allert = () => {
     return (
-        <div className="w-[100%] h-[5rem] mobile:my-[30%] tablet:my-[20%] desktop:my-[5%] flex justify-center items-center">
+        <div className="w-[100%] h-[5rem] mobile:my-[30%] tablet:my-[5%] desktop:my-[5%] flex justify-center items-center">
             <div className="w-[10rem] flex flex-row items-center">
                 <span className=" w-[10rem] font-mono select-none text-[#151515] font-bold text-[1.8rem] bg-[#98f144] rounded pl-2 flex justify-center items-center">Services</span>
             </div>
