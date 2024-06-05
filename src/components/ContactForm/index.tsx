@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ContactFormMobile = () => {
+export const ContactForm = () => {
 
   const [check, setCheck] = React.useState<boolean>(false);
   const [hTextBox, setHTextBox] = React.useState<boolean>(false);
@@ -23,16 +23,29 @@ export const ContactFormMobile = () => {
 
 
   return (
-  <div className="w-full flex flex-col mt-5 px-2 font-mono">
-    <h1 className={`text-white text-[2rem] mobile:ml-[4rem] font-bold font-mono transition-all duration-700 ease-in-out ${check && "-translate-y-14"}`}>HELLO,</h1>
-    <form className="flex flex-col justify-center items-start">
+  <div className="w-full flex flex-col mt-5 
+  mobile:px-2 tablet:px-8
+  font-mono">
+    <h1 className={`text-white mobile:text-[2rem] tablet:text-[2.3rem] mobile:ml-[4rem] laptop:ml-[15rem] font-bold font-mono transition-all duration-700 ease-in-out ${check && "-translate-y-14"}`}>HELLO,</h1>
+    <form className="flex flex-col items-start">
 
     {/* MY NAME IS ______ */}
-      <div className={`w-full flex mt-3 ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>
+      <div className={`
+        mobile:w-full
 
-        <span className="text-white w-full text-[1.8rem] leading-none">MY <span className="bg-[#98f144] text-[#151515]">NAME</span> IS </span>
+        flex mt-3 ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>
 
-        <input type="input" placeholder="Name" className="w-full text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
+        <span className="text-white 
+
+        mobile:w-full tablet:w-[60%] tablet-contact:ml-[3rem] laptop:ml-[10rem] mobile:text-[1.8rem] tablet:text-[2rem] 
+
+        leading-none">MY <span className="bg-[#98f144] text-[#151515]">NAME</span> IS </span>
+
+        <input type="input" placeholder="Name" className="
+
+        mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[10rem] laptop:w-[50rem] desktop:w-[60rem] 
+
+        text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
         placeholder-[#777777] "/>
 
       </div>
@@ -40,9 +53,18 @@ export const ContactFormMobile = () => {
     {/* MY MAIL IS ______ */}
       <div className={`w-full flex mt-5 ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>
 
-        <span className="text-white w-full text-[1.8rem] leading-none">MY <span className="bg-[#98f144] text-[#151515]">MAIL</span> IS </span>
+        <span className="text-white 
+        
+        mobile:w-full tablet:w-[60%]  tablet-contact:ml-[3rem] laptop:ml-[10rem] desktop:ml-[10rem] 
+        mobile:text-[1.8rem] tablet:text-[2rem] 
+        
+        leading-none">MY <span className="bg-[#98f144] text-[#151515]">MAIL</span> IS </span>
        
-        <input type="input" placeholder="Email" className="w-full text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
+        <input type="input" placeholder="Email" className="
+
+        mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[10rem] laptop:w-[50rem] desktop:w-[60rem]
+
+         text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
         placeholder-[#777777] flex justify-center items-center "/>
 
       </div>
@@ -50,21 +72,32 @@ export const ContactFormMobile = () => {
     {/* MY MESSAGE IS.. */}
       <div className={`w-full flex flex-col mt-5 transition-all duration-700 ease-in-out `}>
 
-        <span className={`text-white w-full text-[1.8rem] leading-none ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>MY <span className="bg-[#98f144] text-[#151515]">MESSAGE</span> IS.. </span>
-        
-        <textarea placeholder="Message" className={`w-full text-center bg-[#151515] text-[#98f144] border-b-2 leading-none mt-6
+        <span className={`text-white 
+          
+          mobile:w-full tablet:w-[60%] mobile:text-[1.8rem] tablet:text-[2rem] laptop:ml-[10rem] 
+          
+          leading-none ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>MY <span className="bg-[#98f144] text-[#151515]">MESSAGE</span> IS.. </span>
+
+    <div className="w-full flex justify-center items-center">
+        <textarea placeholder="Message" className={`
+
+        mobile:w-full tablet:w-[65%] laptop:w-1/2
+
+        text-center bg-[#151515] text-[#98f144] border-b-2 leading-none mt-6
         placeholder-[#777777] transition-all duration-700 ease-in-out p-2  ${check && "-translate-y-14"} ${hTextBox && "h-[8rem]"}`}
         onClick={() => messageHandler()} 
         onBlur={() =>blurHandler()}
         ref={textAreaRef}/>
-
       </div>
-
+    </div>
     {/* BUTTON */}
       <div className="w-full flex justify-center mb-10 ">
-      <button type="submit" className={`text-[#161616] select-none border-none bg-[#98f144] font-semibold py-2 px-4 mt-5 rounded-lg shadow-xl 
-      hover:bg-[#6ba039] cursor-pointer font-mono transition duration-700 ease-in-out ${check && "-translate-y-12"}`}
-      >Send Request</button>
+
+      <button type="submit" className={`text-[#161616] select-none border-none bg-[#98f144] font-semibold py-2 px-4 mt-8 rounded-lg shadow-xl 
+      hover:bg-[#6ba039] cursor-pointer font-mono transition duration-700 ease-in-out ${check && "-translate-y-12"}`}>
+      Send Request
+      </button>
+
       </div>
     </form>
   </div>
