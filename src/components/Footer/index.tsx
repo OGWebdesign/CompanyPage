@@ -27,9 +27,9 @@ export const Footer = () => {
                     </div>
                     <div className="w-1/2 flex desktop:gap-8 tablet:gap-6 mobile:gap-4 items-center justify-end">
                         <p className="inline-block bg-[#98f144] mobile:opacity-0 ">Social Media</p>
-                        <FacebookIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6  hover:cursor-pointer duration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></FacebookIcon>
-                        <InstagramIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6  hover:cursor-pointer d0ration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></InstagramIcon>
-                        <PinterestIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6  hover:cursor-pointer duration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></PinterestIcon>
+                        <FacebookIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6 mobile:w-h-5 mobile:h-5 hover:cursor-pointer duration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></FacebookIcon>
+                        <InstagramIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6 mobile:w-h-5 mobile:h-5 hover:cursor-pointer d0ration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></InstagramIcon>
+                        <PinterestIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6  mobile:w-h-5 mobile:h-5 hover:cursor-pointer duration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></PinterestIcon>
                     </div>
                 </div>
             </div>
