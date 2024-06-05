@@ -2,7 +2,7 @@ import { useState } from "react"
 import { HomeIcon } from "../Icons"
 
 export const Navbar = (props:{
-    indicator:number
+    indicator?:number
 }) => {
    
     // state for animation

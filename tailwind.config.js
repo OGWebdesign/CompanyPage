@@ -23,6 +23,7 @@ export default {
         // => @media (min-width: 1280px) { ... }
         'desktop-xxl': "3840px",
         // => @media (min-width: 1280px) { ... }
+        'tablet-contact' : "702px",
       },
       animation:{
         ownpulse:'ownpulse 0.9s ease-in infinite',
