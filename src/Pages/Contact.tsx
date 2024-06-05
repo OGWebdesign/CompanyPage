@@ -1,4 +1,4 @@
-import { ContactFormMobile } from "../components/ContactForm";
+import { ContactForm } from "../components/ContactForm";
 import { ContactStripe } from "../components/ContactStripe";
 import { Description } from "../components/Description";
 import { Footer } from "../components/Footer";
@@ -26,7 +26,7 @@ function App() {
               <ContactStripe />
 
               {/* Contact Formular */}
-              <ContactFormMobile />
+              <ContactForm />
             </div>
           </div>
         </div>
