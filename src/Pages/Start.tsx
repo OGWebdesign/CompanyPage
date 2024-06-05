@@ -34,27 +34,27 @@ function App() {
 
             {/* WrapperLayout */}
             <div className="w-full flex justify-center items-center">
-              <div className="desktop:w-[100%] desktop-xl:w-[75%]  grid gap-11 mobile:gap-20  mobile:grid-rows-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:grid-rows-2 desktop:grid-rows-1 desktop:grid-cols-2 place-content-center place-items-center mt-20 mb-[5%]">
+              <div className="desktop:w-[100%] desktop-xl:w-[75%]  grid tablet:gap-10 gap-11 mobile:gap-20  mobile:grid-rows-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:grid-rows-2 desktop:grid-rows-1 desktop:grid-cols-2 place-content-center place-items-center mt-10 mb-[5%]">
                 <CardBlack
-                  classname="tablet:-translate-x-20"
+                  classname="tablet:-translate-x-28"
                   text1="Search enginge"
                   text2="optimization"
                   discription="A huge part of users ignore lower entries of search results. Let's make your site visible and drive traffic."
                 />
                 <CardWhite
-                  classname="tablet:translate-x-20"
+                  classname="tablet:translate-x-28"
                   text1="Webdesign &"
                   text2="programming"
                   description="50% of website visitors leave by a loading time of 3 seconds. We build website that finishes loading in 200ms."
                 />
                 <CardWhite
-                  classname="tablet:-translate-x-20"
+                  classname="tablet:-translate-x-28"
                   text1="Consulting &"
                   text2="administration"
                   description="If you need advice on your CMS, we advise or administer your existing website."
                 />
                 <CardBlack
-                  classname="tablet:translate-x-20"
+                  classname="tablet:translate-x-28"
                   text1="Artificial"
                   text2="intelligence"
                   discription="Created images and text by a powerful AI, perfect for clients with limited budgets."
