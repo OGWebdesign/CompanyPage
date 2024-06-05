@@ -1,4 +1,4 @@
-import { ArrowIcon, FacebookIcon, InstagramIcon, PinterestIcon } from "../Icons"
+import {FacebookIcon, InstagramIcon, PinterestIcon } from "../Icons"
 
 export const Footer = () => {
     return (
