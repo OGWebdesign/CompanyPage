@@ -21,6 +21,8 @@ export const Navbar = (props:{
     // make border unvisible in unwrap state
     const bordervisibility = visible ? "opacity-100 border-2":"opacity-0 border-none"
 
+    const stroke = visible ? "w-[20rem] opacity-100":"w-0 opacity-0"
+
     const homeActive = props.indicator == 1 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
     const companyActive = props.indicator == 2 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
     const offerActive = props.indicator == 3 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
@@ -90,6 +92,7 @@ export const Navbar = (props:{
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="">Privacy</a>
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="">Contact</a>
                 </div>
+                <div className={`${stroke} duration-500 mt-5  border-2 rounded-full`} mb-5></div>
             </div>
         </div> // End
     )
