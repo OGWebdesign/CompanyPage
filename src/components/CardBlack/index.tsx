@@ -20,16 +20,16 @@ export const CardBlack = (props:{
                 </div>
 
                 <div className="w-full h-1/2 flex justify-center items-center">
-                    <div  className="w-10 h-10  hover:cursor-pointer rounded-full duration-300 group border-2 bg-slate-100 hover:bg-[#98f144] hover:border-[#e9e9e9]  flex justify-center items-center">
-                        <ArrowIcon className="w-6 h-6 duration-300 group-hover:translate-x-10 group-hover:fill-slate-200  "></ArrowIcon>
-                        
+                    <div  className="w-[8rem] h-12  hover:cursor-pointer rounded-xl duration-300 group border-2 bg-slate-100 hover:bg-[#98f144] hover:border-[#e9e9e9]  flex justify-center items-center">
+                    <p className="font-mono text-[1.1rem] font-semibold text-[#151515] group-hover:text-[#151515] mr-3 ">Get it</p>
+                        <ArrowIcon className="w-6 h-6 duration-300 group-hover:translate-x-14 group-hover:fill-slate-200  "></ArrowIcon>             
                     </div>
                     
                 </div>
             </div>
 
 
-            <div className={`w-1/2 h-full duration-300 text-[0.95rem] mobile:text-[0.9rem] desktop:text-[1rem] text-slate-200 p-3 flex items-center font-mono font-semibold `}>
+            <div className={`w-1/2 h-full duration-300 text-[0.95rem] tablet:text-[1rem] mobile:text-[0.9rem] desktop:text-[1rem] text-slate-200 p-3 flex items-center font-mono font-semibold `}>
             <article>
                     {props.discription}
                 </article>

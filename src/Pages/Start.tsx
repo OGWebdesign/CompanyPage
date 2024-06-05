@@ -17,7 +17,7 @@ function App() {
 
         {/* Start Page Layout */}
         <div className="w-full mobile:p-2 tablet:px-5 bg-[#151515] flex justify-center items-center">
-          <div className="mobile:w-full tablet:w-full desktop:w-[55%] desktop-xl:w-[45%]">
+          <div className="mobile:w-full tablet:w-full desktop:w-[75%] desktop-xl:w-[45%]">
             <Navbar indicator={1}>
 
             </Navbar>
