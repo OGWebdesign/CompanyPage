@@ -2,7 +2,6 @@ import { Allert } from "../components/Allert";
 import { CardBlack } from "../components/CardBlack";
 import { CardWhite } from "../components/CardWhite";
 import { Footer } from "../components/Footer";
-
 import { Heading } from "../components/Heading";
 import { LargeCard } from "../components/LargeCard";
 import { Navbar } from "../components/Navbar";

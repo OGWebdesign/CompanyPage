@@ -90,7 +90,7 @@ export const Navbar = (props:{
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="">Privacy</a>
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="/contact">Contact</a>
                 </div>
-                <div className={`${stroke} duration-500 mt-5  border-2 rounded-full`} mb-5></div>
+                <div className={`${stroke} duration-500 mt-5  border-2 rounded-full mb-5`}></div>
             </div>
         </div> // End
     )
