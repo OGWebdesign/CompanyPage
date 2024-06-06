@@ -1,10 +1,12 @@
 import { Heading } from "../Heading"
 
-export const ParagraphOG = () => {
+export const ParagraphOG = (props:{
+    classname?:string
+}) => {
     return (
         <>
             <div className="w-full flex flex-col ">
-                <Heading heading="Compiled with the same technologies as Facebook and Instagram. "></Heading>
+                <Heading classname={props.classname} heading="Compiled with the same technologies as Facebook and Instagram. "></Heading>
                 <p
                     className="w-3/4 px-8 mt-4  select-none font-mono text-[#9e9e9e]
                           font-extralight"

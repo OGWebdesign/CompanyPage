@@ -27,7 +27,7 @@ function App() {
               text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
               reference="/contact"
             />
-
+            <ParagraphOG classname="text-right"></ParagraphOG>
             <TechStripe />
             <Allert head="Services" text="Whether it is a website, a software solution, a bot or advice on websites or application administration, we have the right offer for you."/>
 
@@ -61,7 +61,7 @@ function App() {
               </div>
             </div>
             <LargeCard />
-            <ParagraphOG></ParagraphOG>
+            
             
           </div>
           
