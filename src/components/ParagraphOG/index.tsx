@@ -8,7 +8,7 @@ export const ParagraphOG = (props:{
             <div className="w-full flex flex-col items-end ">
                 <Heading classname="justify-end text-right" heading="Compiled with the same technologies as Facebook and Instagram. "></Heading>
                 <p
-                    className={`w-3/4 px-8 mt-4  select-none font-mono text-[#9e9e9e]
+                    className={`w-3/4 mobile:w-full px-8 mt-4  select-none font-mono text-[#9e9e9e]
                           font-extralight ${props.classname}`}
                 >Using the latest front-end and back-end technologies, we achieve loading speeds that no content management system can even remotely match. 
                 Loading times as low as 300 milliseconds.

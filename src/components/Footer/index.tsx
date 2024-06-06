@@ -19,7 +19,7 @@ export const Footer = () => {
                 </div>
 
 
-                <div className="w-full flex font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center">
+                <div className="w-full flex font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center tablet:text-[1rem] mobile:text-[0.8rem]">
                     <div className="w-1/2 flex desktop:gap-10 tablet:gap-6 mobile:gap-4 justify-start" >
                         <a className="inline-block hover:bg-[#98f144] duration-300 hover:font-bold" href="">Imprint</a>
                         <a className="inline-block hover:bg-[#98f144] duration-300 hover:font-bold" href="">Privacy</a>
