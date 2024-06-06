@@ -40,6 +40,10 @@ export default {
           '50%':{transform:'translateX(-200%)'},
         }
       },
+      backgroundImage: { 
+        "nils": "url('public/nils.png')",
+        "max": "url('public/max.png')",
+      },
     },
   },
   plugins: [],

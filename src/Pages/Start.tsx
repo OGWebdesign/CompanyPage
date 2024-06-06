@@ -27,7 +27,12 @@ function App() {
               text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
               reference="/contact"
             />
-            <ParagraphOG classname="text-right justify-end"></ParagraphOG>
+            <ParagraphOG head="Compiled with the same technologies as Facebook and Instagram. "
+            text="Using the latest front-end and back-end technologies, we achieve loading speeds that no content management system can even remotely match. 
+                Loading times as low as 300 milliseconds.
+                We make no compromises when it comes to design. Modern, timeless designs where there are no limits to the possibilities. 
+                We do not use any modular systems and for this reason we are not subject to any restrictions in the entire development process."
+            animation={true} classname="text-right justify-end"></ParagraphOG>
             <TechStripe />
             <Allert head="Services" text="Whether it is a website, a software solution, a bot or advice on websites or application administration, we have the right offer for you."/>
 
