@@ -59,11 +59,11 @@ export const Navbar = (props:{
 
                     {/* Navbar Item II */}
                     <a className={`${companyActive} mobile:-z-10 tablet:-z-10 desktop:z-0 flex justify-center items-center tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
-                    mobile:opacity-0 mobile:w-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`} href="/">Company</a>
+                    mobile:opacity-0 mobile:w-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`} href="/company">Company</a>
 
                     {/* Navbar Item III */}
                     <a className={`${offerActive} mobile:-z-10 tablet:-z-10 desktop:z-0 flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
-                     mobile:opacity-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`} href="/">Offer</a>
+                     mobile:opacity-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`} href="/offer">Offer</a>
 
                     {/* Burger Menu Button */}
                     <div  onClick={() => setVisible(!visible)} className=" w-20 h-16 rounded-xl duration-300 mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 flex flex-col justify-center items-center hover:cursor-pointer ">
@@ -81,10 +81,10 @@ export const Navbar = (props:{
                     href="/">Start</a>
                 {/* Croll Bar Item II */}
                 <a className={`my-5 ${bordervisibility} text-[#747474] w-[10rem] text-center  font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
-                    href="/">Company</a>
+                    href="/company">Company</a>
                 {/* Croll Bar Item III */}
                 <a className={`my-5 ${bordervisibility}  text-[#747474] w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
-                    href="/contact">Offer</a>
+                    href="/offer">Offer</a>
                 <div className="w-full h-5  flex justify-center text-[0.8rem] mt-10 items-center text-[#858585] overflow-hidden font-mono">
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="">Imprint</a>
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="">Privacy</a>
