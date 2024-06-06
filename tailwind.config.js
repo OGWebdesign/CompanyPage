@@ -41,8 +41,8 @@ export default {
         }
       },
       backgroundImage: { 
-        "nils": "url('public/nils.png')",
-        "max": "url('public/max.png')",
+        "nils": "url('nils.png')",
+        "max": "url('max.png')",
       },
     },
   },
