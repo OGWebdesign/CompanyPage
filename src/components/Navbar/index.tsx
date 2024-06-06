@@ -86,8 +86,8 @@ export const Navbar = (props:{
                 <a className={`my-5 ${bordervisibility}  text-[#747474] w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
                     href="/offer">Offer</a>
                 <div className="w-full h-5  flex justify-center text-[0.8rem] mt-10 items-center text-[#858585] overflow-hidden font-mono">
-                    <a className="p-3 mx-3 hover:text-[#98f144]" href="">Imprint</a>
-                    <a className="p-3 mx-3 hover:text-[#98f144]" href="">Privacy</a>
+                    <a className="p-3 mx-3 hover:text-[#98f144]" href="/imprint">Imprint</a>
+                    <a className="p-3 mx-3 hover:text-[#98f144]" href="/privacy">Privacy</a>
                     <a className="p-3 mx-3 hover:text-[#98f144]" href="/contact">Contact</a>
                 </div>
                 <div className={`${stroke} duration-500 mt-5  border-2 rounded-full mb-5`}></div>
