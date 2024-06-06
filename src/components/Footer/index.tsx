@@ -4,16 +4,16 @@ export const Footer = () => {
     return (
         <>
             <div className="w-full flex flex-col border font-mono text-slate-200 p-10 mobile:p-4 bg-slate-200 mobile:rounded-t-xl rounded-t-2xl mt-[10%]">
-                <article className="desktop:text-[7rem] tablet:text-[4rem] mobile:text-[2rem]  inline-block text-[#151515] leading-none">
+                <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem]  inline-block text-[#151515] leading-none">
                     YOUR IDEA
                 </article>
 
 
-                <article className="desktop:text-[7rem] tablet:text-[4rem] mobile:text-[2rem] inline-block text-[#151515] leading-none">DESERVES BETTER.</article>
+                <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem] inline-block text-[#151515] leading-none">DESERVES BETTER.</article>
                 <div className="w-full flex items-center">
 
-                    <article className="desktop:text-[7rem] tablet:text-[4rem] mobile:text-[2rem]  desktop:w-[50rem] tablet:w-[35rem] mobile:w-[13rem] inline-block bg-[#98f144] text-[#151515] font-bold leading-none">TALK TO US! </article>
-                    <a className="desktop:w-[13rem] tablet:w-[8rem] tablet:h-[3rem] desktop:h-[4rem] desktop:text-[2rem] mobile:w-[6rem] mobile:h-[2rem] mobile:rounded-lg mobile:ml-[1rem] mobile:text-[1rem] font-mono ml-[2rem] duration-300 border-[#151515] mobile:hover:border-2 desktop:hover:border-4 hover:bg-[#98f144] hover:font-bold hover:text-[#151515] rounded-2xl bg-[#151515] flex justify-center items-center" href="">
+                    <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem]  desktop:w-[50rem] tablet:w-[35rem] mobile:w-[13rem] inline-block bg-[#98f144] text-[#151515] font-bold leading-none">TALK TO US! </article>
+                    <a className="desktop:w-[10rem] tablet:w-[8rem] tablet:h-[3rem] desktop:h-[4rem] desktop:text-[1.4rem] mobile:w-[6rem] mobile:h-[2rem] mobile:rounded-lg mobile:ml-[1rem] mobile:text-[1rem] font-mono ml-[2rem] duration-300 border-[#151515] mobile:hover:border-2 desktop:hover:border-4 hover:bg-[#98f144] hover:font-bold hover:text-[#151515] rounded-2xl bg-[#151515] flex justify-center items-center" href="">
                         Lets talk
                     </a>
                 </div>

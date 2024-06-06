@@ -23,7 +23,7 @@ export const CardWhite = (props:{
                 <div className="w-full h-1/2 flex justify-center items-center">
                     <div className="w-[8rem] group h-12 rounded-xl hover:cursor-pointer border-2 border-slate-200 duration-300 group hover:border-[#151515] bg-[#151515] hover:bg-[#98f144] flex justify-center items-center">
                         <p className="font-mono text-[1.1rem] font-semibold text-slate-200 group-hover:text-[#151515] mr-3 ">Get it</p>
-                        <ArrowIcon className="w-6 h-6 fill-slate-200 duration-300 tablet:group-hover:translate-x-14 desktop:group-hover:translate-x-14 mobile:group-hover:translate-x-10 group-hover:fill-black  "></ArrowIcon>        
+                        <ArrowIcon className="w-6 h-6 fill-slate-200 duration-300 tablet:group-hover:translate-x-14 desktop:group-hover:translate-x-12 mobile:group-hover:translate-x-10 group-hover:fill-black  "></ArrowIcon>        
                     </div>
                 </div>
             </div>
