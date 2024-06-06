@@ -1,4 +1,4 @@
-import { CssIcon, DockerIcon, FigmaIcon, GithubIcon, HaskellIcon, HtmlIcon, JSIcon, JavaIcon, NodeIcon, PythonIcon, ReactIcon, TSIcon, TailwindIcon } from "../Icons"
+import { CssIcon, DockerIcon, FigmaIcon, GithubIcon, HaskellIcon, HtmlIcon, JSIcon, JavaIcon, NodeIcon, ReactIcon, TSIcon, TailwindIcon } from "../Icons"
 
 export const TechStripe = () => {
     return (
