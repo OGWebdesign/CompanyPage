@@ -9,6 +9,9 @@ export const EmployeeCard = () => {
 
                     </img>
                 </div>
+                <div className="">
+                    
+                </div>
             </div>
 
 
