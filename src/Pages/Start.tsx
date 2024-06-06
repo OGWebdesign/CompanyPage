@@ -21,13 +21,13 @@ function App() {
           <div className="mobile:w-full tablet:w-full desktop:w-[75%] desktop-xl:w-[45%]">
             <Navbar indicator={1} />
 
-            <Heading classname="" heading="Discover the power of modern web and software development" />
+            <Heading  heading="Discover the power of modern web and software development" />
             <TextAndButton
               buttonText="Book a consultation"
               text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
               reference="/contact"
             />
-            <ParagraphOG classname="text-right"></ParagraphOG>
+            <ParagraphOG classname="text-right justify-end"></ParagraphOG>
             <TechStripe />
             <Allert head="Services" text="Whether it is a website, a software solution, a bot or advice on websites or application administration, we have the right offer for you."/>
 

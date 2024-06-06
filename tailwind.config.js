@@ -37,7 +37,7 @@ export default {
         },
         loading:{
           '0%':{transform:'translateX(0)'},
-          '50%':{transform:'translateX(200%)'},
+          '50%':{transform:'translateX(-200%)'},
         }
       },
     },
