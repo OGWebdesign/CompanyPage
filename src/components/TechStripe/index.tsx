@@ -1,5 +1,4 @@
 import { CssIcon, DockerIcon, FigmaIcon, GithubIcon, HaskellIcon, HtmlIcon, JSIcon, JavaIcon, NodeIcon, ReactIcon, TSIcon, TailwindIcon } from "../Icons"
-
 export const TechStripe = () => {
     return (
         <>
@@ -84,8 +83,6 @@ export const TechStripe = () => {
                         <p className="text-[#777777] mt-4 duration-1000 opacity-0 group-hover:opacity-100 text-center font-mono flex justify-center items-center">Figma</p>
                     </div>
                 </div>
-
-
 
             </div>
         </>
