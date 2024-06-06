@@ -15,7 +15,6 @@ function App() {
           <div className="w-full mobile:p-2 tablet:px-5 bg-[#151515] flex justify-center items-center">
             <div className="mobile:w-full tablet:w-full desktop:w-[75%] desktop-xl:w-[45%]">
               <Navbar  />
-              <Heading classname="text-right" heading="Your professional Partner to reach your goals" />
               <Heading heading="Your professional Partner to reach your goals" />
 
               <Description
