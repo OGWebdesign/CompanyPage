@@ -22,36 +22,36 @@ function App() {
           <div className="mobile:w-full tablet:w-full desktop:w-[75%] desktop-xl:w-[45%]">
             <Navbar indicator={1} />
 
-            <Heading heading="Navigating the digital landscape for success" />
+            <Heading classname="" heading="Discover the power of modern web and software development" />
             <TextAndButton
               buttonText="Book a consultation"
-              text="Our digital marketing agency helps businesses grow and succeed online througth a range of services including SEO, programming, consulting, and content creation."
+              text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
               reference="/contact"
             />
 
             <TechStripe />
-            <Allert head="Services" text="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services inlude:"/>
+            <Allert head="Services" text="Whether it is a website, a software solution, a bot or advice on websites or application administration, we have the right offer for you."/>
 
             {/* WrapperLayout */}
             <div className="w-full flex justify-center items-center">
-              <div className="desktop:w-[100%] desktop-xl:w-[75%]  grid tablet:gap-10 gap-11 mobile:gap-20  mobile:grid-rows-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:grid-rows-2 desktop:grid-rows-1 desktop:grid-cols-2 place-content-center place-items-center mt-10 mb-[5%]">
+              <div className="desktop:w-[75%] desktop-xl:w-[75%]  grid tablet:gap-10 gap-11 mobile:gap-20  mobile:grid-rows-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:grid-rows-2 desktop:grid-rows-1 desktop:grid-cols-2 place-content-center place-items-center mt-10 mb-[5%]">
                 <CardBlack
                   classname="tablet:-translate-x-28"
-                  text1="Search enginge"
-                  text2="optimization"
-                  discription="A huge part of users ignore lower entries of search results. Let's make your site visible and drive traffic."
+                  text1="Websites & "
+                  text2="programming"
+                  discription="Over 50% of all website visitors leave after waiting 3 seconds. Our websites finish loading in 300 milliseconds."
                 />
                 <CardWhite
                   classname="tablet:translate-x-28"
-                  text1="Webdesign &"
-                  text2="programming"
-                  description="50% of website visitors leave by a loading time of 3 seconds. We build website that finishes loading in 200ms."
-                />
-                <CardWhite
-                  classname="tablet:-translate-x-28"
                   text1="Consulting &"
                   text2="administration"
                   description="If you need advice on your CMS, we advise or administer your existing website."
+                />
+                <CardWhite
+                  classname="tablet:-translate-x-28"
+                  text1="Application"
+                  text2="development"
+                  description="Customized app solutions for your company where you determine what your program must do."
                 />
                 <CardBlack
                   classname="tablet:translate-x-28"

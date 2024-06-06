@@ -36,8 +36,8 @@ export default {
           '100%':{opacity:'100%'}
         },
         loading:{
-          '0%':{transform:'translateX(-2rem)'},
-          '50%':{transform:'translateX(-50rem)'},
+          '0%':{transform:'translateX(0)'},
+          '50%':{transform:'translateX(200%)'},
         }
       },
     },
