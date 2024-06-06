@@ -5,7 +5,7 @@ export const EmployeeCard = () => {
             {/* Left Side */}
             <div className="w-1/2 h-full flex flex-col">
                 <div className="flex justify-end">
-                    <img alt="" src="./max.png" className="w-[10rem] h-[10rem]  hover:cursor-pointer hover:scale-110 duration-300 hover:border-8 grayscale hover:grayscale-0  hover:border-[#98f144] rounded-full border-slate-200 border-2 bg-no-repeat bg-cover">
+                    <img alt="" src="max.png" className="w-[10rem] h-[10rem]  hover:cursor-pointer hover:scale-110 duration-300 hover:border-8 grayscale hover:grayscale-0  hover:border-[#98f144] rounded-full border-slate-200 border-2 bg-no-repeat bg-cover">
 
                     </img>
                     <div className="text-slate-200">
@@ -18,7 +18,7 @@ export const EmployeeCard = () => {
 
             {/* Right Side */}
             <div className="w-1/2 h-full flex flex-col">
-                <img alt="" src="./nils.png" className="w-[10rem] h-[10rem] hover:cursor-pointer hover:scale-110 duration-300 hover:border-8 grayscale hover:grayscale-0  hover:border-[#98f144] rounded-full border-slate-200 border-2 bg-no-repeat bg-cover">
+                <img alt="" src="nils.png" className="w-[10rem] h-[10rem] hover:cursor-pointer hover:scale-110 duration-300 hover:border-8 grayscale hover:grayscale-0  hover:border-[#98f144] rounded-full border-slate-200 border-2 bg-no-repeat bg-cover">
 
                 </img>
             </div>
