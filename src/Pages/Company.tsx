@@ -1,3 +1,4 @@
+import Cursor from "../components/Cursor";
 import { EmployeeCard } from "../components/EmployeeCard";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
@@ -6,8 +7,9 @@ import { ParagraphOG } from "../components/ParagraphOG";
 function App(){
     return (
         <>
+         <Cursor></Cursor>
           {/* Wrapper */}
-          <div className="w-full bg-[#151515]">
+          <div className="w-full bg-[#151515] cursor-none">
             <div className="w-full flex justify-center">
               {/* Start Page Layout */}
               <div className="w-full mobile:p-2 tablet:px-5 bg-[#151515] flex justify-center items-center">

@@ -24,7 +24,7 @@ export const ContactForm = () => {
 
   return (
   <div className="w-full flex flex-col mt-5 
-  mobile:px-2 tablet:px-8
+  mobile:px-2 tablet:px-8 
   font-mono">
     <h1 className={`text-white mobile:text-[2rem] tablet:text-[2.3rem] laptop:text-[3rem] mobile:ml-[4rem] laptop:ml-[15rem] font-bold font-mono transition-all duration-700 ease-in-out ${check && "-translate-y-14"}`}>HELLO,</h1>
     <form className="flex flex-col items-start">
@@ -41,7 +41,7 @@ export const ContactForm = () => {
 
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">NAME</span> IS </span>
 
-        <input type="input" placeholder="Name" className="
+        <input  type="input" placeholder="Name" className="
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem] 
 
@@ -102,7 +102,7 @@ export const ContactForm = () => {
       <div className="w-full flex justify-center mb-10 ">
 
       <button type="submit" className={`text-[#161616] select-none border-none bg-[#98f144] font-semibold py-2 px-4 mt-8 rounded-lg shadow-xl 
-      hover:bg-[#6ba039] cursor-pointer font-mono transition duration-700 ease-in-out ${check && "-translate-y-12"}`}>
+      hover:bg-[#6ba039] cursor-none font-mono transition duration-700 ease-in-out ${check && "-translate-y-12"}`}>
       Send Request
       </button>
 

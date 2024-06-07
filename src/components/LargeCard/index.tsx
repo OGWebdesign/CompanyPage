@@ -20,7 +20,7 @@ export const LargeCard = () => {
                     </div>
                   
                 </div>
-                <div className="tablet:w-[20rem] hover:cursor-pointer border-2  duration-300 hover:font-semibold hover:text-[#151515] hover:bg-[#98f144] mobile:w-[10rem] flex justify-center items-center text-center font-mono text-slate-200 h-[3rem] ml-4 mt-14 bg-[#151515] rounded-lg border-[#151515]">
+                <div className="tablet:w-[20rem] border-2  duration-300 hover:font-semibold hover:text-[#151515] hover:bg-[#98f144] mobile:w-[10rem] flex justify-center items-center text-center font-mono text-slate-200 h-[3rem] ml-4 mt-14 bg-[#151515] rounded-lg border-[#151515]">
                     Get your free proposal
                 </div>
                 <div className="h-4">

@@ -1,6 +1,7 @@
 import { Allert } from "../components/Allert";
 import { CardBlack } from "../components/CardBlack";
 import { CardWhite } from "../components/CardWhite";
+import Cursor from "../components/Cursor";
 import { Footer } from "../components/Footer";
 import { Heading } from "../components/Heading";
 import { LargeCard } from "../components/LargeCard";
@@ -13,8 +14,9 @@ function App() {
   return (
     <>
       {/* Wrapper */}
-      <div className="w-full bg-[#151515]">
-      <div className="w-full flex justify-center">
+      <Cursor></Cursor>
+      <div className="w-full bg-[#151515] cursor-none">
+      <div className="w-full flex justify-center ">
       
           {/* Start Page Layout */}
           <div className="w-full mobile:p-2 tablet:px-5 bg-[#151515] flex justify-center items-center">

@@ -1,9 +1,11 @@
+import Cursor from "../components/Cursor";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 
 function App() {
   return (
     <>
+     <Cursor></Cursor>
       {/* Wrapper */}
       <div className="w-full bg-[#151515]">
         <div className="w-full flex justify-center">

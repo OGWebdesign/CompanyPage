@@ -35,7 +35,7 @@ export const Navbar = (props:{
     // start component build
     return (
         // Navbar extansion for scroll out (scroll out wrapper) <-- auto hight
-        <div className="w-full duration-500 flex flex-col ">
+        <div className="w-full duration-500 flex flex-col cursor-none ">
 
             {/* Navbar Item Wrapper */}
             <div className="w-full flex justify-between duration-500">
@@ -54,19 +54,19 @@ export const Navbar = (props:{
                 <div className="mobile:w-[7rem] tablet:w-[20rem] desktop:w-[40rem] flex justify-between items-center">
 
                     {/* Navbar Item I */}
-                    <a className={`${homeActive} mobile:-z-10 tablet:-z-10 desktop:z-0 flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
+                    <a className={`${homeActive} mobile:-z-10 cursor-none tablet:-z-10 desktop:z-0 flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
                     mobile:opacity-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`} href="/">Home</a>
 
                     {/* Navbar Item II */}
-                    <a className={`${companyActive} mobile:-z-10 tablet:-z-10 desktop:z-0 flex justify-center items-center tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
+                    <a className={`${companyActive} mobile:-z-10 cursor-none tablet:-z-10 desktop:z-0 flex justify-center items-center tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
                     mobile:opacity-0 mobile:w-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`} href="/company">Company</a>
 
                     {/* Navbar Item III */}
-                    <a className={`${offerActive} mobile:-z-10 tablet:-z-10 desktop:z-0 flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
+                    <a className={`${offerActive} mobile:-z-10 cursor-none tablet:-z-10 desktop:z-0 flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
                      mobile:opacity-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`} href="/offer">Offer</a>
 
                     {/* Burger Menu Button */}
-                    <div  onClick={() => setVisible(!visible)} className=" w-20 h-16 rounded-xl duration-300 mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 flex flex-col justify-center items-center hover:cursor-pointer ">
+                    <div  onClick={() => setVisible(!visible)} className=" w-20 h-16 rounded-xl duration-300 mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 flex flex-col justify-center items-center  ">
                         <HomeIcon className={`w-8 h-8 ${rotation} duration-300  hover:fill-[#98f144] flex`}></HomeIcon>
                         <p className={` ${textindicator} text-[#777777] font-mono`}>{indicator}</p>
                     </div>
@@ -77,18 +77,18 @@ export const Navbar = (props:{
             {/* Croll Bar Wrapper */}
             <div className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle : notVisibleStyle} duration-300 bg-[#151515]`}>
                 {/* Croll Bar Item I */}
-                <a className={`my-5 ${bordervisibility} text-[#747474] w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
+                <a className={`my-5 ${bordervisibility} text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
                     href="/">Start</a>
                 {/* Croll Bar Item II */}
-                <a className={`my-5 ${bordervisibility} text-[#747474] w-[10rem] text-center  font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
+                <a className={`my-5 ${bordervisibility} text-[#747474] cursor-none w-[10rem] text-center  font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
                     href="/company">Company</a>
                 {/* Croll Bar Item III */}
-                <a className={`my-5 ${bordervisibility}  text-[#747474] w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
+                <a className={`my-5 ${bordervisibility}  text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
                     href="/offer">Offer</a>
                 <div className="w-full h-5  flex justify-center text-[0.8rem] mt-10 items-center text-[#858585] overflow-hidden font-mono">
-                    <a className="p-3 mx-3 hover:text-[#98f144]" href="/imprint">Imprint</a>
-                    <a className="p-3 mx-3 hover:text-[#98f144]" href="/privacy">Privacy</a>
-                    <a className="p-3 mx-3 hover:text-[#98f144]" href="/contact">Contact</a>
+                    <a className="p-3 mx-3 cursor-none hover:text-[#98f144]" href="/imprint">Imprint</a>
+                    <a className="p-3 mx-3 cursor-none hover:text-[#98f144]" href="/privacy">Privacy</a>
+                    <a className="p-3 mx-3 cursor-none hover:text-[#98f144]" href="/contact">Contact</a>
                 </div>
                 <div className={`${stroke} duration-500 mt-5  border-2 rounded-full mb-5`}></div>
             </div>
