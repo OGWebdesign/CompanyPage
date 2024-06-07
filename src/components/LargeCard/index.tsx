@@ -10,7 +10,7 @@ export const LargeCard = (props: {
 
     return (
         <div className="w-full flex justify-center items-center select-none leading-none desktop:mt-[5%]">
-            <div className="flex-col max-w-[60rem] min-h-[15em]  bg-slate-200 rounded-2xl">
+            <div className="flex-col p-4 max-w-[60rem] min-h-[15em]  bg-slate-200 rounded-2xl">
                 <div className="w-full flex desktop:flex-row mobile:flex-col">
                     <div className="w-1/2 mobile:w-full flex-row  mobile:flex-col">
                         <div className="w-full h-1/2">

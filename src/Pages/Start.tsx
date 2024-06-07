@@ -23,13 +23,13 @@ function App() {
           <div className="mobile:w-full tablet:w-full desktop:w-[75%] desktop-xl:w-[45%]">
             <Navbar indicator={1} />
 
-            <Heading  heading="Discover the power of modern web and software development" />
+            <Heading headstyle="text-slate-200"  heading="Discover the power of modern web and software development" />
             <TextAndButton
               buttonText="Book a consultation"
               text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
               reference="/contact"
             />
-            <ParagraphOG head="Compiled with the same technologies as Facebook and Instagram. "
+            <ParagraphOG classnamehead="text-slate-200" head="Compiled with the same technologies as Facebook and Instagram. "
             text="Using the latest front-end and back-end technologies, we achieve loading speeds that no content management system can even remotely match. 
                 Loading times as low as 300 milliseconds.
                 We make no compromises when it comes to design. Modern, timeless designs where there are no limits to the possibilities. 
