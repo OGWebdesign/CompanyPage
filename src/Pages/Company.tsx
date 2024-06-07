@@ -1,6 +1,7 @@
 import Cursor from "../components/Cursor";
 import { EmployeeCard } from "../components/EmployeeCard";
 import { Footer } from "../components/Footer";
+import { LargeCard } from "../components/LargeCard";
 import { Navbar } from "../components/Navbar";
 import { ParagraphOG } from "../components/ParagraphOG";
 
@@ -20,6 +21,7 @@ With our know-how from studying computer science and design and a lot of experie
 Every project begins with a detailed discussion to understand your needs and goals. Based on this, we develop individual concepts that are tailored precisely to your company. Transparent communication and close cooperation are a matter of course for us." 
                  head="#Transparency" animation={false} classname="text-right justify-end"></ParagraphOG>
                  <EmployeeCard></EmployeeCard>
+                 <LargeCard head1="" head2="fdf" text1="dfdf" text2="dfsf"></LargeCard>
                 </div>
               </div>
             </div>

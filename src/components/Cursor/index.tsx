@@ -12,7 +12,6 @@ const Cursor = () => {
     // Event-Handler für Mausbewegung
     const mouseMoveHandler = (event: { clientX: any; clientY: any; }) => {
       setPosition({ x: event.clientX, y: event.clientY });
-    
     };
 
    
@@ -40,7 +39,7 @@ const Cursor = () => {
 
   return (
     <div
-      className={`fixed animate-spin flex ${clickStyle} justify-center items-center font-mono font-bold w-[25px] h-[25px] rounded-[50%] pointer-events-none z-50`}
+      className={`fixed flex ${clickStyle} justify-center items-center font-mono font-bold w-[25px] h-[25px] rounded-[50%] pointer-events-none z-50`}
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
