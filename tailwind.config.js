@@ -36,8 +36,9 @@ export default {
           '100%':{opacity:'100%'}
         },
         loading:{
-          '0%':{transform:'translateX(0)'},
-          '50%':{transform:'translateX(-200%)'},
+          '0%':{transform:'translateX(0)',borderColor:'#777777'},
+          '50%':{transform:'translateX(-200%)',  borderColor:'#98f144'},
+          
         }
       },
       backgroundImage: { 

@@ -3,19 +3,24 @@ export const LargeCard = (props: {
     head2: string,
     text1: string,
     text2: string,
-    withButton?: boolean
+    head1style?:string,
+    head2style?:string,
+    text1Style?: string,
+    text2Style?: string,
+    withButton?: boolean,
+    classname?:string
 }) => {
 
 
 
     return (
         <div className="w-full flex justify-center items-center select-none leading-none desktop:mt-[5%]">
-            <div className="flex-col p-4 max-w-[60rem] min-h-[15em]  bg-slate-200 rounded-2xl">
+            <div className={`flex-col p-4 max-w-[60rem] min-h-[15em] ${props.classname} rounded-2xl`}>
                 <div className="w-full flex desktop:flex-row mobile:flex-col">
                     <div className="w-1/2 mobile:w-full flex-row  mobile:flex-col">
                         <div className="w-full h-1/2">
-                            <p className="pl-5 pt-5 text-[1.7rem] text-[#151515] font-mono font-semibold">{props.head1}</p>
-                            <p className="pl-5 pt-2 font-semibold font-mono text-[1.04rem]">{props.text1}</p>
+                            <p className={`${props.head1style} pl-5 pt-5 text-[1.7rem]  font-mono font-semibold`}>{props.head1}</p>
+                            <p className={`${props.text1Style} pl-5 pt-2 font-semibold font-mono text-[1.04rem]`}>{props.text1}</p>
                         </div>
                         <div className="w-full h-1/2">
 
@@ -24,8 +29,8 @@ export const LargeCard = (props: {
 
 
                     <div className="w-1/2 mobile:w-full ">
-                        <p className="pl-5 pt-5 text-[1.7rem] text-[#151515] font-mono font-semibold">{props.head2}</p>
-                        <p className="pl-5 pt-2 font-semibold font-mono text-[1.04rem]">{props.text2}</p>
+                        <p className={`${props.head2style} pl-5 pt-5 text-[1.7rem] font-mono font-semibold`}>{props.head2}</p>
+                        <p className={`${props.text2Style} pl-5 pt-2 font-semibold font-mono text-[1.04rem]`}>{props.text2}</p>
                     </div>
 
                 </div>

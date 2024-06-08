@@ -72,6 +72,7 @@ function App() {
             text1="No matter what your idea is, we can be the right partner for you. Send us your request and we will find a suitable solution for each of your concerns." 
             head2="Whether big or small."
             text2="You can entrust us with any project proposal, we will find a solution that will ensure your complete satisfaction. Don't hesitate to come to us with small ideas. The biggest companies in the world started in a garage. Dream big, start even bigger."
+            classname="bg-slate-200"
             />
           
             
