@@ -1,13 +1,11 @@
 import { useState } from "react"
 import { HomeIcon } from "../Icons"
 
-export const Navbar = (props:{
-    indicator?:number
-}) => {
+export const Navbar = () => {
    
     // state for animation
     const [visible, setVisible] = useState(false) // state for Nav Bar scroll out effect
-
+    const [indicatorNav, setIndicatorNav] = useState(1)
     // tailwind css for visible style sheet
     const visibleStyle = "h-[20rem]"
     // tailwind css for notvisible style sheet
@@ -21,9 +19,9 @@ export const Navbar = (props:{
     // make border unvisible in unwrap state
     const bordervisibility = visible ? "opacity-100 border-2":"opacity-0 border-none"
     const stroke = visible ? "w-[20rem] opacity-100":"w-0 opacity-0"
-    const homeActive = props.indicator == 1 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
-    const companyActive = props.indicator == 2 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
-    const offerActive = props.indicator == 3 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
+    const homeActive = indicatorNav == 1 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
+    const companyActive = indicatorNav == 2 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
+    const offerActive = indicatorNav == 3 ? "border-b-8 border-[#98f144] text-slate-200 ": "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
 
     
     

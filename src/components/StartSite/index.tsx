@@ -7,7 +7,7 @@ import { ParagraphOG } from "../ParagraphOG"
 import { TechStripe } from "../TechStripe"
 import { TextAndButton } from "../TextAndButton"
 
-export const StartSide = ()=>{
+export const StartSite = ()=>{
     return(
         <>
           <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
