@@ -7,12 +7,16 @@ import { ParagraphOG } from "../ParagraphOG"
 import { TechStripe } from "../TechStripe"
 import { TextAndButton } from "../TextAndButton"
 
-export const StartSite = ()=>{
+
+
+export const StartSite = (props:{
+  TextAndButtonbt:JSX.Element|JSX.Element[]|string,
+})=>{
     return(
         <div className="animate-fadeIn">
           <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
-              <TextAndButton
-                buttonText="Book a consultation"
+              <TextAndButton children={props.TextAndButtonbt}
+      
                 text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
                 reference="/contact"
               />

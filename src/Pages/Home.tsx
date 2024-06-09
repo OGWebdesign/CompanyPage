@@ -1,4 +1,4 @@
-import {useState } from "react";
+import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from "react";
 import Cursor from "../components/Cursor";
 import { DotsIcon, FacebookIcon, InstagramIcon, PinterestIcon } from "../components/Icons";
 import { CompanySite } from "../components/CompanySite";
@@ -32,6 +32,11 @@ function App() {
   const companyActive = indicatorNav == 2 ? "border-b-8 border-[#98f144] text-slate-200 " : "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
   const offerActive = indicatorNav == 3 ? "border-b-8 border-[#98f144] text-slate-200 " : "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
 
+  const orderMeetingbt = (text: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined) => 
+  <div onClick={()=>setIndicatorNav(4)}
+    className="text-[#151515] cursor-none select-none border-none bg-[#98f144] font-semibold mt-8 py-2 px-4 rounded-lg hover:bg-[#6ba039] font-mono transition duration-300 ease-in-out">
+    {text}
+  </div>
 
 
   return (
@@ -39,7 +44,7 @@ function App() {
       {/* cursor over all existing layers with fix position on cursor coordinates */}
       <Cursor></Cursor>
 
-      
+
       {/* Wrapper */}
       <div className="w-full bg-[#151515] cursor-none">
         <div className="w-full flex justify-center ">
@@ -125,7 +130,7 @@ function App() {
 
 
               {indicatorNav === 1 && (
-                <StartSite></StartSite>
+                <StartSite TextAndButtonbt={orderMeetingbt("Book a consultation")}></StartSite>
               )
               }
               {indicatorNav === 2 && (
@@ -188,7 +193,7 @@ function App() {
           </div>
         </div>
         {/* Footer End */}
-        
+
 
 
       </div>
