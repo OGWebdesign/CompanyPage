@@ -5,7 +5,7 @@ import { Heading } from "../Heading"
 
 export const ContactSite = () => {
     return(
-        <>
+        <div className="animate-fadeIn">
         <Heading headstyle="text-slate-200" heading="Let's talk about the future" />
 
         <Description
@@ -18,6 +18,6 @@ export const ContactSite = () => {
 
         {/* Contact Formular */}
         <ContactForm />
-    </>
+    </div>
     )
 }

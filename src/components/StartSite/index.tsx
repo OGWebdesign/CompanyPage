@@ -9,7 +9,7 @@ import { TextAndButton } from "../TextAndButton"
 
 export const StartSite = ()=>{
     return(
-        <>
+        <div className="animate-fadeIn">
           <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
               <TextAndButton
                 buttonText="Book a consultation"
@@ -63,7 +63,7 @@ export const StartSite = ()=>{
               />
         
         
+        </div>
         
-        </>
     )
 }
