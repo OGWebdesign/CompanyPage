@@ -6,6 +6,7 @@ import { ContactSite } from "../components/ContactSite";
 import { StartSite } from "../components/StartSite";
 import { OfferSite } from "../components/OfferSite";
 import { Impressum } from "../components/Impressum";
+import { Maintenance } from "../components/Maintenance";
 
 
 
@@ -50,7 +51,7 @@ function App() {
 
   const BlackCardbt1 = () =>
     <div className="w-full h-1/2 flex justify-center items-center">
-      <div onClick={() => setIndicatorNav(5)} className="w-[8rem] h-12 rounded-xl duration-300 group border-2 bg-slate-100 hover:bg-[#98f144] hover:border-[#e9e9e9]  flex justify-center items-center">
+      <div onClick={() => setIndicatorNav(3)} className="w-[8rem] h-12 rounded-xl duration-300 group border-2 bg-slate-100 hover:bg-[#98f144] hover:border-[#e9e9e9]  flex justify-center items-center">
         <p className="font-mono text-[1.1rem] font-semibold text-[#151515] group-hover:text-[#151515] mr-3 ">Get it</p>
         <ArrowIcon className="w-6 h-6 duration-300 tablet:group-hover:translate-x-14 desktop:group-hover:translate-x-12 mobile:group-hover:translate-x-10 group-hover:fill-slate-200  "></ArrowIcon>
       </div>
@@ -60,12 +61,16 @@ function App() {
 
   const WhiteCardbt1 = () =>
     <div className="w-full h-1/2 flex justify-center items-center">
-      <div onClick={() => setIndicatorNav(5)} className="w-[8rem] group h-12 rounded-xl border-2 border-slate-200 duration-300 group hover:border-[#151515] bg-[#151515] hover:bg-[#98f144] flex justify-center items-center">
+      <div onClick={() => setIndicatorNav(3)} className="w-[8rem] group h-12 rounded-xl border-2 border-slate-200 duration-300 group hover:border-[#151515] bg-[#151515] hover:bg-[#98f144] flex justify-center items-center">
         <p className="font-mono text-[1.1rem] font-semibold text-slate-200 group-hover:text-[#151515] mr-3 ">Get it</p>
         <ArrowIcon className="w-6 h-6 fill-slate-200 duration-300 tablet:group-hover:translate-x-14 desktop:group-hover:translate-x-12 mobile:group-hover:translate-x-10 group-hover:fill-black  "></ArrowIcon>
       </div>
     </div>
 
+
+  const Maintenancebt = () => <div onClick={()=> setIndicatorNav(1)} className="w-[14rem] h-[3rem] hover:bg-[#6ba039] duration-300 rounded-lg mt-10 bg-[#98f144] flex justify-center items-center">
+    <p className="text-[#151515] font-mono font-bold">Back to Main Menu</p>
+  </div>
 
   //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -79,7 +84,9 @@ function App() {
       <Cursor></Cursor>
 
 
-
+      {indicatorNav === 7 && (
+        <Maintenance children={Maintenancebt()}></Maintenance>
+      )}
 
       {/* Wrapper */}
       <div className="w-full bg-[#151515] cursor-none">
@@ -150,7 +157,7 @@ function App() {
                     onClick={() => { setIndicatorNav(3); setVisible(!visible); }}>Offer</div>
                   <div className="w-full h-5  flex justify-center text-[0.8rem] mt-10 items-center text-[#858585] overflow-hidden font-mono">
                     <div onClick={() => { setIndicatorNav(6); setVisible(!visible); }} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Imprint</div>
-                    <div onClick={() => setIndicatorNav(5)} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Privacy</div>
+                    <div onClick={() => setIndicatorNav(7)} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Privacy</div>
                     <div onClick={() => { setIndicatorNav(4); setVisible(!visible); }} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Contact</div>
                   </div>
                   <div className={`${stroke} duration-500 mt-5  border-2 border-[#98f144] rounded-full mb-5`}></div>
@@ -230,7 +237,7 @@ function App() {
             <div className="w-full cursor-none flex font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center tablet:text-[1rem] mobile:text-[0.8rem]">
               <div className="w-1/2 flex desktop:gap-10 tablet:gap-6 mobile:gap-4 justify-start" >
                 <div onClick={() => setIndicatorNav(6)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Imprint</div>
-                <div onClick={() => setIndicatorNav(5)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Privacy</div>
+                <div onClick={() => setIndicatorNav(7)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Privacy</div>
                 <div onClick={() => setIndicatorNav(4)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Contact</div>
                 <div onClick={() => setIndicatorNav(3)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Offer</div>
               </div>
