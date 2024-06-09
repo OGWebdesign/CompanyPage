@@ -1,6 +1,6 @@
 import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from "react";
 import Cursor from "../components/Cursor";
-import { DotsIcon, FacebookIcon, InstagramIcon, PinterestIcon } from "../components/Icons";
+import { ArrowIcon, DotsIcon, FacebookIcon, InstagramIcon, PinterestIcon } from "../components/Icons";
 import { CompanySite } from "../components/CompanySite";
 import { ContactSite } from "../components/ContactSite";
 import { StartSite } from "../components/StartSite";
@@ -38,7 +38,7 @@ function App() {
   const offerActive = indicatorNav == 3 ? "border-b-8 border-[#98f144] text-slate-200 " : "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
 
 
-  // Button for order meeting for component TextAndButton for working with one Page technologie
+  // ---------------------------   Button for order meeting for component TextAndButton for working with one Page technologie
   const orderMeetingbt = (text: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined) =>
     <div onClick={() => setIndicatorNav(4)}
       className="text-[#151515] cursor-none select-none border-none bg-[#98f144] font-semibold mt-8 py-2 px-4 rounded-lg hover:bg-[#6ba039] font-mono transition duration-300 ease-in-out">
@@ -47,7 +47,26 @@ function App() {
 
   const maintainbt = () => <div onClick={() => setIndicatorNav(1)} className="w-[15rem] flex justify-center bg-[#98f144] font-semibold text-[#151515] mt-10 rounded-lg bg-[] font-mono text-[1rem] items-center h-[2rem] duration-300 hover:bg-[#6ba039]">Go back to Main Menu</div>
 
+  const BlackCardbt1 = () => 
+    <div className="w-full h-1/2 flex justify-center items-center">
+      <div onClick={() => setIndicatorNav(5)} className="w-[8rem] h-12 rounded-xl duration-300 group border-2 bg-slate-100 hover:bg-[#98f144] hover:border-[#e9e9e9]  flex justify-center items-center">
+        <p className="font-mono text-[1.1rem] font-semibold text-[#151515] group-hover:text-[#151515] mr-3 ">Get it</p>
+        <ArrowIcon className="w-6 h-6 duration-300 tablet:group-hover:translate-x-14 desktop:group-hover:translate-x-12 mobile:group-hover:translate-x-10 group-hover:fill-slate-200  "></ArrowIcon>
+      </div>
+    </div>
+  
 
+
+  const WhiteCardbt1 = () => 
+    <div className="w-full h-1/2 flex justify-center items-center">
+      <div onClick={() => setIndicatorNav(5)} className="w-[8rem] group h-12 rounded-xl border-2 border-slate-200 duration-300 group hover:border-[#151515] bg-[#151515] hover:bg-[#98f144] flex justify-center items-center">
+        <p className="font-mono text-[1.1rem] font-semibold text-slate-200 group-hover:text-[#151515] mr-3 ">Get it</p>
+        <ArrowIcon className="w-6 h-6 fill-slate-200 duration-300 tablet:group-hover:translate-x-14 desktop:group-hover:translate-x-12 mobile:group-hover:translate-x-10 group-hover:fill-black  "></ArrowIcon>
+      </div>
+    </div>
+  
+
+  //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -147,7 +166,7 @@ function App() {
               {/* Integration for One Page Technologie */}
               {/* get you component for linkship and add an onCLick event. Now you can render dynamicly with an indicator Number */}
               {indicatorNav === 1 && (
-                <StartSite TextAndButtonbt={orderMeetingbt("Book a consultation")}></StartSite>
+                <StartSite TextAndButtonbt={orderMeetingbt("Book a consultation")} BlackCardButton={BlackCardbt1()} WhiteCardButton={WhiteCardbt1()}></StartSite>
               )
               }
               {indicatorNav === 2 && (
@@ -194,7 +213,7 @@ function App() {
               {/* Last TextFragment */}
               <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem]  desktop:w-[50rem] tablet:w-[35rem] mobile:w-[13rem] inline-block bg-[#98f144] text-[#151515] font-bold leading-none">TALK TO US! </article>
               {/* Button */}
-              <div onClick={() => setIndicatorNav(4)} className="desktop:w-[10rem] cursor-none tablet:w-[8rem] tablet:h-[3rem] desktop:h-[4rem] desktop:text-[1.4rem] mobile:w-[6rem] mobile:h-[2rem] mobile:rounded-lg mobile:ml-[1rem] mobile:text-[1rem] font-mono ml-[2rem] duration-300 border-[#151515] mobile:hover:border-2 desktop:hover:border-4 hover:bg-[#98f144] hover:font-bold hover:text-[#151515] rounded-2xl bg-[#151515] text-center flex justify-center items-center" href="">
+              <div onClick={() => setIndicatorNav(4)} className="desktop:w-[10rem] cursor-none tablet:w-[8rem] tablet:h-[3rem] desktop:h-[4rem] desktop:text-[1.4rem] mobile:w-[6rem] mobile:h-[2rem] mobile:rounded-lg mobile:ml-[1rem] mobile:text-[1rem] font-mono ml-[2rem] duration-300 border-[#151515] mobile:hover:border-2 desktop:hover:border-4 hover:bg-[#98f144] hover:font-bold hover:text-[#151515] rounded-2xl bg-[#151515] text-center flex justify-center items-center">
                 Lets talk
               </div>
             </div>

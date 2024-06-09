@@ -1,11 +1,12 @@
 
-import { ArrowIcon } from "../Icons"
+
 
 export const CardBlack = (props:{
     text1 : string,
     text2 : string,
     description:string,
-    classname?:string
+    classname?:string,
+    children?:JSX.Element | JSX.Element[] | string,
     
 })=>{
     
@@ -19,13 +20,7 @@ export const CardBlack = (props:{
                     <p className="inline-block bg-[#98f144] p-1 font-mono font-semibold mobile:text-[1.1rem] text-[1.3rem]" >{props.text2}</p>
                 </div>
 
-                <div className="w-full h-1/2 flex justify-center items-center">
-                    <div  className="w-[8rem] h-12 rounded-xl duration-300 group border-2 bg-slate-100 hover:bg-[#98f144] hover:border-[#e9e9e9]  flex justify-center items-center">
-                    <p className="font-mono text-[1.1rem] font-semibold text-[#151515] group-hover:text-[#151515] mr-3 ">Get it</p>
-                        <ArrowIcon className="w-6 h-6 duration-300 tablet:group-hover:translate-x-14 desktop:group-hover:translate-x-12 mobile:group-hover:translate-x-10 group-hover:fill-slate-200  "></ArrowIcon>             
-                    </div>
-                    
-                </div>
+              {props.children}
             </div>
 
 
