@@ -2,7 +2,7 @@ import {FacebookIcon, InstagramIcon, PinterestIcon } from "../Icons"
 
 export const Footer = () => {
     return (
-        <>
+        <div>
             <div className="w-full cursor-none flex flex-col border font-mono text-slate-200 p-10 mobile:p-4 bg-slate-200 mobile:rounded-t-xl rounded-t-2xl mt-[10%]">
                 <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem]  inline-block text-[#151515] leading-none">
                     YOUR IDEA
@@ -37,6 +37,6 @@ export const Footer = () => {
             <div className="w-full p-4 text-[#151515] bg-slate-200 flex font-mono font-semibold justify-center items-center">
                     <p>©2024 OG-Webdesign</p>
                 </div>
-        </>
+        </div>
     )
 }

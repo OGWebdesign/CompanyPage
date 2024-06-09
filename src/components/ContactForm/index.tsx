@@ -41,7 +41,7 @@ export const ContactForm = () => {
 
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">NAME</span> IS </span>
 
-        <input  type="input" placeholder="Name" className="
+        <input  type="input" placeholder="Name" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem] 
 
@@ -63,7 +63,7 @@ export const ContactForm = () => {
         
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">MAIL</span> IS </span>
        
-        <input type="input" placeholder="Email" className="
+        <input type="input" placeholder="Email" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
@@ -87,7 +87,7 @@ export const ContactForm = () => {
     <div className="w-full flex justify-center items-center">
         <textarea placeholder="Message" className={`
 
-        mobile:w-full tablet:w-[65%] laptop:w-1/2
+        mobile:w-full tablet:w-[65%] laptop:w-1/2 cursor-none
 
         text-center bg-[#151515] text-[#98f144] border-b-2 leading-none mt-6
         placeholder-[#777777] transition-all duration-700 ease-in-out p-2  ${check && "-translate-y-14"} ${hTextBox && "h-[8rem]"}`}

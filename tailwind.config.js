@@ -27,7 +27,9 @@ export default {
       },
       animation:{
         ownpulse:'ownpulse 0.9s ease-in infinite',
-        loading:'loading 6.5s ease-in-out infinite'
+        loading:'loading 6.5s ease-in-out infinite',
+        fadeIn: 'fadeIn 300ms ease-in forwards',
+        fadeOut: 'fadeOut 300ms ease-in forwards',
       },
       keyframes: {
         ownpulse:{
@@ -36,10 +38,18 @@ export default {
           '100%':{opacity:'100%'}
         },
         loading:{
-          '0%':{transform:'translateX(0)',borderColor:'#777777'},
-          '50%':{transform:'translateX(-200%)',  borderColor:'#98f144'},
+          '0%':{transform:'translateX(0)'},
+          '50%':{transform:'translateX(-200%)'},
           
-        }
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
       },
       backgroundImage: { 
         "nils": "url('nils.png')",

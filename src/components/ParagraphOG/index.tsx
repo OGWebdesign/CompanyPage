@@ -21,7 +21,7 @@ export const ParagraphOG = (props:{
                 >{props.text}</p>
                 <div className="w-full flex pl-4 justify-end">
                     {props.animation && (
-                        <div className="w-[12rem] animate-loading mt-10 rounded-full border-2"></div>
+                        <div className="w-[12rem] animate-loading border-[#98f144] mt-10 rounded-full border-2"></div>
                     ) }
                 </div>
             </div>
