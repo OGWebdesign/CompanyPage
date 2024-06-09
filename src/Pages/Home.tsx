@@ -26,7 +26,7 @@ function App() {
   // tailwind css for notvisible style sheet
   const notVisibleStyle = "h-0"
   // Icon rotation by scroll out activation
-  const rotation = visible ? "fill-[#98f144]" : "rotate-[540deg] fill-slate-300"
+  const rotation = visible ? "fill-[#98f144] rotate-[630deg]" : "rotate-[180deg] fill-slate-300"
   // indicator change per state
   const indicator = visible ? "on" : "off"
   // Text color indicator change per state
