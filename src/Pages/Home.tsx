@@ -1,9 +1,10 @@
-import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useEffect, useState } from "react";
+import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from "react";
 import Cursor from "../components/Cursor";
 import { DotsIcon, FacebookIcon, InstagramIcon, PinterestIcon } from "../components/Icons";
 import { CompanySite } from "../components/CompanySite";
 import { ContactSite } from "../components/ContactSite";
 import { StartSite } from "../components/StartSite";
+import { Maintenance } from "../components/Maintenance";
 
 
 
@@ -56,6 +57,8 @@ function App() {
       {/* cursor over all existing layers with fix position on cursor coordinates */}
       <Cursor></Cursor>
 
+
+      <Maintenance></Maintenance>
 
       {/* Wrapper */}
       <div className="w-full bg-[#151515] cursor-none">
@@ -152,7 +155,7 @@ function App() {
                 <ContactSite></ContactSite>
               )}
 
-
+               
 {/*------------------------------------------------------------------------ End Dynamic Render Area -------------------------------------------------------*/}
             </div>
           </div>
