@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import Cursor from "../components/Cursor";
 import { DotsIcon, FacebookIcon, InstagramIcon, PinterestIcon } from "../components/Icons";
 import { CompanySite } from "../components/CompanySite";

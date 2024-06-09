@@ -6,7 +6,7 @@ const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [click, setClick] = useState(true);
   const clickStyle = click ? "bg-[#151515] text-slate-200 border-2 border-slate-200" : "bg-[#98f144] text-[#151515] border-none";
-  const wave = click && "animate-wave"
+
 
   useEffect(() => {
     // Event-Handler für Mausbewegung
