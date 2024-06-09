@@ -2,10 +2,11 @@ import { useState } from "react";
 import Cursor from "../components/Cursor";
 import { Footer } from "../components/Footer";
 import { HomeIcon } from "../components/Icons";
-
 import { CompanySite } from "../components/CompanySite";
 import { ContactSite } from "../components/ContactSite";
 import { StartSite } from "../components/StartSite";
+
+
 
 
 
