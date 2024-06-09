@@ -5,7 +5,7 @@ export const Impressum = () => {
     <div className="animate-fadeIn">
       
     
-        <div className="flex laptop:flex-row mobile:flex-col justify-center items-center h-full font-mono my-[15rem] ">
+        <div className="w-full flex laptop:flex-row mobile:flex-col justify-center items-center h-full font-mono my-[15rem] ">
              {/* CARD UPPER LEFT */}
             <div className="w-[16rem] h-[28rem] bg-slate-200 shadow-lg rounded-lg transform mobile:-translate-y-0 laptop:-translate-y-10 z-10 
             flex flex-col items-center border-r border-r-[#151515] border-b border-b-[#151515]">
@@ -43,7 +43,7 @@ export const Impressum = () => {
                 
              {/* CARD CENTER */} 
             </div>
-            <div className="w-[25rem] h-[35rem] bg-slate-200 shadow-lg rounded-lg transform translate-y-20 -ml-[1.5rem] mobile:mt-[5rem] laptop:mt-0">
+            <div className="mobile:w-[20rem] tablet:w-[25rem] h-[35rem] bg-slate-200 shadow-lg rounded-lg transform translate-y-20 mobile:ml-0 laptop:-ml-[1.5rem] mobile:mt-[5rem] laptop:mt-0">
                 <div className="flex flex-col items-center px-5 py-5">
                     <h3 className="text-[1.7rem] bg-[#98f144]">Rechtliches</h3>
                     <ul className="flex flex-col justify-center items-center mr-[4rem] mt-[2rem]">
