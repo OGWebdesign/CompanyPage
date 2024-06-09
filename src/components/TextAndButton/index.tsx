@@ -1,8 +1,9 @@
 type TextAndButtonProps = {
   text: string;
-  buttonText: string;
+  buttonText?: string;
   classNameContainer?: string;
   reference?: string;
+  children?:JSX.Element |JSX.Element[]|string;
 };
 
 export const TextAndButton = (props: TextAndButtonProps) => {
@@ -16,12 +17,7 @@ export const TextAndButton = (props: TextAndButtonProps) => {
       >
         {props.text}
       </p>
-      <a
-        className="text-[#151515] cursor-none select-none border-none bg-[#98f144] font-semibold mt-8 py-2 px-4 rounded-lg 
-      hover:bg-[#6ba039] font-mono transition duration-300 ease-in-out" href={props.reference}
-      >
-        {props.buttonText}
-      </a>
+      {props.children}
     </div>
   );
 };
