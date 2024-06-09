@@ -36,7 +36,7 @@ export const StartSite = (props:{
                     classname="tablet:-translate-x-28"
                     text1="Websites & "
                     text2="programming"
-                    discription="Over 50% of all website visitors leave after waiting 3 seconds. Our websites finish loading in 300 milliseconds."
+                    description="Over 50% of all website visitors leave after waiting 3 seconds. Our websites finish loading in 300 milliseconds."
                   />
                   <CardWhite
                     classname="tablet:translate-x-28"
@@ -54,7 +54,7 @@ export const StartSite = (props:{
                     classname="tablet:translate-x-28"
                     text1="Artificial"
                     text2="intelligence"
-                    discription="Created images and text by a powerful AI, perfect for clients with limited budgets."
+                    description="Implementation of powerfull AI api's for you website or application for a extremly efficient workflow."
                   />
                 </div>
               </div>

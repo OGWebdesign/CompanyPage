@@ -4,7 +4,7 @@ import { ArrowIcon } from "../Icons"
 export const CardBlack = (props:{
     text1 : string,
     text2 : string,
-    discription:string,
+    description:string,
     classname?:string
     
 })=>{
