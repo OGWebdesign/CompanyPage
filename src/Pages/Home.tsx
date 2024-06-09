@@ -9,9 +9,10 @@ import { StartSite } from "../components/StartSite";
 
 
 
+
 function App() {
   // state for animation
-  
+
   const [visible, setVisible] = useState(false) // state for Nav Bar scroll out effect
   const [indicatorNav, setIndicatorNav] = useState(1)
   // tailwind css for visible style sheet
