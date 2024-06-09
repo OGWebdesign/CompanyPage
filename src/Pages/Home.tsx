@@ -5,6 +5,7 @@ import { CompanySite } from "../components/CompanySite";
 import { ContactSite } from "../components/ContactSite";
 import { StartSite } from "../components/StartSite";
 import { OfferSite } from "../components/OfferSite";
+import { Impressum } from "../components/Impressum";
 
 
 
@@ -45,26 +46,26 @@ function App() {
       {text}
     </div>
 
- 
 
-  const BlackCardbt1 = () => 
+
+  const BlackCardbt1 = () =>
     <div className="w-full h-1/2 flex justify-center items-center">
       <div onClick={() => setIndicatorNav(5)} className="w-[8rem] h-12 rounded-xl duration-300 group border-2 bg-slate-100 hover:bg-[#98f144] hover:border-[#e9e9e9]  flex justify-center items-center">
         <p className="font-mono text-[1.1rem] font-semibold text-[#151515] group-hover:text-[#151515] mr-3 ">Get it</p>
         <ArrowIcon className="w-6 h-6 duration-300 tablet:group-hover:translate-x-14 desktop:group-hover:translate-x-12 mobile:group-hover:translate-x-10 group-hover:fill-slate-200  "></ArrowIcon>
       </div>
     </div>
-  
 
 
-  const WhiteCardbt1 = () => 
+
+  const WhiteCardbt1 = () =>
     <div className="w-full h-1/2 flex justify-center items-center">
       <div onClick={() => setIndicatorNav(5)} className="w-[8rem] group h-12 rounded-xl border-2 border-slate-200 duration-300 group hover:border-[#151515] bg-[#151515] hover:bg-[#98f144] flex justify-center items-center">
         <p className="font-mono text-[1.1rem] font-semibold text-slate-200 group-hover:text-[#151515] mr-3 ">Get it</p>
         <ArrowIcon className="w-6 h-6 fill-slate-200 duration-300 tablet:group-hover:translate-x-14 desktop:group-hover:translate-x-12 mobile:group-hover:translate-x-10 group-hover:fill-black  "></ArrowIcon>
       </div>
     </div>
-  
+
 
   //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -78,7 +79,7 @@ function App() {
       <Cursor></Cursor>
 
 
-      
+
 
       {/* Wrapper */}
       <div className="w-full bg-[#151515] cursor-none">
@@ -148,7 +149,7 @@ function App() {
                   <div className={`my-5 ${bordervisibility}  text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
                     onClick={() => { setIndicatorNav(3); setVisible(!visible); }}>Offer</div>
                   <div className="w-full h-5  flex justify-center text-[0.8rem] mt-10 items-center text-[#858585] overflow-hidden font-mono">
-                    <div onClick={() => setIndicatorNav(6)} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Imprint</div>
+                    <div onClick={() => { setIndicatorNav(6); setVisible(!visible); }} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Imprint</div>
                     <div onClick={() => setIndicatorNav(5)} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Privacy</div>
                     <div onClick={() => { setIndicatorNav(4); setVisible(!visible); }} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Contact</div>
                   </div>
@@ -174,9 +175,14 @@ function App() {
               {indicatorNav === 4 && (
                 <ContactSite></ContactSite>
               )}
-                        {indicatorNav === 3 && (
+              {indicatorNav === 3 && (
                 <OfferSite></OfferSite>
               )}
+              {indicatorNav === 6 && (
+                <Impressum></Impressum>
+              )}
+
+
 
               {/*------------------------------------------------------------------------ End Dynamic Render Area -------------------------------------------------------*/}
             </div>
