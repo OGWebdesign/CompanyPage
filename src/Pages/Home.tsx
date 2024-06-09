@@ -1,4 +1,4 @@
-import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from "react";
+import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useEffect, useState } from "react";
 import Cursor from "../components/Cursor";
 import { DotsIcon, FacebookIcon, InstagramIcon, PinterestIcon } from "../components/Icons";
 import { CompanySite } from "../components/CompanySite";
@@ -10,11 +10,15 @@ import { StartSite } from "../components/StartSite";
 
 
 
+
+
+
 function App() {
   // state for animation
-
   const [visible, setVisible] = useState(false) // state for Nav Bar scroll out effect
   const [indicatorNav, setIndicatorNav] = useState(1)
+ 
+ 
   // tailwind css for visible style sheet
   const visibleStyle = "h-[20rem]"
   // tailwind css for notvisible style sheet
@@ -32,11 +36,19 @@ function App() {
   const companyActive = indicatorNav == 2 ? "border-b-8 border-[#98f144] text-slate-200 " : "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
   const offerActive = indicatorNav == 3 ? "border-b-8 border-[#98f144] text-slate-200 " : "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
 
+
+  // Button for order meeting for component TextAndButton for working with one Page technologie
   const orderMeetingbt = (text: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined) => 
   <div onClick={()=>setIndicatorNav(4)}
     className="text-[#151515] cursor-none select-none border-none bg-[#98f144] font-semibold mt-8 py-2 px-4 rounded-lg hover:bg-[#6ba039] font-mono transition duration-300 ease-in-out">
     {text}
   </div>
+
+
+
+
+
+
 
 
   return (
@@ -105,30 +117,29 @@ function App() {
                 <div className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle : notVisibleStyle} duration-300 bg-[#151515]`}>
                   {/* Scroll Bar Item I */}
                   <div className={`my-5 ${bordervisibility} text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
-                    onClick={() => setIndicatorNav(1)}>Start</div>
+                    onClick={() => {setIndicatorNav(1); setVisible(!visible);}}>Start</div>
                   {/* Scroll Bar Item II */}
                   <div className={`my-5 ${bordervisibility} text-[#747474] cursor-none w-[10rem] text-center  font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
-                    onClick={() => setIndicatorNav(2)}>Company</div>
+                    onClick={() => {setIndicatorNav(2); setVisible(!visible);}}>Company</div>
                   {/* Scroll Bar Item III */}
                   <div className={`my-5 ${bordervisibility}  text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
-                    onClick={() => setIndicatorNav(3)}>Offer</div>
+                    onClick={() => {setIndicatorNav(3); setVisible(!visible);}}>Offer</div>
                   <div className="w-full h-5  flex justify-center text-[0.8rem] mt-10 items-center text-[#858585] overflow-hidden font-mono">
                     <div className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Imprint</div>
                     <div className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Privacy</div>
-                    <div onClick={() => setIndicatorNav(4)} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Contact</div>
+                    <div onClick={() => {setIndicatorNav(4); setVisible(!visible);}} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Contact</div>
                   </div>
                   <div className={`${stroke} duration-500 mt-5  border-2 border-[#98f144] rounded-full mb-5`}></div>
                 </div>
               </div>
 
               {/* EndNav */}
-              {/* End NavigationBar Integration for One Page Technologie */}
+              {/* End NavigationBar*/}
 
+{/*---------------------------------------------------------------------- Here come in all new sites as component ------------------------------------ */}
 
-
+              {/* Integration for One Page Technologie */}
               {/* get you component for linkship and add an onCLick event. Now you can render dynamicly with an indicator Number */}
-
-
               {indicatorNav === 1 && (
                 <StartSite TextAndButtonbt={orderMeetingbt("Book a consultation")}></StartSite>
               )
@@ -142,11 +153,24 @@ function App() {
               )}
 
 
+{/*------------------------------------------------------------------------ End Dynamic Render Area -------------------------------------------------------*/}
             </div>
           </div>
-
         </div>
-        {/* Start Page Layout */}
+        {/* Start Page Layout End */}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         {/* Footer is not Element from Layout */}
@@ -193,6 +217,8 @@ function App() {
           </div>
         </div>
         {/* Footer End */}
+
+
 
 
 
