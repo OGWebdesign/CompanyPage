@@ -5,8 +5,8 @@ export const OfferSite = (props: {
 
 
 }) => {
-    const [choice,setChoice] = useState(null)
-
+    const [choice,setChoice] = useState(0)
+    const activeTechnologie = choice ? "w-[10rem] h-[10rem] border-2 border-[#98f144] border-dashed" :" w-[9rem] h-[9rem] border-[#151515]"
 
     return (
         <>
@@ -15,23 +15,23 @@ export const OfferSite = (props: {
 
                 {/* Left Side */}
                 <div className="w-full h-full grid grid-rows-1 grid-cols-4 place-content-center place-items-center">
-                    <div className="w-[10rem] h-[10rem] flex justify-center items-center border-2 border-[#151515] border-dashed rounded-xl p-slate-200 m-5" >
-                        <div className="w-[9rem] text-slate-200 h-[9rem] rounded-[50%] hover:text-[#151515] hover:font-bold bg-[#151515] flex justify-center items-center hover:rounded-[10px] hover:bg-[#98f144] duration-300">
+                    <div onClick={()=> setChoice(1)} className={`${choice === 1 && activeTechnologie} flex justify-center items-center rounded-xl p-slate-200 m-5`} >
+                        <div className="w-[9rem] h-[9rem] rounded-lg text-[#151515] font-bold flex justify-center items-center bg-[#98f144] duration-300">
                            <p className=" font-mono p-4">Website & Programming</p>
                         </div>
                     </div>
-                    <div className="w-[10rem] h-[10rem] flex justify-center items-center border-2 border-[#151515] border-dashed rounded-xl p-slate-200 m-5" >
-                        <div className="w-[9rem] text-slate-200 h-[9rem] rounded-[50%] hover:text-[#151515] hover:font-bold bg-[#151515] flex justify-center items-center hover:rounded-[10px] hover:bg-[#98f144] duration-300">
+                    <div onClick={()=> setChoice(2)} className={`${choice === 2 && activeTechnologie} flex justify-center items-center rounded-xl p-slate-200 m-5`} >
+                        <div className="w-[9rem] h-[9rem] rounded-lg text-[#151515] font-bold flex justify-center items-center bg-[#98f144] duration-300">
                            <p className=" font-mono p-4">Consulting & Administration</p>
                         </div>
                     </div>
-                    <div className="w-[10rem] h-[10rem] flex justify-center items-center border-2 border-[#151515] border-dashed rounded-xl p-slate-200 m-5" >
-                        <div className="w-[9rem] text-slate-200 h-[9rem] rounded-[50%] hover:text-[#151515] hover:font-bold bg-[#151515] flex justify-center items-center hover:rounded-[10px] hover:bg-[#98f144] duration-300">
+                    <div onClick={()=> setChoice(3)} className={`${choice === 3 && activeTechnologie} flex justify-center items-center rounded-xl p-slate-200 m-5`} >
+                        <div className="w-[9rem] h-[9rem] rounded-lg text-[#151515] font-bold flex justify-center items-center bg-[#98f144] duration-300">
                            <p className=" font-mono p-4">Artificial Intelligence</p>
                         </div>
                     </div>
-                    <div className="w-[10rem] h-[10rem] flex justify-center items-center border-2 border-[#151515] border-dashed rounded-xl p-slate-200 m-5" >
-                        <div className="w-[9rem] text-slate-200 h-[9rem] rounded-[50%] hover:text-[#151515] hover:font-bold bg-[#151515] flex justify-center items-center hover:rounded-[10px] hover:bg-[#98f144] duration-300">
+                    <div onClick={()=> setChoice(4)} className={`${choice === 4 && activeTechnologie} flex justify-center items-center rounded-xl p-slate-200 m-5`} >
+                        <div className={"w-[9rem] h-[9rem] rounded-lg text-[#151515] font-bold flex justify-center items-center bg-[#98f144] duration-300"}>
                            <p className=" font-mono p-4">Application Development</p>
                         </div>
                     </div>
