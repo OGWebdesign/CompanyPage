@@ -149,7 +149,7 @@ function App() {
                   <div className={`my-5 ${bordervisibility}  text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
                     onClick={() => { setIndicatorNav(5); setVisible(!visible); }}>Offer</div>
                   <div className="w-full h-5  flex justify-center text-[0.8rem] mt-10 items-center text-[#858585] overflow-hidden font-mono">
-                    <div onClick={() => setIndicatorNav(5)} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Imprint</div>
+                    <div onClick={() => setIndicatorNav(6)} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Imprint</div>
                     <div onClick={() => setIndicatorNav(5)} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Privacy</div>
                     <div onClick={() => { setIndicatorNav(4); setVisible(!visible); }} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Contact</div>
                   </div>
