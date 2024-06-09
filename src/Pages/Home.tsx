@@ -5,6 +5,7 @@ import { CompanySite } from "../components/CompanySite";
 import { ContactSite } from "../components/ContactSite";
 import { StartSite } from "../components/StartSite";
 import { Maintenance } from "../components/Maintenance";
+import { Impressum } from "../components/Impressum";
 
 
 
@@ -78,9 +79,7 @@ function App() {
       <Cursor></Cursor>
 
 
-      {indicatorNav === 5 && (
-        <Maintenance children={maintainbt()}></Maintenance>
-      )}
+      
 
       {/* Wrapper */}
       <div className="w-full bg-[#151515] cursor-none">
@@ -176,6 +175,12 @@ function App() {
               {indicatorNav === 4 && (
                 <ContactSite></ContactSite>
               )}
+              {indicatorNav === 5 && (
+              <Maintenance children={maintainbt()}></Maintenance>
+              )}
+              {indicatorNav === 6 && (
+                <Impressum/>)
+              }
 
               {/*------------------------------------------------------------------------ End Dynamic Render Area -------------------------------------------------------*/}
             </div>
@@ -222,7 +227,7 @@ function App() {
             {/* Footer Nav Bar */}
             <div className="w-full cursor-none flex font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center tablet:text-[1rem] mobile:text-[0.8rem]">
               <div className="w-1/2 flex desktop:gap-10 tablet:gap-6 mobile:gap-4 justify-start" >
-                <div onClick={() => setIndicatorNav(5)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Imprint</div>
+                <div onClick={() => setIndicatorNav(6)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Imprint</div>
                 <div onClick={() => setIndicatorNav(5)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Privacy</div>
                 <div onClick={() => setIndicatorNav(4)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Contact</div>
                 <div onClick={() => setIndicatorNav(5)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Offer</div>
