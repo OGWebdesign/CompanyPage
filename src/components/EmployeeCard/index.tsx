@@ -1,6 +1,6 @@
 export const EmployeeCard = () => {
     return (
-        <div className="w-full flex cursor-none justify-center font-mono  bg-[#151515] gap-20 mt-[25%] border-white">
+        <div className="w-full flex cursor-none justify-center font-mono  bg-[#151515] gap-20 mt-[5%] border-white">
 
             {/* Left Side */}
             <div className="w-1/2 h-full flex flex-col justify-around group">

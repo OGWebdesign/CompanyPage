@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cursor from "../components/Cursor";
-import { DotsIcon, FacebookIcon,  InstagramIcon, PinterestIcon } from "../components/Icons";
+import { DotsIcon, FacebookIcon, InstagramIcon, PinterestIcon } from "../components/Icons";
 import { CompanySite } from "../components/CompanySite";
 import { ContactSite } from "../components/ContactSite";
 import { StartSite } from "../components/StartSite";
@@ -11,6 +11,7 @@ import { StartSite } from "../components/StartSite";
 
 function App() {
   // state for animation
+  
   const [visible, setVisible] = useState(false) // state for Nav Bar scroll out effect
   const [indicatorNav, setIndicatorNav] = useState(1)
   // tailwind css for visible style sheet
@@ -31,30 +32,40 @@ function App() {
   const offerActive = indicatorNav == 3 ? "border-b-8 border-[#98f144] text-slate-200 " : "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
 
 
+
   return (
     <>
-      {/* Wrapper */}
+      {/* cursor over all existing layers with fix position on cursor coordinates */}
       <Cursor></Cursor>
+
+      
+      {/* Wrapper */}
       <div className="w-full bg-[#151515] cursor-none">
         <div className="w-full flex justify-center ">
 
           {/* Start Page Layout */}
           <div className="w-full mobile:p-2 rot tablet:px-5 bg-[#151515] flex justify-center items-center">
             <div className="mobile:w-full tablet:w-full desktop:w-[75%] desktop-xl:w-[45%]">
-
               <div className="w-full duration-500 flex flex-col cursor-none ">
 
+
+
+                {/* Begin NavigationBar Integration for One Page Technologie */}
                 {/* Navbar Item Wrapper */}
                 <div className="w-full flex justify-between duration-500">
 
                   {/* Navbar Logo Wrapper */}
                   <div className="tablet:w-1/2 duration-500">
+                    {/* Navbar Logo Wrapper End*/}
+
 
                     {/* Navbar Logo */}
                     <img
                       className="mobile:w-28 mobile:h-28 tablet:w-36 mobile:m-4 mobile:scale-110 tablet:h-36 desktop:w-36 desktop:h-36 duration-500"
                       src="logo.png" alt="logoGraphic" />
                   </div>
+                  {/* Navbar Logo End*/}
+
 
 
                   {/* Navbar Item Layout */}
@@ -74,15 +85,17 @@ function App() {
 
                     {/* Burger Menu Button */}
                     <div onClick={() => setVisible(!visible)} className=" w-32 h-26 rounded-xl duration-300 mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 flex flex-col justify-center items-center  ">
-                
                       <DotsIcon className={`w-10 h-w-10 ${rotation} duration-300  hover:fill-[#98f144] flex`}></DotsIcon>
                       <p className={` ${textindicator} text-[#777777] mt-4 text-[0.7rem] font-mono`}>{indicator}</p>
                     </div>
                   </div>
                 </div>
+                {/* Navbar Item Layout End */}
+
 
 
                 {/* Scroll Bar Wrapper */}
+
                 <div className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle : notVisibleStyle} duration-300 bg-[#151515]`}>
                   {/* Scroll Bar Item I */}
                   <div className={`my-5 ${bordervisibility} text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
@@ -101,7 +114,14 @@ function App() {
                   <div className={`${stroke} duration-500 mt-5  border-2 border-[#98f144] rounded-full mb-5`}></div>
                 </div>
               </div>
+
               {/* EndNav */}
+              {/* End NavigationBar Integration for One Page Technologie */}
+
+
+
+              {/* get you component for linkship and add an onCLick event. Now you can render dynamicly with an indicator Number */}
+
 
               {indicatorNav === 1 && (
                 <StartSite></StartSite>
@@ -120,28 +140,32 @@ function App() {
           </div>
 
         </div>
+        {/* Start Page Layout */}
 
 
-
-
+        {/* Footer is not Element from Layout */}
         {/* Footer Start */}
         <div>
+
+          {/* Footer Body */}
           <div className="w-full cursor-none flex flex-col border font-mono text-slate-200 p-10 mobile:p-4 bg-slate-200 mobile:rounded-t-xl rounded-t-2xl mt-[10%]">
+            {/* First TextFragment */}
             <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem]  inline-block text-[#151515] leading-none">
               YOUR IDEA
             </article>
-
-
+            {/* Secound TextFragment */}
             <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem] inline-block text-[#151515] leading-none">DESERVES BETTER.</article>
             <div className="w-full flex items-center">
-
+              {/* Last TextFragment */}
               <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem]  desktop:w-[50rem] tablet:w-[35rem] mobile:w-[13rem] inline-block bg-[#98f144] text-[#151515] font-bold leading-none">TALK TO US! </article>
+              {/* Button */}
               <a className="desktop:w-[10rem] cursor-none tablet:w-[8rem] tablet:h-[3rem] desktop:h-[4rem] desktop:text-[1.4rem] mobile:w-[6rem] mobile:h-[2rem] mobile:rounded-lg mobile:ml-[1rem] mobile:text-[1rem] font-mono ml-[2rem] duration-300 border-[#151515] mobile:hover:border-2 desktop:hover:border-4 hover:bg-[#98f144] hover:font-bold hover:text-[#151515] rounded-2xl bg-[#151515] text-center flex justify-center items-center" href="">
                 Lets talk
               </a>
             </div>
 
 
+            {/* Footer Nav Bar */}
             <div className="w-full cursor-none flex font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center tablet:text-[1rem] mobile:text-[0.8rem]">
               <div className="w-1/2 flex desktop:gap-10 tablet:gap-6 mobile:gap-4 justify-start" >
                 <div className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Imprint</div>
@@ -152,19 +176,22 @@ function App() {
               <div className="w-1/2 flex desktop:gap-8 tablet:gap-6 mobile:gap-4 items-center justify-end">
                 <p className="inline-block bg-[#98f144] mobile:opacity-0 ">Social Media</p>
                 <FacebookIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6 mobile:w-h-5 mobile:h-5 duration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></FacebookIcon>
-                <InstagramIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6 mobile:w-h-5 mobile:h-5 d0ration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></InstagramIcon>
+                <InstagramIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6 mobile:w-h-5 mobile:h-5 duration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></InstagramIcon>
                 <PinterestIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6  mobile:w-h-5 mobile:h-5 duration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></PinterestIcon>
               </div>
             </div>
+            {/* Footer Nav Bar */}
           </div>
           <div className="w-full p-4 text-[#151515] bg-slate-200 flex font-mono font-semibold justify-center items-center">
             <p>©2024 OG-Webdesign</p>
           </div>
         </div>
         {/* Footer End */}
+        
 
 
       </div>
+      {/* Body End */}
 
     </>
   );
