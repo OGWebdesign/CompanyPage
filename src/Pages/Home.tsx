@@ -79,6 +79,8 @@ function App() {
 
 
 
+
+
   return (
     <>
       {/* cursor over all existing layers with fix position on cursor coordinates */}
@@ -90,7 +92,7 @@ function App() {
       )}
 
       {/* Wrapper */}
-      <div className="w-full bg-[#151515] cursor-none">
+      <div className="w-full bg-[#151515] cursor-none overflow-hidden">
         <div className="w-full flex justify-center ">
 
           {/* Start Page Layout */}
@@ -200,17 +202,6 @@ function App() {
           </div>
         </div>
         {/* Start Page Layout End */}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
