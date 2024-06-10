@@ -7,6 +7,7 @@ import { StartSite } from "../components/StartSite";
 import { OfferSite } from "../components/OfferSite";
 import { Impressum } from "../components/Impressum";
 import { Maintenance } from "../components/Maintenance";
+import { Privacy } from "../components/Privacy";
 
 
 
@@ -19,7 +20,7 @@ import { Maintenance } from "../components/Maintenance";
 function App() {
   // state for animation
   const [visible, setVisible] = useState(false) // state for Nav Bar scroll out effect
-  const [indicatorNav, setIndicatorNav] = useState(1)
+  const [indicatorNav, setIndicatorNav] = useState(8)
 
 
   // tailwind css for visible style sheet
@@ -68,7 +69,7 @@ function App() {
     </div>
 
 
-  const Maintenancebt = () => <div onClick={()=> setIndicatorNav(1)} className="w-[14rem] h-[3rem] hover:bg-[#6ba039] duration-300 rounded-lg mt-10 bg-[#98f144] flex justify-center items-center">
+  const Maintenancebt = () => <div onClick={() => setIndicatorNav(1)} className="w-[14rem] h-[3rem] hover:bg-[#6ba039] duration-300 rounded-lg mt-10 bg-[#98f144] flex justify-center items-center">
     <p className="text-[#151515] font-mono font-bold">Back to Main Menu</p>
   </div>
 
@@ -157,7 +158,7 @@ function App() {
                     onClick={() => { setIndicatorNav(3); setVisible(!visible); }}>Offer</div>
                   <div className="w-full h-5  flex justify-center text-[0.8rem] mt-10 items-center text-[#858585] overflow-hidden font-mono">
                     <div onClick={() => { setIndicatorNav(6); setVisible(!visible); }} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Imprint</div>
-                    <div onClick={() => setIndicatorNav(7)} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Privacy</div>
+                    <div onClick={() => { setIndicatorNav(8); setVisible(!visible); }} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Privacy</div>
                     <div onClick={() => { setIndicatorNav(4); setVisible(!visible); }} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Contact</div>
                   </div>
                   <div className={`${stroke} duration-500 mt-5  border-2 border-[#98f144] rounded-full mb-5`}></div>
@@ -187,6 +188,9 @@ function App() {
               )}
               {indicatorNav === 6 && (
                 <Impressum></Impressum>
+              )}
+              {indicatorNav === 8 && (
+                <Privacy></Privacy>
               )}
 
 
@@ -237,7 +241,7 @@ function App() {
             <div className="w-full cursor-none flex font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center tablet:text-[1rem] mobile:text-[0.8rem]">
               <div className="w-1/2 flex desktop:gap-10 tablet:gap-6 mobile:gap-4 justify-start" >
                 <div onClick={() => setIndicatorNav(6)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Imprint</div>
-                <div onClick={() => setIndicatorNav(7)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Privacy</div>
+                <div onClick={() => setIndicatorNav(8)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Privacy</div>
                 <div onClick={() => setIndicatorNav(4)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Contact</div>
                 <div onClick={() => setIndicatorNav(3)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Offer</div>
               </div>
