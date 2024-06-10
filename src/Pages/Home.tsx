@@ -222,21 +222,21 @@ function App() {
               {/* Last TextFragment */}
               <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem]  desktop:w-[50rem] tablet:w-[35rem] mobile:w-[13rem] inline-block bg-[#98f144] text-[#151515] font-bold leading-none">TALK TO US! </article>
               {/* Button */}
-              <div onClick={() => setIndicatorNav(4)} className="desktop:w-[10rem] cursor-none tablet:w-[8rem] tablet:h-[3rem] desktop:h-[4rem] desktop:text-[1.4rem] mobile:w-[6rem] mobile:h-[2rem] mobile:rounded-lg mobile:ml-[1rem] mobile:text-[1rem] font-mono ml-[2rem] duration-300 border-[#151515] mobile:hover:border-2 desktop:hover:border-4 hover:bg-[#98f144] hover:font-bold hover:text-[#151515] rounded-2xl bg-[#151515] text-center flex justify-center items-center">
+              <div onClick={() => setIndicatorNav(4)} className="desktop:w-[10rem] cursor-none tablet:w-[8rem] tablet:h-[3rem] desktop:h-[4rem] desktop:text-[1.4rem] mobile:w-[6rem] mobile:h-[2rem] mobile:rounded-lg mobile:ml-[1rem] mobile:text-[0.88rem] font-mono ml-[2rem] duration-300 border-[#151515] mobile:hover:border-2 desktop:hover:border-4 hover:bg-[#98f144] hover:font-bold hover:text-[#151515] rounded-2xl bg-[#151515] text-center flex justify-center items-center">
                 Lets talk
               </div>
             </div>
 
 
             {/* Footer Nav Bar */}
-            <div className="w-full cursor-none flex font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center tablet:text-[1rem] mobile:text-[0.8rem]">
-              <div className="w-1/2 flex desktop:gap-10 tablet:gap-6 mobile:gap-4 justify-start" >
+            <div className="w-full cursor-none flex flex-row mobile:flex-col font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center tablet:text-[1rem] mobile:text-[0.8rem]">
+              <div className="w-1/2 mobile:w-full flex desktop:gap-10 tablet:gap-6 mobile:gap-4 justify-start" >
                 <div onClick={() => setIndicatorNav(6)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Imprint</div>
                 <div onClick={() => setIndicatorNav(8)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Privacy</div>
                 <div onClick={() => setIndicatorNav(4)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Contact</div>
                 <div onClick={() => setIndicatorNav(3)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Offer</div>
               </div>
-              <div className="w-1/2 flex desktop:gap-8 tablet:gap-6 mobile:gap-4 items-center justify-end">
+              <div className="w-1/2 mobile:w-full mobile:mt-3 flex desktop:gap-8 tablet:gap-6 mobile:gap-4 items-center justify-end">
                 <p className="inline-block bg-[#98f144] mobile:opacity-0 ">Social Media</p>
                 <FacebookIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6 mobile:w-h-5 mobile:h-5 duration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></FacebookIcon>
                 <InstagramIcon className="desktop:w-9 desktop:h-9 tablet:w-6 tablet:h-6 mobile:w-h-5 mobile:h-5 duration-300  hover:border-[#151515] hover:border:2 hover:fill-[#98f144] p-"></InstagramIcon>
