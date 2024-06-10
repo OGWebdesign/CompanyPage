@@ -246,7 +246,7 @@ function App() {
             {/* Footer Nav Bar */}
           </div>
           <div className="w-full p-4 text-[#151515] bg-slate-200 flex font-mono font-semibold justify-center items-center">
-            <p>©2024 OG-Webdesign</p>
+            <p>©2024 OG Webdesign</p>
           </div>
         </div>
         {/* Footer End */}
