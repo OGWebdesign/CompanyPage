@@ -3,7 +3,7 @@ import { PrivacyParagraph } from "../PrivacyParagraph"
 
 export const Privacy = () => {
     return (
-        <div className="w-full flex flex-col">
+        <div className="w-full flex flex-col animate-fadeIn">
 
 
             <Heading heading="Privacy Police" headstyle="text-[#151515] inline-block bg-[#98f144]" />
