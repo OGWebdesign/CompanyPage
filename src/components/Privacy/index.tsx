@@ -5,7 +5,7 @@ export const Privacy = () => {
     return (
 
 
-        <div className="w-full flex flex-col justify-center items-center">
+        <div className="w-full flex flex-col justify-center ">
             <Heading heading="Privacy Police" headstyle="text-[#151515] bg-[#98f144]" />
             <PrivacyParagraph
                 headline="General information"
@@ -20,7 +20,7 @@ export const Privacy = () => {
 
 
 
-<p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">Data collection on our website</p>
+            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.5rem]">Data collection on our website</p>
             <PrivacyParagraph
                 headline="Who is responsible for data collection on this website?"
                 text="The data processing on this website is carried out by the website operator. You can find his contact details in the imprint of this website."
@@ -54,7 +54,7 @@ export const Privacy = () => {
 
 
 
-<p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">General information and mandatory information</p>
+            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.5rem]">General information and mandatory information</p>
             <PrivacyParagraph
                 headline="Privacy"
                 text="The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this data protection declaration.
@@ -117,7 +117,7 @@ export const Privacy = () => {
 
 
 
-            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">Data collection on our website</p>
+            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.5rem]">Data collection on our website</p>
             <PrivacyParagraph
                 headline="Cookies"
                 text="Some of the websites use so-called cookies. Cookies do not harm your computer and do not contain viruses. Cookies are used to make our service more user-friendly, effective and secure. Cookies are small text files that are stored on your computer and saved by your browser.
@@ -147,7 +147,7 @@ export const Privacy = () => {
                 withHead={true}
             ></PrivacyParagraph>
 
-            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">Social media</p>
+            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.5rem]">Social media</p>
             <PrivacyParagraph
                 headline="Social media plugins with Shariff"
                 text="Our pages contain social media plugins (e.g. Facebook, Twitter, Instagram). You can usually recognize the plugins by the respective social media logos. To ensure data protection on our website, we only use these plugins together with the so-called Shariff solution. This application prevents the plugins integrated on our pages from transferring data to the respective provider when you first enter the page.
@@ -157,7 +157,7 @@ export const Privacy = () => {
             ></PrivacyParagraph>
 
 
-            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">Analysis tools and advertising</p>
+            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.5rem]">Analysis tools and advertising</p>
             <PrivacyParagraph
                 headline="Google Analytics"
                 text="This website uses functions of the web analysis service Google Analytics. The provider is Google Ireland Limited Google, Gordon House, Barrow Street, Dublin 4, Ireland.
@@ -205,7 +205,7 @@ export const Privacy = () => {
             ></PrivacyParagraph>
 
 
-            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">Newsletter</p>
+            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.5rem]">Newsletter</p>
             <PrivacyParagraph
                 headline="Newsletter data"
                 text="If you would like to receive the newsletter offered on the website, we require an email address from you as well as information that allows us to verify that you are the owner of the email address provided and that you agree to receive the newsletter. No further data is collected or is only collected on a voluntary basis. We use this data exclusively to send the requested information and do not pass it on to third parties.
@@ -214,7 +214,7 @@ export const Privacy = () => {
                 withHead={true}
             ></PrivacyParagraph>
 
-            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">Plugins and tools</p>
+            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.5rem]">Plugins and tools</p>
             <PrivacyParagraph
                 headline="YouTube"
                 text="Our website uses plugins from the YouTube site operated by Google. The site is operated by Google Ireland Limited Google, Gordon House, Barrow Street, Dublin 4, Ireland.
@@ -243,7 +243,7 @@ export const Privacy = () => {
                 withHead={true}
             ></PrivacyParagraph>
 
-            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">eCommerce and payment providers</p>
+            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.5rem]">eCommerce and payment providers</p>
             <PrivacyParagraph
                 headline="Processing of data (customer and contract data)"
                 text="We only collect, process and use personal data to the extent that it is necessary for the establishment, content design or change of the legal relationship (master data). This is done on the basis of Art. 6 Paragraph 1 Letter b of GDPR, which permits the processing of data to fulfill a contract or pre-contractual measures. We only collect, process and use personal data about the use of our websites (usage data) to the extent that this is necessary to enable the user to use the service or to bill them.

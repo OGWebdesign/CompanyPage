@@ -1,24 +1,35 @@
+
 export const EmployeeCard = () => {
     return (
-        <div className="w-full flex cursor-none justify-center font-mono  bg-[#151515] gap-20 mt-[5%] border-white">
+        <div className="w-full flex justify-center items-center">
+            <div className="w-full desktop:max-w-[70rem] items-center flex flex-col cursor-none duration-300  rounded-2xl p-6 justify-center font-mono gap-20 mt-[5%] border-white">
 
-            {/* Left Side */}
-            <div className="w-1/2 h-full flex flex-col justify-around group">
-                <div className="flex items-end flex-col text-right">
-                    <img src="nils.webp" className="w-[10rem] h-[10rem] bg-nils hover:scale-125 duration-300 hover:border-8 grayscale hover:grayscale-0  hover:border-[#98f144] rounded-full border-slate-200 border-2 bg-no-repeat bg-cover">
-
-                    </img>
-                    <p className="text-[#777777] ease-in-out duration-1000 opacity-0 group-hover:opacity-100 mt-14">Hallo, mein Name ist Nils Ole Otto. Ich bin 20 Jahre alt und studiere Informatik an der BTU Cottbus. In meiner Freizeit programmiere ich leidenschaftlich gerne. Mein Schwerpunkt liegt auf Web-Backend-Entwicklung und Datenbanken. Die Kombination aus Logik, Kreativität und Problemlösung fasziniert mich und ich freue mich immer darauf, neue Technologien und Ansätze in meinen Projekten zu erkunden und anzuwenden.</p>
+                {/* Left Side */}
+                <div className="w-full flex tablet:flex-row group mobile:justify-center mobile:items-center mobile:flex-col-reverse ">
+                    <div className="text-slate-200">
+                        <p className="font-mono font-bold text-[2rem]">Hi</p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae sint dolorum officiis tenetur, rerum, voluptate facilis nostrum iste perspiciatis quasi quas quo excepturi mollitia atque consequuntur, similique odit itaque eaque.
+                        Dolorum labore ex minima beatae illo blanditiis animi inventore, eaque molestiae dignissimos recusandae adipisci minus eius repellendus accusamus. Dicta dignissimos aliquid tenetur modi eius voluptatem ab animi iusto a soluta?
+                    </div>
+                    <div className="p-8">
+                        
+                        <img loading="lazy" className="min-w-[5rem] max-w-[15rem] grayscale group-hover:grayscale-0 group-hover:scale-110 duration-300  mobile:rounded-full mobile:mb-10 mobile:border-8 border-[#98f144]" src="nils.webp" alt="" />
+                    </div>
                 </div>
-            </div>
 
 
-            {/* Right Side */}
-            <div className="w-1/2 h-full flex flex-col group">
-                <img src="max.webp" className="w-[10rem] h-[10rem] bg-nils hover:scale-125 duration-300 hover:border-8 grayscale hover:grayscale-0  hover:border-[#98f144] rounded-full border-slate-200 border-2 bg-no-repeat bg-cover">
+                {/* Right Side */}
+                <div className="w-full flex tablet:flex-row group mobile:flex-col mobile:justify-center mobile:items-center">
+                    <div className="p-8">
+                        <img loading="lazy" className="min-w-[5rem] max-w-[15rem] grayscale group-hover:grayscale-0 group-hover:scale-110 duration-300  mobile:rounded-full mobile:mb-10 mobile:border-8 border-[#98f144]" src="max.webp" alt="" />
+                    </div>
+                    <div className="text-slate-200">
+                        <p className="font-mono font-bold text-[2rem]">Hi</p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto perspiciatis officiis quisquam id dignissimos asperiores. Sed repudiandae velit totam non dicta dolores sunt labore distinctio. Molestiae consectetur sunt omnis?
+                        Reiciendis odio temporibus earum eos obcaecati pariatur eligendi quam, dolorem, illum quas sint rerum ullam fuga corrupti doloremque, molestias reprehenderit nemo ipsa autem ad recusandae. Id maxime asperiores non soluta!
+                    </div>
 
-                </img>
-                <p className="text-[#777777] ease-in-out duration-1000 opacity-0 group-hover:opacity-100 mt-14">Hi, ich bin Maximilian, Anwendungsentwickler und Webdesigner. Seit 2016 programmiere ich Softwareanwendungen und Webseiten. Angefangen von Discord Bots bis hin zu kooperativen Softwareprojekten mit dem Gesundheitswesen.</p>
+                </div>
             </div>
         </div>
     )
