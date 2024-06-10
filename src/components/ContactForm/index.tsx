@@ -41,7 +41,7 @@ export const ContactForm = () => {
 
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">NAME</span> IS </span>
 
-        <input  type="input" placeholder="Name" className=" cursor-none
+        <input name="namefield"  type="input" placeholder="Name" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem] 
 
@@ -63,7 +63,7 @@ export const ContactForm = () => {
         
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">MAIL</span> IS </span>
        
-        <input type="input" placeholder="Email" className=" cursor-none
+        <input name="emailfield" type="input" placeholder="Email" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
