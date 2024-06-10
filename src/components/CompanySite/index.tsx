@@ -11,10 +11,10 @@ export const CompanySite = ()=>{
                  head="#Transparency" animation={false} classname="text-right justify-end"></ParagraphOG>
                        <EmployeeCard></EmployeeCard>
                  <LargeCard 
-                  head1style="text-slate-200 mt-10"
-                  head2style="text-slate-200 mt-10"
-                  text1Style="text-[#707070]"
-                  text2Style="text-[#707070]"
+                  head1style="text-[#98f144] mt-10"
+                  head2style="text-[#98f144] mt-10"
+                  text1Style="text-[#b9b9b9]"
+                  text2Style="text-[#b9b9b9]"
                   head2="Young and unconventional" 
                   head1="Since XX23" 
                   text2="At OG Webdesign, we believe that your website should be more than just a digital business card. It should tell your story, bring your brand to life and delight your customers. Our team consists of talented designers, developers and strategists who work with passion and creativity to turn your ideas into reality. Straight forward!" 

@@ -17,7 +17,7 @@ export const ParagraphOG = (props:{
             <div className="w-full  flex flex-col items-end ">
                 <Heading headstyle={props.classnamehead} classname={` justify-end text-right`} heading={props.head}></Heading>
                 <p
-                    className={`w-3/4 mobile:w-full px-8 mt-4  select-none font-mono text-[#777777]
+                    className={`w-3/4 mobile:w-full px-8 mt-4  select-none font-mono text-[#b9b9b9]
                           font-extralight ${props.classname}`}
                 >{props.text}</p>
                 <div className="w-full flex pl-4 justify-end">

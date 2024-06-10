@@ -5,9 +5,9 @@ import { useTypewriter } from "react-simple-typewriter";
 
 export const TechStripe = () => {
     const [typeEffect] = useTypewriter({
-        words:['Its Git', 'Its NodeJS', 'Its Docker', 'Its React', 
-            'Its Java', 'Its C#', 'Its Haskell', 'Its Python', 'Its Html',
-        'Its Css', 'Its Typescript', 'Its Javascript', 'Its Sass', 'Its MongoDB', 'Its Tailwind'],
+        words:['Its Git   ', 'Its NodeJS   ', 'Its Docker   ', 'Its React   ', 
+            'Its Java   ', 'Its C#   ', 'Its Haskell   ', 'Its Python   ', 'Its Html   ',
+        'Its Css   ', 'Its Typescript   ', 'Its Javascript   ', 'Its Sass   ', 'Its MongoDB   ', 'Its Tailwind   '],
         typeSpeed: 180,
         loop:true ,
         delaySpeed: 100,
@@ -18,8 +18,8 @@ export const TechStripe = () => {
       });
     return (
         <>
-            <div className="w-full text-[#777777] mt-[10rem] select-none font-mono flex justify-center items-center">
-                <p>Supported technologies: <span>{typeEffect}</span></p>
+            <div className="w-full text-[#b9b9b9] mt-[10rem] select-none font-mono flex justify-center items-center">
+                <p>Supported technologies: <span className="text-[#98f144] text-[1.2rem]">{typeEffect}</span></p>
             </div>
             <div className="w-full flex flex-col justify-center items-center select-none">
                 <div className="w-full p-8 mt-4 gap-20 grid desktop:grid-rows-1 desktop:grid-cols-6 tablet:grid-rows-2 tablet:grid-cols-3 mobile:grid-rows-3 mobile:grid-cols-2">
