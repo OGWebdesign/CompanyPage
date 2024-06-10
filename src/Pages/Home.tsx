@@ -7,6 +7,7 @@ import { StartSite } from "../components/StartSite";
 import { OfferSite } from "../components/OfferSite";
 import { Impressum } from "../components/Impressum";
 import { Maintenance } from "../components/Maintenance";
+import { Privacy } from "../components/Privacy";
 
 
 
@@ -19,7 +20,7 @@ import { Maintenance } from "../components/Maintenance";
 function App() {
   // state for animation
   const [visible, setVisible] = useState(false) // state for Nav Bar scroll out effect
-  const [indicatorNav, setIndicatorNav] = useState(1)
+  const [indicatorNav, setIndicatorNav] = useState(8)
 
 
   // tailwind css for visible style sheet
@@ -68,7 +69,7 @@ function App() {
     </div>
 
 
-  const Maintenancebt = () => <div onClick={()=> setIndicatorNav(1)} className="w-[14rem] h-[3rem] hover:bg-[#6ba039] duration-300 rounded-lg mt-10 bg-[#98f144] flex justify-center items-center">
+  const Maintenancebt = () => <div onClick={() => setIndicatorNav(1)} className="w-[14rem] h-[3rem] hover:bg-[#6ba039] duration-300 rounded-lg mt-10 bg-[#98f144] flex justify-center items-center">
     <p className="text-[#151515] font-mono font-bold">Back to Main Menu</p>
   </div>
 
@@ -187,6 +188,9 @@ function App() {
               )}
               {indicatorNav === 6 && (
                 <Impressum></Impressum>
+              )}
+              {indicatorNav === 8 && (
+                <Privacy></Privacy>
               )}
 
 
