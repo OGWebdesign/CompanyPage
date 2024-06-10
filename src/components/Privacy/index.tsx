@@ -3,10 +3,10 @@ import { PrivacyParagraph } from "../PrivacyParagraph"
 
 export const Privacy = () => {
     return (
-        <div className="w-full flex flex-col animate-fadeIn">
 
 
-            <Heading heading="Privacy Police" headstyle="text-[#151515] inline-block bg-[#98f144]" />
+        <div className="w-full flex flex-col justify-center items-center">
+            <Heading heading="Privacy Police" headstyle="text-[#151515] bg-[#98f144]" />
             <PrivacyParagraph
                 headline="General information"
                 text="The following information provides a simple overview of what happens to your personal data when you visit our website. Personal data is all data with which you can be personally identified. 
@@ -20,7 +20,7 @@ export const Privacy = () => {
 
 
 
-            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">Data collection on our website</p>
+<p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">Data collection on our website</p>
             <PrivacyParagraph
                 headline="Who is responsible for data collection on this website?"
                 text="The data processing on this website is carried out by the website operator. You can find his contact details in the imprint of this website."
@@ -54,7 +54,7 @@ export const Privacy = () => {
 
 
 
-            <p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">General information and mandatory information</p>
+<p className="font-mono text-[#98f144]  font-semibold p-10 text-[1.2rem]">General information and mandatory information</p>
             <PrivacyParagraph
                 headline="Privacy"
                 text="The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this data protection declaration.
@@ -187,7 +187,7 @@ export const Privacy = () => {
             <PrivacyParagraph
                 headline="Objection against data collection"
                 text="You can prevent Google Analytics from collecting your data by clicking on the following link. An opt-out cookie will be set that prevents your data from being collected on future visits to this website: Deactivate Google Analytics.
-                You can find more information about how Google Analytics handles user data in Google's privacy policy: https://support.google.com/analytics/answer/6004245?hl=de."
+                You can find more information about how Google Analytics handles user data in Google's privacy policy"
                 withHead={true}
             ></PrivacyParagraph>
 
