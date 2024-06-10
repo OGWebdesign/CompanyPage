@@ -138,7 +138,7 @@ function App() {
                     {/* Burger Menu Button */}
                     <div onClick={() => setVisible(!visible)} className=" w-32 h-26 rounded-xl duration-300 mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 flex flex-col justify-center items-center  ">
                       <DotsIcon className={`w-10 h-w-10 ${rotation} duration-300  hover:fill-[#98f144] flex`}></DotsIcon>
-                      <p className={` ${textindicator} text-[#777777] mt-4 text-[0.7rem] font-mono`}>{indicator}</p>
+                      <p className={` ${textindicator} text-[#e0e0e0] mt-4 text-[0.7rem] font-mono`}>{indicator}</p>
                     </div>
                   </div>
                 </div>
