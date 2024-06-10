@@ -27,7 +27,7 @@ export const ContactForm = () => {
   mobile:px-2 tablet:px-8 
   font-mono">
     <h1 className={`text-white mobile:text-[2rem] tablet:text-[2.3rem] laptop:text-[3rem] mobile:ml-[4rem] laptop:ml-[15rem] font-bold font-mono transition-all duration-700 ease-in-out ${check && "-translate-y-14"}`}>HELLO,</h1>
-    <form className="flex flex-col items-start">
+    <form id="form1" className="flex flex-col items-start">
 
     {/* MY NAME IS ______ */}
       <div className={`
