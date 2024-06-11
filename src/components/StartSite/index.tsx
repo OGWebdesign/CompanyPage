@@ -4,7 +4,6 @@ import { CardWhite } from "../CardWhite"
 import { Heading } from "../Heading"
 import { LargeCard } from "../LargeCard"
 import { ParagraphOG } from "../ParagraphOG"
-import { SideBar } from "../SideBar"
 import { TechStripe } from "../TechStripe"
 import { TextAndButton } from "../TextAndButton"
 
@@ -16,8 +15,7 @@ export const StartSite = (props: {
   WhiteCardButton: JSX.Element | JSX.Element[] | string,
 }) => {
   return (
-    <div className="animate-fadeIn">
-      <SideBar /> 
+    <div className="animate-fadeIn"> 
       <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
       <TextAndButton children={props.TextAndButtonbt}
 
