@@ -55,10 +55,10 @@ export const SideBar = (props:SideBarProps) => {
         <div className="w-full flex justify-center items-center mt-[2rem] gap-x-5 transition-all">
 
         {/* ICONS */}
-        <div onClick={props.handleHome} className="w-[3rem] group p-2 "><HouseIcon className="bg-fill-[#151515]" /> </div>
-        <div onClick={props.handleCompany} className="w-[2.6rem] p-2"><CompanyIcon className="bg-fill-[#151515]" /> </div>
-        <div onClick={props.handleOffer} className="w-[2.6rem] p-2 "><OfferIcon className="bg-fill-[#151515]" /> </div>
-        <div onClick={props.handleMail} className="w-[3rem] p-2 "><MailIcon className="bg-fill-[#151515]" /> </div>
+        <div onClick={props.handleHome} className="w-[3rem] group p-2 hover:scale-150 duration-300 "><HouseIcon className="bg-fill-[#151515]" /> </div>
+        <div onClick={props.handleCompany} className="w-[2.6rem] p-2 hover:scale-150 duration-300"><CompanyIcon className="bg-fill-[#151515]" /> </div>
+        <div onClick={props.handleOffer} className="w-[2.6rem] p-2 hover:scale-150 duration-300 "><OfferIcon className="bg-fill-[#151515]" /> </div>
+        <div onClick={props.handleMail} className="w-[3rem] p-2 hover:scale-150 duration-300 "><MailIcon className="bg-fill-[#151515]" /> </div>
 
         </div>
 
