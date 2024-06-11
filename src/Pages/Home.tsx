@@ -8,7 +8,7 @@ import { OfferSite } from "../components/OfferSite";
 import { Impressum } from "../components/Impressum";
 import { Maintenance } from "../components/Maintenance";
 import { Privacy } from "../components/Privacy";
-import { Clock } from "../components/Clock";
+import { SideBar } from "../components/SideBar";
 
 
 
@@ -77,8 +77,22 @@ function App() {
   //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+  {/* Funktionen für SideBar */}
+  const handleHome = () => {
+    setIndicatorNav(1);
+  }
 
+  const handleCompany = () => {
+    setIndicatorNav(2);
+  }
 
+  const handleOffer = () => {
+    setIndicatorNav(3);
+  }
+
+  const handleMail = () => {
+    setIndicatorNav(4);
+  }
 
 
 
@@ -170,10 +184,7 @@ function App() {
                
                 </div>
               </div>
-              <div className="mt-[2rem]">
-                <Clock/>
-              </div>
-
+              <SideBar handleCompany={handleCompany} handleHome={handleHome} handleMail={handleMail} handleOffer={handleOffer}/>
               {/* EndNav */}
               {/* End NavigationBar*/}
 

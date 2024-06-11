@@ -15,7 +15,7 @@ export const StartSite = (props: {
   WhiteCardButton: JSX.Element | JSX.Element[] | string,
 }) => {
   return (
-    <div className="animate-fadeIn">
+    <div className="animate-fadeIn"> 
       <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
       <TextAndButton children={props.TextAndButtonbt}
 
