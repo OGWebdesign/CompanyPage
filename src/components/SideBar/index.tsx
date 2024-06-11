@@ -24,20 +24,20 @@ export const SideBar = (props:SideBarProps) => {
         setCounter(counter + 1);
         if(counter % 2 === 0){
         setTimeout(() => {
+            setHeight(!height);
+        }, 1000);
+        setClick(!click);
+        } else {
+        setTimeout(() => {
             setClick(!click);
         }, 500);
         setHeight(!height);
-        } else {
-        setTimeout(() => {
-            setHeight(!height);
-        }, 500);
-        setClick(!click);
         }
     }
 
     return(
         <div onClick={handleClick} className={`fixed z-20 w-[20rem] top-1/2 right-0 transform translate-y-[7rem] bg-[#98f144] text-[#151515] p-4 
-        rounded-l-lg flex shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out ${click && activeStyle} ${!click && inactiveStyle}
+        rounded-l-lg flex shadow-lg hover:shadow-2xl transition-all duration-500 ease-in-out ${click && activeStyle} ${!click && inactiveStyle}
         ${height && "h-[5rem]"}`}>
         <div className="w-[1rem] flex justify-center items-center transition-all">
         {}
