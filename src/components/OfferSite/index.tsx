@@ -88,7 +88,7 @@ export const OfferSite = () => {
                 {/* Wrapper for GridItem */}
                 <div className="w-full flex flex-col justify-center items-center">
                     {/* Grid Layout */}
-                    <div className="tablet:w-[80%] mobile:w-full grid mobile:grid-rows-2 gap-5 mobile:grid-cols-2 place-content-center place-items-center">
+                    <div className="tablet:w-[80%] mobile:w-full grid mobile:grid-rows-2 duration-500 gap-5 mobile:grid-cols-2 tablet:grid-rows-1 tablet:grid-cols-4 place-content-center place-items-center">
 
                         {/* Wrapper for GridItem */}
                         <div onClick={() => setActiveOffer(1)} className={`flex justify-center items-center w-[8rem] h-[8rem] ${activeOffer == 1 && activeOfferStyle}`}>
