@@ -1,11 +1,8 @@
-import { PackageCard } from "../PackageCard"
 import { ParagraphOG } from "../ParagraphOG"
 import { ParagraphOGLeft } from "../ParagraphOGLeft"
-import { SwitchesWebsite } from "../SwitchesWebsite"
 
-const technologieCase = () => <PackageCard description1="3" description2="3"description3="3"description4="3"kind1="2"kind2="2"kind3="3"kind4="4"></PackageCard>
-const switchesWebsite = () => <SwitchesWebsite switchTitle1="df" switchTitle2="sdff" switchTitle3="dfs" switchTitle4="fsdf"></SwitchesWebsite>
-const packageCard = () => <PackageCard description1="3" description2="3" description3="3" description4="3" kind1="3" kind2="3" kind3="34" kind4="4234"></PackageCard>
+
+
 
 
 export const OfferSite = () => {
@@ -26,7 +23,7 @@ export const OfferSite = () => {
             </div>
 
 
-           
+      
 
 
             {/* Begin Program */}
