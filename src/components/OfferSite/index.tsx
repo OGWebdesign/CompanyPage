@@ -12,8 +12,8 @@ export const OfferSite = () => {
     const [activeButton3, setActiveButton3] = useState(false)
     const [activeButton4, setActiveButton4] = useState(false)
     const [activeButton5, setActiveButton5] = useState(false)
-    
-    
+
+
     // Style Sheet for Active Items
     const activeOfferStyle = "border rounded-lg border-dashed border-[#98f144] border-2"
     const activePackageStyle = "border-dashed border-[#98f144] rounded-2xl"
@@ -22,6 +22,13 @@ export const OfferSite = () => {
 
 
 
+
+    // description of switch selection
+    const modernDescription = "A modern design with a very intuitive, often minimalist user interface. This type of design is particularly suitable for young or technical companies."
+    const elegantDescription ="An elegant design is ideal for companies in the fashion or beauty industry or for art. However, this design language often requires high-quality photos."
+    const playfulDescription ="A playful design for the Spielemax. A particularly large number of effects and animations are a particularly common stylistic element here. A glowing button here, an expanding window there. Everything is possible."
+    const functionalDescription ="A functional design is the perfect design language for craft companies or companies in the automotive industry. Here, particular emphasis is placed on performance and simplicity. Particularly fast loading times of up to 50ms are possible."
+    const unconventionalDescription ="With an unconventional design, particular emphasis is placed on being different. This can appear very modern but also a little crazy. The aim of this design concept will be to create a particularly striking effect that will stay in the customer's mind."
     // Switch Logic => One On and the other Off
     const switchLogic = (number: number | boolean | ((prevState: boolean) => boolean)) => {
         if (number == 1) {
@@ -88,10 +95,10 @@ export const OfferSite = () => {
 
 
             {/* Offer Program */}
-            <div className="w-full duration-500 mt-[3rem]">
+            <div className="w-full duration-500 mt-[10rem]">
 
 
-                <h1 className="text-[2rem] text-[#98f144] text-center mb-[3rem]">Configure your own offer with us.</h1>
+                <h1 className="text-[1.3rem] text-[#98f144] text-center mb-[3rem] font-mono">Configure your own offer with us.</h1>
 
                 {/* Wrapper for GridItem */}
                 <div className="w-full flex flex-col justify-center items-center">
@@ -123,14 +130,14 @@ export const OfferSite = () => {
                     </div>
 
                     {/* RenderZone */}
-                    <div className="w-full flex flex-col items-center mt-10">
-
-                        {/* First Half */}
-                        <div className="w-full h-1/2 flex flex-col">
 
 
 
-                            <div className="w-full flex  items-center my-2 ml-4">
+
+                    {/* Grid with switches and description */}
+                    <div className="w-full grid mobile:grid-rows-2 mobile:grid-cols-1 tablet:grid-rows-1 mt-10 tablet:grid-cols-2">
+                        <div>
+                            <div className="w-1/2 flex  items-center my-2 ml-4">
                                 <div className="w-[6rem]">
                                     <div onClick={() => switchLogic(1)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton1 ? buttonStyleActive : buttonStyleInActive}`}>
                                         <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton1 ? "ml-6" : "ml-0"}`}></div>
@@ -138,7 +145,7 @@ export const OfferSite = () => {
                                 </div>
 
                                 <div className="w-3/4">
-                                    <p className="text-slate-200 font-mono font-semibold">Modern</p>
+                                    <p className="text-slate-200 font-mono font-semibold">modern</p>
                                 </div>
                             </div>
 
@@ -147,7 +154,7 @@ export const OfferSite = () => {
 
 
 
-                            <div className="w-full flex items-center my-2 ml-4">
+                            <div className="w-1/2 flex items-center my-2 ml-4">
                                 <div className="w-[6rem]">
                                     <div onClick={() => switchLogic(2)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton2 ? buttonStyleActive : buttonStyleInActive}`}>
                                         <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton2 ? "ml-6" : "ml-0"}`}></div>
@@ -155,7 +162,7 @@ export const OfferSite = () => {
                                 </div>
 
                                 <div className="w-3/4">
-                                    <p className="text-slate-200 font-mono font-semibold">Elegant</p>
+                                    <p className="text-slate-200 font-mono font-semibold">elegance</p>
                                 </div>
                             </div>
 
@@ -163,7 +170,7 @@ export const OfferSite = () => {
 
 
 
-                            <div className="w-full flex items-center my-2 ml-4">
+                            <div className="w-1/2 flex items-center my-2 ml-4">
                                 <div className="w-[6rem]">
                                     <div onClick={() => switchLogic(3)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton3 ? buttonStyleActive : buttonStyleInActive}`}>
                                         <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton3 ? "ml-6" : "ml-0"}`}></div>
@@ -171,7 +178,7 @@ export const OfferSite = () => {
                                 </div>
 
                                 <div className="w-3/4">
-                                    <p className="text-slate-200 font-mono font-semibold">Funktional</p>
+                                    <p className="text-slate-200 font-mono font-semibold">functional</p>
                                 </div>
                             </div>
 
@@ -180,7 +187,7 @@ export const OfferSite = () => {
 
 
 
-                            <div className="w-full flex items-center my-2 ml-4">
+                            <div className="w-1/2 flex items-center my-2 ml-4">
                                 <div className="w-[6rem]">
                                     <div onClick={() => switchLogic(4)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton4 ? buttonStyleActive : buttonStyleInActive}`}>
                                         <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton4 ? "ml-6" : "ml-0"}`}></div>
@@ -188,7 +195,7 @@ export const OfferSite = () => {
                                 </div>
 
                                 <div className="w-3/4">
-                                    <p className="text-slate-200 font-mono font-semibold">Unkonventionell</p>
+                                    <p className="text-slate-200 font-mono font-semibold">unconventionel</p>
                                 </div>
                             </div>
 
@@ -196,7 +203,7 @@ export const OfferSite = () => {
 
 
 
-                            <div className="w-full flex items-center my-2 ml-4">
+                            <div className="w-1/2 flex items-center my-2 ml-4">
                                 <div className="w-[6rem]">
                                     <div onClick={() => switchLogic(5)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton5 ? buttonStyleActive : buttonStyleInActive}`}>
                                         <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton5 ? "ml-6" : "ml-0"}`}></div>
@@ -204,68 +211,112 @@ export const OfferSite = () => {
                                 </div>
 
                                 <div className="w-3/4">
-                                    <p className="text-slate-200 font-mono font-semibold">Verspielt</p>
-                                </div>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-                        </div>
-
-                        {/* Secound Half */}
-                        <div className="w-full h-1/2 flex flex-col mobile:mt-8">
-                            <div className="w-full grid duration-500 mobile:grid-rows-4 gap-7 mobile:grid-cols-1 tablet:grid-rows-2 tablet:grid-cols-2 desktop:grid-rows-1 desktop:grid-cols-4 desktop:gap-2 place-items-center">
-
-
-                                <div onClick={() => setActivePackage(1)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 1 && activePackageStyle}`}>
-                                    <div className="flex flex-col justify-center text-center p-3 items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
-                                        <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Onepage</p>
-                                        <p className="font-mono font-semibold duration-500">Ideal als Online Visitenkarte oder Setcard. </p>
-                                    </div>
-                                </div>
-
-
-
-                                <div onClick={() => setActivePackage(2)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 2 && activePackageStyle}`}>
-                                    <div className="flex flex-col justify-center text-center p-3 items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
-                                        <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Startup</p>
-                                        <p className="font-mono font-semibold duration-500">Mit 4-6 Seiten optimal für kleine Unternehmen geeignet.</p>
-                                    </div>
-                                </div>
-
-
-
-                                <div onClick={() => setActivePackage(3)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 3 && activePackageStyle}`}>
-                                    <div className="flex flex-col justify-center text-center p-3  items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
-                                        <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Business</p>
-                                        <p className="font-mono font-semibold duration-500">Mit 8-12 Seiten sehr gut für mittelständische Unternehmen geeignet.</p>
-                                    </div>
-                                </div>
-
-
-
-                                <div onClick={() => setActivePackage(4)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 4 && activePackageStyle}`}>
-                                    <div className="flex flex-col justify-center text-center p-3  items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
-                                        <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Individuell</p>
-                                        <p className="font-mono font-semibold duration-500">Kein passendes Paket gefunden? Sie können auch eine individuelle Anfrage stellen.</p>
-                                    </div>
+                                    <p className="text-slate-200 font-mono font-semibold">playful</p>
                                 </div>
                             </div>
                         </div>
+
+
+                        {/* Secound Element of Grid with the description */}
+
+
+                        {/* Wrapper */}
+                        <div>
+                            {activeButton1 && (
+                                <p className="text-slate-200 p-4 mobile:p-8 font-mono font-semibold animate-fadeIn">
+                                    {modernDescription}
+                                </p>
+                            )}
+
+
+                            {activeButton2 && (
+                                <p className="text-slate-200 p-4 mobile:p-8 font-mono font-semibold animate-fadeIn">
+                                    {elegantDescription}
+                                </p>
+                            )}
+
+                            {activeButton3 && (
+                                <p className="text-slate-200 p-4 mobile:p-8 font-mono font-semibold animate-fadeIn">
+                                    {functionalDescription}
+                                </p>
+                            )}
+
+
+                            {activeButton4 && (
+                                <p className="text-slate-200 p-4 mobile:p-8 font-mono font-semibold animate-fadeIn">
+                                    {unconventionalDescription}
+                                </p>
+                            )}
+
+                            {activeButton5 && (
+                                <p className="text-slate-200 p-4 mobile:p-8 font-mono font-semibold animate-fadeIn">
+                                    {playfulDescription}
+                                </p>
+                            )}
+                        </div>
+
 
 
                     </div>
 
 
+
+
+
+
+
+
+
+
+
+
+                    {/* Secound Half */}
+                    <div className="w-full h-1/2 flex flex-col mobile:mt-8">
+                        <div className="w-full grid duration-500 mobile:grid-rows-4 gap-7 mobile:grid-cols-1 tablet:grid-rows-2 tablet:grid-cols-2 desktop:grid-rows-1 desktop:grid-cols-4 desktop:gap-2 place-items-center">
+
+
+                            <div onClick={() => setActivePackage(1)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 1 && activePackageStyle}`}>
+                                <div className="flex flex-col justify-center text-center p-3 items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
+                                    <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Onepage</p>
+                                    <p className="font-mono font-semibold duration-500">Ideal als Online Visitenkarte oder Setcard. </p>
+                                </div>
+                            </div>
+
+
+
+                            <div onClick={() => setActivePackage(2)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 2 && activePackageStyle}`}>
+                                <div className="flex flex-col justify-center text-center p-3 items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
+                                    <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Startup</p>
+                                    <p className="font-mono font-semibold duration-500">Mit 4-6 Seiten optimal für kleine Unternehmen geeignet.</p>
+                                </div>
+                            </div>
+
+
+
+                            <div onClick={() => setActivePackage(3)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 3 && activePackageStyle}`}>
+                                <div className="flex flex-col justify-center text-center p-3  items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
+                                    <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Business</p>
+                                    <p className="font-mono font-semibold duration-500">Mit 8-12 Seiten sehr gut für mittelständische Unternehmen geeignet.</p>
+                                </div>
+                            </div>
+
+
+
+                            <div onClick={() => setActivePackage(4)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 4 && activePackageStyle}`}>
+                                <div className="flex flex-col justify-center text-center p-3  items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
+                                    <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Individuell</p>
+                                    <p className="font-mono font-semibold duration-500">Kein passendes Paket gefunden? Sie können auch eine individuelle Anfrage stellen.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
+
+
             </div>
+
         </>
     )
 }
