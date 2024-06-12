@@ -25,15 +25,23 @@ export const SideBar = (props:SideBarProps) => {
 
     const handleClick = () => {
         setCounter(counter + 1);
+
         if(counter % 2 === 0){
         setTimeout(() => {
             setHeight(!height);
         }, 100);
+
+
         setClick(!click);
-        } else {
+        } 
+        
+        
+        else {
         setTimeout(() => {
             setClick(!click);
         }, 100);
+
+        
         setHeight(!height);
         }
     }
