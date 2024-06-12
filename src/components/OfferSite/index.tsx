@@ -4,17 +4,25 @@ import { ParagraphOGLeft } from "../ParagraphOGLeft"
 
 
 export const OfferSite = () => {
+    // Logical States 
     const [activeOffer, setActiveOffer] = useState(0)
+    const [activePackage, setActivePackage] = useState(0)
     const [activeButton1, setActiveButton1] = useState(false)
     const [activeButton2, setActiveButton2] = useState(false)
     const [activeButton3, setActiveButton3] = useState(false)
     const [activeButton4, setActiveButton4] = useState(false)
     const [activeButton5, setActiveButton5] = useState(false)
+    
+    
+    // Style Sheet for Active Items
     const activeOfferStyle = "border rounded-lg border-dashed border-[#98f144] border-2"
+    const activePackageStyle = "border-dashed border-[#98f144] rounded-2xl"
     const buttonStyleActive = "bg-[#98f144]"
     const buttonStyleInActive = "bg-[#151515]"
-    
 
+
+
+    // Switch Logic => One On and the other Off
     const switchLogic = (number: number | boolean | ((prevState: boolean) => boolean)) => {
         if (number == 1) {
             setActiveButton1(!activeButton1)
@@ -57,7 +65,7 @@ export const OfferSite = () => {
             setActiveButton4(false)
             setActiveButton5(!activeButton5)
         }
-         
+
     }
 
     return (
@@ -91,26 +99,26 @@ export const OfferSite = () => {
                     <div className="tablet:w-[80%] mobile:w-full grid mobile:grid-rows-2 duration-500 gap-5 mobile:grid-cols-2 tablet:grid-rows-1 tablet:grid-cols-4 place-content-center place-items-center">
 
                         {/* Wrapper for GridItem */}
-                        <div onClick={() => setActiveOffer(1)} className={`flex justify-center items-center w-[8rem] h-[8rem] ${activeOffer == 1 && activeOfferStyle}`}>
-                            <div className="flex text-center justify-center items-center w-[7rem] h-[7rem] rounded-lg bg-[#98f144] p-4 font-mono font-bold">Web Application</div>
+                        <div onClick={() => setActiveOffer(1)} className={`flex justify-center duration-500 border-2 border-[#151515] items-center w-[8rem] h-[8rem] ${activeOffer == 1 && activeOfferStyle}`}>
+                            <div className="flex text-center justify-center items-center w-[7rem] h-[7rem] rounded-md bg-[#98f144] p-4 font-mono font-bold">Web Application</div>
                         </div>
 
 
                         {/* Wrapper for GridItem */}
-                        <div onClick={() => setActiveOffer(2)} className={`flex justify-center items-center w-[8rem] h-[8rem] ${activeOffer == 2 && activeOfferStyle}`}>
-                            <div className="flex text-center justify-center items-center w-[7rem] h-[7rem] rounded-lg bg-[#98f144] p-4 font-mono font-bold">Websites</div>
+                        <div onClick={() => setActiveOffer(2)} className={`flex justify-center duration-500 border-2 border-[#151515] items-center w-[8rem] h-[8rem] ${activeOffer == 2 && activeOfferStyle}`}>
+                            <div className="flex text-center justify-center items-center w-[7rem] h-[7rem] rounded-md bg-[#98f144] p-4 font-mono font-bold">Websites</div>
                         </div>
 
 
                         {/* Wrapper for GridItem */}
-                        <div onClick={() => setActiveOffer(3)} className={`flex justify-center items-center w-[8rem] h-[8rem] ${activeOffer == 3 && activeOfferStyle}`}>
-                            <div className="flex text-center justify-center items-center w-[7rem] h-[7rem] rounded-lg bg-[#98f144] p-4 font-mono font-bold">Consulting</div>
+                        <div onClick={() => setActiveOffer(3)} className={`flex justify-center duration-500 border-2 border-[#151515] items-center w-[8rem] h-[8rem] ${activeOffer == 3 && activeOfferStyle}`}>
+                            <div className="flex text-center justify-center items-center w-[7rem] h-[7rem] rounded-md bg-[#98f144] p-4 font-mono font-bold">Consulting</div>
                         </div>
 
 
                         {/* Wrapper for GridItem */}
-                        <div onClick={() => setActiveOffer(4)} className={`flex justify-center items-center w-[8rem] h-[8rem] ${activeOffer == 4 && activeOfferStyle}`}>
-                            <div className="flex text-center justify-center items-center w-[7rem] h-[7rem] rounded-lg bg-[#98f144] p-4 font-mono font-bold">Bot & AI</div>
+                        <div onClick={() => setActiveOffer(4)} className={`flex justify-center duration-500 border-2 border-[#151515] items-center w-[8rem] h-[8rem] ${activeOffer == 4 && activeOfferStyle}`}>
+                            <div className="flex text-center justify-center items-center w-[7rem] h-[7rem] rounded-md bg-[#98f144] p-4 font-mono font-bold">Bot & AI</div>
                         </div>
                     </div>
 
@@ -124,8 +132,8 @@ export const OfferSite = () => {
 
                             <div className="w-full flex  items-center my-2 ml-4">
                                 <div className="w-[6rem]">
-                                    <div onClick={()=>switchLogic(1)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton1 ? buttonStyleActive:buttonStyleInActive}`}>
-                                        <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton1 ? "ml-6":"ml-0"}`}></div>
+                                    <div onClick={() => switchLogic(1)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton1 ? buttonStyleActive : buttonStyleInActive}`}>
+                                        <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton1 ? "ml-6" : "ml-0"}`}></div>
                                     </div>
                                 </div>
 
@@ -141,8 +149,8 @@ export const OfferSite = () => {
 
                             <div className="w-full flex items-center my-2 ml-4">
                                 <div className="w-[6rem]">
-                                    <div onClick={()=>switchLogic(2)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton2 ? buttonStyleActive:buttonStyleInActive}`}>
-                                        <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton2 ? "ml-6":"ml-0"}`}></div>
+                                    <div onClick={() => switchLogic(2)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton2 ? buttonStyleActive : buttonStyleInActive}`}>
+                                        <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton2 ? "ml-6" : "ml-0"}`}></div>
                                     </div>
                                 </div>
 
@@ -157,8 +165,8 @@ export const OfferSite = () => {
 
                             <div className="w-full flex items-center my-2 ml-4">
                                 <div className="w-[6rem]">
-                                    <div onClick={()=>switchLogic(3)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton3 ? buttonStyleActive:buttonStyleInActive}`}>
-                                        <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton3 ? "ml-6":"ml-0"}`}></div>
+                                    <div onClick={() => switchLogic(3)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton3 ? buttonStyleActive : buttonStyleInActive}`}>
+                                        <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton3 ? "ml-6" : "ml-0"}`}></div>
                                     </div>
                                 </div>
 
@@ -174,8 +182,8 @@ export const OfferSite = () => {
 
                             <div className="w-full flex items-center my-2 ml-4">
                                 <div className="w-[6rem]">
-                                    <div onClick={()=>switchLogic(4)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton4 ? buttonStyleActive:buttonStyleInActive}`}>
-                                        <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton4 ? "ml-6":"ml-0"}`}></div>
+                                    <div onClick={() => switchLogic(4)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton4 ? buttonStyleActive : buttonStyleInActive}`}>
+                                        <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton4 ? "ml-6" : "ml-0"}`}></div>
                                     </div>
                                 </div>
 
@@ -190,8 +198,8 @@ export const OfferSite = () => {
 
                             <div className="w-full flex items-center my-2 ml-4">
                                 <div className="w-[6rem]">
-                                    <div onClick={()=>switchLogic(5)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton5 ? buttonStyleActive:buttonStyleInActive}`}>
-                                        <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton5 ? "ml-6":"ml-0"}`}></div>
+                                    <div onClick={() => switchLogic(5)} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton5 ? buttonStyleActive : buttonStyleInActive}`}>
+                                        <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton5 ? "ml-6" : "ml-0"}`}></div>
                                     </div>
                                 </div>
 
@@ -205,15 +213,51 @@ export const OfferSite = () => {
 
 
 
-             
+
 
 
 
                         </div>
 
                         {/* Secound Half */}
-                        <div className="w-full h-1/2 flex flex-col">
+                        <div className="w-full h-1/2 flex flex-col mobile:mt-8">
+                            <div className="w-full grid duration-500 mobile:grid-rows-4 gap-7 mobile:grid-cols-1 tablet:grid-rows-2 tablet:grid-cols-2 desktop:grid-rows-1 desktop:grid-cols-4 desktop:gap-2 place-items-center">
 
+
+                                <div onClick={() => setActivePackage(1)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 1 && activePackageStyle}`}>
+                                    <div className="flex flex-col justify-center text-center p-3 items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
+                                        <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Onepage</p>
+                                        <p className="font-mono font-semibold duration-500">Ideal als Online Visitenkarte oder Setcard. </p>
+                                    </div>
+                                </div>
+
+
+
+                                <div onClick={() => setActivePackage(2)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 2 && activePackageStyle}`}>
+                                    <div className="flex flex-col justify-center text-center p-3 items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
+                                        <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Startup</p>
+                                        <p className="font-mono font-semibold duration-500">Mit 4-6 Seiten optimal für kleine Unternehmen geeignet.</p>
+                                    </div>
+                                </div>
+
+
+
+                                <div onClick={() => setActivePackage(3)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 3 && activePackageStyle}`}>
+                                    <div className="flex flex-col justify-center text-center p-3  items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
+                                        <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Business</p>
+                                        <p className="font-mono font-semibold duration-500">Mit 8-12 Seiten sehr gut für mittelständische Unternehmen geeignet.</p>
+                                    </div>
+                                </div>
+
+
+
+                                <div onClick={() => setActivePackage(4)} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage === 4 && activePackageStyle}`}>
+                                    <div className="flex flex-col justify-center text-center p-3  items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
+                                        <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Individuell</p>
+                                        <p className="font-mono font-semibold duration-500">Kein passendes Paket gefunden? Sie können auch eine individuelle Anfrage stellen.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 
