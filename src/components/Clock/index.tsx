@@ -39,7 +39,7 @@ type TimeUnitDisplayProps = {
 const TimeUnitDisplay = (props : TimeUnitDisplayProps) => (
     <div className="bg-[#151515] p-2">
         <span className="bg-[#98f144] text-[#151515]">{props.hours}</span>
-        <span className='text-[#98f144]'>:</span>
+        <span className='text-[#98f144] '>:</span>
         <span className="border-b-[#98f144] border-b-2 text-slate-200">{props.minutes}</span>
     </div>
 );
