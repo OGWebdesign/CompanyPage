@@ -9,6 +9,7 @@ import { Impressum } from "../components/Impressum";
 import { Maintenance } from "../components/Maintenance";
 import { Privacy } from "../components/Privacy";
 import { SideBar } from "../components/SideBar";
+import {Link} from "react-scroll"
 
 
 
@@ -107,7 +108,7 @@ function App() {
       )}
 
       {/* Wrapper */}
-      <div className="w-full bg-[#151515] cursor-none overflow-hidden">
+      <div id="navigator" className="w-full bg-[#151515] cursor-none overflow-hidden">
         <div className="w-full flex justify-center ">
 
           {/* Start Page Layout */}
@@ -249,10 +250,10 @@ function App() {
             {/* Footer Nav Bar */}
             <div className="w-full cursor-none flex flex-row mobile:flex-col font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center tablet:text-[1rem] mobile:text-[0.8rem]">
               <div className="w-1/2 mobile:w-full flex desktop:gap-10 tablet:gap-6 mobile:gap-4 justify-start" >
-                <div onClick={() => setIndicatorNav(6)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Imprint</div>
-                <div onClick={() => setIndicatorNav(8)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Privacy</div>
-                <div onClick={() => setIndicatorNav(4)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Contact</div>
-                <div onClick={() => setIndicatorNav(3)} className="inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold" >Offer</div>
+                <Link to="navigator" spy={true} smooth={true} offset={50} duration={500} onClick={() => setIndicatorNav(6)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 6 && "bg-[#98f144]" }`} >Imprint</Link>
+                <Link to="navigator" spy={true} smooth={true} offset={50} duration={500} onClick={() => setIndicatorNav(8)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 8 && "bg-[#98f144]" }`} >Privacy</Link>
+                <Link to="navigator" spy={true} smooth={true} offset={50} duration={500} onClick={() => setIndicatorNav(4)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 4 && "bg-[#98f144]" }`} >Contact</Link>
+                <Link to="navigator" spy={true} smooth={true} offset={50} duration={500} onClick={() => setIndicatorNav(3)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 3 && "bg-[#98f144]" }`} >Offer</Link>
               </div>
               <div className="w-1/2 mobile:w-full mobile:mt-3 flex desktop:gap-8 tablet:gap-6 mobile:gap-4 items-center justify-end">
                 <p className="inline-block bg-[#98f144] mobile:opacity-0 ">Social Media</p>
