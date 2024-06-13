@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ParagraphOG } from "../ParagraphOG";
 import { ParagraphOGLeft } from "../ParagraphOGLeft";
 import { TechnologieCase } from "../TechnologieCase";
-import { SwitchesWebsite } from "../SwitchesWebsite";
+import { SwitchesTime, SwitchesWebsite } from "../SwitchesWebsite";
 import { ProgressionBar } from "../ProgressionBar";
 import { PackageCard } from "../PackageCard";
 
@@ -71,8 +71,21 @@ export const OfferSite = () => {
   const [activeSwitch4, setActiveSwitch4] = useState(false);
   const [activeSwitch5, setActiveSwitch5] = useState(false);
 
+  const [activeSwitch1Time, setActiveSwitch1Time] = useState(false);
+  const [activeSwitch2Time, setActiveSwitch2Time] = useState(false);
+  const [activeSwitch3Time, setActiveSwitch3Time] = useState(false);
+
+  const [activePackage1, setActivePackage1] = useState(false)
+  const [activePackage2, setActivePackage2] = useState(false)
+  const [activePackage3, setActivePackage3] = useState(false)
+  const [activePackage4, setActivePackage4] = useState(false)
+
+  {/* BEGIN Logic for Switches (Emotions) */}
   const switchLogic = (number: number, check?:boolean) => {
     if (number == 1) {
+      if(activeSwitch1){
+        packageCardLogic(1, true)
+      }
       setActiveSwitch1(!activeSwitch1);
       setActiveSwitch2(false);
       setActiveSwitch3(false);
@@ -81,6 +94,9 @@ export const OfferSite = () => {
     }
 
     if (number == 2) {
+      if(activeSwitch2){
+        packageCardLogic(2, true)
+      }
       setActiveSwitch1(false);
       setActiveSwitch2(!activeSwitch2);
       setActiveSwitch3(false);
@@ -89,6 +105,9 @@ export const OfferSite = () => {
     }
 
     if (number == 3) {
+      if(activeSwitch3){
+        packageCardLogic(3, true)
+      }
       setActiveSwitch1(false);
       setActiveSwitch2(false);
       setActiveSwitch3(!activeSwitch3);
@@ -97,6 +116,9 @@ export const OfferSite = () => {
     }
 
     if (number == 4) {
+      if (activeSwitch4){
+        packageCardLogic(4, true)
+      }
       setActiveSwitch1(false);
       setActiveSwitch2(false);
       setActiveSwitch3(false);
@@ -105,6 +127,9 @@ export const OfferSite = () => {
     }
 
     if (number == 5) {
+      if (activeSwitch5){
+        packageCardLogic(5, true)
+      }
       setActiveSwitch1(false);
       setActiveSwitch2(false);
       setActiveSwitch3(false);
@@ -118,6 +143,10 @@ export const OfferSite = () => {
         setActiveSwitch3(false);
         setActiveSwitch4(false);
         setActiveSwitch5(false);
+        setActivePackage1(false);
+        setActivePackage2(false);
+        setActivePackage3(false);
+        setActivePackage4(false);
     }
   };
 
@@ -125,12 +154,9 @@ export const OfferSite = () => {
     /*End Switch Logic */
   }
 
-  const [activePackage1, setActivePackage1] = useState(false)
-  const [activePackage2, setActivePackage2] = useState(false)
-  const [activePackage3, setActivePackage3] = useState(false)
-  const [activePackage4, setActivePackage4] = useState(false)
+  
 
-
+{/* BEGIN Logic for pages selection */}
   const packageCardLogic = (number: number, check?:boolean) => {
     if (number == 1) {
         setActivePackage1(!activePackage1);
@@ -167,6 +193,44 @@ export const OfferSite = () => {
         setActivePackage4(false);
     }
   };
+{/* END Logic for pages selection */}
+
+
+{/* BEGIN Logic for time switches */}
+  const switchTimeLogic = (number: number, check?:boolean) => {
+    {/* current position is handled by number */}
+    if (number == 1) {
+      setActiveSwitch1Time(!activeSwitch1Time);
+      setActiveSwitch2Time(false);
+      setActiveSwitch3Time(false);
+    }
+
+    if (number == 2) {
+      setActiveSwitch1Time(false);
+      setActiveSwitch2Time(!activeSwitch2Time);
+      setActiveSwitch3Time(false);
+    }
+
+    if (number == 3) {
+      setActiveSwitch1Time(false);
+      setActiveSwitch2Time(false);
+      setActiveSwitch3Time(!activeSwitch3Time);
+    }
+
+
+    if(check){
+        setActiveSwitch1(false);
+        setActiveSwitch2(false);
+        setActiveSwitch3(false);
+        setActiveSwitch4(false);
+        setActiveSwitch5(false);
+        setActivePackage1(false);
+        setActivePackage2(false);
+        setActivePackage3(false);
+        setActivePackage4(false);
+    }
+  };
+  {/* END Logic for time switches */}
 
   return (
     <>
@@ -244,7 +308,9 @@ export const OfferSite = () => {
             )
       ]}
       {(activePackage1 || activePackage2 || activePackage3 || activePackage4) &&
-      (<div className="text-[10rem] text-white">Hello World</div>)}
+      (<div className="mt-[5rem]">
+        <SwitchesTime switchLogic={switchTimeLogic} switchTitle1="6 to 8 weeks" switchTitle2="8 to 10 weeks" switchTitle3="10 to 12 weeks" />
+       </div>)}
     </>
   );
 }
