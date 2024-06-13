@@ -71,8 +71,16 @@ export const OfferSite = () => {
   const [activeSwitch4, setActiveSwitch4] = useState(false);
   const [activeSwitch5, setActiveSwitch5] = useState(false);
 
+  const [activePackage1, setActivePackage1] = useState(false)
+  const [activePackage2, setActivePackage2] = useState(false)
+  const [activePackage3, setActivePackage3] = useState(false)
+  const [activePackage4, setActivePackage4] = useState(false)
+
   const switchLogic = (number: number, check?:boolean) => {
     if (number == 1) {
+      if(activeSwitch1){
+        packageCardLogic(1, true)
+      }
       setActiveSwitch1(!activeSwitch1);
       setActiveSwitch2(false);
       setActiveSwitch3(false);
@@ -81,6 +89,9 @@ export const OfferSite = () => {
     }
 
     if (number == 2) {
+      if(activeSwitch2){
+        packageCardLogic(2, true)
+      }
       setActiveSwitch1(false);
       setActiveSwitch2(!activeSwitch2);
       setActiveSwitch3(false);
@@ -89,6 +100,9 @@ export const OfferSite = () => {
     }
 
     if (number == 3) {
+      if(activeSwitch3){
+        packageCardLogic(3, true)
+      }
       setActiveSwitch1(false);
       setActiveSwitch2(false);
       setActiveSwitch3(!activeSwitch3);
@@ -97,6 +111,9 @@ export const OfferSite = () => {
     }
 
     if (number == 4) {
+      if (activeSwitch4){
+        packageCardLogic(4, true)
+      }
       setActiveSwitch1(false);
       setActiveSwitch2(false);
       setActiveSwitch3(false);
@@ -105,6 +122,9 @@ export const OfferSite = () => {
     }
 
     if (number == 5) {
+      if (activeSwitch5){
+        packageCardLogic(5, true)
+      }
       setActiveSwitch1(false);
       setActiveSwitch2(false);
       setActiveSwitch3(false);
@@ -118,6 +138,10 @@ export const OfferSite = () => {
         setActiveSwitch3(false);
         setActiveSwitch4(false);
         setActiveSwitch5(false);
+        setActivePackage1(false);
+        setActivePackage2(false);
+        setActivePackage3(false);
+        setActivePackage4(false);
     }
   };
 
@@ -125,10 +149,7 @@ export const OfferSite = () => {
     /*End Switch Logic */
   }
 
-  const [activePackage1, setActivePackage1] = useState(false)
-  const [activePackage2, setActivePackage2] = useState(false)
-  const [activePackage3, setActivePackage3] = useState(false)
-  const [activePackage4, setActivePackage4] = useState(false)
+  
 
 
   const packageCardLogic = (number: number, check?:boolean) => {
