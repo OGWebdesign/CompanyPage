@@ -30,7 +30,7 @@ export const OfferSite = () => {
 
   const eventTrigger2 = () => {
     if (technologieCaseActive2) {
-        switchLogic(1, true);
+      switchLogic(1, true);
     }
     setTechnologieCaseActive2(!technologieCaseActive2);
     setTechnologieCaseActive1(false);
@@ -40,7 +40,7 @@ export const OfferSite = () => {
 
   const eventTrigger3 = () => {
     if (technologieCaseActive3) {
-        switchLogic(1, true);
+      switchLogic(1, true);
     }
     setTechnologieCaseActive3(!technologieCaseActive3);
     setTechnologieCaseActive1(false);
@@ -50,7 +50,7 @@ export const OfferSite = () => {
 
   const eventTrigger4 = () => {
     if (technologieCaseActive4) {
-        switchLogic(1, true);
+      switchLogic(1, true);
     }
     setTechnologieCaseActive4(!technologieCaseActive4);
     setTechnologieCaseActive1(false);
@@ -80,10 +80,10 @@ export const OfferSite = () => {
   const [activePackage3, setActivePackage3] = useState(false)
   const [activePackage4, setActivePackage4] = useState(false)
 
-  {/* BEGIN Logic for Switches (Emotions) */}
-  const switchLogic = (number: number, check?:boolean) => {
+  {/* BEGIN Logic for Switches (Emotions) */ }
+  const switchLogic = (number: number, check?: boolean) => {
     if (number == 1) {
-      if(activeSwitch1){
+      if (activeSwitch1) {
         packageCardLogic(1, true)
       }
       setActiveSwitch1(!activeSwitch1);
@@ -94,7 +94,7 @@ export const OfferSite = () => {
     }
 
     if (number == 2) {
-      if(activeSwitch2){
+      if (activeSwitch2) {
         packageCardLogic(2, true)
       }
       setActiveSwitch1(false);
@@ -105,7 +105,7 @@ export const OfferSite = () => {
     }
 
     if (number == 3) {
-      if(activeSwitch3){
+      if (activeSwitch3) {
         packageCardLogic(3, true)
       }
       setActiveSwitch1(false);
@@ -116,7 +116,7 @@ export const OfferSite = () => {
     }
 
     if (number == 4) {
-      if (activeSwitch4){
+      if (activeSwitch4) {
         packageCardLogic(4, true)
       }
       setActiveSwitch1(false);
@@ -127,7 +127,7 @@ export const OfferSite = () => {
     }
 
     if (number == 5) {
-      if (activeSwitch5){
+      if (activeSwitch5) {
         packageCardLogic(5, true)
       }
       setActiveSwitch1(false);
@@ -137,16 +137,16 @@ export const OfferSite = () => {
       setActiveSwitch5(!activeSwitch5);
     }
 
-    if(check){
-        setActiveSwitch1(false);
-        setActiveSwitch2(false);
-        setActiveSwitch3(false);
-        setActiveSwitch4(false);
-        setActiveSwitch5(false);
-        setActivePackage1(false);
-        setActivePackage2(false);
-        setActivePackage3(false);
-        setActivePackage4(false);
+    if (check) {
+      setActiveSwitch1(false);
+      setActiveSwitch2(false);
+      setActiveSwitch3(false);
+      setActiveSwitch4(false);
+      setActiveSwitch5(false);
+      setActivePackage1(false);
+      setActivePackage2(false);
+      setActivePackage3(false);
+      setActivePackage4(false);
     }
   };
 
@@ -154,51 +154,51 @@ export const OfferSite = () => {
     /*End Switch Logic */
   }
 
-  
 
-{/* BEGIN Logic for pages selection */}
-  const packageCardLogic = (number: number, check?:boolean) => {
+
+  {/* BEGIN Logic for pages selection */ }
+  const packageCardLogic = (number: number, check?: boolean) => {
     if (number == 1) {
-        setActivePackage1(!activePackage1);
-        setActivePackage2(false);
-        setActivePackage3(false);
-        setActivePackage4(false);
+      setActivePackage1(!activePackage1);
+      setActivePackage2(false);
+      setActivePackage3(false);
+      setActivePackage4(false);
     }
 
     if (number == 2) {
-        setActivePackage1(false);
-        setActivePackage2(!activePackage2);
-        setActivePackage3(false);
-        setActivePackage4(false);
+      setActivePackage1(false);
+      setActivePackage2(!activePackage2);
+      setActivePackage3(false);
+      setActivePackage4(false);
     }
 
     if (number == 3) {
-        setActivePackage1(false);
-        setActivePackage2(false);
-        setActivePackage3(!activePackage3);
-        setActivePackage4(false);
+      setActivePackage1(false);
+      setActivePackage2(false);
+      setActivePackage3(!activePackage3);
+      setActivePackage4(false);
     }
 
     if (number == 4) {
-        setActivePackage1(false);
-        setActivePackage2(false);
-        setActivePackage3(false);
-        setActivePackage4(!activePackage4);
+      setActivePackage1(false);
+      setActivePackage2(false);
+      setActivePackage3(false);
+      setActivePackage4(!activePackage4);
     }
 
-    if(check){
-        setActivePackage1(false);
-        setActivePackage2(false);
-        setActivePackage3(false);
-        setActivePackage4(false);
+    if (check) {
+      setActivePackage1(false);
+      setActivePackage2(false);
+      setActivePackage3(false);
+      setActivePackage4(false);
     }
   };
-{/* END Logic for pages selection */}
+  {/* END Logic for pages selection */ }
 
 
-{/* BEGIN Logic for time switches */}
-  const switchTimeLogic = (number: number, check?:boolean) => {
-    {/* current position is handled by number */}
+  {/* BEGIN Logic for time switches */ }
+  const switchTimeLogic = (number: number, check?: boolean) => {
+    {/* current position is handled by number */ }
     if (number == 1) {
       setActiveSwitch1Time(!activeSwitch1Time);
       setActiveSwitch2Time(false);
@@ -218,19 +218,19 @@ export const OfferSite = () => {
     }
 
 
-    if(check){
-        setActiveSwitch1(false);
-        setActiveSwitch2(false);
-        setActiveSwitch3(false);
-        setActiveSwitch4(false);
-        setActiveSwitch5(false);
-        setActivePackage1(false);
-        setActivePackage2(false);
-        setActivePackage3(false);
-        setActivePackage4(false);
+    if (check) {
+      setActiveSwitch1(false);
+      setActiveSwitch2(false);
+      setActiveSwitch3(false);
+      setActiveSwitch4(false);
+      setActiveSwitch5(false);
+      setActivePackage1(false);
+      setActivePackage2(false);
+      setActivePackage3(false);
+      setActivePackage4(false);
     }
   };
-  {/* END Logic for time switches */}
+  {/* END Logic for time switches */ }
 
   return (
     <>
@@ -277,40 +277,39 @@ export const OfferSite = () => {
         />
       </div>
       {(technologieCaseActive1 || technologieCaseActive2) && (
-          <div
-            className={`overflow-hidden mt-[3rem] duration-500 ${
-              technologieCaseActive1 ||
+        <div
+          className={`overflow-hidden mt-[3rem] duration-500 ${technologieCaseActive1 ||
               technologieCaseActive2 ||
               technologieCaseActive3 ||
               technologieCaseActive4
-                ? "h-full"
-                : "h-0"
+              ? "h-full"
+              : "h-0"
             }`}
-          >
-            <ProgressionBar initProgression={5} />
-            <SwitchesWebsite
-              switchTitle1="modern"
-              switchTitle2="elegance"
-              switchTitle3="functional"
-              switchTitle4="unconventional"
-              switchTitle5="playful"
-              switchLogic={switchLogic}
-            />
-        
-          </div>
+        >
+          <ProgressionBar initProgression={5} />
+          <SwitchesWebsite
+            switchTitle1="modern"
+            switchTitle2="elegance"
+            switchTitle3="functional"
+            switchTitle4="unconventional"
+            switchTitle5="playful"
+            switchLogic={switchLogic}
+          />
+
+        </div>
       )}
-      {[(activeSwitch1 || activeSwitch2 || activeSwitch3 || activeSwitch4 ||
-          activeSwitch5) && 
-            (
-                <div className="mt-[5rem]">
-                <PackageCard packageCardLogic={packageCardLogic} />
-                </div>
-            )
-      ]}
+      {(activeSwitch1 || activeSwitch2 || activeSwitch3 || activeSwitch4 ||
+        activeSwitch5) &&
+        (
+          <div className="mt-[5rem]">
+            <PackageCard packageCardLogic={packageCardLogic} />
+          </div>
+        )
+      }
       {(activePackage1 || activePackage2 || activePackage3 || activePackage4) &&
-      (<div className="mt-[5rem]">
-        <SwitchesTime switchLogic={switchTimeLogic} switchTitle1="6 to 8 weeks" switchTitle2="8 to 10 weeks" switchTitle3="10 to 12 weeks" />
-       </div>)}
+        (<div className="mt-[5rem]">
+          <SwitchesTime switchLogic={switchTimeLogic} switchTitle1="6 to 8 weeks" switchTitle2="8 to 10 weeks" switchTitle3="10 to 12 weeks" />
+        </div>)}
     </>
   );
 }
