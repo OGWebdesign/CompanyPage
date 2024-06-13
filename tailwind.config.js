@@ -30,6 +30,7 @@ export default {
         loading:'loading 6.5s ease-in-out infinite',
         fadeIn: 'fadeIn 300ms ease-in forwards',
         fadeOut: 'fadeOut 300ms ease-in forwards',
+        progressInit: 'progressInit 1s ease-in forwards',
       },
       keyframes: {
         ownpulse:{
@@ -39,8 +40,7 @@ export default {
         },
         loading:{
           '0%':{transform:'translateX(0)'},
-          '50%':{transform:'translateX(-200%)'},
-          
+          '50%':{transform:'translateX(-200%)'},         
         },
         fadeIn: {
           '0%': { opacity: '0' },
@@ -50,6 +50,10 @@ export default {
           '0%': { opacity: '1' },
           '100%': { opacity: '0' },
         },
+        progressInit:{
+          '0%':{width:'0rem'},
+          '100%':{width:'5rem'}  
+        },    
       },
       backgroundImage: { 
         "nils": "url('nils.png')",
