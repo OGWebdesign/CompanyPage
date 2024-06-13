@@ -30,6 +30,9 @@ const [activePackage4, setActivePackage4] = useState(false);
 
                 <div onClick={() => {
                     setActivePackage1(!activePackage1);
+                    setActivePackage2(false);
+                    setActivePackage3(false);
+                    setActivePackage4(false);
                     props.packageCardLogic(1);
                     }} className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage1 && activePackageStyle}`}>
                     <div className="flex flex-col justify-center text-center p-3 items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
@@ -42,6 +45,9 @@ const [activePackage4, setActivePackage4] = useState(false);
 
                 <div onClick={() => {
                     setActivePackage2(!activePackage2);
+                    setActivePackage1(false);
+                    setActivePackage3(false);
+                    setActivePackage4(false);
                     props.packageCardLogic(2);
                     }}  className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage2 && activePackageStyle}`}>
                     <div className="flex flex-col justify-center text-center p-3 items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
@@ -54,7 +60,11 @@ const [activePackage4, setActivePackage4] = useState(false);
 
                 <div onClick={() => {
                     setActivePackage3(!activePackage3);
+
                     props.packageCardLogic(3);
+                    setActivePackage1(false);
+                    setActivePackage2(false);
+                    setActivePackage4(false);
                     }}  className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage3 && activePackageStyle}`}>
                     <div className="flex flex-col justify-center text-center p-3  items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
                         <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Business</p>
@@ -66,7 +76,11 @@ const [activePackage4, setActivePackage4] = useState(false);
 
                 <div onClick={() => {
                     setActivePackage4(!activePackage4);
+                    setActivePackage1(false);
+                    setActivePackage2(false);
+                    setActivePackage3(false);
                     props.packageCardLogic(4);
+                    
                     }}  className={`w-[95%] duration-300 border-2 border-[#151515] h-[14rem] flex justify-center items-center ${activePackage4 && activePackageStyle}`}>
                     <div className="flex flex-col justify-center text-center p-3  items-center w-[96%] h-[94%] bg-[#98f144] rounded-lg">
                         <p className="font-mono font-semibold text-[1.4rem] text-[#151515]">Individuell</p>
