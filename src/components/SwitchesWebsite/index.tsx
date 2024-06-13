@@ -201,3 +201,125 @@ export const SwitchesWebsite = (props: {
         </>
     )
 }
+
+
+export const SwitchesTime = (props: {
+    switchTitle1: string,
+    switchTitle2: string,
+    switchTitle3: string,
+    switchLogic: (number:number) => void
+}) => {
+    const sixtoeightweeks = "6-8 weeks is the standard time for a website. This time frame is particularly suitable for small companies or private individuals who want to present themselves online.";
+    const eighttoten = "8-10 weeks is the standard time for a website. This time frame is particularly suitable for small companies or private individuals who want to present themselves online.";
+    const tentotwelfweeks = "10-12 weeks is the standard time for a website. This time frame is particularly suitable for small companies or private individuals who want to present themselves online.";
+   
+
+    const buttonStyleActive = "bg-[#98f144]";
+    const buttonStyleInActive = "bg-[#151515]";
+    
+    const [activeButton1, setActiveButton1] = useState(false);
+    const [activeButton2, setActiveButton2] = useState(false);
+    const [activeButton3, setActiveButton3] = useState(false);
+
+    // Switch Logic => One On and the other Off
+
+
+    return (
+        <>
+            <div className="w-full grid mobile:grid-rows-2 mobile:grid-cols-1 tablet:grid-rows-1 mt-10 tablet:grid-cols-2 transition-all">
+                <div>
+                    <div className="w-1/2 flex  items-center my-2 ml-4 ">
+                        <div className="w-[6rem]">
+                            <div onClick={() =>{
+                                props.switchLogic(1);
+                                setActiveButton1(!activeButton1);
+                                setActiveButton2(false);
+                                setActiveButton3(false);
+                            }} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton1 ? buttonStyleActive : buttonStyleInActive}`}>
+                                <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton1 ? "ml-6" : "ml-0"}`}></div>
+                            </div>
+                        </div>
+
+                        <div className="w-3/4">
+                            <p className="text-slate-200 font-mono font-semibold">{props.switchTitle1}</p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div className="w-1/2 flex items-center my-2 ml-4">
+                        <div className="w-[6rem]">
+                            <div onClick={() => {
+                                props.switchLogic(2);
+                                setActiveButton2(!activeButton2);
+                                setActiveButton1(false);
+                                setActiveButton3(false);
+                            }} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton2 ? buttonStyleActive : buttonStyleInActive}`}>
+                                <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton2 ? "ml-6" : "ml-0"}`}></div>
+                            </div>
+                        </div>
+
+                        <div className="w-3/4">
+                            <p className="text-slate-200 font-mono font-semibold">{props.switchTitle2}</p>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div className="w-1/2 flex items-center my-2 ml-4">
+                        <div className="w-[6rem]">
+                            <div onClick={() => {
+                                props.switchLogic(3);
+                                setActiveButton3(!activeButton3);
+                                setActiveButton1(false);
+                                setActiveButton2(false);
+                            }} className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full ${activeButton3 ? buttonStyleActive : buttonStyleInActive}`}>
+                                <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${activeButton3 ? "ml-6" : "ml-0"}`}></div>
+                            </div>
+                        </div>
+
+                        <div className="w-3/4">
+                            <p className="text-slate-200 font-mono font-semibold">{props.switchTitle3}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                {/* Secound Element of Grid with the description */}
+
+
+                {/* Wrapper */}
+                <div>
+                    {activeButton1 && (
+                        <p className="text-slate-200 p-4 mobile:p-8 font-mono font-semibold animate-fadeIn">
+                            {sixtoeightweeks}
+                        </p>
+                    )}
+
+
+                    {activeButton2 && (
+                        <p className="text-slate-200 p-4 mobile:p-8 font-mono font-semibold animate-fadeIn">
+                            {eighttoten}
+                        </p>
+                    )}
+
+                    {activeButton3 && (
+                        <p className="text-slate-200 p-4 mobile:p-8 font-mono font-semibold animate-fadeIn">
+                            {tentotwelfweeks}
+                        </p>
+                    )}
+                </div>
+
+
+
+            </div>
+
+        </>
+    )
+}
