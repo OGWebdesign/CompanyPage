@@ -80,6 +80,7 @@ export const OfferSite = () => {
   const [activePackage3, setActivePackage3] = useState(false)
   const [activePackage4, setActivePackage4] = useState(false)
 
+  {/* BEGIN Logic for Switches (Emotions) */}
   const switchLogic = (number: number, check?:boolean) => {
     if (number == 1) {
       if(activeSwitch1){
@@ -155,7 +156,7 @@ export const OfferSite = () => {
 
   
 
-
+{/* BEGIN Logic for pages selection */}
   const packageCardLogic = (number: number, check?:boolean) => {
     if (number == 1) {
         setActivePackage1(!activePackage1);
@@ -192,9 +193,12 @@ export const OfferSite = () => {
         setActivePackage4(false);
     }
   };
+{/* END Logic for pages selection */}
 
 
+{/* BEGIN Logic for time switches */}
   const switchTimeLogic = (number: number, check?:boolean) => {
+    {/* current position is handled by number */}
     if (number == 1) {
       setActiveSwitch1Time(!activeSwitch1Time);
       setActiveSwitch2Time(false);
@@ -226,6 +230,7 @@ export const OfferSite = () => {
         setActivePackage4(false);
     }
   };
+  {/* END Logic for time switches */}
 
   return (
     <>
