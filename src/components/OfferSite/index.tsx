@@ -8,6 +8,9 @@ import { PackageCard } from "../PackageCard";
 import { PackageCardItem } from "../PackageCardItem";
 
 export const OfferSite = () => {
+
+
+
   // TechnologieCase Komponenten
   // Klickabhängiges CSS für den gestrichelten Rand bei Aktivierung
   const activeEffect = "border-[#98f144] rounded-lg border-dashed"
@@ -16,6 +19,11 @@ export const OfferSite = () => {
   const [techCaseItem2Active, setTechCaseItem2Active] = useState(false)
   const [techCaseItem3Active, setTechCaseItem3Active] = useState(false)
   const [techCaseItem4Active, setTechCaseItem4Active] = useState(false)
+  // Hilfsfunktion für Wrap
+  const allTechnicalCaseItemsOff = () => {
+    return techCaseItem1Active || techCaseItem2Active || techCaseItem3Active || techCaseItem4Active
+  }
+
 
   // Funktionen die die Schalterpositionen rekulieren.
   const handleTechCaseItem1Click = () => {
@@ -45,6 +53,10 @@ export const OfferSite = () => {
     setTechCaseItem3Active(false);
     setTechCaseItem4Active(!techCaseItem4Active);
   };
+
+
+
+
   // TechnologieCase Items
   const techCaseItem1 = (<TechnologieCaseItem aktivatecss={`${techCaseItem1Active && activeEffect}`} name1="Webapp" onClick={handleTechCaseItem1Click}></TechnologieCaseItem>)
   const techCaseItem2 = (<TechnologieCaseItem aktivatecss={`${techCaseItem2Active && activeEffect}`} name1="Website" onClick={handleTechCaseItem2Click}></TechnologieCaseItem>)
@@ -80,10 +92,6 @@ export const OfferSite = () => {
 
   const allSwitchesOff = () => {
     return switch1 || switch2 || switch3 || switch4 || switch5
-  }
-  // Hilfsfunktion für Wrap
-  const allTechnicalCaseItemsOff = () => {
-    return techCaseItem1Active || techCaseItem2Active || techCaseItem3Active || techCaseItem4Active
   }
 
   // Styleklassen für aktiv und inaktiv der Switches
@@ -142,7 +150,9 @@ export const OfferSite = () => {
     setSwitch3(false);
     setSwitch4(false);
     setSwitch5(false);
+
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
+
 
   const websiteSwitch1 = (<CalculatorSwitches onClick={handleSwitch1} activecss={switch1 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch1 ? moveAnimation : notMove} switchTitle="modern"></CalculatorSwitches>)
   const websiteSwitch2 = (<CalculatorSwitches onClick={handleSwitch2} activecss={switch2 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch2 ? moveAnimation : notMove} switchTitle="elegant"></CalculatorSwitches>)
@@ -203,6 +213,7 @@ export const OfferSite = () => {
     setCustomActiv(false);
     setBusinessActiv(false);
     setStartUpActiv(false);
+
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
 
@@ -212,6 +223,18 @@ export const OfferSite = () => {
   const StartUp = (<PackageCardItem activecss={`${startUpActiv && activePackageStyle}`} onClick={handleStartUp} title="Start Up" description="TestText"></PackageCardItem>)
   const Business = (<PackageCardItem activecss={`${businessActiv && activePackageStyle}`} onClick={handleBusiness} title="Business" description="TestText"></PackageCardItem>)
   const Custom = (<PackageCardItem activecss={`${customActiv && activePackageStyle}`} onClick={handleCustom} title="Custom" description="TestText"></PackageCardItem>)
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <>
@@ -331,12 +354,14 @@ export const OfferSite = () => {
 
           <div className={`flex w-full justify-center  duration-500   ${allSwitchesOff() ? "mobile:h-[70rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
             {(switch1 || switch2 || switch3 || switch4 || switch5) && (
-              <PackageCard>
-                {onePager}
-                {StartUp}
-                {Business}
-                {Custom}
-              </PackageCard>
+              <div className="w-full animate-fadeIn">
+                <PackageCard>
+                  {onePager}
+                  {StartUp}
+                  {Business}
+                  {Custom}
+                </PackageCard>
+              </div>
             )}
           </div>
 
@@ -347,17 +372,18 @@ export const OfferSite = () => {
 
 
 
-        {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
-        <div className="w-full flex flex-col items-center mt-10">
-          <div className="w-[20rem] h-10 border border-[#292929] rounded-full flex items-center overflow-hidden">
-            {/* Progress Bar */}
-            <div className={`animate-progressInit h-full bg-[#98f144] duration-500 overflow-hidden rounded-full flex justify-center items-center`}>
-              <span className={`font-mono font-semibold`}></span>
+          {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
+          <div className="w-full flex flex-col items-center mt-10">
+            <div className="w-[20rem] h-10 border border-[#292929] rounded-full flex items-center overflow-hidden">
+              {/* Progress Bar */}
+              <div className={`h-full bg-[#98f144] duration-500 overflow-hidden rounded-full flex justify-center 
+                items-center`}>
+                <span className={`font-mono font-semibold`}></span>
+              </div>
             </div>
+            <div className="text-slate-200 font-mono text-[0.8rem] mt-3"><span>Progression</span>{" : "}<span></span></div>
           </div>
-          <div className="text-slate-200 font-mono text-[0.8rem] mt-3"><span>Progression</span>{" : "}<span>25 %</span></div>
-        </div>
-        {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
+          {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
 
 
 
