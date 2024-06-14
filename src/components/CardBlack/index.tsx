@@ -11,7 +11,7 @@ export const CardBlack = (props:{
 })=>{
     
     return(
-        <div className={`w-full ${props.classname} select-none max-w-[30rem] min-w-[25rem] h-[15rem] border p-3 rounded-2xl flex border-b-8 `}>
+        <div className={`w-full ${props.classname} select-none max-w-[30rem] min-w-[25rem] h-[15rem] bg-[#151515] border p-3 rounded-2xl flex border-b-8 `}>
             
             <div className="flex flex-col w-1/2 text-[#151515]">
 

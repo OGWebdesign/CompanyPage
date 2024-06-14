@@ -33,6 +33,12 @@ export const StartSite = (props: {
 
       {/* WrapperLayout */}
       <div className="w-full flex justify-center items-center">
+
+
+        <p className="absolute font-mono font-bold  text-white">OG</p>
+
+
+
         <div className="desktop:w-[75%] desktop-xl:w-[75%]  grid tablet:gap-10 gap-11 mobile:gap-20  mobile:grid-rows-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:grid-rows-2 desktop:grid-rows-1 desktop:grid-cols-2 place-content-center place-items-center mt-10 mb-[5%]">
           <CardBlack
             children={props.BlackCardButton}
