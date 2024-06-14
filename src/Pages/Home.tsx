@@ -9,7 +9,7 @@ import { Impressum } from "../components/Impressum";
 import { Maintenance } from "../components/Maintenance";
 import { Privacy } from "../components/Privacy";
 import { SideBar } from "../components/SideBar";
-import {Link} from "react-scroll"
+import { Link } from "react-scroll"
 
 
 
@@ -78,7 +78,7 @@ function App() {
   //-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-  {/* Funktionen für SideBar */}
+  {/* Funktionen für SideBar */ }
   const handleHome = () => {
     setIndicatorNav(1);
   }
@@ -174,7 +174,7 @@ function App() {
                   {/* Scroll Bar Item III */}
                   <div className={`my-5 ${bordervisibility}  text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
                     onClick={() => { setIndicatorNav(3); setVisible(!visible); }}>Offer</div>
-                 
+
 
                   <div className="w-full h-5  flex justify-center text-[0.8rem] mt-10 items-center text-[#858585] overflow-hidden font-mono">
                     <div onClick={() => { setIndicatorNav(6); setVisible(!visible); }} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Imprint</div>
@@ -182,10 +182,10 @@ function App() {
                     <div onClick={() => { setIndicatorNav(4); setVisible(!visible); }} className="p-3 mx-3 cursor-none hover:text-[#98f144]" >Contact</div>
                   </div>
                   <div className={`${stroke} duration-500 mt-5  border-2 border-[#98f144] rounded-full mb-5`}></div>
-               
+
                 </div>
               </div>
-              <SideBar handleCompany={handleCompany} handleHome={handleHome} handleMail={handleMail} handleOffer={handleOffer}/>
+              <SideBar handleCompany={handleCompany} handleHome={handleHome} handleMail={handleMail} handleOffer={handleOffer} />
               {/* EndNav */}
               {/* End NavigationBar*/}
 
@@ -193,26 +193,36 @@ function App() {
 
               {/* Integration for One Page Technologie */}
               {/* get you component for linkship and add an onCLick event. Now you can render dynamicly with an indicator Number */}
-              {indicatorNav === 1 && (
-                <StartSite TextAndButtonbt={orderMeetingbt("Book a consultation")} BlackCardButton={BlackCardbt1()} WhiteCardButton={WhiteCardbt1()}></StartSite>
-              )
+              {
+                indicatorNav === 1 && (
+                  <StartSite TextAndButtonbt={orderMeetingbt("Book a consultation")} BlackCardButton={BlackCardbt1()} WhiteCardButton={WhiteCardbt1()}></StartSite>
+                )
               }
-              {indicatorNav === 2 && (
-                <CompanySite></CompanySite>
-              )
+              {
+                indicatorNav === 2 && (
+                  <CompanySite></CompanySite>
+                )
               }
-              {indicatorNav === 4 && (
-                <ContactSite></ContactSite>
-              )}
-              {indicatorNav === 3 && (
-                <OfferSite></OfferSite>
-              )}
-              {indicatorNav === 6 && (
-                <Impressum></Impressum>
-              )}
-              {indicatorNav === 8 && (
-                <Privacy></Privacy>
-              )}
+              {
+                indicatorNav === 4 && (
+                  <ContactSite></ContactSite>
+                )
+              }
+              {
+                indicatorNav === 3 && (
+                  <OfferSite></OfferSite>
+                )
+              }
+              {
+                indicatorNav === 6 && (
+                  <Impressum></Impressum>
+                )
+              }
+              {
+                indicatorNav === 8 && (
+                  <Privacy></Privacy>
+                )
+              }
 
 
 
@@ -250,10 +260,10 @@ function App() {
             {/* Footer Nav Bar */}
             <div className="w-full cursor-none flex flex-row mobile:flex-col font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center tablet:text-[1rem] mobile:text-[0.8rem]">
               <div className="w-1/2 mobile:w-full flex desktop:gap-10 tablet:gap-6 mobile:gap-4 justify-start" >
-                <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={() => setIndicatorNav(6)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 6 && "bg-[#98f144]" }`} >Imprint</Link>
-                <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={() => setIndicatorNav(8)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 8 && "bg-[#98f144]" }`} >Privacy</Link>
-                <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={() => setIndicatorNav(4)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 4 && "bg-[#98f144]" }`} >Contact</Link>
-                <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={() => setIndicatorNav(3)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 3 && "bg-[#98f144]" }`} >Offer</Link>
+                <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={() => setIndicatorNav(6)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 6 && "bg-[#98f144]"}`} >Imprint</Link>
+                <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={() => setIndicatorNav(8)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 8 && "bg-[#98f144]"}`} >Privacy</Link>
+                <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={() => setIndicatorNav(4)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 4 && "bg-[#98f144]"}`} >Contact</Link>
+                <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={() => setIndicatorNav(3)} className={`inline-block hover:bg-[#98f144] cursor-none duration-300 hover:font-bold ${indicatorNav === 3 && "bg-[#98f144]"}`} >Offer</Link>
               </div>
               <div className="w-1/2 mobile:w-full mobile:mt-3 flex desktop:gap-8 tablet:gap-6 mobile:gap-4 items-center justify-end">
                 <p className="inline-block bg-[#98f144] mobile:opacity-0 ">Social Media</p>

@@ -80,6 +80,9 @@ export const OfferSite = () => {
   const [activePackage3, setActivePackage3] = useState(false)
   const [activePackage4, setActivePackage4] = useState(false)
 
+
+
+
   {/* BEGIN Logic for Switches (Emotions) */ }
   const switchLogic = (number: number, check?: boolean) => {
     if (number == 1) {
@@ -93,6 +96,8 @@ export const OfferSite = () => {
       setActiveSwitch5(false);
     }
 
+
+    
     if (number == 2) {
       if (activeSwitch2) {
         packageCardLogic(2, true)
@@ -276,40 +281,74 @@ export const OfferSite = () => {
           eventTrigger4={eventTrigger4}
         />
       </div>
-      {(technologieCaseActive1 || technologieCaseActive2) && (
-        <div
-          className={`overflow-hidden mt-[3rem] duration-500 ${technologieCaseActive1 ||
+
+
+
+
+
+
+
+
+
+      {
+        (technologieCaseActive1 || technologieCaseActive2) && (
+          <div
+            className={`overflow-hidden mt-[3rem] duration-500 ${technologieCaseActive1 ||
               technologieCaseActive2 ||
               technologieCaseActive3 ||
               technologieCaseActive4
               ? "h-full"
               : "h-0"
-            }`}
-        >
-          <ProgressionBar initProgression={5} />
-          <SwitchesWebsite
-            switchTitle1="modern"
-            switchTitle2="elegance"
-            switchTitle3="functional"
-            switchTitle4="unconventional"
-            switchTitle5="playful"
-            switchLogic={switchLogic}
-          />
+              }`}
+          >
 
-        </div>
-      )}
-      {(activeSwitch1 || activeSwitch2 || activeSwitch3 || activeSwitch4 ||
-        activeSwitch5) &&
+            <ProgressionBar initProgression={5} />
+            
+            <SwitchesWebsite
+              switchTitle1="modern"
+              switchTitle2="elegance"
+              switchTitle3="functional"
+              switchTitle4="unconventional"
+              switchTitle5="playful"
+              switchLogic={switchLogic}
+            />
+
+          </div>
+        )
+      }
+
+
+
+
+
+
+      {
+        (activeSwitch1 || activeSwitch2 || activeSwitch3 || activeSwitch4 ||
+          activeSwitch5) &&
         (
           <div className="mt-[5rem]">
             <PackageCard packageCardLogic={packageCardLogic} />
           </div>
         )
       }
+
+
+
+
+
+
       {(activePackage1 || activePackage2 || activePackage3 || activePackage4) &&
         (<div className="mt-[5rem]">
           <SwitchesTime switchLogic={switchTimeLogic} switchTitle1="6 to 8 weeks" switchTitle2="8 to 10 weeks" switchTitle3="10 to 12 weeks" />
-        </div>)}
+        </div>
+        )
+      }
+
+
+
+      <div className="border">
+
+      </div>
     </>
   );
 }

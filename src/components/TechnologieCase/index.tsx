@@ -20,6 +20,9 @@ export const TechnologieCase = (props: {
     const [active3, setActive3] = useState(false);
     const [active4, setActive4] = useState(false);
 
+
+
+
     return (
         <>
             <h1 className="text-[1.3rem] text-[#98f144] text-center mb-[3rem] font-mono mt-[3rem]">{props.heading}</h1>
