@@ -4,6 +4,8 @@ import { TechnologieCase } from "../TechnologieCase";
 import { TechnologieCaseItem } from "../TechnologieCaseItem";
 import { SwitchesWebsite } from "../SwitchesWebsite";
 import { CalculatorSwitches } from "../CalculatorSwitches";
+import { PackageCard } from "../PackageCard";
+import { PackageCardItem } from "../PackageCardItem";
 
 export const OfferSite = () => {
   // TechnologieCase Komponenten
@@ -76,6 +78,9 @@ export const OfferSite = () => {
   const [switch4, setSwitch4] = useState(false);
   const [switch5, setSwitch5] = useState(false);
 
+  const allSwitchesOff = () => {
+    return switch1 || switch2 || switch3 || switch4 || switch5
+  }
   // Hilfsfunktion für Wrap
   const allTechnicalCaseItemsOff = () => {
     return techCaseItem1Active || techCaseItem2Active || techCaseItem3Active || techCaseItem4Active
@@ -146,6 +151,68 @@ export const OfferSite = () => {
   const websiteSwitch5 = (<CalculatorSwitches onClick={handleSwitch5} activecss={switch5 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch5 ? moveAnimation : notMove} switchTitle="unconventional"></CalculatorSwitches>)
 
 
+
+
+
+
+
+  // PackageCards
+  const activePackageStyle = "border-dashed border-[#98f144] rounded-2xl"
+
+
+  // PackageCards for Websites States
+  const [onepagerActiv, setOnePagerActiv] = useState(false)
+  const [startUpActiv, setStartUpActiv] = useState(false)
+  const [businessActiv, setBusinessActiv] = useState(false)
+  const [customActiv, setCustomActiv] = useState(false)
+
+
+
+
+  const handleOnePager = () => {
+    setOnePagerActiv(!onepagerActiv);
+    setCustomActiv(false);
+    setBusinessActiv(false);
+    setStartUpActiv(false);
+  };
+
+  const handleStartUp = () => {
+    setOnePagerActiv(false);
+    setCustomActiv(false);
+    setBusinessActiv(false);
+    setStartUpActiv(!startUpActiv);
+  };
+
+  const handleBusiness = () => {
+    setOnePagerActiv(false);
+    setCustomActiv(false);
+    setBusinessActiv(!businessActiv);
+    setStartUpActiv(false);
+  };
+
+  const handleCustom = () => {
+    setOnePagerActiv(false);
+    setCustomActiv(!customActiv);
+    setBusinessActiv(false);
+    setStartUpActiv(false);
+  };
+
+
+  useEffect(() => {
+    setOnePagerActiv(false);
+    setCustomActiv(false);
+    setBusinessActiv(false);
+    setStartUpActiv(false);
+  }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
+
+
+
+  // PackageCards for Websites
+  const onePager = (<PackageCardItem activecss={`${onepagerActiv && activePackageStyle}`} onClick={handleOnePager} title="One Pager" description="TestText"></PackageCardItem>)
+  const StartUp = (<PackageCardItem activecss={`${startUpActiv && activePackageStyle}`} onClick={handleStartUp} title="Start Up" description="TestText"></PackageCardItem>)
+  const Business = (<PackageCardItem activecss={`${businessActiv && activePackageStyle}`} onClick={handleBusiness} title="Business" description="TestText"></PackageCardItem>)
+  const Custom = (<PackageCardItem activecss={`${customActiv && activePackageStyle}`} onClick={handleCustom} title="Custom" description="TestText"></PackageCardItem>)
+
   return (
     <>
       {/* Headline and Product Desciption */}
@@ -195,55 +262,64 @@ export const OfferSite = () => {
 
 
 
-        {/* // Linke Seite mit den switches */}
-        <div className={`w-full mt-10 flex justify-center duration-300 items-center`}>
-          <div className={`w-full mt-10 duration-300  ${allTechnicalCaseItemsOff() ? "h-[20rem]": "h-0"}`}>
-          {techCaseItem1Active && (
-            <div className={`animate-fadeIn flex mobile:flex-col tablet:flex-row w-full justify-center items-center mt-10`}>
-              <SwitchesWebsite
-                switch1={websiteSwitch1}
-                switch2={websiteSwitch2}
-                switch3={websiteSwitch3}
-                switch4={websiteSwitch4}
-                switch5={websiteSwitch5}
-              ></SwitchesWebsite>
 
 
 
-              <div className={`w-1/2 overflow-hidden mobile:text-left tablet:text-left p-5 text-slate-200 font-mono mobile:p-1 mobile:mt-10`}>
-                {
-                  switch1 && (
-                    <p className="animate-fadeIn text-[0.8rem]">{modernDescription}</p>
-                  )
-                }
 
-                {
-                  switch2 && (
-                    <p className="animate-fadeIn text-[0.8rem]">{elegantDescription}</p>
-                  )
-                }
 
-                {
-                  switch3 && (
-                    <p className="animate-fadeIn text-[0.8rem]">{playfulDescription}</p>
-                  )
-                }
 
-                {
-                  switch4 && (
-                    <p className="animate-fadeIn text-[0.8rem]">{functionalDescription}</p>
-                  )
-                }
+        <div className={`w-full mt-10 flex flex-col justify-center items-center`}>
 
-                {
-                  switch5 && (
-                    <p className="animate-fadeIn text-[0.8rem]">{unconventionalDescription}</p>
-                  )
-                }
 
+          <div className={`w-full mt-10 duration-500  ${allTechnicalCaseItemsOff() ? "h-[30rem]" : "h-0"}`}>
+            {techCaseItem1Active && (
+              <div className={`animate-fadeIn flex mobile:flex-col tablet:flex-row w-full justify-center items-center mt-10`}>
+                <SwitchesWebsite
+                  switch1={websiteSwitch1}
+                  switch2={websiteSwitch2}
+                  switch3={websiteSwitch3}
+                  switch4={websiteSwitch4}
+                  switch5={websiteSwitch5}
+                ></SwitchesWebsite>
+
+
+
+                <div className={`w-1/2 overflow-hidden mobile:text-left tablet:text-left p-5 text-slate-200 font-mono mobile:p-1 mobile:mt-10`}>
+                  {
+                    switch1 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{modernDescription}</p>
+                    )
+                  }
+
+                  {
+                    switch2 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{elegantDescription}</p>
+                    )
+                  }
+
+                  {
+                    switch3 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{playfulDescription}</p>
+                    )
+                  }
+
+                  {
+                    switch4 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{functionalDescription}</p>
+                    )
+                  }
+
+                  {
+                    switch5 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{unconventionalDescription}</p>
+                    )
+                  }
+
+                </div>
               </div>
-            </div>
-          )}
+            )}
+
+            {/* Wrap 1 Endet hier */}
           </div>
 
 
@@ -253,16 +329,39 @@ export const OfferSite = () => {
 
 
 
+          <div className={`flex w-full justify-center  duration-500   ${allSwitchesOff() ? "mobile:h-[70rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
+            {(switch1 || switch2 || switch3 || switch4 || switch5) && (
+              <PackageCard>
+                {onePager}
+                {StartUp}
+                {Business}
+                {Custom}
+              </PackageCard>
+            )}
+          </div>
+
+
+
+
+
+
+
+
+        {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
+        <div className="w-full flex flex-col items-center mt-10">
+          <div className="w-[20rem] h-10 border border-[#292929] rounded-full flex items-center overflow-hidden">
+            {/* Progress Bar */}
+            <div className={`animate-progressInit h-full bg-[#98f144] duration-500 overflow-hidden rounded-full flex justify-center items-center`}>
+              <span className={`font-mono font-semibold`}></span>
+            </div>
+          </div>
+          <div className="text-slate-200 font-mono text-[0.8rem] mt-3"><span>Progression</span>{" : "}<span>25 %</span></div>
+        </div>
+        {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
+
+
 
         </div>
-
-
-
-
-
-
-
-
 
 
 
