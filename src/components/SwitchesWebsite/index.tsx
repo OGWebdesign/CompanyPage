@@ -6,7 +6,7 @@ export const SwitchesWebsite = (props: {
     switch5:JSX.Element | JSX.Element[] | string
 }) => {
     return (
-        <div className="w-1/2 duration-500 ease-in-out transition-all flex justify-center items-center flex-col">
+        <div className="w-1/2 duration-500 ease-in-out transition-all flex justify-center items-center tablet:items-center mobile:items-start flex-col">
             <div>
                 {props.switch1}
                 {props.switch2}

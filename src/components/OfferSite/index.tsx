@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ParagraphOGLeft } from "../ParagraphOGLeft";
 import { TechnologieCase } from "../TechnologieCase";
 import { TechnologieCaseItem } from "../TechnologieCaseItem";
@@ -60,27 +60,32 @@ export const OfferSite = () => {
 
 
   // Switches
-  // Switch Beschreibung
+  // Switch Beschreibung für Webseiten.
   const modernDescription = "A modern design with a very intuitive, often minimalist user interface. This type of design is particularly suitable for young or technical companies.";
   const elegantDescription = "An elegant design is ideal for companies in the fashion or beauty industry or for art. However, this design language often requires high-quality photos.";
   const playfulDescription = "A playful design for the Spielemax. A particularly large number of effects and animations are a particularly common stylistic element here. A glowing button here, an expanding window there. Everything is possible.";
   const functionalDescription = "A functional design is the perfect design language for craft companies or companies in the automotive industry. Here, particular emphasis is placed on performance and simplicity. Particularly fast loading times of up to 50ms are possible.";
   const unconventionalDescription = "With an unconventional design, particular emphasis is placed on being different. This can appear very modern but also a little crazy. The aim of this design concept will be to create a particularly striking effect that will stay in the customer's mind.";
 
+  //-----------------------------------------------------------------------------------------------------------------------------------------
+
+  // Die Switches können mit der jetztigen Technologie wiederverwendet werden. Hierzu muss nur das Grid Welches diese aufnimmt eine andere Einstellung der Renderung unten haben.
   const [switch1, setSwitch1] = useState(false);
   const [switch2, setSwitch2] = useState(false);
   const [switch3, setSwitch3] = useState(false);
   const [switch4, setSwitch4] = useState(false);
   const [switch5, setSwitch5] = useState(false);
 
+  // Hilfsfunktion für Wrap
+  const allTechnicalCaseItemsOff = () => {
+    return techCaseItem1Active || techCaseItem2Active || techCaseItem3Active || techCaseItem4Active
+  }
 
   // Styleklassen für aktiv und inaktiv der Switches
-  const wrapperHeightRegulator = techCaseItem1Active || techCaseItem2Active ? "h-[20rem]" : "h-0"
   const buttonBackgroundActive = "bg-[#98f144]";
   const buttonBackgroundInActive = "bg-[#151515]";
   const moveAnimation = "ml-6"
   const notMove = "ml-0"
-
 
 
 
@@ -126,37 +131,19 @@ export const OfferSite = () => {
   };
 
 
+  useEffect(() => {
+    setSwitch1(false);
+    setSwitch2(false);
+    setSwitch3(false);
+    setSwitch4(false);
+    setSwitch5(false);
+  }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
+
   const websiteSwitch1 = (<CalculatorSwitches onClick={handleSwitch1} activecss={switch1 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch1 ? moveAnimation : notMove} switchTitle="modern"></CalculatorSwitches>)
   const websiteSwitch2 = (<CalculatorSwitches onClick={handleSwitch2} activecss={switch2 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch2 ? moveAnimation : notMove} switchTitle="elegant"></CalculatorSwitches>)
   const websiteSwitch3 = (<CalculatorSwitches onClick={handleSwitch3} activecss={switch3 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch3 ? moveAnimation : notMove} switchTitle="playful"></CalculatorSwitches>)
   const websiteSwitch4 = (<CalculatorSwitches onClick={handleSwitch4} activecss={switch4 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch4 ? moveAnimation : notMove} switchTitle="functional"></CalculatorSwitches>)
   const websiteSwitch5 = (<CalculatorSwitches onClick={handleSwitch5} activecss={switch5 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch5 ? moveAnimation : notMove} switchTitle="unconventional"></CalculatorSwitches>)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   return (
@@ -209,10 +196,10 @@ export const OfferSite = () => {
 
 
         {/* // Linke Seite mit den switches */}
-        <div className={`w-[80%] mt-10  flex justify-center duration-300 items-center`}>
-
+        <div className={`w-full mt-10 flex justify-center duration-300 items-center`}>
+          <div className={`w-full mt-10 duration-300  ${allTechnicalCaseItemsOff() ? "h-[20rem]": "h-0"}`}>
           {techCaseItem1Active && (
-            <div className="animate-fadeIn flex w-full justify-center items-center">
+            <div className={`animate-fadeIn flex mobile:flex-col tablet:flex-row w-full justify-center items-center mt-10`}>
               <SwitchesWebsite
                 switch1={websiteSwitch1}
                 switch2={websiteSwitch2}
@@ -223,40 +210,44 @@ export const OfferSite = () => {
 
 
 
-              <div className={`w-1/2 overflow-hidden p-5 text-slate-200 font-mono`}>
+              <div className={`w-1/2 overflow-hidden mobile:text-left tablet:text-left p-5 text-slate-200 font-mono mobile:p-1 mobile:mt-10`}>
                 {
                   switch1 && (
-                    <p className="animate-fadeIn">{modernDescription}</p>
+                    <p className="animate-fadeIn text-[0.8rem]">{modernDescription}</p>
                   )
                 }
 
                 {
                   switch2 && (
-                    <p className="animate-fadeIn">{elegantDescription}</p>
+                    <p className="animate-fadeIn text-[0.8rem]">{elegantDescription}</p>
                   )
                 }
 
                 {
                   switch3 && (
-                    <p className="animate-fadeIn">{playfulDescription}</p>
+                    <p className="animate-fadeIn text-[0.8rem]">{playfulDescription}</p>
                   )
                 }
 
                 {
                   switch4 && (
-                    <p className="animate-fadeIn">{functionalDescription}</p>
+                    <p className="animate-fadeIn text-[0.8rem]">{functionalDescription}</p>
                   )
                 }
 
                 {
                   switch5 && (
-                    <p className="animate-fadeIn">{unconventionalDescription}</p>
+                    <p className="animate-fadeIn text-[0.8rem]">{unconventionalDescription}</p>
                   )
                 }
 
               </div>
             </div>
           )}
+          </div>
+
+
+
 
 
 
