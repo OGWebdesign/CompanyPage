@@ -1,15 +1,15 @@
 export const CalculatorSwitches = (props: {
-    switchTitle: string
+    switchTitle: string,
+    activecss:string,
+    move:string,
+    onClick:() => void
 }) => {
-    const buttonStyleActive = "bg-[#98f144]"; // <-für den Hintergrund der Grün wird
-    const buttonStyleInActive = "bg-[#151515]";// <- oder Grau
-
-    // Wichtiger Hinweis -> aktiv ? "ml-6" : "ml-0" <-- für das innere div
+ // Wichtiger Hinweis -> aktiv ? "ml-6" : "ml-0" <-- für das innere div
     return (
         <div className="flex items-center my-2 ml-4">
             <div className="w-[6rem]">
-                <div className={`flex items-center h-8 w-14 border border-[#4d4d4d] duration-300 rounded-full`}>
-                    <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300`}></div>
+                <div onClick={props.onClick} className={`flex items-center h-8 w-14 border border-[#4d4d4d] ${props.activecss} duration-300 rounded-full`}>
+                    <div className={`w-8 h-8 bg-slate-200 rounded-full duration-300 ${props.move}`}></div>
                 </div>
             </div>
 

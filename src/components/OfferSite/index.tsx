@@ -1,241 +1,240 @@
-import { useState } from "react";
-import { ParagraphOG } from "../ParagraphOG";
+import { useEffect, useState } from "react";
 import { ParagraphOGLeft } from "../ParagraphOGLeft";
 import { TechnologieCase } from "../TechnologieCase";
-import { SwitchesTime, SwitchesWebsite } from "../SwitchesWebsite";
-import { ProgressionBar } from "../ProgressionBar";
+import { TechnologieCaseItem } from "../TechnologieCaseItem";
+import { SwitchesWebsite } from "../SwitchesWebsite";
+import { CalculatorSwitches } from "../CalculatorSwitches";
 import { PackageCard } from "../PackageCard";
+import { PackageCardItem } from "../PackageCardItem";
 
 export const OfferSite = () => {
-  {
-    /* Auswahl Angebot */
-  }
-  const [technologieCaseActive1, setTechnologieCaseActive1] = useState(false);
-  const [technologieCaseActive2, setTechnologieCaseActive2] = useState(false);
-  const [technologieCaseActive3, setTechnologieCaseActive3] = useState(false);
-  const [technologieCaseActive4, setTechnologieCaseActive4] = useState(false);
-
-  {
-    /*Begin TechSelect Logic */
-  }
-  const eventTrigger1 = () => {
-    if (technologieCaseActive1) {
-      switchLogic(1, true);
-    }
-    setTechnologieCaseActive1(!technologieCaseActive1);
-    setTechnologieCaseActive2(false);
-    setTechnologieCaseActive3(false);
-    setTechnologieCaseActive4(false);
-  };
-
-  const eventTrigger2 = () => {
-    if (technologieCaseActive2) {
-      switchLogic(1, true);
-    }
-    setTechnologieCaseActive2(!technologieCaseActive2);
-    setTechnologieCaseActive1(false);
-    setTechnologieCaseActive3(false);
-    setTechnologieCaseActive4(false);
-  };
-
-  const eventTrigger3 = () => {
-    if (technologieCaseActive3) {
-      switchLogic(1, true);
-    }
-    setTechnologieCaseActive3(!technologieCaseActive3);
-    setTechnologieCaseActive1(false);
-    setTechnologieCaseActive2(false);
-    setTechnologieCaseActive4(false);
-  };
-
-  const eventTrigger4 = () => {
-    if (technologieCaseActive4) {
-      switchLogic(1, true);
-    }
-    setTechnologieCaseActive4(!technologieCaseActive4);
-    setTechnologieCaseActive1(false);
-    setTechnologieCaseActive2(false);
-    setTechnologieCaseActive3(false);
-  };
-  {
-    /*End TechSelect Logic */
-  }
-
-  {
-    /* Switch Logic */
-  }
-
-  const [activeSwitch1, setActiveSwitch1] = useState(false);
-  const [activeSwitch2, setActiveSwitch2] = useState(false);
-  const [activeSwitch3, setActiveSwitch3] = useState(false);
-  const [activeSwitch4, setActiveSwitch4] = useState(false);
-  const [activeSwitch5, setActiveSwitch5] = useState(false);
-
-  const [activeSwitch1Time, setActiveSwitch1Time] = useState(false);
-  const [activeSwitch2Time, setActiveSwitch2Time] = useState(false);
-  const [activeSwitch3Time, setActiveSwitch3Time] = useState(false);
-
-  const [activePackage1, setActivePackage1] = useState(false)
-  const [activePackage2, setActivePackage2] = useState(false)
-  const [activePackage3, setActivePackage3] = useState(false)
-  const [activePackage4, setActivePackage4] = useState(false)
 
 
 
-
-  {/* BEGIN Logic for Switches (Emotions) */ }
-  const switchLogic = (number: number, check?: boolean) => {
-    if (number == 1) {
-      if (activeSwitch1) {
-        packageCardLogic(1, true)
-      }
-      setActiveSwitch1(!activeSwitch1);
-      setActiveSwitch2(false);
-      setActiveSwitch3(false);
-      setActiveSwitch4(false);
-      setActiveSwitch5(false);
-    }
-
-
-    
-    if (number == 2) {
-      if (activeSwitch2) {
-        packageCardLogic(2, true)
-      }
-      setActiveSwitch1(false);
-      setActiveSwitch2(!activeSwitch2);
-      setActiveSwitch3(false);
-      setActiveSwitch4(false);
-      setActiveSwitch5(false);
-    }
-
-    if (number == 3) {
-      if (activeSwitch3) {
-        packageCardLogic(3, true)
-      }
-      setActiveSwitch1(false);
-      setActiveSwitch2(false);
-      setActiveSwitch3(!activeSwitch3);
-      setActiveSwitch4(false);
-      setActiveSwitch5(false);
-    }
-
-    if (number == 4) {
-      if (activeSwitch4) {
-        packageCardLogic(4, true)
-      }
-      setActiveSwitch1(false);
-      setActiveSwitch2(false);
-      setActiveSwitch3(false);
-      setActiveSwitch4(!activeSwitch4);
-      setActiveSwitch5(false);
-    }
-
-    if (number == 5) {
-      if (activeSwitch5) {
-        packageCardLogic(5, true)
-      }
-      setActiveSwitch1(false);
-      setActiveSwitch2(false);
-      setActiveSwitch3(false);
-      setActiveSwitch4(false);
-      setActiveSwitch5(!activeSwitch5);
-    }
-
-    if (check) {
-      setActiveSwitch1(false);
-      setActiveSwitch2(false);
-      setActiveSwitch3(false);
-      setActiveSwitch4(false);
-      setActiveSwitch5(false);
-      setActivePackage1(false);
-      setActivePackage2(false);
-      setActivePackage3(false);
-      setActivePackage4(false);
-    }
-  };
-
-  {
-    /*End Switch Logic */
+  // TechnologieCase Komponenten
+  // Klickabhängiges CSS für den gestrichelten Rand bei Aktivierung
+  const activeEffect = "border-[#98f144] rounded-lg border-dashed"
+  // States die bestimmen,welcher Komponent aktiv ist.
+  const [techCaseItem1Active, setTechCaseItem1Active] = useState(false)
+  const [techCaseItem2Active, setTechCaseItem2Active] = useState(false)
+  const [techCaseItem3Active, setTechCaseItem3Active] = useState(false)
+  const [techCaseItem4Active, setTechCaseItem4Active] = useState(false)
+  // Hilfsfunktion für Wrap
+  const allTechnicalCaseItemsOff = () => {
+    return techCaseItem1Active || techCaseItem2Active || techCaseItem3Active || techCaseItem4Active
   }
 
 
-
-  {/* BEGIN Logic for pages selection */ }
-  const packageCardLogic = (number: number, check?: boolean) => {
-    if (number == 1) {
-      setActivePackage1(!activePackage1);
-      setActivePackage2(false);
-      setActivePackage3(false);
-      setActivePackage4(false);
-    }
-
-    if (number == 2) {
-      setActivePackage1(false);
-      setActivePackage2(!activePackage2);
-      setActivePackage3(false);
-      setActivePackage4(false);
-    }
-
-    if (number == 3) {
-      setActivePackage1(false);
-      setActivePackage2(false);
-      setActivePackage3(!activePackage3);
-      setActivePackage4(false);
-    }
-
-    if (number == 4) {
-      setActivePackage1(false);
-      setActivePackage2(false);
-      setActivePackage3(false);
-      setActivePackage4(!activePackage4);
-    }
-
-    if (check) {
-      setActivePackage1(false);
-      setActivePackage2(false);
-      setActivePackage3(false);
-      setActivePackage4(false);
-    }
+  // Funktionen die die Schalterpositionen rekulieren.
+  const handleTechCaseItem1Click = () => {
+    setTechCaseItem1Active(!techCaseItem1Active);
+    setTechCaseItem2Active(false);
+    setTechCaseItem3Active(false);
+    setTechCaseItem4Active(false);
   };
-  {/* END Logic for pages selection */ }
 
-
-  {/* BEGIN Logic for time switches */ }
-  const switchTimeLogic = (number: number, check?: boolean) => {
-    {/* current position is handled by number */ }
-    if (number == 1) {
-      setActiveSwitch1Time(!activeSwitch1Time);
-      setActiveSwitch2Time(false);
-      setActiveSwitch3Time(false);
-    }
-
-    if (number == 2) {
-      setActiveSwitch1Time(false);
-      setActiveSwitch2Time(!activeSwitch2Time);
-      setActiveSwitch3Time(false);
-    }
-
-    if (number == 3) {
-      setActiveSwitch1Time(false);
-      setActiveSwitch2Time(false);
-      setActiveSwitch3Time(!activeSwitch3Time);
-    }
-
-
-    if (check) {
-      setActiveSwitch1(false);
-      setActiveSwitch2(false);
-      setActiveSwitch3(false);
-      setActiveSwitch4(false);
-      setActiveSwitch5(false);
-      setActivePackage1(false);
-      setActivePackage2(false);
-      setActivePackage3(false);
-      setActivePackage4(false);
-    }
+  const handleTechCaseItem2Click = () => {
+    setTechCaseItem1Active(false);
+    setTechCaseItem2Active(!techCaseItem2Active);
+    setTechCaseItem3Active(false);
+    setTechCaseItem4Active(false);
   };
-  {/* END Logic for time switches */ }
+
+  const handleTechCaseItem3Click = () => {
+    setTechCaseItem1Active(false);
+    setTechCaseItem2Active(false);
+    setTechCaseItem3Active(!techCaseItem3Active);
+    setTechCaseItem4Active(false);
+  };
+
+  const handleTechCaseItem4Click = () => {
+    setTechCaseItem1Active(false);
+    setTechCaseItem2Active(false);
+    setTechCaseItem3Active(false);
+    setTechCaseItem4Active(!techCaseItem4Active);
+  };
+
+
+
+
+  // TechnologieCase Items
+  const techCaseItem1 = (<TechnologieCaseItem aktivatecss={`${techCaseItem1Active && activeEffect}`} name1="Webapp" onClick={handleTechCaseItem1Click}></TechnologieCaseItem>)
+  const techCaseItem2 = (<TechnologieCaseItem aktivatecss={`${techCaseItem2Active && activeEffect}`} name1="Website" onClick={handleTechCaseItem2Click}></TechnologieCaseItem>)
+  const techCaseItem3 = (<TechnologieCaseItem aktivatecss={`${techCaseItem3Active && activeEffect}`} name1="Consulting" onClick={handleTechCaseItem3Click}></TechnologieCaseItem>)
+  const techCaseItem4 = (<TechnologieCaseItem aktivatecss={`${techCaseItem4Active && activeEffect}`} name1="Bots & AI" onClick={handleTechCaseItem4Click}></TechnologieCaseItem>)
+
+
+
+
+
+
+
+
+
+
+
+  // Switches
+  // Switch Beschreibung für Webseiten.
+  const modernDescription = "A modern design with a very intuitive, often minimalist user interface. This type of design is particularly suitable for young or technical companies.";
+  const elegantDescription = "An elegant design is ideal for companies in the fashion or beauty industry or for art. However, this design language often requires high-quality photos.";
+  const playfulDescription = "A playful design for the Spielemax. A particularly large number of effects and animations are a particularly common stylistic element here. A glowing button here, an expanding window there. Everything is possible.";
+  const functionalDescription = "A functional design is the perfect design language for craft companies or companies in the automotive industry. Here, particular emphasis is placed on performance and simplicity. Particularly fast loading times of up to 50ms are possible.";
+  const unconventionalDescription = "With an unconventional design, particular emphasis is placed on being different. This can appear very modern but also a little crazy. The aim of this design concept will be to create a particularly striking effect that will stay in the customer's mind.";
+
+  //-----------------------------------------------------------------------------------------------------------------------------------------
+
+  // Die Switches können mit der jetztigen Technologie wiederverwendet werden. Hierzu muss nur das Grid Welches diese aufnimmt eine andere Einstellung der Renderung unten haben.
+  const [switch1, setSwitch1] = useState(false);
+  const [switch2, setSwitch2] = useState(false);
+  const [switch3, setSwitch3] = useState(false);
+  const [switch4, setSwitch4] = useState(false);
+  const [switch5, setSwitch5] = useState(false);
+
+  const allSwitchesOff = () => {
+    return switch1 || switch2 || switch3 || switch4 || switch5
+  }
+
+  // Styleklassen für aktiv und inaktiv der Switches
+  const buttonBackgroundActive = "bg-[#98f144]";
+  const buttonBackgroundInActive = "bg-[#151515]";
+  const moveAnimation = "ml-6"
+  const notMove = "ml-0"
+
+
+
+
+  const handleSwitch1 = () => {
+    setSwitch1(!switch1);
+    setSwitch2(false);
+    setSwitch3(false);
+    setSwitch4(false);
+    setSwitch5(false);
+  };
+
+  const handleSwitch2 = () => {
+    setSwitch1(false);
+    setSwitch2(!switch2);
+    setSwitch3(false);
+    setSwitch4(false);
+    setSwitch5(false);
+  };
+
+  const handleSwitch3 = () => {
+    setSwitch1(false);
+    setSwitch2(false);
+    setSwitch3(!switch3);
+    setSwitch4(false);
+    setSwitch5(false);
+  };
+
+  const handleSwitch4 = () => {
+    setSwitch1(false);
+    setSwitch2(false);
+    setSwitch3(false);
+    setSwitch4(!switch4);
+    setSwitch5(false);
+  };
+
+  const handleSwitch5 = () => {
+    setSwitch1(false);
+    setSwitch2(false);
+    setSwitch3(false);
+    setSwitch4(false);
+    setSwitch5(!switch5);
+  };
+
+
+  useEffect(() => {
+    setSwitch1(false);
+    setSwitch2(false);
+    setSwitch3(false);
+    setSwitch4(false);
+    setSwitch5(false);
+
+  }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
+
+
+  const websiteSwitch1 = (<CalculatorSwitches onClick={handleSwitch1} activecss={switch1 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch1 ? moveAnimation : notMove} switchTitle="modern"></CalculatorSwitches>)
+  const websiteSwitch2 = (<CalculatorSwitches onClick={handleSwitch2} activecss={switch2 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch2 ? moveAnimation : notMove} switchTitle="elegant"></CalculatorSwitches>)
+  const websiteSwitch3 = (<CalculatorSwitches onClick={handleSwitch3} activecss={switch3 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch3 ? moveAnimation : notMove} switchTitle="playful"></CalculatorSwitches>)
+  const websiteSwitch4 = (<CalculatorSwitches onClick={handleSwitch4} activecss={switch4 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch4 ? moveAnimation : notMove} switchTitle="functional"></CalculatorSwitches>)
+  const websiteSwitch5 = (<CalculatorSwitches onClick={handleSwitch5} activecss={switch5 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch5 ? moveAnimation : notMove} switchTitle="unconventional"></CalculatorSwitches>)
+
+
+
+
+
+
+
+  // PackageCards
+  const activePackageStyle = "border-dashed border-[#98f144] rounded-2xl"
+
+
+  // PackageCards for Websites States
+  const [onepagerActiv, setOnePagerActiv] = useState(false)
+  const [startUpActiv, setStartUpActiv] = useState(false)
+  const [businessActiv, setBusinessActiv] = useState(false)
+  const [customActiv, setCustomActiv] = useState(false)
+
+
+
+
+  const handleOnePager = () => {
+    setOnePagerActiv(!onepagerActiv);
+    setCustomActiv(false);
+    setBusinessActiv(false);
+    setStartUpActiv(false);
+  };
+
+  const handleStartUp = () => {
+    setOnePagerActiv(false);
+    setCustomActiv(false);
+    setBusinessActiv(false);
+    setStartUpActiv(!startUpActiv);
+  };
+
+  const handleBusiness = () => {
+    setOnePagerActiv(false);
+    setCustomActiv(false);
+    setBusinessActiv(!businessActiv);
+    setStartUpActiv(false);
+  };
+
+  const handleCustom = () => {
+    setOnePagerActiv(false);
+    setCustomActiv(!customActiv);
+    setBusinessActiv(false);
+    setStartUpActiv(false);
+  };
+
+
+  useEffect(() => {
+    setOnePagerActiv(false);
+    setCustomActiv(false);
+    setBusinessActiv(false);
+    setStartUpActiv(false);
+
+  }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
+
+
+
+  // PackageCards for Websites
+  const onePager = (<PackageCardItem activecss={`${onepagerActiv && activePackageStyle}`} onClick={handleOnePager} title="One Pager" description="TestText"></PackageCardItem>)
+  const StartUp = (<PackageCardItem activecss={`${startUpActiv && activePackageStyle}`} onClick={handleStartUp} title="Start Up" description="TestText"></PackageCardItem>)
+  const Business = (<PackageCardItem activecss={`${businessActiv && activePackageStyle}`} onClick={handleBusiness} title="Business" description="TestText"></PackageCardItem>)
+  const Custom = (<PackageCardItem activecss={`${customActiv && activePackageStyle}`} onClick={handleCustom} title="Custom" description="TestText"></PackageCardItem>)
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <>
@@ -267,20 +266,21 @@ export const OfferSite = () => {
         ></ParagraphOGLeft>
       </div>
 
+
+
+
+
+
+
       {/* Begin Program */}
-      <div className="w-full flex flex-col justify-center items-center">
-        <TechnologieCase
-          heading="Our technologies"
-          name1="Websites"
-          name2="Web Apps"
-          name3="Consulting"
-          name4="Bots & AI"
-          eventTrigger1={eventTrigger1}
-          eventTrigger2={eventTrigger2}
-          eventTrigger3={eventTrigger3}
-          eventTrigger4={eventTrigger4}
-        />
-      </div>
+      <div className="flex flex-col justify-center items-center w-full">
+        <TechnologieCase heading="Lets configurate your own Offer"
+          item1={techCaseItem1}
+          item2={techCaseItem2}
+          item3={techCaseItem3}
+          item4={techCaseItem4}
+        >
+        </TechnologieCase>
 
 
 
@@ -290,63 +290,106 @@ export const OfferSite = () => {
 
 
 
-      {
-        (technologieCaseActive1 || technologieCaseActive2) && (
-          <div
-            className={`overflow-hidden mt-[3rem] duration-500 ${technologieCaseActive1 ||
-              technologieCaseActive2 ||
-              technologieCaseActive3 ||
-              technologieCaseActive4
-              ? "h-full"
-              : "h-0"
-              }`}
-          >
 
-            <ProgressionBar initProgression={5} />
+        <div className={`w-full mt-10 flex flex-col justify-center items-center`}>
 
-            <SwitchesWebsite
-              switchTitle1="modern"
-              switchTitle2="elegance"
-              switchTitle3="functional"
-              switchTitle4="unconventional"
-              switchTitle5="playful"
-              switchLogic={switchLogic}
-            />
 
+          <div className={`w-full mt-10 duration-500  ${allTechnicalCaseItemsOff() ? "h-[30rem]" : "h-0"}`}>
+            {techCaseItem1Active && (
+              <div className={`animate-fadeIn flex mobile:flex-col tablet:flex-row w-full justify-center items-center mt-10`}>
+                <SwitchesWebsite
+                  switch1={websiteSwitch1}
+                  switch2={websiteSwitch2}
+                  switch3={websiteSwitch3}
+                  switch4={websiteSwitch4}
+                  switch5={websiteSwitch5}
+                ></SwitchesWebsite>
+
+
+
+                <div className={`w-1/2 overflow-hidden mobile:text-left tablet:text-left p-5 text-slate-200 font-mono mobile:p-1 mobile:mt-10`}>
+                  {
+                    switch1 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{modernDescription}</p>
+                    )
+                  }
+
+                  {
+                    switch2 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{elegantDescription}</p>
+                    )
+                  }
+
+                  {
+                    switch3 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{playfulDescription}</p>
+                    )
+                  }
+
+                  {
+                    switch4 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{functionalDescription}</p>
+                    )
+                  }
+
+                  {
+                    switch5 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{unconventionalDescription}</p>
+                    )
+                  }
+
+                </div>
+              </div>
+            )}
+
+            {/* Wrap 1 Endet hier */}
           </div>
-        )
-      }
 
 
 
 
 
 
-      {
-        (activeSwitch1 || activeSwitch2 || activeSwitch3 || activeSwitch4 ||
-          activeSwitch5) &&
-        (
-          <div className="mt-[5rem]">
-            <PackageCard packageCardLogic={packageCardLogic} />
+
+
+          <div className={`flex w-full justify-center  duration-500   ${allSwitchesOff() ? "mobile:h-[70rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
+            {(switch1 || switch2 || switch3 || switch4 || switch5) && (
+              <div className="w-full animate-fadeIn">
+                <PackageCard>
+                  {onePager}
+                  {StartUp}
+                  {Business}
+                  {Custom}
+                </PackageCard>
+              </div>
+            )}
           </div>
-        )
-      }
 
 
 
 
 
 
-      {(activePackage1 || activePackage2 || activePackage3 || activePackage4) &&
-        (<div className="mt-[5rem]">
-          <SwitchesTime switchLogic={switchTimeLogic} switchTitle1="6 to 8 weeks" switchTitle2="8 to 10 weeks" switchTitle3="10 to 12 weeks" />
+
+
+          {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
+          <div className="w-full flex flex-col items-center mt-10">
+            <div className="w-[20rem] h-10 border border-[#292929] rounded-full flex items-center overflow-hidden">
+              {/* Progress Bar */}
+              <div className={`h-full bg-[#98f144] duration-500 overflow-hidden rounded-full flex justify-center 
+                items-center`}>
+                <span className={`font-mono font-semibold`}></span>
+              </div>
+            </div>
+            <div className="text-slate-200 font-mono text-[0.8rem] mt-3"><span>Progression</span>{" : "}<span></span></div>
+          </div>
+          {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
+
+
+
         </div>
-        )
-      }
 
 
-
-      <div className="border">
 
       </div>
     </>
