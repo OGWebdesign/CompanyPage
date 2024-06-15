@@ -8,6 +8,7 @@ import { PackageCard } from "../PackageCard";
 import { PackageCardItem } from "../PackageCardItem";
 import { WeekChanger } from "../WeekChanger";
 import { WeekChangerItems } from "../WeekChangerItems";
+import { ContactSite } from "../ContactSite";
 
 export const OfferSite = () => {
 
@@ -239,14 +240,35 @@ export const OfferSite = () => {
   //------------------------------------------------------------------------ WeekChanger
 
   // For Business 
-  const [active6to8Weeks, setActive6to8Weeks] = useState(false);
-  const [active8To108Weeks, setActive8To10Weeks] = useState(false);
+  const [active6To8Weeks, setActive6To8Weeks] = useState(false);
+  const [active8To10Weeks, setActive8To10Weeks] = useState(false);
   const [active10To12Weeks, setActive10To12Weeks] = useState(false);
+  const aktivcssWeeks = "border-2 border-[#98f144] border-dashed rounded-lg" 
 
+  const handleClickSixToEight = () => {
+    setActive6To8Weeks(active6To8Weeks => !active6To8Weeks)
+    setActive8To10Weeks(false)
+    setActive10To12Weeks(false)
+  }
 
-  const sixToEight = (<WeekChangerItems text="6 - 8 Weeks " activecss="3"></WeekChangerItems>)
-  const eightToTen = (<WeekChangerItems text="8 - 10 Weeks " activecss="3"></WeekChangerItems>)
-  const tenTotwelve = (<WeekChangerItems text="10 - 12 Weeks " activecss="3"></WeekChangerItems>)
+  const handleClickEightToTen = () => {
+    setActive6To8Weeks(false)
+    setActive8To10Weeks(active8To108Weeks => ! active8To108Weeks)
+    setActive10To12Weeks(false)
+  }
+
+  const handleClickTenToTwelve = () => {
+    setActive6To8Weeks(false)
+    setActive8To10Weeks(false)
+    setActive10To12Weeks(active10To12Weeks => !active10To12Weeks)
+  }
+
+  useEffect(() => {
+    
+  })
+  const sixToEight = (<WeekChangerItems onClick={handleClickSixToEight} text="6 - 8 Weeks " activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
+  const eightToTen = (<WeekChangerItems onClick={handleClickEightToTen} text="8 - 10 Weeks " activecss={`${active8To10Weeks && aktivcssWeeks}`}></WeekChangerItems>)
+  const tenTotwelve = (<WeekChangerItems onClick={handleClickTenToTwelve} text="10 - 12 Weeks " activecss={`${active10To12Weeks && aktivcssWeeks}`}></WeekChangerItems>)
 
 
 
@@ -394,8 +416,6 @@ export const OfferSite = () => {
 
 
 
-
-
           {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
           <div className="w-full flex flex-col items-center mt-10">
             <div className="w-[20rem] h-10 border border-[#292929] rounded-full flex items-center overflow-hidden">
@@ -409,6 +429,9 @@ export const OfferSite = () => {
           </div>
           {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
 
+          <div>
+            <ContactSite></ContactSite>
+          </div>
 
 
         </div>
