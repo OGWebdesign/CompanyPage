@@ -6,12 +6,15 @@ import { SwitchesWebsite } from "../SwitchesWebsite";
 import { CalculatorSwitches } from "../CalculatorSwitches";
 import { PackageCard } from "../PackageCard";
 import { PackageCardItem } from "../PackageCardItem";
+import { WeekChanger } from "../WeekChanger";
+import { WeekChangerItems } from "../WeekChangerItems";
+import { ContactSite } from "../ContactSite";
 
 export const OfferSite = () => {
 
 
 
-  // TechnologieCase Komponenten
+  // ------------------------------------------------------------------- TechnologieCase Komponenten
   // Klickabhängiges CSS für den gestrichelten Rand bei Aktivierung
   const activeEffect = "border-[#98f144] rounded-lg border-dashed"
   // States die bestimmen,welcher Komponent aktiv ist.
@@ -19,6 +22,9 @@ export const OfferSite = () => {
   const [techCaseItem2Active, setTechCaseItem2Active] = useState(false)
   const [techCaseItem3Active, setTechCaseItem3Active] = useState(false)
   const [techCaseItem4Active, setTechCaseItem4Active] = useState(false)
+
+
+
   // Hilfsfunktion für Wrap
   const allTechnicalCaseItemsOff = () => {
     return techCaseItem1Active || techCaseItem2Active || techCaseItem3Active || techCaseItem4Active
@@ -57,7 +63,7 @@ export const OfferSite = () => {
 
 
 
-  // TechnologieCase Items
+  // ---------------------------------------  TechnologieCase Items Constants
   const techCaseItem1 = (<TechnologieCaseItem aktivatecss={`${techCaseItem1Active && activeEffect}`} name1="Webapp" onClick={handleTechCaseItem1Click}></TechnologieCaseItem>)
   const techCaseItem2 = (<TechnologieCaseItem aktivatecss={`${techCaseItem2Active && activeEffect}`} name1="Website" onClick={handleTechCaseItem2Click}></TechnologieCaseItem>)
   const techCaseItem3 = (<TechnologieCaseItem aktivatecss={`${techCaseItem3Active && activeEffect}`} name1="Consulting" onClick={handleTechCaseItem3Click}></TechnologieCaseItem>)
@@ -73,7 +79,7 @@ export const OfferSite = () => {
 
 
 
-  // Switches
+  // -----------------------------------------------------------------  Switches
   // Switch Beschreibung für Webseiten.
   const modernDescription = "A modern design with a very intuitive, often minimalist user interface. This type of design is particularly suitable for young or technical companies.";
   const elegantDescription = "An elegant design is ideal for companies in the fashion or beauty industry or for art. However, this design language often requires high-quality photos.";
@@ -166,7 +172,9 @@ export const OfferSite = () => {
 
 
 
-  // PackageCards
+  //---------------------------------------------------------- PackageCards
+
+
   const activePackageStyle = "border-dashed border-[#98f144] rounded-2xl"
 
 
@@ -176,8 +184,9 @@ export const OfferSite = () => {
   const [businessActiv, setBusinessActiv] = useState(false)
   const [customActiv, setCustomActiv] = useState(false)
 
-
-
+  const allPackagesOff = () => {
+    return onepagerActiv || startUpActiv || businessActiv || customActiv
+  }
 
   const handleOnePager = () => {
     setOnePagerActiv(!onepagerActiv);
@@ -218,7 +227,7 @@ export const OfferSite = () => {
 
 
 
-  // PackageCards for Websites
+  // ----------------------------------- PackageCards Item Constants for Websites
   const onePager = (<PackageCardItem activecss={`${onepagerActiv && activePackageStyle}`} onClick={handleOnePager} title="One Pager" description="TestText"></PackageCardItem>)
   const StartUp = (<PackageCardItem activecss={`${startUpActiv && activePackageStyle}`} onClick={handleStartUp} title="Start Up" description="TestText"></PackageCardItem>)
   const Business = (<PackageCardItem activecss={`${businessActiv && activePackageStyle}`} onClick={handleBusiness} title="Business" description="TestText"></PackageCardItem>)
@@ -229,7 +238,40 @@ export const OfferSite = () => {
 
 
 
+  //------------------------------------------------------------------------ WeekChanger
 
+  // For Business 
+  const [active6To8Weeks, setActive6To8Weeks] = useState(false);
+  const [active8To10Weeks, setActive8To10Weeks] = useState(false);
+  const [active10To12Weeks, setActive10To12Weeks] = useState(false);
+  const aktivcssWeeks = "border-2 border-[#98f144] border-dashed rounded-lg"
+
+  const handleClickSixToEight = () => {
+    setActive6To8Weeks(!active6To8Weeks)
+    setActive8To10Weeks(false)
+    setActive10To12Weeks(false)
+  }
+
+  const handleClickEightToTen = () => {
+    setActive6To8Weeks(false)
+    setActive8To10Weeks(!active8To10Weeks)
+    setActive10To12Weeks(false)
+  }
+
+  const handleClickTenToTwelve = () => {
+    setActive6To8Weeks(false)
+    setActive8To10Weeks(false)
+    setActive10To12Weeks(!active10To12Weeks)
+  }
+
+  useEffect(() => {
+    setActive6To8Weeks(false)
+    setActive8To10Weeks(false)
+    setActive10To12Weeks(false)
+  }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
+  const sixToEight = (<WeekChangerItems onClick={handleClickSixToEight} text="6 - 8 Weeks " activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
+  const eightToTen = (<WeekChangerItems onClick={handleClickEightToTen} text="8 - 10 Weeks " activecss={`${active8To10Weeks && aktivcssWeeks}`}></WeekChangerItems>)
+  const tenTotwelve = (<WeekChangerItems onClick={handleClickTenToTwelve} text="10 - 12 Weeks " activecss={`${active10To12Weeks && aktivcssWeeks}`}></WeekChangerItems>)
 
 
 
@@ -294,9 +336,9 @@ export const OfferSite = () => {
         <div className={`w-full mt-10 flex flex-col justify-center items-center`}>
 
 
-          <div className={`w-full mt-10 duration-500  ${allTechnicalCaseItemsOff() ? "h-[30rem]" : "h-0"}`}>
+          <div className={`w-full mt-1 duration-500  ${allTechnicalCaseItemsOff() ? "mobile:h-[27rem] tablet:h-[15rem]" : "h-0"}`}>
             {techCaseItem1Active && (
-              <div className={`animate-fadeIn flex mobile:flex-col tablet:flex-row w-full justify-center items-center mt-10`}>
+              <div className={`animate-fadeIn flex mobile:flex-col tablet:flex-row w-full justify-center items-center`}>
                 <SwitchesWebsite
                   switch1={websiteSwitch1}
                   switch2={websiteSwitch2}
@@ -352,7 +394,7 @@ export const OfferSite = () => {
 
 
 
-          <div className={`flex w-full justify-center  duration-500   ${allSwitchesOff() ? "mobile:h-[70rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
+          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${allSwitchesOff() ? "mobile:h-[70rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
             {(switch1 || switch2 || switch3 || switch4 || switch5) && (
               <div className="w-full animate-fadeIn">
                 <PackageCard>
@@ -368,6 +410,14 @@ export const OfferSite = () => {
 
 
 
+          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${allPackagesOff() ? "mobile:h-[9rem] tablet:h-[8rem] desktop:h-[8rem]" : "h-0"}`}>
+            {(onepagerActiv || startUpActiv || businessActiv || Custom) && (
+              <div className="w-full animate-fadeIn">
+                <WeekChanger children1={sixToEight} children2={eightToTen} children3={tenTotwelve}>
+                </WeekChanger>
+              </div>
+            )}
+          </div>
 
 
 
@@ -385,6 +435,9 @@ export const OfferSite = () => {
           </div>
           {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
 
+          <div>
+            <ContactSite></ContactSite>
+          </div>
 
 
         </div>
