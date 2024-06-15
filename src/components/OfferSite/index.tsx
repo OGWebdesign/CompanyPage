@@ -6,12 +6,14 @@ import { SwitchesWebsite } from "../SwitchesWebsite";
 import { CalculatorSwitches } from "../CalculatorSwitches";
 import { PackageCard } from "../PackageCard";
 import { PackageCardItem } from "../PackageCardItem";
+import { WeekChanger } from "../WeekChanger";
+import { WeekChangerItems } from "../WeekChangerItems";
 
 export const OfferSite = () => {
 
 
 
-  // TechnologieCase Komponenten
+  // ------------------------------------------------------------------- TechnologieCase Komponenten
   // Klickabhängiges CSS für den gestrichelten Rand bei Aktivierung
   const activeEffect = "border-[#98f144] rounded-lg border-dashed"
   // States die bestimmen,welcher Komponent aktiv ist.
@@ -19,6 +21,9 @@ export const OfferSite = () => {
   const [techCaseItem2Active, setTechCaseItem2Active] = useState(false)
   const [techCaseItem3Active, setTechCaseItem3Active] = useState(false)
   const [techCaseItem4Active, setTechCaseItem4Active] = useState(false)
+
+
+
   // Hilfsfunktion für Wrap
   const allTechnicalCaseItemsOff = () => {
     return techCaseItem1Active || techCaseItem2Active || techCaseItem3Active || techCaseItem4Active
@@ -57,7 +62,7 @@ export const OfferSite = () => {
 
 
 
-  // TechnologieCase Items
+  // ---------------------------------------  TechnologieCase Items Constants
   const techCaseItem1 = (<TechnologieCaseItem aktivatecss={`${techCaseItem1Active && activeEffect}`} name1="Webapp" onClick={handleTechCaseItem1Click}></TechnologieCaseItem>)
   const techCaseItem2 = (<TechnologieCaseItem aktivatecss={`${techCaseItem2Active && activeEffect}`} name1="Website" onClick={handleTechCaseItem2Click}></TechnologieCaseItem>)
   const techCaseItem3 = (<TechnologieCaseItem aktivatecss={`${techCaseItem3Active && activeEffect}`} name1="Consulting" onClick={handleTechCaseItem3Click}></TechnologieCaseItem>)
@@ -73,7 +78,7 @@ export const OfferSite = () => {
 
 
 
-  // Switches
+  // -----------------------------------------------------------------  Switches
   // Switch Beschreibung für Webseiten.
   const modernDescription = "A modern design with a very intuitive, often minimalist user interface. This type of design is particularly suitable for young or technical companies.";
   const elegantDescription = "An elegant design is ideal for companies in the fashion or beauty industry or for art. However, this design language often requires high-quality photos.";
@@ -166,7 +171,9 @@ export const OfferSite = () => {
 
 
 
-  // PackageCards
+  //---------------------------------------------------------- PackageCards
+
+
   const activePackageStyle = "border-dashed border-[#98f144] rounded-2xl"
 
 
@@ -218,7 +225,7 @@ export const OfferSite = () => {
 
 
 
-  // PackageCards for Websites
+  // ----------------------------------- PackageCards Item Constants for Websites
   const onePager = (<PackageCardItem activecss={`${onepagerActiv && activePackageStyle}`} onClick={handleOnePager} title="One Pager" description="TestText"></PackageCardItem>)
   const StartUp = (<PackageCardItem activecss={`${startUpActiv && activePackageStyle}`} onClick={handleStartUp} title="Start Up" description="TestText"></PackageCardItem>)
   const Business = (<PackageCardItem activecss={`${businessActiv && activePackageStyle}`} onClick={handleBusiness} title="Business" description="TestText"></PackageCardItem>)
@@ -229,7 +236,17 @@ export const OfferSite = () => {
 
 
 
+  //------------------------------------------------------------------------ WeekChanger
 
+  // For Business 
+  const [active6to8Weeks, setActive6to8Weeks] = useState(false);
+  const [active8To108Weeks, setActive8To10Weeks] = useState(false);
+  const [active10To12Weeks, setActive10To12Weeks] = useState(false);
+
+
+  const sixToEight = (<WeekChangerItems text="6 - 8 Weeks " activecss="3"></WeekChangerItems>)
+  const eightToTen = (<WeekChangerItems text="8 - 10 Weeks " activecss="3"></WeekChangerItems>)
+  const tenTotwelve = (<WeekChangerItems text="10 - 12 Weeks " activecss="3"></WeekChangerItems>)
 
 
 
@@ -294,9 +311,9 @@ export const OfferSite = () => {
         <div className={`w-full mt-10 flex flex-col justify-center items-center`}>
 
 
-          <div className={`w-full mt-10 duration-500  ${allTechnicalCaseItemsOff() ? "h-[30rem]" : "h-0"}`}>
+          <div className={`w-full mt-1 duration-500  ${allTechnicalCaseItemsOff() ? "mobile:h-[27rem] tablet:h-[15rem]" : "h-0"}`}>
             {techCaseItem1Active && (
-              <div className={`animate-fadeIn flex mobile:flex-col tablet:flex-row w-full justify-center items-center mt-10`}>
+              <div className={`animate-fadeIn flex mobile:flex-col tablet:flex-row w-full justify-center items-center`}>
                 <SwitchesWebsite
                   switch1={websiteSwitch1}
                   switch2={websiteSwitch2}
@@ -366,6 +383,13 @@ export const OfferSite = () => {
           </div>
 
 
+
+
+          <div>
+            <WeekChanger children1={sixToEight} children2={eightToTen} children3={tenTotwelve}>
+
+            </WeekChanger>
+          </div>
 
 
 
