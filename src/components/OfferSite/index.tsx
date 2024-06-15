@@ -184,8 +184,9 @@ export const OfferSite = () => {
   const [businessActiv, setBusinessActiv] = useState(false)
   const [customActiv, setCustomActiv] = useState(false)
 
-
-
+  const allPackagesOff = () => {
+    return onepagerActiv || startUpActiv || businessActiv || customActiv
+  }
 
   const handleOnePager = () => {
     setOnePagerActiv(!onepagerActiv);
@@ -243,29 +244,31 @@ export const OfferSite = () => {
   const [active6To8Weeks, setActive6To8Weeks] = useState(false);
   const [active8To10Weeks, setActive8To10Weeks] = useState(false);
   const [active10To12Weeks, setActive10To12Weeks] = useState(false);
-  const aktivcssWeeks = "border-2 border-[#98f144] border-dashed rounded-lg" 
+  const aktivcssWeeks = "border-2 border-[#98f144] border-dashed rounded-lg"
 
   const handleClickSixToEight = () => {
-    setActive6To8Weeks(active6To8Weeks => !active6To8Weeks)
+    setActive6To8Weeks(!active6To8Weeks)
     setActive8To10Weeks(false)
     setActive10To12Weeks(false)
   }
 
   const handleClickEightToTen = () => {
     setActive6To8Weeks(false)
-    setActive8To10Weeks(active8To108Weeks => ! active8To108Weeks)
+    setActive8To10Weeks(!active8To10Weeks)
     setActive10To12Weeks(false)
   }
 
   const handleClickTenToTwelve = () => {
     setActive6To8Weeks(false)
     setActive8To10Weeks(false)
-    setActive10To12Weeks(active10To12Weeks => !active10To12Weeks)
+    setActive10To12Weeks(!active10To12Weeks)
   }
 
   useEffect(() => {
-    
-  })
+    setActive6To8Weeks(false)
+    setActive8To10Weeks(false)
+    setActive10To12Weeks(false)
+  }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
   const sixToEight = (<WeekChangerItems onClick={handleClickSixToEight} text="6 - 8 Weeks " activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
   const eightToTen = (<WeekChangerItems onClick={handleClickEightToTen} text="8 - 10 Weeks " activecss={`${active8To10Weeks && aktivcssWeeks}`}></WeekChangerItems>)
   const tenTotwelve = (<WeekChangerItems onClick={handleClickTenToTwelve} text="10 - 12 Weeks " activecss={`${active10To12Weeks && aktivcssWeeks}`}></WeekChangerItems>)
@@ -391,7 +394,7 @@ export const OfferSite = () => {
 
 
 
-          <div className={`flex w-full justify-center  duration-500   ${allSwitchesOff() ? "mobile:h-[70rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
+          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${allSwitchesOff() ? "mobile:h-[70rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
             {(switch1 || switch2 || switch3 || switch4 || switch5) && (
               <div className="w-full animate-fadeIn">
                 <PackageCard>
@@ -407,10 +410,13 @@ export const OfferSite = () => {
 
 
 
-          <div>
-            <WeekChanger children1={sixToEight} children2={eightToTen} children3={tenTotwelve}>
-
-            </WeekChanger>
+          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${allPackagesOff() ? "mobile:h-[9rem] tablet:h-[8rem] desktop:h-[8rem]" : "h-0"}`}>
+            {(onepagerActiv || startUpActiv || businessActiv || Custom) && (
+              <div className="w-full animate-fadeIn">
+                <WeekChanger children1={sixToEight} children2={eightToTen} children3={tenTotwelve}>
+                </WeekChanger>
+              </div>
+            )}
           </div>
 
 
