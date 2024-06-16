@@ -307,7 +307,7 @@ export const OfferSite = () => {
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   useEffect(() => {
-    if(!notAllSwitchesOff()){
+    if(!notAllSwitchesOff() || !notAllPackagesOff()){
       setActive6To8Weeks(false);
     setActive8To10Weeks(false);
     setActive10To12Weeks(false);
@@ -320,8 +320,7 @@ export const OfferSite = () => {
     } 
     else if (!notAllWeeksOff() && notAllPackagesOff() && notAllSwitchesOff()){
       setProgression(15);
-    }
-    
+    } 
   },[active6To8Weeks, active8To10Weeks, active10To12Weeks, switch1, switch2, switch3, switch4, switch5, onepagerActiv, businessActiv, customActiv, startUpActiv ])
 
   const sixToEight = (<WeekChangerItems onClick={handleClickSixToEight} text="6 - 8 Weeks " activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
