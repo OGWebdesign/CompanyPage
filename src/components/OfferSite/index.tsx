@@ -12,7 +12,7 @@ import { ContactSite } from "../ContactSite";
 
 export const OfferSite = () => {
 
-
+  const [progression, setProgression] = useState(0)
 
   // ------------------------------------------------------------------- TechnologieCase Komponenten
   // Klickabhängiges CSS für den gestrichelten Rand bei Aktivierung
@@ -62,6 +62,14 @@ export const OfferSite = () => {
 
 
 
+  useEffect(()  => {
+    if(allTechnicalCaseItemsOff()){
+      setProgression(progression + 5)
+    }
+    else {
+      setProgression(0)
+    }
+  },[techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   // ---------------------------------------  TechnologieCase Items Constants
   const techCaseItem1 = (<TechnologieCaseItem aktivatecss={`${techCaseItem1Active && activeEffect}`} name1="Webapp" onClick={handleTechCaseItem1Click}></TechnologieCaseItem>)
@@ -159,6 +167,17 @@ export const OfferSite = () => {
 
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
+  useEffect(() => {
+    if(allSwitchesOff() && progression == 5){
+      setProgression(progression + 5)
+    }
+    else {
+      setProgression(progression - 5)
+    }
+    
+    
+  },[switch1, switch2, switch3, switch4, switch5])
+
 
   const websiteSwitch1 = (<CalculatorSwitches onClick={handleSwitch1} activecss={switch1 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch1 ? moveAnimation : notMove} switchTitle="modern"></CalculatorSwitches>)
   const websiteSwitch2 = (<CalculatorSwitches onClick={handleSwitch2} activecss={switch2 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch2 ? moveAnimation : notMove} switchTitle="elegant"></CalculatorSwitches>)
@@ -225,6 +244,17 @@ export const OfferSite = () => {
 
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
+  useEffect(() => {
+    if(allTechnicalCaseItemsOff() && allSwitchesOff() && progression === 10){
+      setProgression(progression + 5)
+    }else if(progression === 0) {
+      setProgression(0)
+    }
+    else{
+      setProgression(progression - 5)
+    }
+  },[onepagerActiv, businessActiv, customActiv, startUpActiv])
+
 
 
   // ----------------------------------- PackageCards Item Constants for Websites
@@ -269,9 +299,23 @@ export const OfferSite = () => {
     setActive8To10Weeks(false)
     setActive10To12Weeks(false)
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
+
+  useEffect(() => {
+    if(allSwitchesOff() && allTechnicalCaseItemsOff() && allPackagesOff() && progression === 15){
+      setProgression(progression + 5)
+    }
+    else if(progression === 0){
+      setProgression(0)
+    }
+    else {
+      setProgression(progression - 5)
+    }
+  },[active6To8Weeks, active8To10Weeks, active10To12Weeks])
+
   const sixToEight = (<WeekChangerItems onClick={handleClickSixToEight} text="6 - 8 Weeks " activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
   const eightToTen = (<WeekChangerItems onClick={handleClickEightToTen} text="8 - 10 Weeks " activecss={`${active8To10Weeks && aktivcssWeeks}`}></WeekChangerItems>)
   const tenTotwelve = (<WeekChangerItems onClick={handleClickTenToTwelve} text="10 - 12 Weeks " activecss={`${active10To12Weeks && aktivcssWeeks}`}></WeekChangerItems>)
+
 
 
 
@@ -426,12 +470,12 @@ export const OfferSite = () => {
           <div className="w-full flex flex-col items-center mt-10">
             <div className="w-[20rem] h-10 border border-[#292929] rounded-full flex items-center overflow-hidden">
               {/* Progress Bar */}
-              <div className={`h-full bg-[#98f144] duration-500 overflow-hidden rounded-full flex justify-center 
-                items-center`}>
-                <span className={`font-mono font-semibold`}></span>
+              <div className={`h-full bg-[#98f144] duration-500 rounded-full flex justify-center overflow-hidden
+                items-center ${progression == 20 && "w-[20rem]"} ${progression == 15 && "w-[15rem]"} ${progression == 10 && "w-[10rem]"} ${progression == 5 && "w-[5rem]"} ${progression == 0 && "w-[0rem]"}`}>
+                <span className={`font-mono font-semibold`}>{progression * 5 === 100 && "Configuration Complete"}</span>
               </div>
             </div>
-            <div className="text-slate-200 font-mono text-[0.8rem] mt-3"><span>Progression</span>{" : "}<span></span></div>
+            <div className="text-slate-200 font-mono text-[0.8rem] mt-3"><span>{progression * 5}</span> %<span></span></div>
           </div>
           {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
 
