@@ -26,7 +26,7 @@ export const OfferSite = () => {
 
 
   // Hilfsfunktion für Wrap
-  const allTechnicalCaseItemsOff = () => {
+  const notAllTechnicalCaseItemsOff = () => {
     return techCaseItem1Active || techCaseItem2Active || techCaseItem3Active || techCaseItem4Active
   }
 
@@ -63,16 +63,10 @@ export const OfferSite = () => {
 
 
   useEffect(()  => {
-   if(allTechnicalCaseItemsOff()){
-    if((progression === 0)){
-      setProgression(progression + 5)
-    }
-   }
-
-   else if(!allTechnicalCaseItemsOff()){
-    if(!(progression === 0)){
-      setProgression(0)
-    }
+   if (!notAllTechnicalCaseItemsOff()){
+      setProgression(0);
+   } else if (notAllTechnicalCaseItemsOff()){
+      setProgression(5);
    }
   },[techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
@@ -109,7 +103,7 @@ export const OfferSite = () => {
   const [switch4, setSwitch4] = useState(false);
   const [switch5, setSwitch5] = useState(false);
 
-  const allSwitchesOff = () => {
+  const notAllSwitchesOff = () => {
     return switch1 || switch2 || switch3 || switch4 || switch5
   }
 
@@ -169,22 +163,16 @@ export const OfferSite = () => {
     setSwitch3(false);
     setSwitch4(false);
     setSwitch5(false);
-
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
 
 
   useEffect(() => {
-    if(allSwitchesOff()){
-      if(!(progression === 10)){
-        setProgression(progression + 5)
-      }
-     }
-     else if(!allSwitchesOff()){
-      if((progression === 10)){
-        setProgression(progression - 5)
-      }
-     }
+      if (notAllSwitchesOff()){
+        setProgression(10);
+      } else if (!notAllSwitchesOff() && notAllTechnicalCaseItemsOff()){
+        setProgression(5);
+      } 
   },[switch1, switch2, switch3, switch4, switch5])
 
 
@@ -212,7 +200,7 @@ export const OfferSite = () => {
   const [businessActiv, setBusinessActiv] = useState(false)
   const [customActiv, setCustomActiv] = useState(false)
 
-  const allPackagesOff = () => {
+  const notAllPackagesOff = () => {
     return onepagerActiv || startUpActiv || businessActiv || customActiv
   }
 
@@ -254,17 +242,21 @@ export const OfferSite = () => {
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   useEffect(() => {
-    if(allPackagesOff()){
-      if(!(progression === 15)){
-        setProgression(progression + 5)
-      }
-     }
-     else if(!allPackagesOff()){
-      if((progression === 15)){
-        setProgression(progression - 5)
-      }
-     }
-  },[onepagerActiv, businessActiv, customActiv, startUpActiv])
+    if(!notAllSwitchesOff()){
+      setOnePagerActiv(false);
+      setStartUpActiv(false);
+      setBusinessActiv(false);
+      setCustomActiv(false);
+    } else if (!notAllSwitchesOff() && notAllTechnicalCaseItemsOff()){
+      setProgression(10);
+    }
+    else if (notAllSwitchesOff() && notAllPackagesOff()){
+      setProgression(15);
+    } 
+    else if (notAllSwitchesOff() && !notAllPackagesOff() ){
+      setProgression(10);
+    }
+  },[onepagerActiv, businessActiv, customActiv, startUpActiv, switch1, switch2, switch3, switch4, switch5])
 
 
 
@@ -287,7 +279,7 @@ export const OfferSite = () => {
   const [active10To12Weeks, setActive10To12Weeks] = useState(false);
   const aktivcssWeeks = "border-2 border-[#98f144] border-dashed rounded-lg"
 
-  const allWeeksOf = () => {
+  const notAllWeeksOff = () => {
     return active6To8Weeks || active8To10Weeks || active10To12Weeks
   }
   const handleClickSixToEight = () => {
@@ -315,17 +307,22 @@ export const OfferSite = () => {
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   useEffect(() => {
-    if(allWeeksOf()){
-      if(!(progression === 20)){
-        setProgression(progression + 5)
-      }
-     }
-     else if(!allWeeksOf()){
-      if((progression === 20)){
-        setProgression(progression - 5)
-      }
-     }
-  },[active6To8Weeks, active8To10Weeks, active10To12Weeks])
+    if(!notAllSwitchesOff()){
+      setActive6To8Weeks(false);
+    setActive8To10Weeks(false);
+    setActive10To12Weeks(false);
+    } 
+    else if (notAllPackagesOff() && notAllSwitchesOff() && notAllWeeksOff()){
+      setProgression(20);
+    } 
+    else if (!notAllPackagesOff() && notAllSwitchesOff()){
+      setProgression(10);
+    } 
+    else if (!notAllWeeksOff() && notAllPackagesOff() && notAllSwitchesOff()){
+      setProgression(15);
+    }
+    
+  },[active6To8Weeks, active8To10Weeks, active10To12Weeks, switch1, switch2, switch3, switch4, switch5, onepagerActiv, businessActiv, customActiv, startUpActiv ])
 
   const sixToEight = (<WeekChangerItems onClick={handleClickSixToEight} text="6 - 8 Weeks " activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
   const eightToTen = (<WeekChangerItems onClick={handleClickEightToTen} text="8 - 10 Weeks " activecss={`${active8To10Weeks && aktivcssWeeks}`}></WeekChangerItems>)
@@ -395,7 +392,7 @@ export const OfferSite = () => {
         <div className={`w-full mt-10 flex flex-col justify-center items-center`}>
 
 
-          <div className={`w-full mt-1 duration-500  ${allTechnicalCaseItemsOff() ? "mobile:h-[27rem] tablet:h-[15rem]" : "h-0"}`}>
+          <div className={`w-full mt-1 duration-500  ${notAllTechnicalCaseItemsOff() ? "mobile:h-[27rem] tablet:h-[15rem]" : "h-0"}`}>
             {techCaseItem1Active && (
               <div className={`animate-fadeIn flex mobile:flex-col tablet:flex-row w-full justify-center items-center`}>
                 <SwitchesWebsite
@@ -453,7 +450,7 @@ export const OfferSite = () => {
 
 
 
-          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${allSwitchesOff() ? "mobile:h-[70rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
+          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${notAllSwitchesOff() ? "mobile:h-[70rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
             {(switch1 || switch2 || switch3 || switch4 || switch5) && (
               <div className="w-full animate-fadeIn">
                 <PackageCard>
@@ -469,7 +466,7 @@ export const OfferSite = () => {
 
 
 
-          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${allPackagesOff() ? "mobile:h-[9rem] tablet:h-[8rem] desktop:h-[8rem]" : "h-0"}`}>
+          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${notAllPackagesOff() ? "mobile:h-[9rem] tablet:h-[8rem] desktop:h-[8rem]" : "h-0"}`}>
             {(onepagerActiv || startUpActiv || businessActiv || Custom) && (
               <div className="w-full animate-fadeIn">
                 <WeekChanger children1={sixToEight} children2={eightToTen} children3={tenTotwelve}>
