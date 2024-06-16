@@ -1,12 +1,16 @@
 import { useState } from "react";
-import { CompanyIcon, HouseIcon, LeftArrowIcon, MailIcon, OfferIcon, RightArrowIcon } from "../Icons";
+import { LeftArrowIcon,RightArrowIcon } from "../Icons";
 import { Clock } from "../Clock";
 
 type SideBarProps = {
-    handleHome: () => void;
-    handleCompany: () => void;
-    handleOffer: () => void;
-    handleMail: () => void;
+    handleHome: () => void,
+    handleCompany: () => void,
+    handleOffer: () => void,
+    handleMail: () => void,
+    houseIcon:JSX.Element | JSX.Element[]|string,
+    companyIcon:JSX.Element | JSX.Element[]|string,
+    offerIcon:JSX.Element | JSX.Element[]|string,
+    mailIcon:JSX.Element | JSX.Element[]|string,
 }
 
 
@@ -63,10 +67,10 @@ export const SideBar = (props:SideBarProps) => {
         <div className="w-full flex justify-center items-center mt-[2rem] gap-x-5 transition-all">
 
         {/* ICONS */}
-        <div onClick={props.handleHome} className="w-[3rem] group p-2 hover:scale-150 duration-300 "><HouseIcon className="bg-fill-[#151515]" /> </div>
-        <div onClick={props.handleCompany} className="w-[2.6rem] p-2 hover:scale-150 duration-300"><CompanyIcon className="bg-fill-[#151515]" /> </div>
-        <div onClick={props.handleOffer} className="w-[2.6rem] p-2 hover:scale-150 duration-300 "><OfferIcon className="bg-fill-[#151515]" /> </div>
-        <div onClick={props.handleMail} className="w-[3rem] p-2 hover:scale-150 duration-300 "><MailIcon className="bg-fill-[#151515]" /> </div>
+        {props.houseIcon}
+        {props.companyIcon}
+        {props.offerIcon}
+        {props.mailIcon}
 
         </div>
 

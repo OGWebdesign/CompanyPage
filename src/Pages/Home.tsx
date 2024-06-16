@@ -1,6 +1,6 @@
 import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from "react";
 import Cursor from "../components/Cursor";
-import { ArrowIcon, DotsIcon, FacebookIcon, InstagramIcon, PinterestIcon } from "../components/Icons";
+import { ArrowIcon, CompanyIcon, DotsIcon, FacebookIcon, HouseIcon, InstagramIcon, MailIcon, OfferIcon, PinterestIcon } from "../components/Icons";
 import { CompanySite } from "../components/CompanySite";
 import { ContactSite } from "../components/ContactSite";
 import { StartSite } from "../components/StartSite";
@@ -75,9 +75,6 @@ function App() {
     <p className="text-[#151515] font-mono font-bold">Back to Main Menu</p>
   </div>
 
-  //-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
   {/* Funktionen für SideBar */ }
   const handleHome = () => {
     setIndicatorNav(1);
@@ -94,6 +91,16 @@ function App() {
   const handleMail = () => {
     setIndicatorNav(4);
   }
+
+
+  const homeIcon = (<Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={handleHome} className="w-[3rem] group p-2 hover:scale-150 duration-300 "><HouseIcon className="bg-fill-[#151515]" /> </Link>)
+  const companyIcon = ( <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={handleCompany} className="w-[2.6rem] p-2 hover:scale-150 duration-300"><CompanyIcon className="bg-fill-[#151515]" /> </Link>)
+  const offerIcon = (<Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={handleOffer} className="w-[2.6rem] p-2 hover:scale-150 duration-300 "><OfferIcon className="bg-fill-[#151515]" /> </Link>)
+  const mailIcon = (<Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={handleMail} className="w-[3rem] p-2 hover:scale-150 duration-300 "><MailIcon className="bg-fill-[#151515]" /> </Link>)
+  //-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
@@ -185,7 +192,12 @@ function App() {
 
                 </div>
               </div>
-              <SideBar handleCompany={handleCompany} handleHome={handleHome} handleMail={handleMail} handleOffer={handleOffer} />
+              <SideBar 
+              companyIcon={companyIcon}
+              houseIcon={homeIcon}
+              offerIcon={offerIcon}
+              mailIcon={mailIcon}
+              handleCompany={handleCompany} handleHome={handleHome} handleMail={handleMail} handleOffer={handleOffer} />
               {/* EndNav */}
               {/* End NavigationBar*/}
 
