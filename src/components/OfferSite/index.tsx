@@ -8,7 +8,6 @@ import { PackageCard } from "../PackageCard";
 import { PackageCardItem } from "../PackageCardItem";
 import { WeekChanger } from "../WeekChanger";
 import { WeekChangerItems } from "../WeekChangerItems";
-import { ContactSite } from "../ContactSite";
 
 export const OfferSite = () => {
 
@@ -490,9 +489,7 @@ export const OfferSite = () => {
           </div>
           {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
 
-          <div>
-            <ContactSite></ContactSite>
-          </div>
+
 
 
         </div>
