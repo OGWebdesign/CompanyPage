@@ -7,9 +7,11 @@ export const EmployeeCard = () => {
                 {/* Left Side */}
                 <div className="w-full flex tablet:flex-row group mobile:justify-center mobile:items-center mobile:flex-col-reverse ">
                     <div className="text-slate-200">
-                        <p className="font-mono font-bold text-[2rem] text-[#98f144]">Hi</p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae sint dolorum officiis tenetur, rerum, voluptate facilis nostrum iste perspiciatis quasi quas quo excepturi mollitia atque consequuntur, similique odit itaque eaque.
-                        Dolorum labore ex minima beatae illo blanditiis animi inventore, eaque molestiae dignissimos recusandae adipisci minus eius repellendus accusamus. Dicta dignissimos aliquid tenetur modi eius voluptatem ab animi iusto a soluta?
+                        <p className="font-mono font-bold text-[2rem] text-[#98f144]">Hi, I'm Nils.</p>
+                        Informatics has fascinated me ever since. I always wanted to understand how computers and programs work on them. 
+                        The world of the web, in particular, captivates me. Almost nothing is impossible, and the possibilities are becoming 
+                        increasingly diverse. Max and I met during our studies and decided to start a company together to realize our ideas and visions. 
+                        Whether it's large or small websites/web apps, consulting, bots, or AI interfaces, we are here for you.
                     </div>
                     <div className="p-8">
                         
@@ -25,7 +27,11 @@ export const EmployeeCard = () => {
                     </div>
                     <div className="text-slate-200">
                         <p className="font-mono font-bold text-[2rem] text-[#98f144]">Hi, I'm Max.</p>
-                        I am a passionate programmer and after my active service as a soldier I decided to study computer science and start my own business in web and application development. I have a lot of experience in web applications and frontend development, but I am also familiar with bot networks and interfaces for artificial intelligence. Be it React, Typescript, Java or C#. We have extensive experience in various front- and back-end technologies and have programmed everything from small web applications or websites to cooperative app development projects with the healthcare sector.
+                        I am a passionate programmer and after my active service as a soldier I decided to study computer science and start my 
+                        own business in web and application development. I have a lot of experience in web applications and frontend development, 
+                        but I am also familiar with bot networks and interfaces for artificial intelligence. Be it React, Typescript, Java or C#. 
+                        We have extensive experience in various front- and back-end technologies and have programmed everything from small web applications
+                         or websites to cooperative app development projects with the healthcare sector.
                     </div>
 
                 </div>
