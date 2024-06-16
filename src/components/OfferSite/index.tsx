@@ -63,12 +63,17 @@ export const OfferSite = () => {
 
 
   useEffect(()  => {
-    if(allTechnicalCaseItemsOff()){
+   if(allTechnicalCaseItemsOff()){
+    if((progression === 0)){
       setProgression(progression + 5)
     }
-    else {
+   }
+
+   else if(!allTechnicalCaseItemsOff()){
+    if(!(progression === 0)){
       setProgression(0)
     }
+   }
   },[techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   // ---------------------------------------  TechnologieCase Items Constants
@@ -167,15 +172,19 @@ export const OfferSite = () => {
 
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
+
+
   useEffect(() => {
-    if(allSwitchesOff() && progression == 5){
-      setProgression(progression + 5)
-    }
-    else {
-      setProgression(progression - 5)
-    }
-    
-    
+    if(allSwitchesOff()){
+      if(!(progression === 10)){
+        setProgression(progression + 5)
+      }
+     }
+     else if(!allSwitchesOff()){
+      if((progression === 10)){
+        setProgression(progression - 5)
+      }
+     }
   },[switch1, switch2, switch3, switch4, switch5])
 
 
@@ -245,14 +254,16 @@ export const OfferSite = () => {
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   useEffect(() => {
-    if(allTechnicalCaseItemsOff() && allSwitchesOff() && progression === 10){
-      setProgression(progression + 5)
-    }else if(progression === 0) {
-      setProgression(0)
-    }
-    else{
-      setProgression(progression - 5)
-    }
+    if(allPackagesOff()){
+      if(!(progression === 15)){
+        setProgression(progression + 5)
+      }
+     }
+     else if(!allPackagesOff()){
+      if((progression === 15)){
+        setProgression(progression - 5)
+      }
+     }
   },[onepagerActiv, businessActiv, customActiv, startUpActiv])
 
 
@@ -276,6 +287,9 @@ export const OfferSite = () => {
   const [active10To12Weeks, setActive10To12Weeks] = useState(false);
   const aktivcssWeeks = "border-2 border-[#98f144] border-dashed rounded-lg"
 
+  const allWeeksOf = () => {
+    return active6To8Weeks || active8To10Weeks || active10To12Weeks
+  }
   const handleClickSixToEight = () => {
     setActive6To8Weeks(!active6To8Weeks)
     setActive8To10Weeks(false)
@@ -301,15 +315,16 @@ export const OfferSite = () => {
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   useEffect(() => {
-    if(allSwitchesOff() && allTechnicalCaseItemsOff() && allPackagesOff() && progression === 15){
-      setProgression(progression + 5)
-    }
-    else if(progression === 0){
-      setProgression(0)
-    }
-    else {
-      setProgression(progression - 5)
-    }
+    if(allWeeksOf()){
+      if(!(progression === 20)){
+        setProgression(progression + 5)
+      }
+     }
+     else if(!allWeeksOf()){
+      if((progression === 20)){
+        setProgression(progression - 5)
+      }
+     }
   },[active6To8Weeks, active8To10Weeks, active10To12Weeks])
 
   const sixToEight = (<WeekChangerItems onClick={handleClickSixToEight} text="6 - 8 Weeks " activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
