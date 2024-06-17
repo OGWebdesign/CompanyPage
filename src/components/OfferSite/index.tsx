@@ -7,7 +7,7 @@ import { PackageCard } from "../PackageCard";
 import { PackageCardItem } from "../PackageCardItem";
 import { WeekChanger } from "../WeekChanger";
 import { WeekChangerItems } from "../WeekChangerItems";
-import { PriceCard } from "../PriceCard";
+import { PriceCard, PriceCardWebApp } from "../PriceCard";
 import { OfferSeperatorCard } from "../OfferSeperatorCard";
 import { ConfigurationSlider } from "../ConfigurationSlider";
 export const OfferSite = () => {
@@ -71,9 +71,9 @@ export const OfferSite = () => {
   },[techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   // ---------------------------------------  TechnologieCase Items Constants
-  const techCaseItem1 = (<TechnologieCaseItem aktivatecss={`${techCaseItem1Active && activeEffect}`} name1="Webapp" onClick={handleTechCaseItem1Click}></TechnologieCaseItem>)
-  const techCaseItem2 = (<TechnologieCaseItem aktivatecss={`${techCaseItem2Active && activeEffect}`} name1="Website" onClick={handleTechCaseItem2Click}></TechnologieCaseItem>)
-  const techCaseItem3 = (<TechnologieCaseItem aktivatecss={`${techCaseItem3Active && activeEffect}`} name1="Consulting" onClick={handleTechCaseItem3Click}></TechnologieCaseItem>)
+  const techCaseItem1 = (<TechnologieCaseItem aktivatecss={`${techCaseItem1Active && activeEffect}`} name1="Website" onClick={handleTechCaseItem1Click}></TechnologieCaseItem>)
+  const techCaseItem2 = (<TechnologieCaseItem aktivatecss={`${techCaseItem2Active && activeEffect}`} name1="WebApp" onClick={handleTechCaseItem2Click}></TechnologieCaseItem>)
+  const techCaseItem3 = (<TechnologieCaseItem aktivatecss={`${techCaseItem3Active && activeEffect}`} name1="DevOps" onClick={handleTechCaseItem3Click}></TechnologieCaseItem>)
   const techCaseItem4 = (<TechnologieCaseItem aktivatecss={`${techCaseItem4Active && activeEffect}`} name1="Bots & AI" onClick={handleTechCaseItem4Click}></TechnologieCaseItem>)
 
 
@@ -178,6 +178,12 @@ export const OfferSite = () => {
   const websiteSwitch4 = (<CalculatorSwitches onClick={handleSwitch4} activecss={switch4 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch4 ? moveAnimation : notMove} switchTitle="functional"></CalculatorSwitches>)
   const websiteSwitch5 = (<CalculatorSwitches onClick={handleSwitch5} activecss={switch5 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch5 ? moveAnimation : notMove} switchTitle="unconventional"></CalculatorSwitches>)
 
+  const webAppSwitch1 = (<CalculatorSwitches onClick={handleSwitch1} activecss={switch1 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch1 ? moveAnimation : notMove} switchTitle="modern"></CalculatorSwitches>)
+  const webAppSwitch2 = (<CalculatorSwitches onClick={handleSwitch2} activecss={switch2 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch2 ? moveAnimation : notMove} switchTitle="elegant"></CalculatorSwitches>)
+  const webAppSwitch3 = (<CalculatorSwitches onClick={handleSwitch3} activecss={switch3 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch3 ? moveAnimation : notMove} switchTitle="playful"></CalculatorSwitches>)
+  const webAppSwitch4 = (<CalculatorSwitches onClick={handleSwitch4} activecss={switch4 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch4 ? moveAnimation : notMove} switchTitle="functional"></CalculatorSwitches>)
+  const webAppSwitch5 = (<CalculatorSwitches onClick={handleSwitch5} activecss={switch5 ? buttonBackgroundActive : buttonBackgroundInActive} move={switch5 ? moveAnimation : notMove} switchTitle="unconventional"></CalculatorSwitches>)
+
 
 
 
@@ -196,36 +202,76 @@ export const OfferSite = () => {
   const [businessActiv, setBusinessActiv] = useState(false)
   const [customActiv, setCustomActiv] = useState(false)
 
+  const [miniAppActiv, setMiniAppActiv] = useState(false)
+  const [mediumAppActiv, setMediumAppActiv] = useState(false)
+  const [largeAppActiv, setLargeAppActiv] = useState(false)
+  const [customAppActiv, setCustomAppActiv] = useState(false)
+
   const notAllPackagesOff = () => {
     return onepagerActiv || startUpActiv || businessActiv || customActiv
   }
 
   const handleOnePager = () => {
-    setOnePagerActiv(!onepagerActiv);
-    setCustomActiv(false);
-    setBusinessActiv(false);
-    setStartUpActiv(false);
+    if(techCaseItem1Active){
+      setOnePagerActiv(!onepagerActiv);
+      setCustomActiv(false);
+      setBusinessActiv(false);
+      setStartUpActiv(false);
+      console.log("hello1")
+    } 
+    else if (techCaseItem2Active){
+      console.log("hello2")
+    {/* WEBAPP CONTROLLER */}
+    setMiniAppActiv(!miniAppActiv);
+    setMediumAppActiv(false);
+    setLargeAppActiv(false);
+    setCustomAppActiv(false);
+    }
   };
 
   const handleStartUp = () => {
+    if(techCaseItem1Active){
     setOnePagerActiv(false);
     setCustomActiv(false);
     setBusinessActiv(false);
     setStartUpActiv(!startUpActiv);
+    }
+    else if(techCaseItem2Active){ {/* WEBAPP CONTROLLER */}
+    setMiniAppActiv(false);
+    setMediumAppActiv(!mediumAppActiv);
+    setLargeAppActiv(false);
+    setCustomAppActiv(false);
+    }
   };
 
   const handleBusiness = () => {
+    if(techCaseItem1Active){
     setOnePagerActiv(false);
     setCustomActiv(false);
     setBusinessActiv(!businessActiv);
     setStartUpActiv(false);
+    }
+    else if(techCaseItem2Active){ {/* WEBAPP CONTROLLER */}
+    setMiniAppActiv(false);
+    setMediumAppActiv(false);
+    setLargeAppActiv(!largeAppActiv);
+    setCustomAppActiv(false);
+    }
   };
 
   const handleCustom = () => {
+    if(techCaseItem1Active){
     setOnePagerActiv(false);
     setCustomActiv(!customActiv);
     setBusinessActiv(false);
     setStartUpActiv(false);
+    }
+    else if(techCaseItem2Active){ {/* WEBAPP CONTROLLER */}
+    setMiniAppActiv(false);
+    setMediumAppActiv(false);
+    setLargeAppActiv(false);
+    setCustomAppActiv(!customAppActiv);
+    }
   };
 
 
@@ -243,6 +289,10 @@ export const OfferSite = () => {
       setStartUpActiv(false);
       setBusinessActiv(false);
       setCustomActiv(false);
+      setMiniAppActiv(false);
+      setMediumAppActiv(false);
+      setLargeAppActiv(false);
+      setCustomAppActiv(false);
     } else if (!notAllSwitchesOff() && notAllTechnicalCaseItemsOff()){
       setProgression(10);
     }
@@ -262,7 +312,15 @@ export const OfferSite = () => {
   const Business = (<PackageCardItem currency="$" numbers="6-8 Seiten" price={4500} activecss={`${businessActiv && activePackageStyle}`} onClick={() => {handleBusiness(); }} title="Business" description="A very good solution for medium-sized companies."></PackageCardItem>)
   const Custom = (<PackageCardItem activecss={`${customActiv && activePackageStyle}`} onClick={handleCustom} title="Custom" description="Didn't find a suitable package? No problem. Send us an individual request. We will find the right solution for you"></PackageCardItem>)
 
+  // ----------------------------------- PackageCards Item Constants for WebApps
+  const miniApp = (<PackageCardItem currency="$" numbers="Eine Seite" price={1750}  activecss={`${miniAppActiv && activePackageStyle}`} onClick={() => {handleOnePager(); }} title="miniApp" description="Ideal for Seccards, online applications or artists."></PackageCardItem>)
+  const mediumApp = (<PackageCardItem currency="$" numbers="2-4 Seiten" price={3500} activecss={`${mediumAppActiv && activePackageStyle}`} onClick={() => {handleStartUp(); }} title="mediumApp" description="The optimal solution for small businesses and start-ups"></PackageCardItem>)
+  const largeApp = (<PackageCardItem currency="$" numbers="6-8 Seiten" price={5600} activecss={`${largeAppActiv && activePackageStyle}`} onClick={() => {handleBusiness(); }} title="largeApp" description="A very good solution for medium-sized companies."></PackageCardItem>)
+  const customApp = (<PackageCardItem activecss={`${customAppActiv && activePackageStyle}`} onClick={handleCustom} title="Custom" description="Didn't find a suitable package? No problem. Send us an individual request. We will find the right solution for you"></PackageCardItem>)
 
+  const notAllAppPackagesOff = () => {
+    return (miniAppActiv || largeAppActiv || mediumAppActiv || customAppActiv);
+  }
 
 
 
@@ -278,6 +336,7 @@ export const OfferSite = () => {
   const notAllWeeksOff = () => {
     return active6To8Weeks || active8To10Weeks || active10To12Weeks
   }
+
   const handleClickSixToEight = () => {
     setActive6To8Weeks(!active6To8Weeks)
     setActive8To10Weeks(false)
@@ -285,9 +344,11 @@ export const OfferSite = () => {
   }
 
   const handleClickEightToTen = () => {
+   
     setActive6To8Weeks(false)
     setActive8To10Weeks(!active8To10Weeks)
     setActive10To12Weeks(false)
+
   }
 
   const handleClickTenToTwelve = () => {
@@ -303,11 +364,15 @@ export const OfferSite = () => {
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   useEffect(() => {
-    if(!notAllSwitchesOff() || !notAllPackagesOff()){
+    if(techCaseItem1Active && (!notAllSwitchesOff() || !notAllPackagesOff())){
       setActive6To8Weeks(false);
     setActive8To10Weeks(false);
     setActive10To12Weeks(false);
-    } 
+    } else if (techCaseItem2Active && (!notAllSwitchesOff() || !notAllAppPackagesOff())){
+      setActive6To8Weeks(false);
+    setActive8To10Weeks(false);
+    setActive10To12Weeks(false);
+    }
     else if (customActiv && notAllSwitchesOff() && notAllWeeksOff()){
       setProgression(18);
     }
@@ -329,7 +394,7 @@ export const OfferSite = () => {
 
   {/* -----------------------------------BEGIN-----------------------------------
 
-    Funktionen um aus der Paketauswahl der Websitepakete und aus der Wochenpaketauswahl
+    Funktionen um aus der Paketauswahl der Websitepakete und WebAppPakete und aus der Wochenpaketauswahl
     Zahlen für den PriceCard Component zu erstellen 
   
   */}
@@ -342,6 +407,20 @@ export const OfferSite = () => {
         return 2;
       } 
       else if (businessActiv){
+        return 3;
+      } else {
+        return 0;
+      }
+    }
+
+    function getNumberPackagesWebApps() {
+      if(miniAppActiv){
+         return 1;
+      } 
+      else if (mediumAppActiv){
+        return 2;
+      } 
+      else if (largeAppActiv){
         return 3;
       } else {
         return 0;
@@ -365,6 +444,8 @@ export const OfferSite = () => {
     const [numberPackages, setNumberPackages] = useState(getNumberPackages());
     const [numberWeeks, setNumberWeeks] = useState(getNumberWeeks());
 
+    const [numberPackagesWebApps, setNumberPackagesWebApps] = useState(getNumberPackagesWebApps());
+
     /* Wert für Preiskarte aktualisieren (Wochen) */
     useEffect(() => {
         setNumberPackages(getNumberPackages());
@@ -375,6 +456,10 @@ export const OfferSite = () => {
     useEffect(() => {
         setNumberPackages(getNumberPackages());
     },[onepagerActiv,businessActiv,businessActiv])
+
+    useEffect(() => {
+      setNumberPackagesWebApps(getNumberPackagesWebApps());
+    },[miniAppActiv,mediumAppActiv,largeAppActiv])
 
     {/*  -----------------------------------END----------------------------------- */}
 
@@ -463,7 +548,7 @@ export const OfferSite = () => {
         <div className={`w-full mt-10 flex flex-col justify-center items-center`}>
 
 
-          <div className={`w-full mt-1 duration-500  ${notAllTechnicalCaseItemsOff() ? "mobile:h-[27rem] tablet:h-[15rem]" : "h-0"}`}>
+          {/* WEBSEITEN Wrapper */}
             {techCaseItem1Active && (
               <div className={`animate-fadeIn flex mobile:flex-col tablet:flex-row w-full justify-center items-center`}>
                 <SwitchesWebsite
@@ -512,17 +597,62 @@ export const OfferSite = () => {
             )}
 
             {/* Wrap 1 Endet hier */}
-          </div>
+         
+
+
+            {/* WEBAPP Wrapper */}
+            {techCaseItem2Active && (
+              <div className={`animate-fadeIn flex mobile:flex-col tablet:flex-row w-full justify-center items-center`}>
+                <SwitchesWebsite
+                  switch1={webAppSwitch1}
+                  switch2={webAppSwitch2}
+                  switch3={webAppSwitch3}
+                  switch4={webAppSwitch4}
+                  switch5={webAppSwitch5}
+                ></SwitchesWebsite>
 
 
 
+                <div className={`w-1/2 overflow-hidden mobile:text-left tablet:text-left p-5 text-slate-200 font-mono mobile:p-1 mobile:mt-10`}>
+                  {
+                    switch1 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{modernDescription}</p>
+                    )
+                  }
 
+                  {
+                    switch2 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{elegantDescription}</p>
+                    )
+                  }
 
+                  {
+                    switch3 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{playfulDescription}</p>
+                    )
+                  }
 
+                  {
+                    switch4 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{functionalDescription}</p>
+                    )
+                  }
 
+                  {
+                    switch5 && (
+                      <p className="animate-fadeIn text-[0.8rem]">{unconventionalDescription}</p>
+                    )
+                  }
 
-          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${notAllSwitchesOff() ? "mobile:h-[35rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
-            {(switch1 || switch2 || switch3 || switch4 || switch5) && (
+                </div>
+              </div>
+            )}
+
+            {/* Wrap 2 Endet hier */}
+
+            {/* PackageCards für WEBSEITEN */}
+            <div className={`flex w-full justify-center overflow-hidden  duration-500   ${notAllSwitchesOff() && techCaseItem1Active ? "mobile:h-[35rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
+            {(switch1 || switch2 || switch3 || switch4 || switch5) && techCaseItem1Active && (
               <div className="w-full animate-fadeIn" onChange={() => getNumberPackages()}>
                 <PackageCard>
                   {onePager}
@@ -537,8 +667,28 @@ export const OfferSite = () => {
 
 
 
-          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${notAllPackagesOff() ? "mobile:h-[9rem] tablet:h-[8rem] desktop:h-[8rem]" : "h-0"}`}>
-            {(onepagerActiv || startUpActiv || businessActiv || Custom) && (
+
+
+
+          {/* PackageCard für WEBAPPS */}
+          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${notAllSwitchesOff() && techCaseItem2Active?  "mobile:h-[35rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
+            {(switch1 || switch2 || switch3 || switch4 || switch5) && techCaseItem2Active && (
+              <div className="w-full animate-fadeIn" onChange={() => getNumberPackages()}>
+                <PackageCard>
+                  {miniApp}
+                  {mediumApp}
+                  {largeApp}
+                  {customApp}
+                </PackageCard>
+              </div>
+            )}
+          </div>
+
+
+
+          {/* WeekChanger für Custom WEBSEITEN und WEBAPPS */}
+          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${(notAllPackagesOff() || notAllAppPackagesOff()) ? "mobile:h-[9rem] tablet:h-[8rem] desktop:h-[8rem]" : "h-0"}`}>
+            {(startUpActiv || onepagerActiv || businessActiv || customActiv || miniAppActiv || mediumAppActiv || largeAppActiv || customAppActiv) && (
               <div className="w-full animate-fadeIn">
                 <WeekChanger children1={sixToEight} children2={eightToTen} children3={tenTotwelve}>
                 </WeekChanger>
@@ -546,7 +696,7 @@ export const OfferSite = () => {
             )}
           </div>
 
-          {notAllWeeksOff() && notAllSwitchesOff() && customActiv && (
+          {notAllWeeksOff() && notAllSwitchesOff() && (customActiv || customAppActiv) && (
             <div className="w-full flex justify-center items-center mt-[5rem]">
             <ConfigurationSlider onChange={onChange}/>
             </div>
@@ -571,11 +721,19 @@ export const OfferSite = () => {
 
           {/* PriceCard Component */}
 
-          {notAllWeeksOff() && (startUpActiv || businessActiv || onepagerActiv) && notAllSwitchesOff() && 
+          {notAllWeeksOff() && techCaseItem1 && (startUpActiv || businessActiv || onepagerActiv) && notAllSwitchesOff() && 
           (<div>
             <PriceCard title="Preis" package={numberPackages} weeks={numberWeeks}  />
             </div>
+          )} 
+
+          {notAllWeeksOff() && techCaseItem2 && (miniAppActiv || mediumAppActiv || largeAppActiv) && notAllSwitchesOff() && 
+          (<div>
+            <PriceCardWebApp title="Preis" package={numberPackagesWebApps} weeks={numberWeeks}  />
+            </div>
           )}
+
+          
 
           
          
