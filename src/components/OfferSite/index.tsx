@@ -8,7 +8,7 @@ import { PackageCard } from "../PackageCard";
 import { PackageCardItem } from "../PackageCardItem";
 import { WeekChanger } from "../WeekChanger";
 import { WeekChangerItems } from "../WeekChangerItems";
-
+import { useTypewriter } from "react-simple-typewriter";
 export const OfferSite = () => {
 
   const [progression, setProgression] = useState(0)
@@ -74,10 +74,6 @@ export const OfferSite = () => {
   const techCaseItem2 = (<TechnologieCaseItem aktivatecss={`${techCaseItem2Active && activeEffect}`} name1="Website" onClick={handleTechCaseItem2Click}></TechnologieCaseItem>)
   const techCaseItem3 = (<TechnologieCaseItem aktivatecss={`${techCaseItem3Active && activeEffect}`} name1="Consulting" onClick={handleTechCaseItem3Click}></TechnologieCaseItem>)
   const techCaseItem4 = (<TechnologieCaseItem aktivatecss={`${techCaseItem4Active && activeEffect}`} name1="Bots & AI" onClick={handleTechCaseItem4Click}></TechnologieCaseItem>)
-
-
-
-
 
 
 
@@ -260,10 +256,10 @@ export const OfferSite = () => {
 
 
   // ----------------------------------- PackageCards Item Constants for Websites
-  const onePager = (<PackageCardItem activecss={`${onepagerActiv && activePackageStyle}`} onClick={handleOnePager} title="One Pager" description="TestText"></PackageCardItem>)
-  const StartUp = (<PackageCardItem activecss={`${startUpActiv && activePackageStyle}`} onClick={handleStartUp} title="Start Up" description="TestText"></PackageCardItem>)
-  const Business = (<PackageCardItem activecss={`${businessActiv && activePackageStyle}`} onClick={handleBusiness} title="Business" description="TestText"></PackageCardItem>)
-  const Custom = (<PackageCardItem activecss={`${customActiv && activePackageStyle}`} onClick={handleCustom} title="Custom" description="TestText"></PackageCardItem>)
+  const onePager = (<PackageCardItem currency="$" numbers="Eine Seite" price={1050}  activecss={`${onepagerActiv && activePackageStyle}`} onClick={handleOnePager} title="One Pager" description="Ideal for Seccards, online applications or artists."></PackageCardItem>)
+  const StartUp = (<PackageCardItem currency="$" numbers="2-4 Seiten" price={2500} activecss={`${startUpActiv && activePackageStyle}`} onClick={handleStartUp} title="Start Up" description="The optimal solution for small businesses and start-ups"></PackageCardItem>)
+  const Business = (<PackageCardItem currency="$" numbers="6-8 Seiten" price={4500} activecss={`${businessActiv && activePackageStyle}`} onClick={handleBusiness} title="Business" description="A very good solution for medium-sized companies."></PackageCardItem>)
+  const Custom = (<PackageCardItem activecss={`${customActiv && activePackageStyle}`} onClick={handleCustom} title="Custom" description="Didn't find a suitable package? No problem. Send us an individual request. We will find the right solution for you"></PackageCardItem>)
 
 
 
@@ -322,9 +318,9 @@ export const OfferSite = () => {
     } 
   },[active6To8Weeks, active8To10Weeks, active10To12Weeks, switch1, switch2, switch3, switch4, switch5, onepagerActiv, businessActiv, customActiv, startUpActiv ])
 
-  const sixToEight = (<WeekChangerItems onClick={handleClickSixToEight} text="6 - 8 Weeks " activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
-  const eightToTen = (<WeekChangerItems onClick={handleClickEightToTen} text="8 - 10 Weeks " activecss={`${active8To10Weeks && aktivcssWeeks}`}></WeekChangerItems>)
-  const tenTotwelve = (<WeekChangerItems onClick={handleClickTenToTwelve} text="10 - 12 Weeks " activecss={`${active10To12Weeks && aktivcssWeeks}`}></WeekChangerItems>)
+  const sixToEight = (<WeekChangerItems onClick={handleClickSixToEight} text="6-8" activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
+  const eightToTen = (<WeekChangerItems onClick={handleClickEightToTen} text="8-10" activecss={`${active8To10Weeks && aktivcssWeeks}`}></WeekChangerItems>)
+  const tenTotwelve = (<WeekChangerItems onClick={handleClickTenToTwelve} text="10-12" activecss={`${active10To12Weeks && aktivcssWeeks}`}></WeekChangerItems>)
 
 
 
@@ -370,7 +366,7 @@ export const OfferSite = () => {
 
       {/* Begin Program */}
       <div className="flex flex-col justify-center items-center w-full">
-        <TechnologieCase heading="Lets configurate your own Offer"
+        <TechnologieCase heading="Lets configurate your own offer"
           item1={techCaseItem1}
           item2={techCaseItem2}
           item3={techCaseItem3}
@@ -448,7 +444,7 @@ export const OfferSite = () => {
 
 
 
-          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${notAllSwitchesOff() ? "mobile:h-[70rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
+          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${notAllSwitchesOff() ? "mobile:h-[35rem] tablet:h-[40rem] desktop:h-[20rem]" : "h-0"}`}>
             {(switch1 || switch2 || switch3 || switch4 || switch5) && (
               <div className="w-full animate-fadeIn">
                 <PackageCard>
@@ -478,9 +474,9 @@ export const OfferSite = () => {
 
           {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
           <div className="w-full flex flex-col items-center mt-10">
-            <div className={`w-[20rem] h-10 border border-[#292929] ${progression === 0 ? "opacity-0": "opacity-100"}  rounded-full flex items-center overflow-hidden`}>
+            <div className={`w-[20rem] h-10 border border-[#292929] ${progression === 0 ? "opacity-0": "opacity-100"}  rounded-xl flex items-center overflow-hidden`}>
               {/* Progress Bar */}
-              <div className={`h-full ${progression === 20 ? "bg-[#98f144]":"bg-[#c73838]"} duration-500 rounded-full flex justify-center overflow-hidden
+              <div className={`h-full ${progression === 20 ? "bg-[#98f144]":"bg-[#c73838]"} duration-500 flex justify-center overflow-hidden
                 items-center ${progression == 20 && "w-[20rem]"} ${progression == 15 && "w-[15rem]"} ${progression == 10 && "w-[10rem]"} ${progression == 5 && "w-[5rem]"} ${progression == 0 && "w-[0rem]"}`}>
                 <span className={`font-mono font-semibold`}>{progression * 5 === 100 && "Configuration Complete!"}</span>
               </div>
