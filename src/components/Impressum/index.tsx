@@ -5,7 +5,7 @@ export const Impressum = () => {
     <div className="animate-fadeIn">
       
     
-        <div className="w-full flex laptop:flex-row mobile:flex-col justify-center items-center h-full font-mono my-[15rem] ">
+        <div className="w-full flex laptop:flex-row mobile:flex-col justify-center items-center h-full font-mono mt-[15rem] mb-[5rem] ">
              {/* CARD UPPER LEFT */}
             <div className="w-[16rem] h-[28rem] bg-slate-200 shadow-lg rounded-lg transform mobile:-translate-y-0 laptop:-translate-y-10 z-10 
             flex flex-col items-center border-r border-r-[#151515] border-b border-b-[#151515]">

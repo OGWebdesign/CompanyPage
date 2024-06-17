@@ -258,9 +258,11 @@ function App() {
             <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem] inline-block text-[#151515] leading-none">DESERVES BETTER.</article>
             <div className="w-full flex items-center">
               {/* Last TextFragment */}
-              <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem]  desktop:w-[50rem] tablet:w-[35rem] mobile:w-[13rem] inline-block bg-[#98f144] text-[#151515] font-bold leading-none">TALK TO US! </article>
+              <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem]  desktop:w-[41rem] tablet:w-[28rem] mobile:w-[14rem] inline-block bg-[#98f144] text-[#151515] font-bold leading-none">TALK TO US! </article>
               {/* Button */}
-              <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={() => setIndicatorNav(4)} className="desktop:w-[10rem] cursor-none tablet:w-[8rem] tablet:h-[3rem] desktop:h-[4rem] desktop:text-[1.4rem] mobile:w-[6rem] mobile:h-[2rem] mobile:rounded-lg mobile:ml-[1rem] mobile:text-[0.88rem] font-mono ml-[2rem] duration-300 border-[#151515] mobile:hover:border-2 desktop:hover:border-4 hover:bg-[#98f144] hover:font-bold hover:text-[#151515] rounded-2xl bg-[#151515] text-center flex justify-center items-center">
+              <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={() => setIndicatorNav(4)} 
+              className="desktop:w-[10rem] cursor-none tablet:w-[8rem] tablet:h-[3rem] desktop:h-[4rem] desktop:text-[1.4rem] mobile:w-[6rem] mobile:h-[2rem] mobile:rounded-lg mobile:ml-[1rem] mobile:text-[0.88rem] font-mono ml-[2rem] duration-300 border-[#151515] mobile:hover:border-2 desktop:hover:border-2 hover:bg-[#98f144] hover:font-bold hover:text-[#151515] rounded-2xl bg-[#151515] text-center flex justify-center items-center
+              desktop:ml-[5rem] laptop:ml-[3rem]">
                 Lets talk
               </Link>
             </div>

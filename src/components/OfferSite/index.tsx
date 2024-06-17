@@ -332,7 +332,8 @@ export const OfferSite = () => {
       {/* Headline and Product Desciption */}
       <div className="animate-fadeIn">
         <ParagraphOGLeft
-          classnamehead="text-[#98f144]"
+          classnamehead="text-[#98f144] bg-slate-200"
+          classname="bg-slate-200 p-7 rounded-2xl text-[#151515]"
           head="What exactly is a SPA?"
           text="A SPA or Single Page Application is a modern technology that does not program websites as such, but rather as a real web-based program. Sounds crazy and it is. The huge advantages of this technology are that there are no loading times. The program is completely preloaded, so to speak. In addition, after loading once, the program no longer needs an internet connection to be displayed properly. There are also lots of new possibilities in terms of animation. Imagine an online shop where you can browse through the individual products and are not subject to any loading times. Porting it as a permanent mobile app is also child's play after such an implementation. However, a large amount of know-how is required. Technical SEO in particular is a challenge here. Thanks to content management systems such as WordPress, we have stopped leaving work on the web to real experts. If you have a broken car, very few people try to tackle it themselves. This is where we come in. We are experts in this field and have made it our mission to make this technology accessible to every company. The advantages are obvious. Almost no loading times, an exceptional user experience and state-of-the-art technology like Facebook or Instagram."
           animation={false}
@@ -475,12 +476,14 @@ export const OfferSite = () => {
           <div className="w-full flex flex-col items-center mt-10">
             <div className={`w-[20rem] h-10 border border-[#292929] ${progression === 0 ? "opacity-0": "opacity-100"}  rounded-xl flex items-center overflow-hidden`}>
               {/* Progress Bar */}
-              <div className={`h-full ${progression === 20 ? "bg-[#98f144]":"bg-[#c73838]"} duration-500 flex justify-center overflow-hidden
+              <div className={`h-full ${progression <= 5 ? "bg-[#DC143C]": progression === 10 ? "bg-[#f16444]" : progression === 15 ? "bg-[#e5f144]" : progression === 20 ? "bg-[#98f144]" : "" } duration-500 flex justify-center overflow-hidden
                 items-center ${progression == 20 && "w-[20rem]"} ${progression == 15 && "w-[15rem]"} ${progression == 10 && "w-[10rem]"} ${progression == 5 && "w-[5rem]"} ${progression == 0 && "w-[0rem]"}`}>
                 <span className={`font-mono font-semibold`}>{progression * 5 === 100 && "Configuration Complete!"}</span>
               </div>
             </div>
-            <div className={`font-mono text-[0.8rem] ${progression === 0 ? "opacity-0": "opacity-100"} mt-3 text-[#98f144] font-bold text-[1.1rem]`}><span>Configutation progress: {progression * 5}</span> %<span></span></div>
+            <div className={`font-mono text-[0.8rem] ${progression === 0 ? "opacity-0": "opacity-100"} mt-3  ${progression <= 5 ? "text-[#DC143C]": progression === 10 ? "text-[#f16444]" : progression === 15 ? "text-[#e5f144]" : progression === 20 ? "text-[#98f144]" : "" } font-bold text-[1.1rem]`}>
+              <span className="duration-300">Configuration progress: {progression * 5}
+              </span> %<span></span></div>
           </div>
           {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
 
