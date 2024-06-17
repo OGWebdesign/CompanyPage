@@ -9,6 +9,7 @@ import { WeekChanger } from "../WeekChanger";
 import { WeekChangerItems } from "../WeekChangerItems";
 import { PriceCard } from "../PriceCard";
 import { OfferSeperatorCard } from "../OfferSeperatorCard";
+import { ConfigurationSlider } from "../ConfigurationSlider";
 export const OfferSite = () => {
 
   const [progression, setProgression] = useState(0)
@@ -256,9 +257,9 @@ export const OfferSite = () => {
 
 
   // ----------------------------------- PackageCards Item Constants for Websites
-  const onePager = (<PackageCardItem currency="$" numbers="Eine Seite" price={1050}  activecss={`${onepagerActiv && activePackageStyle}`} onClick={() => {handleOnePager(); getNumberPackages();}} title="One Pager" description="Ideal for Seccards, online applications or artists."></PackageCardItem>)
-  const StartUp = (<PackageCardItem currency="$" numbers="2-4 Seiten" price={2500} activecss={`${startUpActiv && activePackageStyle}`} onClick={() => {handleStartUp(); getNumberPackages();}} title="Start Up" description="The optimal solution for small businesses and start-ups"></PackageCardItem>)
-  const Business = (<PackageCardItem currency="$" numbers="6-8 Seiten" price={4500} activecss={`${businessActiv && activePackageStyle}`} onClick={() => {handleBusiness(); getNumberPackages();}} title="Business" description="A very good solution for medium-sized companies."></PackageCardItem>)
+  const onePager = (<PackageCardItem currency="$" numbers="Eine Seite" price={1050}  activecss={`${onepagerActiv && activePackageStyle}`} onClick={() => {handleOnePager(); }} title="One Pager" description="Ideal for Seccards, online applications or artists."></PackageCardItem>)
+  const StartUp = (<PackageCardItem currency="$" numbers="2-4 Seiten" price={2500} activecss={`${startUpActiv && activePackageStyle}`} onClick={() => {handleStartUp(); }} title="Start Up" description="The optimal solution for small businesses and start-ups"></PackageCardItem>)
+  const Business = (<PackageCardItem currency="$" numbers="6-8 Seiten" price={4500} activecss={`${businessActiv && activePackageStyle}`} onClick={() => {handleBusiness(); }} title="Business" description="A very good solution for medium-sized companies."></PackageCardItem>)
   const Custom = (<PackageCardItem activecss={`${customActiv && activePackageStyle}`} onClick={handleCustom} title="Custom" description="Didn't find a suitable package? No problem. Send us an individual request. We will find the right solution for you"></PackageCardItem>)
 
 
@@ -307,6 +308,9 @@ export const OfferSite = () => {
     setActive8To10Weeks(false);
     setActive10To12Weeks(false);
     } 
+    else if (customActiv && notAllSwitchesOff() && notAllWeeksOff()){
+      setProgression(18);
+    }
     else if (notAllPackagesOff() && notAllSwitchesOff() && notAllWeeksOff()){
       setProgression(20);
     } 
@@ -318,14 +322,14 @@ export const OfferSite = () => {
     } 
   },[active6To8Weeks, active8To10Weeks, active10To12Weeks, switch1, switch2, switch3, switch4, switch5, onepagerActiv, businessActiv, customActiv, startUpActiv ])
 
-  const sixToEight = (<WeekChangerItems onClick={() => {handleClickSixToEight(); getNumberWeeks();}} text="6-8" activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
-  const eightToTen = (<WeekChangerItems onClick={() => {handleClickEightToTen(); getNumberWeeks();}} text="8-10" activecss={`${active8To10Weeks && aktivcssWeeks}`}></WeekChangerItems>)
-  const tenTotwelve = (<WeekChangerItems onClick={() => {handleClickTenToTwelve(); getNumberWeeks();}} text="10-12" activecss={`${active10To12Weeks && aktivcssWeeks}`}></WeekChangerItems>)
+  const sixToEight = (<WeekChangerItems onClick={() => {handleClickSixToEight(); }} text="6-8" activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
+  const eightToTen = (<WeekChangerItems onClick={() => {handleClickEightToTen(); }} text="8-10" activecss={`${active8To10Weeks && aktivcssWeeks}`}></WeekChangerItems>)
+  const tenTotwelve = (<WeekChangerItems onClick={() => {handleClickTenToTwelve();}} text="10-12" activecss={`${active10To12Weeks && aktivcssWeeks}`}></WeekChangerItems>)
 
 
   {/* -----------------------------------BEGIN-----------------------------------
 
-    Funktion um aus der Paketauswahl der Websitepakete und aus der Wochenpaketauswahl
+    Funktionen um aus der Paketauswahl der Websitepakete und aus der Wochenpaketauswahl
     Zahlen für den PriceCard Component zu erstellen 
   
   */}
@@ -339,6 +343,8 @@ export const OfferSite = () => {
       } 
       else if (businessActiv){
         return 3;
+      } else {
+        return 0;
       }
     }
 
@@ -351,11 +357,51 @@ export const OfferSite = () => {
       }
       else if (active10To12Weeks){
         return 3;
+      } else {
+        return 0;
       }
     }
 
+    const [numberPackages, setNumberPackages] = useState(getNumberPackages());
+    const [numberWeeks, setNumberWeeks] = useState(getNumberWeeks());
+
+    /* Wert für Preiskarte aktualisieren (Wochen) */
+    useEffect(() => {
+        setNumberPackages(getNumberPackages());
+        setNumberWeeks(getNumberWeeks());
+    },[active10To12Weeks,active6To8Weeks,active8To10Weeks])
+
+    /* Wert für Preiskarte aktualisieren (Packages) */
+    useEffect(() => {
+        setNumberPackages(getNumberPackages());
+    },[onepagerActiv,businessActiv,businessActiv])
+
     {/*  -----------------------------------END----------------------------------- */}
 
+    {/* onChange Handler um die Progressbar bei Aktivierung von Custom bei Auswahl eines Preises auf 100% zu setzen*/}
+
+    const [valueSlider,setValueSlider] = useState(0);
+
+    function onChange(value:number){
+      if(value > 0){
+      setProgression(20);
+      setValueSlider(value);
+      } 
+      else if (value === 0){
+        setProgression(18);
+        setValueSlider(0);
+      }
+    }
+
+    /* Funktion um Progress anzupassen */
+    useEffect(() => {
+      if (valueSlider > 0 && customActiv){
+        setProgression(20);
+      } 
+      else if (valueSlider === 0 && customActiv) {
+        setProgression(18);
+      }
+    },[valueSlider])
 
   return (
     <>
@@ -498,19 +544,23 @@ export const OfferSite = () => {
             )}
           </div>
 
-
+          {notAllWeeksOff() && notAllSwitchesOff() && customActiv && (
+            <div className="w-full flex justify-center items-center mt-[5rem]">
+            <ConfigurationSlider onChange={onChange}/>
+            </div>
+          )}
 
 
           {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
           <div className="w-full flex flex-col items-center mt-10">
             <div className={`w-[20rem] h-10 border border-[#292929] ${progression === 0 ? "opacity-0": "opacity-100"}  rounded-xl flex items-center overflow-hidden`}>
               {/* Progress Bar */}
-              <div className={`h-full ${progression <= 5 ? "bg-[#DC143C]": progression === 10 ? "bg-[#f16444]" : progression === 15 ? "bg-[#e5f144]" : progression === 20 ? "bg-[#98f144]" : "" } duration-500 flex justify-center overflow-hidden
-                items-center ${progression == 20 && "w-[20rem]"} ${progression == 15 && "w-[15rem]"} ${progression == 10 && "w-[10rem]"} ${progression == 5 && "w-[5rem]"} ${progression == 0 && "w-[0rem]"}`}>
+              <div className={`h-full ${progression <= 5 ? "bg-[#DC143C]": progression === 10 ? "bg-[#f16444]" : progression === 15 ? "bg-[#e5f144]" : progression === 18 ? "bg-[#e8f144]" :  progression === 20 ? "bg-[#98f144]" : "" } duration-500 flex justify-center overflow-hidden
+                items-center ${progression == 20 && "w-[20rem]"} ${progression === 18 && "w-[17.5rem]"} ${progression == 15 && "w-[15rem]"} ${progression == 10 && "w-[10rem]"} ${progression == 5 && "w-[5rem]"} ${progression == 0 && "w-[0rem]"}`}>
                 <span className={`font-mono font-semibold`}>{progression * 5 === 100 && "Configuration Complete!"}</span>
               </div>
             </div>
-            <div className={`font-mono text-[0.8rem] ${progression === 0 ? "opacity-0": "opacity-100"} mt-3  ${progression <= 5 ? "text-[#DC143C]": progression === 10 ? "text-[#f16444]" : progression === 15 ? "text-[#e5f144]" : progression === 20 ? "text-[#98f144]" : "" } font-bold text-[1.1rem]`}>
+            <div className={`font-mono text-[0.8rem] ${progression === 0 ? "opacity-0": "opacity-100"} mt-3  ${progression <= 5 ? "text-[#DC143C]": progression === 10 ? "text-[#f16444]" : progression === 15 ? "text-[#e5f144]" : progression === 18 ? "text-[#e8f144]" : progression === 20 ? "text-[#98f144]" : "" } font-bold text-[1.1rem]`}>
               <span className="duration-300">Configuration progress: {progression * 5}
               </span> %<span></span></div>
           </div>
@@ -519,12 +569,13 @@ export const OfferSite = () => {
 
           {/* PriceCard Component */}
 
-
-          {notAllWeeksOff() && notAllPackagesOff() && notAllSwitchesOff() && 
+          {notAllWeeksOff() && (startUpActiv || businessActiv || onepagerActiv) && notAllSwitchesOff() && 
           (<div>
-            <PriceCard title="Preis" package={getNumberPackages()} weeks={getNumberWeeks()}  />
+            <PriceCard title="Preis" package={numberPackages} weeks={numberWeeks}  />
             </div>
           )}
+
+          
          
 
         </div>
