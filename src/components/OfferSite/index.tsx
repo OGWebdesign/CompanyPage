@@ -217,8 +217,10 @@ export const OfferSite = () => {
       setCustomActiv(false);
       setBusinessActiv(false);
       setStartUpActiv(false);
+      console.log("hello1")
     } 
     else if (techCaseItem2Active){
+      console.log("hello2")
     {/* WEBAPP CONTROLLER */}
     setMiniAppActiv(!miniAppActiv);
     setMediumAppActiv(false);
@@ -311,11 +313,14 @@ export const OfferSite = () => {
   const Custom = (<PackageCardItem activecss={`${customActiv && activePackageStyle}`} onClick={handleCustom} title="Custom" description="Didn't find a suitable package? No problem. Send us an individual request. We will find the right solution for you"></PackageCardItem>)
 
   // ----------------------------------- PackageCards Item Constants for WebApps
-  const miniApp = (<PackageCardItem currency="$" numbers="Eine Seite" price={1750}  activecss={`${onepagerActiv && activePackageStyle}`} onClick={() => {handleOnePager(); }} title="miniApp" description="Ideal for Seccards, online applications or artists."></PackageCardItem>)
-  const mediumApp = (<PackageCardItem currency="$" numbers="2-4 Seiten" price={3500} activecss={`${startUpActiv && activePackageStyle}`} onClick={() => {handleStartUp(); }} title="mediumApp" description="The optimal solution for small businesses and start-ups"></PackageCardItem>)
-  const largeApp = (<PackageCardItem currency="$" numbers="6-8 Seiten" price={5600} activecss={`${businessActiv && activePackageStyle}`} onClick={() => {handleBusiness(); }} title="largeApp" description="A very good solution for medium-sized companies."></PackageCardItem>)
-  const customApp = (<PackageCardItem activecss={`${customActiv && activePackageStyle}`} onClick={handleCustom} title="Custom" description="Didn't find a suitable package? No problem. Send us an individual request. We will find the right solution for you"></PackageCardItem>)
+  const miniApp = (<PackageCardItem currency="$" numbers="Eine Seite" price={1750}  activecss={`${miniAppActiv && activePackageStyle}`} onClick={() => {handleOnePager(); }} title="miniApp" description="Ideal for Seccards, online applications or artists."></PackageCardItem>)
+  const mediumApp = (<PackageCardItem currency="$" numbers="2-4 Seiten" price={3500} activecss={`${mediumAppActiv && activePackageStyle}`} onClick={() => {handleStartUp(); }} title="mediumApp" description="The optimal solution for small businesses and start-ups"></PackageCardItem>)
+  const largeApp = (<PackageCardItem currency="$" numbers="6-8 Seiten" price={5600} activecss={`${largeAppActiv && activePackageStyle}`} onClick={() => {handleBusiness(); }} title="largeApp" description="A very good solution for medium-sized companies."></PackageCardItem>)
+  const customApp = (<PackageCardItem activecss={`${customAppActiv && activePackageStyle}`} onClick={handleCustom} title="Custom" description="Didn't find a suitable package? No problem. Send us an individual request. We will find the right solution for you"></PackageCardItem>)
 
+  const notAllAppPackagesOff = () => {
+    return (miniAppActiv || largeAppActiv || mediumAppActiv || customAppActiv);
+  }
 
 
 
@@ -331,6 +336,7 @@ export const OfferSite = () => {
   const notAllWeeksOff = () => {
     return active6To8Weeks || active8To10Weeks || active10To12Weeks
   }
+
   const handleClickSixToEight = () => {
     setActive6To8Weeks(!active6To8Weeks)
     setActive8To10Weeks(false)
@@ -338,9 +344,11 @@ export const OfferSite = () => {
   }
 
   const handleClickEightToTen = () => {
+   
     setActive6To8Weeks(false)
     setActive8To10Weeks(!active8To10Weeks)
     setActive10To12Weeks(false)
+
   }
 
   const handleClickTenToTwelve = () => {
@@ -356,11 +364,15 @@ export const OfferSite = () => {
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   useEffect(() => {
-    if(!notAllSwitchesOff() || !notAllPackagesOff()){
+    if(techCaseItem1Active && (!notAllSwitchesOff() || !notAllPackagesOff())){
       setActive6To8Weeks(false);
     setActive8To10Weeks(false);
     setActive10To12Weeks(false);
-    } 
+    } else if (techCaseItem2Active && (!notAllSwitchesOff() || !notAllAppPackagesOff())){
+      setActive6To8Weeks(false);
+    setActive8To10Weeks(false);
+    setActive10To12Weeks(false);
+    }
     else if (customActiv && notAllSwitchesOff() && notAllWeeksOff()){
       setProgression(18);
     }
@@ -672,9 +684,9 @@ export const OfferSite = () => {
 
 
 
-          {/* WeekChanger für Custom WEBSEITEN */}
-          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${notAllPackagesOff() && techCaseItem1Active ? "mobile:h-[9rem] tablet:h-[8rem] desktop:h-[8rem]" : "h-0"}`}>
-            {(onepagerActiv || startUpActiv || businessActiv || Custom) && (
+          {/* WeekChanger für Custom WEBSEITEN und WEBAPPS */}
+          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${(notAllPackagesOff() || notAllAppPackagesOff()) ? "mobile:h-[9rem] tablet:h-[8rem] desktop:h-[8rem]" : "h-0"}`}>
+            {(startUpActiv || onepagerActiv || businessActiv || customActiv || miniAppActiv || mediumAppActiv || largeAppActiv || customAppActiv) && (
               <div className="w-full animate-fadeIn">
                 <WeekChanger children1={sixToEight} children2={eightToTen} children3={tenTotwelve}>
                 </WeekChanger>
@@ -682,24 +694,7 @@ export const OfferSite = () => {
             )}
           </div>
 
-          {notAllWeeksOff() && notAllSwitchesOff() && customActiv && (
-            <div className="w-full flex justify-center items-center mt-[5rem]">
-            <ConfigurationSlider onChange={onChange}/>
-            </div>
-          )}
-
-
-          {/* WeekChanger für WEBAPPS */}
-          <div className={`flex w-full justify-center overflow-hidden  duration-500   ${notAllPackagesOff() && techCaseItem2Active ? "mobile:h-[9rem] tablet:h-[8rem] desktop:h-[8rem]" : "h-0"}`}>
-            {(onepagerActiv || startUpActiv || businessActiv || Custom) && (
-              <div className="w-full animate-fadeIn">
-                <WeekChanger children1={sixToEight} children2={eightToTen} children3={tenTotwelve}>
-                </WeekChanger>
-              </div>
-            )}
-          </div>
-
-          {notAllWeeksOff() && notAllSwitchesOff() && customActiv && (
+          {notAllWeeksOff() && notAllSwitchesOff() && (customActiv || customAppActiv) && (
             <div className="w-full flex justify-center items-center mt-[5rem]">
             <ConfigurationSlider onChange={onChange}/>
             </div>
