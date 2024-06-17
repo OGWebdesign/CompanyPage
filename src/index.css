@@ -12,3 +12,12 @@
 
 
 
+.custom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Entfernt das Standard-Styling für Webkit */
+    appearance: none; /* Entfernt das Standard-Styling */
+    width: 25px; /* Breite der Kugel */
+    height: 25px; /* Höhe der Kugel */
+    background-color: #98f144; /* Hintergrundfarbe der Kugel */
+    cursor: none; /* Zeiger beim Überfahren der Kugel */
+    border-radius: 50%; /* Runde Ecken */
+  }
