@@ -478,14 +478,14 @@ export const OfferSite = () => {
 
           {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
           <div className="w-full flex flex-col items-center mt-10">
-            <div className="w-[20rem] h-10 border border-[#292929] rounded-full flex items-center overflow-hidden">
+            <div className={`w-[20rem] h-10 border border-[#292929] ${progression === 0 ? "opacity-0": "opacity-100"}  rounded-full flex items-center overflow-hidden`}>
               {/* Progress Bar */}
-              <div className={`h-full bg-[#98f144] duration-500 rounded-full flex justify-center overflow-hidden
+              <div className={`h-full ${progression === 20 ? "bg-[#98f144]":"bg-[#c73838]"} duration-500 rounded-full flex justify-center overflow-hidden
                 items-center ${progression == 20 && "w-[20rem]"} ${progression == 15 && "w-[15rem]"} ${progression == 10 && "w-[10rem]"} ${progression == 5 && "w-[5rem]"} ${progression == 0 && "w-[0rem]"}`}>
-                <span className={`font-mono font-semibold`}>{progression * 5 === 100 && "Configuration Complete"}</span>
+                <span className={`font-mono font-semibold`}>{progression * 5 === 100 && "Configuration Complete!"}</span>
               </div>
             </div>
-            <div className="text-slate-200 font-mono text-[0.8rem] mt-3"><span>{progression * 5}</span> %<span></span></div>
+            <div className={`font-mono text-[0.8rem] ${progression === 0 ? "opacity-0": "opacity-100"} mt-3 text-[#98f144] font-bold text-[1.1rem]`}><span>Configutation progress: {progression * 5}</span> %<span></span></div>
           </div>
           {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
 
