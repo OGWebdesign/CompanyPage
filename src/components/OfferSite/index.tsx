@@ -8,6 +8,8 @@ import { PackageCard } from "../PackageCard";
 import { PackageCardItem } from "../PackageCardItem";
 import { WeekChanger } from "../WeekChanger";
 import { WeekChangerItems } from "../WeekChangerItems";
+import { ConfigurationSlider } from "../ConfigurationSlider";
+
 export const OfferSite = () => {
 
   const [progression, setProgression] = useState(0)
@@ -486,7 +488,9 @@ export const OfferSite = () => {
           </div>
           {/*-------------------------------------------- Progress Border---------------------------------------------------------------------------------------- */}
 
-
+         <div>
+          <ConfigurationSlider></ConfigurationSlider>
+         </div>
 
 
         </div>
