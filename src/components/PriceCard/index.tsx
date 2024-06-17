@@ -27,7 +27,6 @@ export const PriceCard = (props: PriceCardProps) => {
         package: 1-(OnePager), 2-(Start Up), 3-(Business)
     */}
     const price = (weeksSelected : number | undefined, packageSelected : number | undefined) : number | undefined => {
-        console.log(props.weeks,props.package);
         switch(packageSelected){
             /* OnePager */
             case 1 :
