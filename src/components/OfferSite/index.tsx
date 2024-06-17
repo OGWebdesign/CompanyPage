@@ -407,7 +407,7 @@ export const OfferSite = () => {
     <>
       {/* Headline and Product Desciption */}
       <div className="animate-fadeIn">
-        <OfferSeperatorCard
+      <OfferSeperatorCard
           classnamehead="text-[#151515] font-semibold inline-block bg-[#98f144]"
           head="What exactly is a SPA?"
           text="A SPA or Single Page Application is a modern technology that does not program websites as such, but rather as a real web-based program. Sounds crazy and it is. The huge advantages of this technology are that there are no loading times. The program is completely preloaded, so to speak. In addition, after loading once, the program no longer needs an internet connection to be displayed properly. There are also lots of new possibilities in terms of animation. Imagine an online shop where you can browse through the individual products and are not subject to any loading times. Porting it as a permanent mobile app is also child's play after such an implementation. However, a large amount of know-how is required. Technical SEO in particular is a challenge here. Thanks to content management systems such as WordPress, we have stopped leaving work on the web to real experts. If you have a broken car, very few people try to tackle it themselves. This is where we come in. We are experts in this field and have made it our mission to make this technology accessible to every company. The advantages are obvious. Almost no loading times, an exceptional user experience and state-of-the-art technology like Facebook or Instagram."
@@ -421,8 +421,10 @@ export const OfferSite = () => {
         ></OfferSeperatorCard>
         <OfferSeperatorCard
           classnamehead="text-[#151515] font-semibold inline-block bg-[#98f144]"
-          head="Consulting & administration."
-          text="Of course, the basis of computer science is to pass on knowledge. An entire project stands or falls with advice and planning. Especially in the IT jungle, all the confusing terminology can quickly become overwhelming. We are there for your concerns from the very first minute. From planning to implementation, we are available to answer any questions you may have. Get comprehensive advice for your own idea so that it gets the implementation it deserves. Be it a web application, a website or the integration of artificial intelligence or bots."
+          head="DevOps"
+          text="The fast help for your web development. DevOps as a flexible solution!
+          Are you an agile company that needs to react quickly to changing requirements in web development? Then our DevOps team is just the thing for you!
+          Say goodbye to lengthy recruitment processes and expensive permanent positions. With our DevOps team as a flexible partner, you can scale your projects effortlessly. Bookable monthly and cancelable at any time. Experienced developers with comprehensive know-how are available to you directly. Whether in the short term for a specific project or in the long term to expand your capacities. We will find the right solution."
           animation={false}
         ></OfferSeperatorCard>
         <OfferSeperatorCard
