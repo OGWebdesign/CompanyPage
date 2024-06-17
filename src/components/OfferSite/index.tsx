@@ -8,7 +8,6 @@ import { PackageCard } from "../PackageCard";
 import { PackageCardItem } from "../PackageCardItem";
 import { WeekChanger } from "../WeekChanger";
 import { WeekChangerItems } from "../WeekChangerItems";
-import { useTypewriter } from "react-simple-typewriter";
 export const OfferSite = () => {
 
   const [progression, setProgression] = useState(0)
