@@ -373,19 +373,31 @@ export const OfferSite = () => {
     setActive8To10Weeks(false);
     setActive10To12Weeks(false);
     }
-    else if (customActiv && notAllSwitchesOff() && notAllWeeksOff()){
+    else if (techCaseItem1Active && customActiv && notAllSwitchesOff() && notAllWeeksOff()){
       setProgression(18);
     }
-    else if (notAllPackagesOff() && notAllSwitchesOff() && notAllWeeksOff()){
+    else if (techCaseItem1Active && (notAllPackagesOff() && notAllSwitchesOff() && notAllWeeksOff())){
       setProgression(20);
     } 
-    else if (!notAllPackagesOff() && notAllSwitchesOff()){
+    else if (techCaseItem1Active && (!notAllPackagesOff() && notAllSwitchesOff())){
       setProgression(10);
     } 
-    else if (!notAllWeeksOff() && notAllPackagesOff() && notAllSwitchesOff()){
+    else if (techCaseItem1Active && (!notAllWeeksOff() && notAllPackagesOff() && notAllSwitchesOff())){
       setProgression(15);
     } 
-  },[active6To8Weeks, active8To10Weeks, active10To12Weeks, switch1, switch2, switch3, switch4, switch5, onepagerActiv, businessActiv, customActiv, startUpActiv ])
+    else if (techCaseItem2Active && (!notAllWeeksOff() && notAllAppPackagesOff() && notAllSwitchesOff())){
+      setProgression(15);
+    } 
+    else if (techCaseItem2Active && (notAllAppPackagesOff() && notAllSwitchesOff() && notAllWeeksOff())){
+      setProgression(20);
+    } 
+    else if (techCaseItem2Active && (!notAllAppPackagesOff() && notAllSwitchesOff())){
+      setProgression(10);
+    }  
+    else if (techCaseItem2Active && customAppActiv && notAllSwitchesOff() && notAllWeeksOff()){
+      setProgression(18);
+    }
+  },[active6To8Weeks, active8To10Weeks, active10To12Weeks, switch1, switch2, switch3, switch4, switch5, onepagerActiv, businessActiv, customActiv, startUpActiv, miniAppActiv, mediumAppActiv, largeAppActiv, customAppActiv])
 
   const sixToEight = (<WeekChangerItems onClick={() => {handleClickSixToEight(); }} text="6-8" activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
   const eightToTen = (<WeekChangerItems onClick={() => {handleClickEightToTen(); }} text="8-10" activecss={`${active8To10Weeks && aktivcssWeeks}`}></WeekChangerItems>)
@@ -472,7 +484,7 @@ export const OfferSite = () => {
       setProgression(20);
       setValueSlider(value);
       } 
-      else if (value === 0){
+      else if (value == 0){
         setProgression(18);
         setValueSlider(0);
       }
