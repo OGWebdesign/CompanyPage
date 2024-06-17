@@ -41,7 +41,8 @@ const Cursor = () => {
     <>
 
         <div
-          className={` fixed flex ${clickStyle} justify-center items-center font-mono font-bold w-[25px] h-[25px] rounded-[50%] pointer-events-none z-50`}
+          className={` fixed flex ${clickStyle} justify-center items-center font-mono font-bold w-[25px] h-[25px] rounded-[50%] pointer-events-none z-50
+            translate-x-[-50%] translate-y-[-50%] `}
           style={{
             left: `${position.x}px`,
             top: `${position.y}px`,
