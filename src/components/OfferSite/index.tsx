@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { ParagraphOGLeft } from "../ParagraphOGLeft";
 import { TechnologieCase } from "../TechnologieCase";
 import { TechnologieCaseItem } from "../TechnologieCaseItem";
 import { SwitchesWebsite } from "../SwitchesWebsite";
