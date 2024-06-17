@@ -332,8 +332,7 @@ export const OfferSite = () => {
       {/* Headline and Product Desciption */}
       <div className="animate-fadeIn">
         <ParagraphOGLeft
-          classnamehead="text-[#98f144] bg-slate-200"
-          classname="bg-slate-200 p-7 rounded-2xl text-[#151515]"
+          classnamehead="text-[#98f144]"
           head="What exactly is a SPA?"
           text="A SPA or Single Page Application is a modern technology that does not program websites as such, but rather as a real web-based program. Sounds crazy and it is. The huge advantages of this technology are that there are no loading times. The program is completely preloaded, so to speak. In addition, after loading once, the program no longer needs an internet connection to be displayed properly. There are also lots of new possibilities in terms of animation. Imagine an online shop where you can browse through the individual products and are not subject to any loading times. Porting it as a permanent mobile app is also child's play after such an implementation. However, a large amount of know-how is required. Technical SEO in particular is a challenge here. Thanks to content management systems such as WordPress, we have stopped leaving work on the web to real experts. If you have a broken car, very few people try to tackle it themselves. This is where we come in. We are experts in this field and have made it our mission to make this technology accessible to every company. The advantages are obvious. Almost no loading times, an exceptional user experience and state-of-the-art technology like Facebook or Instagram."
           animation={false}
