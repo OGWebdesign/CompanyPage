@@ -51,9 +51,9 @@ export const StartSite = (props: {
           <CardWhite
             children={props.WhiteCardButton}
             classname="tablet:translate-x-28"
-            text1="Consulting &"
-            text2="administration"
-            description="If you need advice on your CMS, we advise or administer your existing website."
+            text1="FlexDev &"
+            text2="admin"
+            description="Do you need developers at short notice for a project that is already in the development phase?"
           />
           <CardWhite
             children={props.WhiteCardButton}

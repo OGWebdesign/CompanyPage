@@ -39,7 +39,7 @@ export const CompanySite = () => {
 
 
 
-            <LargeCard classname="bg-slate-200 text-[#151515]"
+            <LargeCard classname="bg-slate-200 text-[#151515] mt-[3rem]"
                 head1="Creating new opportunities."
                 head2="Setting new standards in high-performance websites."
                 text1="We have very high standards for ourselves, whether it's performance optimization or design. The reason why we decided to focus on web development is simple. We want to put an end to the old-fashioned uniformity. It's time to try new things, to stand out and stand out."
