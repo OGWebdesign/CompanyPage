@@ -378,9 +378,9 @@ export const OfferSite = () => {
   }
 
   useEffect(() => {
-    setActive6To8Weeks(false)
-    setActive8To10Weeks(false)
-    setActive10To12Weeks(false)
+    setActive6To8Weeks(false);
+    setActive8To10Weeks(false);
+    setActive10To12Weeks(false);
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   useEffect(() => {
@@ -408,9 +408,13 @@ export const OfferSite = () => {
       setProgression(15);
     } 
     /* Wenn Packages abgewählt werden und Switches aber noch an sind, setze Progress auf 50% */
-    else if ((techCaseItem1Active && !notAllPackagesOff() && notAllSwitchesOff()) || (techCaseItem2Active && !notAllAppPackagesOff() && notAllSwitchesOff())){
+    else if ((techCaseItem1Active && !notAllPackagesOff() && notAllSwitchesOff() && !notAllWeeksOff()) || (techCaseItem2Active && !notAllAppPackagesOff() && notAllSwitchesOff() && !notAllWeeksOff())){
       setProgression(10);
-    } 
+    }  
+    /* Wenn alles abgewählt ist, setze Progression auf 0 */
+    else if (!notAllAppPackagesOff() && !notAllPackagesOff() && !notAllSwitchesOff() && !notAllTechnicalCaseItemsOff() && !notAllWeeksOff()){
+      setProgression(0);
+    }
    
 
   },
@@ -476,7 +480,6 @@ export const OfferSite = () => {
 
     const [numberPackages, setNumberPackages] = useState(getNumberPackages());
     const [numberWeeks, setNumberWeeks] = useState(getNumberWeeks());
-
     const [numberPackagesWebApps, setNumberPackagesWebApps] = useState(getNumberPackagesWebApps());
 
     /* Wert für Preiskarte aktualisieren (Wochen) */
@@ -490,6 +493,7 @@ export const OfferSite = () => {
         setNumberPackages(getNumberPackages());
     },[onepagerActiv,businessActiv,businessActiv])
 
+    /* Wert für Preiskarte aktualisieren (AppPackages) */
     useEffect(() => {
       setNumberPackagesWebApps(getNumberPackagesWebApps());
     },[miniAppActiv,mediumAppActiv,largeAppActiv])
@@ -499,25 +503,18 @@ export const OfferSite = () => {
     {/* onChange Handler um die Progressbar bei Aktivierung von Custom bei Auswahl eines Preises auf 100% zu setzen*/}
 
     function onChange(value:number){
+      //Schiebewert > 0
       if(value > 0){
       setProgression(20);
       setValueSlider(value);
       } 
+      //Schiebewert = 0
       else if (value == 0){
         setProgression(18);
         setValueSlider(0);
       }
     }
 
-    /* Funktion um Progress anzupassen */
-    useEffect(() => {
-      if (valueSlider > 0 && customActiv){
-        setProgression(20);
-      } 
-      else if (valueSlider === 0 && customActiv) {
-        setProgression(18);
-      }
-    },[valueSlider])
 
   return (
     <>
