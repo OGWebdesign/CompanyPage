@@ -364,39 +364,34 @@ export const OfferSite = () => {
   }, [techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active])
 
   useEffect(() => {
-    if(techCaseItem1Active && (!notAllSwitchesOff() || !notAllPackagesOff())){
+    {/* Wenn Packages oder Switches abgewählt werden, Wochenauswahl auch abwählen  */}
+    if((techCaseItem1Active ) && (!notAllSwitchesOff() || !notAllPackagesOff()) || (techCaseItem2Active && (!notAllSwitchesOff() || !notAllAppPackagesOff()))){
       setActive6To8Weeks(false);
-    setActive8To10Weeks(false);
-    setActive10To12Weeks(false);
-    } else if (techCaseItem2Active && (!notAllSwitchesOff() || !notAllAppPackagesOff())){
-      setActive6To8Weeks(false);
-    setActive8To10Weeks(false);
-    setActive10To12Weeks(false);
-    }
-    else if (techCaseItem1Active && customActiv && notAllSwitchesOff() && notAllWeeksOff()){
+      setActive8To10Weeks(false);
+      setActive10To12Weeks(false);
+    } 
+    /* Wenn custom Auswahl an ist und alle Optionen vorher gewählt sind, jedoch der Sliderwert noch 0 ist, setze Progress auf 90% */
+    else if ((techCaseItem1Active || techCaseItem2Active) && (customActiv || customAppActiv) && notAllSwitchesOff() && notAllWeeksOff() && valueSlider == 0){
       setProgression(18);
     }
-    else if (techCaseItem1Active && (notAllPackagesOff() && notAllSwitchesOff() && notAllWeeksOff())){
+    /* Wenn custom Auswahl an ist und alle Optionen vorher gewählt sind und der Sliderwert größer 0 ist, setze Progress auf 100% */
+    else if ((techCaseItem1Active || techCaseItem2Active) && (customActiv || customAppActiv) && notAllSwitchesOff() && notAllWeeksOff() && valueSlider > 0){
       setProgression(20);
-    } 
-    else if (techCaseItem1Active && (!notAllPackagesOff() && notAllSwitchesOff())){
-      setProgression(10);
-    } 
-    else if (techCaseItem1Active && (!notAllWeeksOff() && notAllPackagesOff() && notAllSwitchesOff())){
-      setProgression(15);
-    } 
-    else if (techCaseItem2Active && (!notAllWeeksOff() && notAllAppPackagesOff() && notAllSwitchesOff())){
-      setProgression(15);
-    } 
-    else if (techCaseItem2Active && (notAllAppPackagesOff() && notAllSwitchesOff() && notAllWeeksOff())){
-      setProgression(20);
-    } 
-    else if (techCaseItem2Active && (!notAllAppPackagesOff() && notAllSwitchesOff())){
-      setProgression(10);
-    }  
-    else if (techCaseItem2Active && customAppActiv && notAllSwitchesOff() && notAllWeeksOff()){
-      setProgression(18);
     }
+    /* Wenn keine Custom Auswahl ist, und alle Optionen gewählt sind setze Progress auf 100% */
+    else if ((techCaseItem1Active && notAllPackagesOff() && notAllSwitchesOff() && notAllWeeksOff()) || (techCaseItem2Active && notAllAppPackagesOff() && notAllSwitchesOff() && notAllWeeksOff())){
+      setProgression(20);
+    } 
+    /* Wenn alles außer die Wochen aktiviert ist, dann setze Progress auf 75% */
+    else if ((techCaseItem1Active && !notAllWeeksOff() && notAllPackagesOff() && notAllSwitchesOff()) || (techCaseItem2Active && !notAllWeeksOff() && notAllAppPackagesOff() && notAllSwitchesOff())){
+      setProgression(15);
+    } 
+    /* Wenn Packages abgewählt werden und Switches aber noch an sind, setze Progress auf 50% */
+    else if ((techCaseItem1Active && !notAllPackagesOff() && notAllSwitchesOff()) || (techCaseItem2Active && !notAllAppPackagesOff() && notAllSwitchesOff())){
+      setProgression(10);
+    } 
+   
+
   },[active6To8Weeks, active8To10Weeks, active10To12Weeks, switch1, switch2, switch3, switch4, switch5, onepagerActiv, businessActiv, customActiv, startUpActiv, miniAppActiv, mediumAppActiv, largeAppActiv, customAppActiv])
 
   const sixToEight = (<WeekChangerItems onClick={() => {handleClickSixToEight(); }} text="6-8" activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
