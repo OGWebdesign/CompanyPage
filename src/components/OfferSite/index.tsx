@@ -23,6 +23,8 @@ export const OfferSite = () => {
   const [techCaseItem3Active, setTechCaseItem3Active] = useState(false)
   const [techCaseItem4Active, setTechCaseItem4Active] = useState(false)
 
+  const [valueSlider,setValueSlider] = useState(0);
+
 
 
   // Hilfsfunktion für Wrap
@@ -33,6 +35,7 @@ export const OfferSite = () => {
 
   // Funktionen die die Schalterpositionen rekulieren.
   const handleTechCaseItem1Click = () => {
+    setValueSlider(0);
     setTechCaseItem1Active(!techCaseItem1Active);
     setTechCaseItem2Active(false);
     setTechCaseItem3Active(false);
@@ -40,6 +43,7 @@ export const OfferSite = () => {
   };
 
   const handleTechCaseItem2Click = () => {
+    setValueSlider(0);
     setTechCaseItem1Active(false);
     setTechCaseItem2Active(!techCaseItem2Active);
     setTechCaseItem3Active(false);
@@ -47,6 +51,7 @@ export const OfferSite = () => {
   };
 
   const handleTechCaseItem3Click = () => {
+    setValueSlider(0);
     setTechCaseItem1Active(false);
     setTechCaseItem2Active(false);
     setTechCaseItem3Active(!techCaseItem3Active);
@@ -54,6 +59,7 @@ export const OfferSite = () => {
   };
 
   const handleTechCaseItem4Click = () => {
+    setValueSlider(0);
     setTechCaseItem1Active(false);
     setTechCaseItem2Active(false);
     setTechCaseItem3Active(false);
@@ -113,6 +119,9 @@ export const OfferSite = () => {
 
 
   const handleSwitch1 = () => {
+    if(switch1){
+      setValueSlider(0);
+    }
     setSwitch1(!switch1);
     setSwitch2(false);
     setSwitch3(false);
@@ -121,6 +130,9 @@ export const OfferSite = () => {
   };
 
   const handleSwitch2 = () => {
+    if(switch2){
+      setValueSlider(0);
+    }
     setSwitch1(false);
     setSwitch2(!switch2);
     setSwitch3(false);
@@ -129,6 +141,9 @@ export const OfferSite = () => {
   };
 
   const handleSwitch3 = () => {
+    if(switch3){
+      setValueSlider(0);
+    }
     setSwitch1(false);
     setSwitch2(false);
     setSwitch3(!switch3);
@@ -137,6 +152,9 @@ export const OfferSite = () => {
   };
 
   const handleSwitch4 = () => {
+    if(switch4){
+      setValueSlider(0);
+    }
     setSwitch1(false);
     setSwitch2(false);
     setSwitch3(false);
@@ -145,6 +163,9 @@ export const OfferSite = () => {
   };
 
   const handleSwitch5 = () => {
+    if(switch5){
+      setValueSlider(0);
+    }
     setSwitch1(false);
     setSwitch2(false);
     setSwitch3(false);
@@ -217,7 +238,6 @@ export const OfferSite = () => {
       setCustomActiv(false);
       setBusinessActiv(false);
       setStartUpActiv(false);
-      console.log("hello1")
     } 
     else if (techCaseItem2Active){
       console.log("hello2")
@@ -372,6 +392,7 @@ export const OfferSite = () => {
     } 
     /* Wenn custom Auswahl an ist und alle Optionen vorher gewählt sind, jedoch der Sliderwert noch 0 ist, setze Progress auf 90% */
     else if ((techCaseItem1Active || techCaseItem2Active) && (customActiv || customAppActiv) && notAllSwitchesOff() && notAllWeeksOff() && valueSlider == 0){
+      setValueSlider(0);
       setProgression(18);
     }
     /* Wenn custom Auswahl an ist und alle Optionen vorher gewählt sind und der Sliderwert größer 0 ist, setze Progress auf 100% */
@@ -392,7 +413,12 @@ export const OfferSite = () => {
     } 
    
 
-  },[active6To8Weeks, active8To10Weeks, active10To12Weeks, switch1, switch2, switch3, switch4, switch5, onepagerActiv, businessActiv, customActiv, startUpActiv, miniAppActiv, mediumAppActiv, largeAppActiv, customAppActiv])
+  },
+  /* Observe-Liste */
+  [ 
+    active6To8Weeks, active8To10Weeks, active10To12Weeks, switch1, switch2, switch3, switch4, switch5, onepagerActiv, businessActiv, customActiv, 
+    startUpActiv, miniAppActiv, mediumAppActiv, largeAppActiv, customAppActiv, techCaseItem1Active, techCaseItem2Active, techCaseItem3Active, techCaseItem4Active
+  ])
 
   const sixToEight = (<WeekChangerItems onClick={() => {handleClickSixToEight(); }} text="6-8" activecss={`${active6To8Weeks && aktivcssWeeks}`}></WeekChangerItems>)
   const eightToTen = (<WeekChangerItems onClick={() => {handleClickEightToTen(); }} text="8-10" activecss={`${active8To10Weeks && aktivcssWeeks}`}></WeekChangerItems>)
@@ -471,8 +497,6 @@ export const OfferSite = () => {
     {/*  -----------------------------------END----------------------------------- */}
 
     {/* onChange Handler um die Progressbar bei Aktivierung von Custom bei Auswahl eines Preises auf 100% zu setzen*/}
-
-    const [valueSlider,setValueSlider] = useState(0);
 
     function onChange(value:number){
       if(value > 0){
