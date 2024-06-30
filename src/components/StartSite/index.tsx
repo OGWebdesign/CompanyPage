@@ -17,24 +17,24 @@ export const StartSite = (props: {
 }) => {
   return (
     <div className="animate-fadeIn"> 
-      <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
+      <Heading headstyle="text-slate-200" heading="Discover the power of modern sample products and sample innovations" />
       <TextAndButton children={props.TextAndButtonbt}
 
-        text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
+        text="With the force of sample products, we are able to offer you a wide range of services. We are constantly developing new products and services to meet the needs of our customers."
         reference="/contact"
       />
-      <ParagraphOG classnamehead="text-slate-200" head="Compiled with the same technologies as Facebook and Instagram. "
-        text="Using the latest front-end and back-end technologies, we achieve loading speeds that no content management system can even remotely match. 
-                Loading times as low as 300 milliseconds.
-                We make no compromises when it comes to design. Modern, timeless designs where there are no limits to the possibilities. 
-                We do not use any modular systems and for this reason we are not subject to any restrictions in the entire development process."
+      <ParagraphOG classnamehead="text-slate-200" head="Same Technologies as big companies. "
+        text="Using the latest technologies is a key to reach the goal of perfection. We use the same technologies as big companies like Sample1, Sample2 and Sample3.
+        With our experience and the right tools, we can offer you the best possible service. And that's what we want to do. Speed, Innovation and Quality are our top priorities that 
+        we will always follow. Our Sample Products should be the best in the world."
         animation={true} classname="text-right justify-end"></ParagraphOG>
       <TechStripe />
       <TextComponent
-      headline="High-speed performance for websites and web applications on the next level."
-      text="We have consciously decided against content management solutions when developing websites. On the one hand, we have set ourselves the task of revolutionizing the Internet with highly customized customer projects. We want to help companies that have understood how to stand out from the competition to offer an alternative to offers that mainly consist of content management systems. On the other hand, full control over the project is important. It is particularly important for perfectionist developers like us to be able to change even the finer details. Performance and maintainability are particularly guaranteed by the technologies we use. We can log all development steps of a project and reset them if necessary. Nothing unexpected happens here! We make no compromises when it comes to performance. The code base, the media, and even the fonts are professionally compressed so that quality losses are not visible. All packed together in a state-of-the-art and reliable ecosystem with the highest level of care for maintainability. 80% of a software product consists of maintenance and care."
+      headline="High-speed performance for sample products on the next level."
+      text="Speed is the key to success. That's the reason we've got a SPA instead of a traditional website, just a fact. We are able to offer you the best possible performance for your environment.
+      We want to grap the attention of your customers and keep them on your solution of choice. With modern technologies and our priorities we are able to offer you the best possible performance."
       ></TextComponent>
-      <Allert head="Services" text="Whether it is a website, a software solution, a bot or advice on websites or application administration, we have the right offer for you." />
+      <Allert head="Services" text="Whether it is a sampleproduct1, a sampleproduct2, a sampleproduct3 or something else on sampleTopic, we have the right offer for you." />
 
       {/* WrapperLayout */}
       <div className="w-full flex justify-center items-center">
@@ -44,30 +44,30 @@ export const StartSite = (props: {
           <CardBlack
             children={props.BlackCardButton}
             classname="tablet:-translate-x-28"
-            text1="Websites & "
-            text2="programming"
-            description="Over 50% of all website visitors leave after waiting 3 seconds. Our websites finish loading in 300 milliseconds."
+            text1="sample1 & "
+            text2="sampleTopic"
+            description="Your chance to start a new, innovative idea with the help of our sample products. "
           />
           <CardWhite
             children={props.WhiteCardButton}
             classname="tablet:translate-x-28"
-            text1="FlexDev &"
+            text1="Flexsample &"
             text2="admin"
-            description="Do you need developers at short notice for a project that is already in the development phase?"
+            description="Do you need our team to develop a custom solution for you? We are happy to help you."
           />
           <CardWhite
             children={props.WhiteCardButton}
             classname="tablet:-translate-x-28"
-            text1="Application"
+            text1="sample2"
             text2="development"
-            description="Customized app solutions for your company where you determine what your program must do."
+            description="We are happy to help you with the development of your sample2 project to make it a success."
           />
           <CardBlack
             children={props.BlackCardButton}
             classname="tablet:translate-x-28"
-            text1="Artificial"
-            text2="intelligence"
-            description="Implementation of powerfull AI api's for you website or application for a extremly efficient workflow."
+            text1="sample3 &"
+            text2="sampleTopic"
+            description="We want to offer you the best possible service. That's what sample3 is about."
           />
         </div>
       </div>

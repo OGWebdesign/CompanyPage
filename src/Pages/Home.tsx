@@ -1,6 +1,6 @@
 import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from "react";
 import Cursor from "../components/Cursor";
-import { ArrowIcon, CompanyIcon, DotsIcon, FacebookIcon, HouseIcon, InstagramIcon, MailIcon, OfferIcon, PinterestIcon } from "../components/Icons";
+import { ArrowIcon, CompanyIcon, DotsIcon, FacebookIcon, HouseIcon, InstagramIcon, MailIcon, OfferIcon, PinterestIcon, ReactIcon } from "../components/Icons";
 import { CompanySite } from "../components/CompanySite";
 import { ContactSite } from "../components/ContactSite";
 import { StartSite } from "../components/StartSite";
@@ -40,7 +40,7 @@ function App() {
   const stroke = visible ? "w-[20rem] opacity-100" : "w-0 opacity-0"
   const homeActive = indicatorNav == 1 ? "border-b-8 border-[#98f144] text-slate-200 " : "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
   const companyActive = indicatorNav == 2 ? "border-b-8 border-[#98f144] text-slate-200 " : "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
-  const offerActive = indicatorNav == 3 ? "border-b-8 border-[#98f144] text-slate-200 " : "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
+  //const offerActive = indicatorNav == 3 ? "border-b-8 border-[#98f144] text-slate-200 " : "hover:border-b-8 hover:border-b-slate-200 text-[#747474]"
 
 
   // ---------------------------   Button for order meeting for component TextAndButton for working with one Page technologie
@@ -54,7 +54,7 @@ function App() {
 
   const BlackCardbt1 = () =>
     <div className="w-full h-1/2 flex justify-center items-center">
-      <div onClick={() => setIndicatorNav(3)} className="w-[8rem] h-12 rounded-xl duration-300 group border-2 bg-slate-100 hover:bg-[#98f144] hover:border-[#e9e9e9]  flex justify-center items-center">
+      <div className="w-[8rem] h-12 rounded-xl duration-300 group border-2 bg-slate-100 hover:bg-[#98f144] hover:border-[#e9e9e9]  flex justify-center items-center">
         <p className="font-mono text-[1.1rem] font-semibold text-[#151515] group-hover:text-[#151515] mr-3 ">Get it</p>
         <ArrowIcon className="w-6 h-6 duration-300 tablet:group-hover:translate-x-14 desktop:group-hover:translate-x-12 mobile:group-hover:translate-x-10 group-hover:fill-slate-200  "></ArrowIcon>
       </div>
@@ -64,7 +64,7 @@ function App() {
 
   const WhiteCardbt1 = () =>
     <div className="w-full h-1/2 flex justify-center items-center">
-      <div onClick={() => setIndicatorNav(3)} className="w-[8rem] group h-12 rounded-xl border-2 border-slate-200 duration-300 group hover:border-[#151515] bg-[#151515] hover:bg-[#98f144] flex justify-center items-center">
+      <div className="w-[8rem] group h-12 rounded-xl border-2 border-slate-200 duration-300 group hover:border-[#151515] bg-[#151515] hover:bg-[#98f144] flex justify-center items-center">
         <p className="font-mono text-[1.1rem] font-semibold text-slate-200 group-hover:text-[#151515] mr-3 ">Get it</p>
         <ArrowIcon className="w-6 h-6 fill-slate-200 duration-300 tablet:group-hover:translate-x-14 desktop:group-hover:translate-x-12 mobile:group-hover:translate-x-10 group-hover:fill-black  "></ArrowIcon>
       </div>
@@ -130,14 +130,12 @@ function App() {
                 <div className="w-full flex justify-between duration-500">
 
                   {/* Navbar Logo Wrapper */}
-                  <div className="tablet:w-1/2 duration-500">
+                  <div className="tablet:w-1/3 duration-500">
                     {/* Navbar Logo Wrapper End*/}
 
 
                     {/* Navbar Logo */}
-                    <img
-                      className="mobile:w-28 mobile:h-28 tablet:w-36 mobile:m-4 mobile:scale-110 tablet:h-36 desktop:w-36 desktop:h-36 duration-500"
-                      src="logo.png" alt="logoGraphic" />
+                     <ReactIcon className="fill-[#98f144] mobile:w-28 mobile:h-28 tablet:w-36 mobile:m-4 mobile:scale-110 tablet:h-36 desktop:w-36 desktop:h-36 duration-500"/>
                   </div>
                   {/* Navbar Logo End*/}
 
@@ -155,8 +153,8 @@ function App() {
                     mobile:opacity-0 mobile:w-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`} >Company</div>
 
                     {/* Navbar Item III */}
-                    <div onClick={() => setIndicatorNav(3)} className={`${offerActive} mobile:-z-10 cursor-none tablet:-z-10 desktop:z-0 flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
-                     mobile:opacity-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`} >Offer</div>
+                    {/* <div onClick={() => setIndicatorNav(3)} className={`${offerActive} mobile:-z-10 cursor-none tablet:-z-10 desktop:z-0 flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
+                     mobile:opacity-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`} >Offer</div> */}
 
                     {/* Burger Menu Button */}
                     <div onClick={() => setVisible(!visible)} className=" w-32 h-26 rounded-xl duration-300 mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 flex flex-col justify-center items-center  ">
@@ -179,8 +177,8 @@ function App() {
                   <div className={`my-5 ${bordervisibility} text-[#747474] cursor-none w-[10rem] text-center  font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
                     onClick={() => { setIndicatorNav(2); setVisible(!visible); }}>Company</div>
                   {/* Scroll Bar Item III */}
-                  <div className={`my-5 ${bordervisibility}  text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
-                    onClick={() => { setIndicatorNav(3); setVisible(!visible); }}>Offer</div>
+                  {/* <div className={`my-5 ${bordervisibility}  text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
+                    onClick={() => { setIndicatorNav(3); setVisible(!visible); }}>Offer</div> */}
 
 
                   <div className="w-full h-5  flex justify-center text-[0.8rem] mt-10 items-center text-[#858585] overflow-hidden font-mono">
@@ -207,7 +205,7 @@ function App() {
               {/* get you component for linkship and add an onCLick event. Now you can render dynamicly with an indicator Number */}
               {
                 indicatorNav === 1 && (
-                  <StartSite TextAndButtonbt={orderMeetingbt("Book a consultation")} BlackCardButton={BlackCardbt1()} WhiteCardButton={WhiteCardbt1()}></StartSite>
+                  <StartSite TextAndButtonbt={orderMeetingbt("Kontaktieren Sie uns!")} BlackCardButton={BlackCardbt1()} WhiteCardButton={WhiteCardbt1()}></StartSite>
                 )
               }
               {
@@ -286,7 +284,7 @@ function App() {
             {/* Footer Nav Bar */}
           </div>
           <div className="w-full p-4 text-[#151515] bg-slate-200 flex font-mono font-semibold justify-center items-center">
-            <p>©2024 OG Webdesign</p>
+            <p>©2024 Mustermann AG</p>
           </div>
         </div>
         {/* Footer End */}

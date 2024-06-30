@@ -1,51 +1,46 @@
-import { EmployeeCard } from "../EmployeeCard"
-import { LargeCard } from "../LargeCard"
-import { ParagraphOG } from "../ParagraphOG"
-import { ParagraphOGLeft } from "../ParagraphOGLeft"
+import { EmployeeCard } from "../EmployeeCard";
+import { LargeCard } from "../LargeCard";
+import { ParagraphOG } from "../ParagraphOG";
+import { ParagraphOGLeft } from "../ParagraphOGLeft";
 
 export const CompanySite = () => {
-    return (
-        <div className="animate-fadeIn">
-            <ParagraphOG classnamehead="inline-block bg-[#98f144] text-[#151515]" text="Hey, we're Max and Nils the creative duo behind OG Webdesign and we are very pleased to meet you. What is our job? To create cool and innovative digital solutions that not only look good, but also have a lot to offer.
-             With our know-how from studying computer science and design and a lot of experience under our belt, we bring your ideas to life online. Whether it's websites, bots, web apps, application software or AI services, we've got it!
-             Every project begins with a detailed discussion to understand your needs and goals. Based on this, we develop individual concepts that are tailored precisely to your company. Transparent communication and close cooperation are a matter of course for us."
-                head="#Transparency" animation={false} classname="text-right justify-end"></ParagraphOG>
+  return (
+    <div className="animate-fadeIn">
+      <ParagraphOG
+        classnamehead="inline-block bg-[#98f144] text-[#151515]"
+        text="Willkommen auf unserer Demo-Webseite! Wir sind stolz darauf, Ihnen unsere Dienstleistungen und Produkte vorzustellen, die auf höchsten Standards basieren. Unser Team aus erfahrenen Fachleuten ist stets bestrebt, Ihnen innovative und maßgeschneiderte Lösungen anzubieten.
+            Unsere Mission ist es, durch erstklassigen Service und hochwertige Produkte Mehrwert für unsere Kunden zu schaffen. Wir setzen auf modernste Technologien und kontinuierliche Weiterentwicklung, um Ihre Erwartungen nicht nur zu erfüllen, sondern zu übertreffen."
+        head="#Transparenz"
+        animation={false}
+        classname="text-right justify-end"
+      />
 
-            <ParagraphOGLeft
-                classnamehead="bg-[#98f144] inline-block text-[#151515] mt-[3rem]"
-                text="The web offers countless opportunities to present yourself or your company in a contemporary and sensible manner. 
-            Despite this, many websites do not fully realize their potential. 
-            Websites are becoming increasingly important in the digital age and are often a key to success. 
-            We want to help you achieve this success and support you with our technical know-how. 
-            Even if functionality is your primary concern, we are the right partner for you. Web applications are becoming increasingly popular 
-            because they operate independently of operating systems. A web app can quickly be turned into a desktop application. Bots also play a 
-            crucial role on the web. Whether used to close security gaps or analyze website activities, they are universally applicable. 
-            Does it all seem a bit overwhelming? Or do you need expert opinions? We are happy to advise you on the advantages and disadvantages of 
-            various technologies and answer your questions."
-                head="#Motivation"
-                animation={false}
-            />
+      <ParagraphOGLeft
+        classnamehead="bg-[#98f144] inline-block text-[#151515] mt-[3rem]"
+        text="Unsere oberste Priorität ist es, durch erstklassigen Service und hochwertige Produkte echten Mehrwert für unsere Kunden zu schaffen. Mit einem starken Fokus auf modernste Technologien und kontinuierliche Verbesserung, streben wir danach, Ihre Erwartungen nicht nur zu erfüllen, sondern zu übertreffen. Von umfassender Beratung über innovative technologische Lösungen bis hin zu zuverlässigem Support bieten wir Ihnen alles aus einer Hand. Unser Ziel ist es, Ihre Projekte erfolgreich und effizient zu realisieren."
+        head="#Motivation"
+        animation={false}
+      />
 
-            <EmployeeCard></EmployeeCard>
-            <LargeCard
-                head1style="text-[#98f144] mt-10"
-                head2style="text-[#98f144] mt-10"
-                text1Style="text-[#b9b9b9]"
-                text2Style="text-[#b9b9b9]"
-                head2="Young and unconventional"
-                head1="Since XX23"
-                text2="At OG Webdesign, we believe that your website should be more than just a digital business card. It should tell your story, bring your brand to life and delight your customers. Our team consists of talented designers, developers and strategists who work with passion and creativity to turn your ideas into reality. Straight forward!"
-                text1="We look back on a short but successful past. We have implemented every project, every application, no matter how small with great care and an even greater sense of responsibility, always to the full satisfaction of our clients and beyond. We are thrilled to see how our websites and software products have transformed us into a completely different company, from the way we present ourselves online to how we operate our software products internally."></LargeCard>
+      <EmployeeCard />
+      <LargeCard
+        head1style="text-[#98f144] mt-10"
+        head2style="text-[#98f144] mt-10"
+        text1Style="text-[#b9b9b9]"
+        text2Style="text-[#b9b9b9]"
+        head2="Innovativ"
+        head1="Since XXYY"
+        text2="Seit unserer Gründung im Jahr XXYY setzen wir neue Maßstäbe in der Welt. Mit einer unermüdlichen Leidenschaft für unsere Tätigkeit entwickeln wir maßgeschneiderte Lösungen, die Ihre Visionen Wirklichkeit werden lassen. Für unser Spezialgebiet sind wir Ihr Partner für Innovation. Erleben Sie die Zukunft mit uns."
+        text1="Seit XXYY verfolgen wir unsere Vision, die Welt zu revolutionieren. Seit unserer Gründung arbeiten wir daran innovative und maßgeschneiderte Lösungen im unserem Bereich zu bieten. Unser Ziel ist es, Ideen in die Realität umzusetzen und unseren Kunden dabei zu helfen, ihre Ziele zu erreichen."
+      ></LargeCard>
 
-
-
-            <LargeCard classname="bg-slate-200 text-[#151515] mt-[3rem]"
-                head1="Creating new opportunities."
-                head2="Setting new standards in high-performance websites."
-                text1="We have very high standards for ourselves, whether it's performance optimization or design. The reason why we decided to focus on web development is simple. We want to put an end to the old-fashioned uniformity. It's time to try new things, to stand out and stand out."
-                text2="New technologies always offer the appeal of overcoming different challenges. They also usually bring new possibilities for software development. It is time to put aside the old habits and take new paths. The courage to create new user experiences will pay off because being the first always pays off.">
-            </LargeCard>
-
-        </div>
-    )
-}
+      <LargeCard
+        classname="bg-slate-200 text-[#151515] mt-[3rem]"
+        head1="Neue Möglichkeiten erschaffen."
+        head2="Neue Standards setzen."
+        text1="Neue Möglichkeiten im Musterbereich sind für uns immer eine Herausforderung. Diese Herausforderungen treiben uns an und motivieren uns, neue Wege zu gehen. Der Mut, das Produkt immer weiter zu entwickeln und neue Benutzererfahrungen zu schaffen, bietet Kunden neue Wege."
+        text2="Sind wir mit einer Lösung zufrieden, welche nicht optimal ist? Niemals! Denn wir wollen neue Maßstäbe im Bereich Musterfach setzen. Wir wollen die Welt verändern und neue Standards setzen. Wir wollen, dass unsere Kunden die besten Produkte und Dienstleistungen erhalten."
+      ></LargeCard>
+    </div>
+  );
+};
