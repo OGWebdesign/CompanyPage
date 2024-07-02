@@ -9,29 +9,29 @@ export const Impressum = () => {
              {/* CARD UPPER LEFT */}
             <div className="w-[16rem] h-[28rem] bg-slate-200 shadow-lg rounded-lg transform mobile:-translate-y-0 laptop:-translate-y-10 z-10 
             flex flex-col items-center border-r border-r-[#151515] border-b border-b-[#151515]">
-                <h1 className=" my-4 text-[1.5rem] text-[#151515] bg-[#98f144] p-1">Nils</h1>
+                <h1 className=" my-4 text-[1.5rem] text-[#151515] bg-[#98f144] p-1">Mustername</h1>
                 <div className="flex flex-col items-start px-5 py-2 ">
 
                     <p className="text-[#151515] text-[1rem] text-left w-full mb-2">
                         <span className="font-bold text-[1.1rem] border-b-2 border-b-[#98f144]">Name:</span> 
-                        {" "} Nils-Ole Otto
+                        {" "} Mustermann 1
                     </p>
 
                     <p className="text-[#151515] text-[1rem] text-center w-full mb-2">
                         <span className="font-bold text-[1.1rem] bg-[#98f144]">Adresse</span> 
                         <br/>
-                        Universitätsstraße 12, 03046 Cottbus
+                        Musterstraße 12, 00000 Musterhausen
                     </p>
 
                     <p className="text-[#151515] text-[1rem] text-left w-full mb-2">
                         <span className="font-bold text-[1.1rem] border-b-2 border-b-[#98f144]">Telefon:</span> 
-                        {" "} 015570271669
+                        {" "} 0123456789
                     </p>
 
                     <p className="text-[#151515] text-[1rem] text-center w-full mb-2">
                         <span className="font-bold text-[1.1rem] bg-[#98f144]">E-Mail</span> 
                         <br/> 
-                        info@og-webdesign.de
+                        muster@muster.de
                     </p>                  
                 </div>
 
@@ -63,29 +63,29 @@ export const Impressum = () => {
             <div className="w-[16rem] h-[28rem] bg-slate-200 border-l border-l-[#151515] shadow-lg rounded-lg  
              laptop:-translate-y-48 laptop:-translate-x-6 z-10 mobile:-translate-x-0  mobile:translate-y-0 mobile:mt-[15rem] laptop:mt-0
              flex flex-col items-center "> 
-            <h1 className=" my-4 text-[1.5rem] text-[#151515] bg-[#98f144] p-1">Max</h1>
+            <h1 className=" my-4 text-[1.5rem] text-[#151515] bg-[#98f144] p-1">Mustername</h1>
                 <div className="flex flex-col items-start px-5 py-2   ">
 
                     <p className="text-[#151515] text-[1rem] text-left w-full mb-2">
                         <span className="font-bold text-[1.1rem] border-b-2 border-b-[#98f144]">Name:</span> 
-                        {" "} Maximilian Gorn
+                        {" "} Mustermann 2 
                     </p>
 
                     <p className="text-[#151515] text-[1rem] text-center w-full mb-2">
                         <span className="font-bold text-[1.1rem] bg-[#98f144]">Adresse</span> 
                         <br/>
-                        Sachsendorfer Hauptstraße 36, 03046 Cottbus
+                        Musterstraße 13, 00000 Musterhausen
                     </p>
 
                     <p className="text-[#151515] text-[1rem] text-left w-full mb-2">
                         <span className="font-bold text-[1.1rem] border-b-2 border-b-[#98f144]">Telefon:</span> 
-                        {" "} 017646026146
+                        {" "} 012345678
                     </p>
 
                     <p className="text-[#151515] text-[1rem] text-center w-full mb-2">
                         <span className="font-bold text-[1.1rem] bg-[#98f144]">E-Mail</span> 
                         <br/> 
-                        info@og-webdesign.de
+                        muster@muster.de
                     </p>        
 
                 </div>
