@@ -135,7 +135,7 @@ function App() {
 
 
                     {/* Navbar Logo */}
-                     <img src="ESP.jpeg" className="bg-[#151515] mobile:w-[15rem] p-2 ml-4  tablet:w-[20rem] mobile:m-4 mobile:scale-110 desktop:w-[15rem] duration-500"/>
+                     <img src="ESP.png" className=" mobile:w-[15rem] p-2 ml-4  tablet:w-[20rem] mobile:m-4 mobile:scale-110 desktop:w-[15rem] duration-500"/>
                   </div>
                   {/* Navbar Logo End*/}
  
