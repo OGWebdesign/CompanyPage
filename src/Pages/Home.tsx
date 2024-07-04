@@ -135,10 +135,10 @@ function App() {
 
 
                     {/* Navbar Logo */}
-                     <ReactIcon className="fill-[#98f144] mobile:w-28 mobile:h-28 tablet:w-36 mobile:m-4 mobile:scale-110 tablet:h-36 desktop:w-36 desktop:h-36 duration-500"/>
+                     <img src="ESP.jpeg" className="bg-[#151515] mobile:w-[15rem] p-2 ml-4  tablet:w-[20rem] mobile:m-4 mobile:scale-110 desktop:w-[15rem] duration-500"/>
                   </div>
                   {/* Navbar Logo End*/}
-
+ 
 
 
                   {/* Navbar Item Layout */}
