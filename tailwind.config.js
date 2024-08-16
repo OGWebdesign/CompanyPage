@@ -58,7 +58,7 @@ export default {
       backgroundImage: { 
         "nils": "url('nils.png')",
         "max": "url('max.png')",
-        "clouds" : "url('/background3.webp')",
+        "clouds" : "url('/background4.webp')",
       },
     },
   },
