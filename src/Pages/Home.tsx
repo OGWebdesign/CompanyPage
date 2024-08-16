@@ -119,7 +119,7 @@ function App() {
         <div className="w-full flex justify-center ">
 
           {/* Start Page Layout */}
-          <div className="w-full mobile:p-2 rot tablet:px-5 bg-[#151515] flex justify-center items-center">
+          <div className="w-full mobile:p-2 bg-clouds bg-cover bg-no-repeat rot tablet:px-5 flex justify-center items-center relative">
             <div className="mobile:w-full tablet:w-full desktop:w-[75%] desktop-xl:w-[45%]">
               <div className="w-full duration-500 flex flex-col cursor-none ">
 
@@ -249,7 +249,7 @@ function App() {
         <div>
 
           {/* Footer Body */}
-          <div className="w-full cursor-none flex flex-col border font-mono text-slate-200 p-10 mobile:p-4 bg-slate-200 mobile:rounded-t-xl rounded-t-2xl mt-[10%]">
+          <div className="w-full cursor-none flex flex-col border font-mono text-slate-200 p-10 mobile:p-4 bg-slate-200 mobile:rounded-t-xl rounded-t-2xl">
             {/* First TextFragment */}
             <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem]  inline-block text-[#151515] leading-none">
               YOUR IDEA
@@ -266,7 +266,6 @@ function App() {
                 Lets talk
               </Link>
             </div>
-
 
             {/* Footer Nav Bar */}
             <div className="w-full cursor-none flex flex-row mobile:flex-col font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center tablet:text-[1rem] mobile:text-[0.8rem]">
