@@ -58,6 +58,7 @@ export default {
       backgroundImage: { 
         "nils": "url('nils.png')",
         "max": "url('max.png')",
+        "clouds" : "url('./public/background1.png')",
       },
     },
   },

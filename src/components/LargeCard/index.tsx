@@ -14,7 +14,7 @@ export const LargeCard = (props: {
 
 
     return (
-        <div className="w-full flex justify-center items-center select-none leading-none mt-[3rem]">
+        <div className="w-full flex justify-center items-center select-none leading-none mt-[10rem]">
             <div className={`flex-col p-4 max-w-[60rem] min-h-[15em] ${props.classname} rounded-2xl`}>
                 <div className="w-full flex desktop:flex-row mobile:flex-col gap-x-[2rem]">
                     <div className="w-1/2 mobile:w-full flex-row  mobile:flex-col">
@@ -35,7 +35,7 @@ export const LargeCard = (props: {
 
                 </div>
                 {props.withButton && (
-                    <div className="tablet:w-[20rem] border-2  duration-300 hover:font-semibold hover:text-[#151515] hover:bg-[#98f144] mobile:w-[10rem] flex justify-center items-center text-center font-mono text-slate-200 h-[3rem] ml-4 mt-14 bg-[#151515] rounded-lg border-[#151515]">
+                    <div className="tablet:w-[20rem] border-2  duration-300 hover:font-semibold hover:text-[#151515] hover:bg-[#98f144] mobile:w-[10rem] flex justify-center items-center text-center font-mono text-[#98f144] h-[3rem] ml-4 mt-14 bg-[#151515] rounded-lg border-[#151515]">
                         Get your free proposal
                     </div>
                 )}
