@@ -19,8 +19,7 @@ import { Impressum } from "../components/Impressum";
 import { Maintenance } from "../components/Maintenance";
 import { Privacy } from "../components/Privacy";
 import { SideBar } from "../components/SideBar";
-import { Button, Link } from "react-scroll";
-import { Allert } from "../components/Allert/index";
+import { Link } from "react-scroll";
 
 function App() {
   // state for animation
@@ -375,8 +374,8 @@ function App() {
           {/* Upper Content Wrapper (Contact, Text with Button, Navlinks) */}
           <div className="w-full flex flex-col">
             <div className="w-full h-[20rem] flex">
-              <div className="w-[25%] h-full flex flex-col justify-center p-3">
-                <span className="text-[1.3rem] text-[#98f144]">Contact</span>
+              <div className="w-[25%] h-full flex flex-col justify-center p-5">
+                <span className="text-[1.3rem] text-[#98f144]">Question?</span>
                 <span className="mt-[2rem] text-[2rem] text-slate-200">
                   info
                   <span className="text-[#98f144]">@</span>og-webdesign
@@ -394,7 +393,7 @@ function App() {
                   Contact us
                 </div>
               </div>
-              <div className="w-[25%] h-full flex flex-col justify-center items-end p-3">
+              <div className="w-[25%] h-full flex flex-col justify-center items-end p-5">
                 <span className="text-slate-200 text-[2rem] hover:text-[#98f144] transition-all duration-500">
                   Contact
                 </span>
@@ -415,14 +414,16 @@ function App() {
                <span className="border-b-[#98f144] border-b-2 hover:animate-ownpulse transition-all ease-in-out duration-500">Datasecure</span>
               </div>
               <div className="w-1/3 flex justify-evenly items-center">
-                  <FacebookIcon className="w-6 h-6 text-slate-200 hover:text-[#98f144] transition-all duration-500"/>
-                  <InstagramIcon className="w-6 h-6 text-slate-200 hover:text-[#98f144] transition-all duration-500"/>
-                  <PinterestIcon className="w-6 h-6 text-slate-200 hover:text-[#98f144] transition-all duration-500"/>
+                  <div className="w-[25rem] flex justify-evenly">
+                  <FacebookIcon className="w-10 h-10  fill-slate-200 hover:fill-[#3b5998] hover:p-1 hover:rotate-[360deg] transition-all duration-1000"/>
+                  <InstagramIcon className="w-10 h-10  fill-slate-200 hover:bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded-xl hover:p-1 hover:rotate-[360deg] transition-all duration-1000"/>
+                  <PinterestIcon className="w-10 h-10  fill-slate-200 hover:fill-[#E60023] hover:p-1 hover:rotate-[360deg] transition-all duration-1000"/>
+                  </div>
               </div>
             </div>
 
             <span className="w-full text-center pt-[3rem] text-slate-200 text-[5rem] font-bold">
-              LET'S WORK TOGETHER!
+              LET'S <span className="text-[#98f144]">WORK</span> TOGETHER!
             </span>
           </div>
         </div>
