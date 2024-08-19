@@ -1,4 +1,4 @@
-import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from "react";
+import {useState } from "react";
 import Cursor from "../components/Cursor";
 import { ArrowIcon, CompanyIcon, DotsIcon, FacebookIcon, HouseIcon, InstagramIcon, MailIcon, OfferIcon, PinterestIcon } from "../components/Icons";
 import { CompanySite } from "../components/CompanySite";
@@ -44,7 +44,7 @@ function App() {
 
 
   // ---------------------------   Button for order meeting for component TextAndButton for working with one Page technologie
-  const orderMeetingbt = (text: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined) =>
+  const orderMeetingbt = (text: string) =>
     <div onClick={() => setIndicatorNav(4)}
       className="text-[#151515] cursor-none select-none border-none bg-[#98f144] font-semibold mt-8 py-2 px-4 rounded-lg hover:bg-[#6ba039] font-mono transition duration-300 ease-in-out">
       {text}
@@ -93,6 +93,8 @@ function App() {
   }
 
 
+
+  // Side Bar Icons
   const homeIcon = (<Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={handleHome} className="w-[3rem] group p-2 hover:scale-150 duration-300 "><HouseIcon className="bg-fill-[#151515]" /> </Link>)
   const companyIcon = ( <Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={handleCompany} className="w-[2.6rem] p-2 hover:scale-150 duration-300"><CompanyIcon className="bg-fill-[#151515]" /> </Link>)
   const offerIcon = (<Link to="navigator" spy={true} smooth={true} offset={0} duration={500} onClick={handleOffer} className="w-[2.6rem] p-2 hover:scale-150 duration-300 "><OfferIcon className="bg-fill-[#151515]" /> </Link>)
@@ -119,7 +121,7 @@ function App() {
         <div className="w-full flex justify-center ">
 
           {/* Start Page Layout */}
-          <div className="w-full mobile:p-2 rot tablet:px-5 bg-[#151515] flex justify-center items-center">
+          <div className="w-full mobile:p-2 bg-[#151515] rot tablet:px-5 flex justify-center items-center relative">
             <div className="mobile:w-full tablet:w-full desktop:w-[75%] desktop-xl:w-[45%]">
               <div className="w-full duration-500 flex flex-col cursor-none ">
 
@@ -128,6 +130,7 @@ function App() {
                 {/* Begin NavigationBar Integration for One Page Technologie */}
                 {/* Navbar Item Wrapper */}
                 <div className="w-full flex justify-between duration-500">
+
 
                   {/* Navbar Logo Wrapper */}
                   <div className="tablet:w-1/2 duration-500">
@@ -249,7 +252,7 @@ function App() {
         <div>
 
           {/* Footer Body */}
-          <div className="w-full cursor-none flex flex-col border font-mono text-slate-200 p-10 mobile:p-4 bg-slate-200 mobile:rounded-t-xl rounded-t-2xl mt-[10%]">
+          <div className="w-full cursor-none flex flex-col border font-mono text-slate-200 p-10 mt-[10rem] mobile:p-4 bg-slate-200 mobile:rounded-t-xl rounded-t-2xl">
             {/* First TextFragment */}
             <article className="desktop:text-[6rem] tablet:text-[4rem] mobile:text-[2rem]  inline-block text-[#151515] leading-none">
               YOUR IDEA
@@ -266,7 +269,6 @@ function App() {
                 Lets talk
               </Link>
             </div>
-
 
             {/* Footer Nav Bar */}
             <div className="w-full cursor-none flex flex-row mobile:flex-col font-mono font-semibold text-[#151515] mt-[3%] duration-300  items-center tablet:text-[1rem] mobile:text-[0.8rem]">

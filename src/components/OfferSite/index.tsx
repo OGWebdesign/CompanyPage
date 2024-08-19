@@ -8,7 +8,6 @@ import { PackageCardItem } from "../PackageCardItem";
 import { WeekChanger } from "../WeekChanger";
 import { WeekChangerItems } from "../WeekChangerItems";
 import { PriceCard, PriceCardWebApp } from "../PriceCard";
-import { OfferSeperatorCard } from "../OfferSeperatorCard";
 import { ConfigurationSlider } from "../ConfigurationSlider";
 export const OfferSite = () => {
 
@@ -518,36 +517,6 @@ export const OfferSite = () => {
 
   return (
     <>
-      {/* Headline and Product Desciption */}
-      <div className="animate-fadeIn">
-      <OfferSeperatorCard
-          classnamehead="text-[#151515] font-semibold inline-block bg-[#98f144]"
-          head="What exactly is a SPA?"
-          text="A SPA or Single Page Application is a modern technology that does not program websites as such, but rather as a real web-based program. Sounds crazy and it is. The huge advantages of this technology are that there are no loading times. The program is completely preloaded, so to speak. In addition, after loading once, the program no longer needs an internet connection to be displayed properly. There are also lots of new possibilities in terms of animation. Imagine an online shop where you can browse through the individual products and are not subject to any loading times. Porting it as a permanent mobile app is also child's play after such an implementation. However, a large amount of know-how is required. Technical SEO in particular is a challenge here. Thanks to content management systems such as WordPress, we have stopped leaving work on the web to real experts. If you have a broken car, very few people try to tackle it themselves. This is where we come in. We are experts in this field and have made it our mission to make this technology accessible to every company. The advantages are obvious. Almost no loading times, an exceptional user experience and state-of-the-art technology like Facebook or Instagram."
-          animation={false}
-        ></OfferSeperatorCard>
-        <OfferSeperatorCard
-          classnamehead="text-[#151515] font-semibold inline-block bg-[#98f144]"
-          head="Websites"
-          animation={false}
-          text="Of course, we can also do classic websites. Here, too, we use developer tools for professional maintainability and performance with the highest security standards. Especially with content management systems, security gaps can quickly and unnoticed creep in through outdated plugins. From a technical point of view, this cannot happen so easily with our websites. The developer tools are created and tested by the really big players such as Facebook and Instagram. This means that a very high security guarantee is given. The performance cannot even come close to being achieved with content management systems. Leave your website to the experts, where real code is still written."
-        ></OfferSeperatorCard>
-        <OfferSeperatorCard
-          classnamehead="text-[#151515] font-semibold inline-block bg-[#98f144]"
-          head="DevOps"
-          text="The fast help for your web development. DevOps as a flexible solution!
-          Are you an agile company that needs to react quickly to changing requirements in web development? Then our DevOps team is just the thing for you!
-          Say goodbye to lengthy recruitment processes and expensive permanent positions. With our DevOps team as a flexible partner, you can scale your projects effortlessly. Bookable monthly and cancelable at any time. Experienced developers with comprehensive know-how are available to you directly. Whether in the short term for a specific project or in the long term to expand your capacities. We will find the right solution."
-          animation={false}
-        ></OfferSeperatorCard>
-        <OfferSeperatorCard
-          classnamehead="text-[#151515] font-semibold inline-block bg-[#98f144]"
-          head="AI & Bots"
-          animation={false}
-          text="The new topic of AI in particular has brought to light incredible potential for how technology can support people in their everyday lives. Not every company has enough budget to afford a social media specialist. Or how often do you come across situations in everyday life where you need information or a comparison quickly? And that's exactly where we come in. We offer the implementation of such bot networks or AI interfaces. You don't have to post your social media posts yourself. A bot only needs the relevant content and a fixed set of commands and then completes the task independently. But a bot can also take on security measures. Especially in critical systems, a security bot network can detect external influences and initiate countermeasures. They are also indispensable for user-friendliness. A chatbot offers excellent assistance when it comes to answering customer questions or instructions on how to navigate through the application. Everything is possible. Did you know? Google uses such bot networks to rank websites."
-        ></OfferSeperatorCard>
-      </div>
-
 
 
 
