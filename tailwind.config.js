@@ -58,8 +58,11 @@ export default {
       backgroundImage: { 
         "nils": "url('nils.png')",
         "max": "url('max.png')",
-        "clouds" : "url('/background4.webp')",
+        "clouds" : "url('/background2.webp')",
       },
+      fontFamily:{
+        "sharemono" : ["Share Tech Mono", "normal"],
+      }
     },
   },
   plugins: [],
