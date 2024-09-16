@@ -206,7 +206,7 @@ function App() {
                     {/* Navbar Logo */}
                     <img
                       className="mobile:w-28 mobile:h-28 tablet:w-36 mobile:m-4 mobile:scale-110 tablet:h-36 desktop:w-36 desktop:h-36 duration-500"
-                      src="logo.png"
+                      src="logo.jpeg"
                       alt="logoGraphic"
                     />
                   </div>
@@ -401,13 +401,13 @@ function App() {
               </div>
               <div className="laptop:w-[25%] mobile:w-full h-full flex mobile:my-[1.5rem] laptop:my-0 laptop:flex-col laptop:justify-center mobile:justify-around items-end p-5">
                 <span className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
-                  Contact
+                About us
                 </span>
                 <span className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] laptop:my-[1rem] hover:text-[#98f144] transition-all duration-500">
-                  Imprint
+                  Pricing
                 </span>
                 <span className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
-                  About us
+                  Imprint
                 </span>
               </div>
             </div>
