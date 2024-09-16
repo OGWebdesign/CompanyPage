@@ -376,7 +376,7 @@ function App() {
           <div className="w-full flex flex-col ">
             <div className="w-full laptop:h-[20rem] mobile:h-full flex items-center
             laptop:flex-row mobile:flex-col">
-              <div className="laptop:w-[25%] mobile:w-full h-full flex flex-col justify-center p-5
+              <div className="laptop:w-[25%] mobile:w-full laptop:h-[10rem] flex flex-col justify-center p-5
               mobile:justify-between">
                 <span className="text-[1.3rem] text-[#98f144]">Question?</span>
                 <span className="mt-[2rem] laptop:text-[2rem] mobile:text-[1.3rem] text-slate-200">
