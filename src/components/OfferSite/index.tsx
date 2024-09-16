@@ -1,3 +1,5 @@
+import PriceCalculator from "../PriceCalculator";
+
 export const OfferSite = () => {
 
 
@@ -33,6 +35,7 @@ export const OfferSite = () => {
           </div>
         </div>
       </div>
+      <PriceCalculator />
 
     </>
   );
