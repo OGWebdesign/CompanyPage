@@ -58,7 +58,7 @@ export default {
       backgroundImage: { 
         "nils": "url('nils.png')",
         "max": "url('max.png')",
-        "clouds" : "url('/background2.webp')",
+        "footer" : "url('footer-bg.webp')",
       },
       fontFamily:{
         "sharemono" : ["Share Tech Mono", "normal"],
