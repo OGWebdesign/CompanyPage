@@ -15,10 +15,10 @@ const IconCard = (props: { icon : React.ReactElement, title : string}) => {
             console.log(clicked);
             }} 
             className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${clicked ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
-            <div className={`flex justify-center items-center fill-white group-hover:fill-black duration-500 ${clicked && "fill-black"} `}>
+            <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${clicked ? "fill-black" : "fill-white"} `}>
                 {props.icon}
             </div>
-            <div className={`w-full text-center mobile:text-[0.8rem] tablet:text-[1rem] mt-[0.3rem] font-sharemono text-white group-hover:text-black duration-500 ${clicked && "text-black"}`}>
+            <div className={`w-full text-center mobile:text-[0.8rem] tablet:text-[1rem] mt-[0.3rem] font-sharemono group-hover:text-black duration-500 ${clicked ? "text-black" : "text-white"}`}>
                <p>{props.title}</p> 
             </div>
         </div>
