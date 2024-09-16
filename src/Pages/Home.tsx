@@ -264,11 +264,11 @@ function App() {
                 <div
                   className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${
                     visible ? visibleStyle : notVisibleStyle
-                  } duration-300 bg-[#151515]`}
+                  } duration-300 bg-black`}
                 >
                   {/* Scroll Bar Item I */}
                   <div
-                    className={`my-5 ${bordervisibility} text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
+                    className={`my-5 ${bordervisibility} text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-black hover:border-[#98f144] rounded-lg overflow-hidden`}
                     onClick={() => {
                       setIndicatorNav(1);
                       setVisible(!visible);
@@ -278,7 +278,7 @@ function App() {
                   </div>
                   {/* Scroll Bar Item II */}
                   <div
-                    className={`my-5 ${bordervisibility} text-[#747474] cursor-none w-[10rem] text-center  font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
+                    className={`my-5 ${bordervisibility} text-[#747474] cursor-none w-[10rem] text-center  font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-black hover:border-[#98f144] rounded-lg overflow-hidden`}
                     onClick={() => {
                       setIndicatorNav(2);
                       setVisible(!visible);
@@ -288,7 +288,7 @@ function App() {
                   </div>
                   {/* Scroll Bar Item III */}
                   <div
-                    className={`my-5 ${bordervisibility}  text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-[#151515] hover:border-[#98f144] rounded-lg overflow-hidden`}
+                    className={`my-5 ${bordervisibility}  text-[#747474] cursor-none w-[10rem] text-center font-mono text-[1.2rem] hover:text-[#98f144] hover:animate-ownpulse border-black hover:border-[#98f144] rounded-lg overflow-hidden`}
                     onClick={() => {
                       setIndicatorNav(3);
                       setVisible(!visible);

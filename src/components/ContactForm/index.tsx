@@ -41,7 +41,7 @@ export const ContactForm = () => {
 
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">NAME</span> IS </span>
 
-        <input name="namefield"  type="input" placeholder="Name" className=" cursor-none
+        <input name="namefield"  type="input" placeholder="Name*" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem] 
 
@@ -63,7 +63,7 @@ export const ContactForm = () => {
         
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">MAIL</span> IS </span>
        
-        <input name="emailfield" type="input" placeholder="Email" className=" cursor-none
+        <input name="emailfield" type="input" placeholder="Email*" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
@@ -71,6 +71,25 @@ export const ContactForm = () => {
         placeholder-[#777777] flex justify-center items-center "
         
         required
+        />
+
+      </div>
+
+      <div className={`w-full flex mt-5 ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>
+
+        <span className="text-white 
+        
+        mobile:w-full tablet:w-[65%]  tablet-contact:ml-[3rem] laptop:ml-[10rem] 
+        mobile:text-[1.8rem] tablet:text-[2rem] laptop:text-[2.3rem] 
+        
+        leading-none">MY <span className="bg-[#98f144] text-[#151515]">FIRMA</span> IS </span>
+       
+        <input name="emailfield" type="input" placeholder="Firma" className=" cursor-none
+
+        mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
+
+         text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
+        placeholder-[#777777] flex justify-center items-center "
         />
 
       </div>
@@ -85,7 +104,7 @@ export const ContactForm = () => {
           leading-none ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>MY <span className="bg-[#98f144] text-[#151515]">MESSAGE</span> IS.. </span>
 
     <div className="w-full flex justify-center items-center">
-        <textarea placeholder="Message" className={`
+        <textarea placeholder="Message*" className={`
 
         mobile:w-full tablet:w-[65%] laptop:w-1/2 cursor-none
 
@@ -98,6 +117,8 @@ export const ContactForm = () => {
         />
       </div>
     </div>
+
+    
     {/* BUTTON */}
       <div className="w-full flex justify-center mb-10 ">
 
