@@ -368,22 +368,28 @@ function App() {
 
         {/* Footer is not Element from Layout */}
         {/* Footer Start */}
-        <div className="w-full h-[50rem] bg-footer bg-bottom bg-cover flex justify-start items-center flex-col-reverse font-sharemono bg-transparent">
+        <div className="w-full laptop:h-[50rem] mobile:h-full bg-footer bg-bottom bg-cover flex justify-start items-center flex-col-reverse font-sharemono bg-transparent 
+        mobile:mt-[3rem] laptop:mt-0">
           {/* Empty div for col-reverse to place elements at bottom */}
           <div className=""></div>
           {/* Upper Content Wrapper (Contact, Text with Button, Navlinks) */}
-          <div className="w-full flex flex-col">
-            <div className="w-full h-[20rem] flex">
-              <div className="w-[25%] h-full flex flex-col justify-center p-5">
+          <div className="w-full flex flex-col ">
+            <div className="w-full laptop:h-[20rem] mobile:h-full flex items-center
+            laptop:flex-row mobile:flex-col">
+              <div className="laptop:w-[25%] mobile:w-full h-full flex flex-col justify-center p-5
+              mobile:justify-between">
                 <span className="text-[1.3rem] text-[#98f144]">Question?</span>
-                <span className="mt-[2rem] text-[2rem] text-slate-200">
+                <span className="mt-[2rem] laptop:text-[2rem] mobile:text-[1.3rem] text-slate-200">
                   info
-                  <span className="text-[#98f144]">@</span>og-webdesign
-                  <span className="text-[#98f144]">.</span>de
+                  <span className="text-[#98f144]">@</span>
+                  og-webdesign
+                  <span className="text-[#98f144]">.</span>
+                  de
                 </span>
-                <span className="text-slate-200 text-[2rem]">01515123124</span>
+                <span className="text-slate-200 laptop:text-[2rem] mobile:text-[1.3rem]">01515123124</span>
               </div>
-              <div className="w-[50%] h-full flex flex-col justify-center items-center text-[2rem] text-center">
+              <div className="laptop:w-[50%] h-full flex flex-col justify-center items-center laptop:text-[2rem] mobile:text-[1.7rem] text-center
+              mobile:mt-[1rem] mobile:w-full tablet:w-[70%] laptop:m-0">
                 <span className="text-slate-200">
                   Got a nice <span className="text-[#98f144]">Idea</span>? Come
                   to us and <span className="text-[#98f144]">talk</span> with
@@ -393,27 +399,27 @@ function App() {
                   Contact us
                 </div>
               </div>
-              <div className="w-[25%] h-full flex flex-col justify-center items-end p-5">
-                <span className="text-slate-200 text-[2rem] hover:text-[#98f144] transition-all duration-500">
+              <div className="laptop:w-[25%] mobile:w-full h-full flex mobile:my-[1.5rem] laptop:my-0 laptop:flex-col laptop:justify-center mobile:justify-around items-end p-5">
+                <span className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
                   Contact
                 </span>
-                <span className="text-slate-200 text-[2rem] my-[1rem] hover:text-[#98f144] transition-all duration-500">
+                <span className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] laptop:my-[1rem] hover:text-[#98f144] transition-all duration-500">
                   Imprint
                 </span>
-                <span className="text-slate-200 text-[2rem] hover:text-[#98f144] transition-all duration-500">
+                <span className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
                   About us
                 </span>
               </div>
             </div>
             {/* Lower Content Wrapper (Copyright, Datasecure, Social Media Icons) */}
-            <div className="w-full h-[5rem] flex">
-              <div className="w-1/3 flex justify-center items-center  text-slate-200 text-[1.3rem]">
+            <div className="w-full laptop:h-[5rem] flex mobile:flex-col mobile:items-center laptop:flex-row mobile:mt-[0.5rem] laptop:mt-0">
+              <div className="laptop:w-1/3 flex justify-center items-center  text-slate-200 text-[1.3rem]">
               <span className="text-[#98f144] px-2">©</span> 2024 <span className="text-[#98f144] pl-2">OG</span>-Webdesign
               </div>
-              <div className="w-1/3 flex justify-center items-center text-slate-200 text-[1.3rem]">
-               <span className="border-b-[#98f144] border-b-2 hover:animate-ownpulse transition-all ease-in-out duration-500">Datasecure</span>
+              <div className="laptop:w-1/3 flex justify-center items-center text-slate-200 text-[1.3rem]">
+               <span className="border-b-[#98f144] border-b-2 hover:animate-ownpulse transition-all ease-in-out duration-500 mobile:my-[1.2rem] laptop:my-0">Datasecure</span>
               </div>
-              <div className="w-1/3 flex justify-evenly items-center">
+              <div className="laptop:w-1/3 mobile:w-1/2 flex justify-evenly items-center">
                   <div className="w-[25rem] flex justify-evenly">
                   <FacebookIcon className="w-10 h-10  fill-slate-200 hover:fill-[#3b5998] hover:p-1 hover:rotate-[360deg] transition-all duration-1000"/>
                   <InstagramIcon className="w-10 h-10  fill-slate-200 hover:bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded-xl hover:p-1 hover:rotate-[360deg] transition-all duration-1000"/>
@@ -422,7 +428,7 @@ function App() {
               </div>
             </div>
 
-            <span className="w-full text-center pt-[3rem] text-slate-200 text-[5rem] font-bold">
+            <span className="w-full text-center pt-[3rem] text-slate-200 laptop:text-[5rem] mobile:text-[2rem] font-bold">
               LET'S <span className="text-[#98f144]">WORK</span> TOGETHER!
             </span>
           </div>
