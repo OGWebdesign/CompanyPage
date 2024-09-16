@@ -24,7 +24,7 @@ export const OfferSite = () => {
             </p>
             <div className="w-full">
               <div className="w-full flex mt-[5%] mobile:mt-[10%] items-center">
-                <div className="w-[4rem] h-[4rem] mobile:w-[3rem] mobile:h-[3rem] text-[1.3rem] mobile:text-[1rem] font-bold font-sharemono rounded-full bg-[#98f144] my-2 flex justify-center items-center">
+                <div className="w-[4rem] h-[4rem] mobile:w-[3rem] mobile:h-[3rem] text-[1.3rem] mobile:text-[1rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] font-bold font-sharemono rounded-full bg-[#98f144] my-2 flex justify-center items-center">
                   1
                 </div>
                 <p className="text-[1.2rem] mobile:text-[1rem] font-sharemono ml-8 text-[#8b8b8b]">
@@ -32,7 +32,7 @@ export const OfferSite = () => {
                 </p>
               </div>
               <div className="w-full flex items-center">
-                <div className="w-[4rem] h-[4rem] mobile:w-[3rem] mobile:h-[3rem] text-[1.3rem] mobile:text-[1rem] font-bold font-sharemono rounded-full bg-[#98f144] my-2 flex justify-center items-center">
+                <div className="w-[4rem] h-[4rem] mobile:w-[3rem] mobile:h-[3rem] text-[1.3rem] mobile:text-[1rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] font-bold font-sharemono rounded-full bg-[#98f144] my-2 flex justify-center items-center">
                   2
                 </div>
                 <p className="text-[1.2rem] mobile:text-[1rem] font-sharemono ml-8 text-[#8b8b8b]">
@@ -40,7 +40,7 @@ export const OfferSite = () => {
                 </p>
               </div>
               <div className="w-full flex items-center">
-                <div className="w-[4rem] h-[4rem] mobile:w-[3rem] mobile:h-[3rem] text-[1.3rem] mobile:text-[1rem] font-bold font-sharemono rounded-full bg-[#98f144] my-2 flex justify-center items-center">
+                <div className="w-[4rem] h-[4rem] mobile:w-[3rem] mobile:h-[3rem] text-[1.3rem] mobile:text-[1rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] font-bold font-sharemono rounded-full bg-[#98f144] my-2 flex justify-center items-center">
                   3
                 </div>
 
