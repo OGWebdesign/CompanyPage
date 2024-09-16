@@ -4,7 +4,7 @@ import PriceCalculator from "../PriceCalculator";
 export const OfferSite = () => {
   return (
     <>
-    <div className="flex justify-around">
+    <div className="flex mobile:flex-col laptop:flex-row justify-around">
       <div className="w-full h-[50rem] flex items-center">
         <div className="p-1">
           <div className="offertext mt-[10%] max-w-[30rem]">
@@ -52,7 +52,7 @@ export const OfferSite = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-[50rem] flex items-center">
+      <div className="w-full laptop:h-[50rem] laptop:m-0 mobile:mt-[5rem] flex items-center">
         <PriceCalculator />
       </div>
       
