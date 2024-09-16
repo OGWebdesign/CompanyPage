@@ -368,7 +368,7 @@ function App() {
 
         {/* Footer is not Element from Layout */}
         {/* Footer Start */}
-        <div className="w-full laptop:h-[50rem] mobile:h-full bg-footer bg-bottom bg-cover flex justify-start items-center flex-col-reverse font-sharemono bg-transparent 
+        <div className="w-full laptop:h-[50rem] desktop-xl:h-[75rem] mobile:h-full bg-footer bg-bottom bg-cover flex justify-start items-center flex-col-reverse font-sharemono bg-transparent 
         mobile:mt-[3rem] laptop:mt-0">
           {/* Empty div for col-reverse to place elements at bottom */}
           <div className=""></div>
