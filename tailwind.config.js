@@ -31,6 +31,7 @@ export default {
         fadeIn: 'fadeIn 300ms ease-in forwards',
         fadeOut: 'fadeOut 300ms ease-in forwards',
         progressInit: 'progressInit 1s ease-in forwards',
+        float: 'float 3s ease-in-out infinite',
       },
       keyframes: {
         ownpulse:{
@@ -54,6 +55,10 @@ export default {
           '0%':{width:'0rem'},
           '100%':{width:'5rem'}  
         },    
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
       },
       backgroundImage: { 
         "nils": "url('nils.png')",
