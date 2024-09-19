@@ -101,7 +101,7 @@ export default {
       backgroundImage: { 
         "nils": "url('nils.png')",
         "max": "url('max.png')",
-        "footer" : "url('footer-bg.webp')",
+        "footer" : "url('./footer-bg.webp')",
       },
       fontFamily:{
         "sharemono" : ["Share Tech Mono", "normal"],
