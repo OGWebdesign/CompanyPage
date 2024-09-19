@@ -31,34 +31,77 @@ export default {
         fadeIn: 'fadeIn 300ms ease-in forwards',
         fadeOut: 'fadeOut 300ms ease-in forwards',
         progressInit: 'progressInit 1s ease-in forwards',
+        float: 'float 3s ease-in-out infinite',
       },
       keyframes: {
         ownpulse:{
-          '0%':{opacity:'100%'}, 
-          '50%':{opacity:'30%'},
-          '100%':{opacity:'100%'}
+          '0%':
+          {
+            opacity:'100%'
+          }, 
+          '50%':
+          {
+            opacity:'30%'
+          },
+          '100%':
+          {
+            opacity:'100%'
+          }
         },
         loading:{
-          '0%':{transform:'translateX(0)'},
-          '50%':{transform:'translateX(-200%)'},         
+          '0%':
+          {
+            transform:'translateX(0)'
+          },
+          '50%':{
+            transform:'translateX(-200%)'
+          },         
         },
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          '0%': 
+          { 
+            opacity: '0' 
+          },
+          '100%': 
+          { 
+            opacity: '1' 
+          },
         },
         fadeOut: {
-          '0%': { opacity: '1' },
-          '100%': { opacity: '0' },
+          '0%': 
+          { 
+            opacity: '1' 
+          },
+          '100%': 
+          { 
+            opacity: '0' 
+          },
         },
         progressInit:{
-          '0%':{width:'0rem'},
-          '100%':{width:'5rem'}  
+          '0%':
+          {
+            width:'0rem'
+          },
+          '100%':
+          {
+            width:'5rem'
+          }  
         },    
+        float: {
+          '0%, 100%': 
+          { 
+            transform: 'translateY(0)' 
+          },
+          '50%': 
+          { 
+            transform: 'translateY(-15px)' 
+          },
+        },
       },
       backgroundImage: { 
         "nils": "url('nils.png')",
         "max": "url('max.png')",
-        "footer" : "url('footer-bg.webp')",
+        "footer" : "url('./footer-bg.webp')",
       },
       fontFamily:{
         "sharemono" : ["Share Tech Mono", "normal"],
