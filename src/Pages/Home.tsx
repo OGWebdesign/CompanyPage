@@ -262,9 +262,8 @@ function App() {
                 {/* Scroll Bar Wrapper */}
 
                 <div
-                  className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${
-                    visible ? visibleStyle : notVisibleStyle
-                  } duration-300 bg-black`}
+                  className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle : notVisibleStyle
+                    } duration-300 bg-black`}
                 >
                   {/* Scroll Bar Item I */}
                   <div
@@ -395,18 +394,18 @@ function App() {
                   to us and <span className="text-[#98f144]">talk</span> with
                   us!
                 </span>
-                <div className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039]">
+                <div onClick={() => setIndicatorNav(4)} className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039]">
                   Contact us
                 </div>
               </div>
               <div className="laptop:w-[25%] mobile:w-full h-full flex mobile:my-[1.5rem] laptop:my-0 laptop:flex-col laptop:justify-center mobile:justify-around items-end p-5">
-                <span className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
-                About us
+                <span onClick={() => setIndicatorNav(2)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
+                  About us
                 </span>
-                <span className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] laptop:my-[1rem] hover:text-[#98f144] transition-all duration-500">
+                <span onClick={() => setIndicatorNav(3)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] laptop:my-[1rem] hover:text-[#98f144] transition-all duration-500">
                   Pricing
                 </span>
-                <span className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
+                <span onClick={() => setIndicatorNav(6)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
                   Imprint
                 </span>
               </div>
@@ -414,20 +413,19 @@ function App() {
             {/* Lower Content Wrapper (Copyright, Datasecure, Social Media Icons) */}
             <div className="w-full laptop:h-[5rem] flex mobile:flex-col mobile:items-center laptop:flex-row mobile:mt-[0.5rem] laptop:mt-0">
               <div className="laptop:w-1/3 flex justify-center items-center  text-slate-200 text-[1.3rem]">
-              <span className="text-[#98f144] px-2">©</span> 2024 <span className="text-[#98f144] pl-2">OG</span>-Webdesign
+                <span className="text-[#98f144] px-2">©</span> 2024 <span className="text-[#98f144] pl-2">OG</span>-Webdesign
               </div>
               <div className="laptop:w-1/3 flex justify-center items-center text-slate-200 text-[1.3rem]">
-               <span className="border-b-[#98f144] border-b-2 hover:animate-ownpulse transition-all ease-in-out duration-500 mobile:my-[1.2rem] laptop:my-0">Datasecure</span>
+                <span onClick={() => setIndicatorNav(8)} className="border-b-[#98f144] border-b-2 hover:animate-ownpulse transition-all ease-in-out duration-500 mobile:my-[1.2rem] laptop:my-0">Datasecure</span>
               </div>
               <div className="laptop:w-1/3 mobile:w-1/2 flex justify-evenly items-center">
-                  <div className="w-[25rem] flex justify-evenly">
-                  <FacebookIcon className="w-10 h-10  fill-slate-200 hover:fill-[#3b5998] hover:p-1 hover:rotate-[360deg] transition-all duration-1000"/>
-                  <InstagramIcon className="w-10 h-10  fill-slate-200 hover:bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded-xl hover:p-1 hover:rotate-[360deg] transition-all duration-1000"/>
-                  <PinterestIcon className="w-10 h-10  fill-slate-200 hover:fill-[#E60023] hover:p-1 hover:rotate-[360deg] transition-all duration-1000"/>
-                  </div>
+                <div className="w-[25rem] flex justify-evenly">
+                  <FacebookIcon className="w-10 h-10 fill-slate-200 hover:fill-[#3b5998] hover:p-1 hover:rotate-[360deg] transition-all duration-1000" />
+                  <InstagramIcon className="w-10 h-10  fill-slate-200 hover:bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded-xl hover:p-1 hover:rotate-[360deg] transition-all duration-1000" />
+                  <PinterestIcon className="w-10 h-10  fill-slate-200 hover:fill-[#E60023] hover:p-1 hover:rotate-[360deg] transition-all duration-1000" />
+                </div>
               </div>
             </div>
-
             <span className="w-full text-center pt-[3rem] text-slate-200 laptop:text-[5rem] mobile:text-[2rem] font-bold">
               LET'S <span className="text-[#98f144]">WORK</span> TOGETHER!
             </span>
