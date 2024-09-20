@@ -34,9 +34,15 @@ export default {
         float: 'float 3s ease-in-out infinite',
         flyacross: 'fly-across 2s ease-in-out infinite',
         flyoffscreen: 'flyoffscreen 3s ease-in-out forwards',
+        flyIn: 'flyIn 3s ease-out forwards',
         
       },
       keyframes: {
+        flyIn: {
+          '0%': { transform: 'translateY(-200%)', opacity: '0' },
+          '50%': { transform: 'translateY(10%)', opacity: '1' },
+          '100%': { transform: 'translateY(0)' },
+        },
         flyoffscreen: {
           '0%': { transform: 'translate(0, 0) rotate(0deg)' },
           '20%': { transform: 'translate(100px, -50px) rotate(20deg)' },

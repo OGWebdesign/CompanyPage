@@ -15,6 +15,5 @@ export const TextAndButton = (props: TextAndButtonProps) => {
       {props.children}
       <img className="absolute w-[25rem] animate-flyoffscreen" src="graphics/astro2.png" alt="cute little astronaut" />
     </div>
-
   );
 };

@@ -53,7 +53,11 @@ export const OfferSite = () => {
           </div>
         </div>
         <div className="w-full laptop:h-[50rem] laptop:m-0 mobile:mt-[5rem] flex items-center flex-col">
-          <img className="h-[20rem] animate-float" src="graphics\astro.png" alt="" />
+          <img className="h-[20rem] animate-flyIn" src="graphics\astro.png" alt="a little cute astronaut" onAnimationEnd={(e) => {
+          const target = e.target as HTMLImageElement;
+          target.classList.remove('animate-flyIn');
+          target.classList.add('animate-float');
+        }}/>
           <PriceCalculator />
         </div>
       </div>
