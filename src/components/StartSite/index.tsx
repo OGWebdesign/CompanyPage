@@ -10,10 +10,10 @@ import { TextComponent } from "../TextComponent"
 
 
 export const StartSite = (props: {
-  TextAndButtonbt: JSX.Element | JSX.Element[] | string,
-  BlackCardButton: JSX.Element | JSX.Element[] | string,
-  WhiteCardButton: JSX.Element | JSX.Element[] | string,
-  ProposalButton:JSX.Element | JSX.Element[] | string,
+  TextAndButtonbt: JSX.Element,
+  BlackCardButton: JSX.Element,
+  WhiteCardButton: JSX.Element,
+  ProposalButton:JSX.Element,
 }) => {
   return (
     <div className="animate-fadeIn"> 
