@@ -41,25 +41,25 @@ export const StartSite = (props: {
           <CardBlack
             classname="tablet:-translate-x-28"
             text1="Websites & "
-            text2="programming"
+            text2="Programming"
             description="Over 50% of all website visitors leave after waiting 3 seconds. Our websites finish loading in 300 milliseconds."
           />
           <CardWhite
             classname="tablet:translate-x-28"
             text1="FlexDev &"
-            text2="admin"
+            text2="Admin"
             description="Do you need developers at short notice for a project that is already in the development phase?"
           />
           <CardWhite
             classname="tablet:-translate-x-28"
             text1="Application"
-            text2="development"
+            text2="Development"
             description="Customized app solutions for your company where you determine what your program must do."
           />
           <CardBlack
             classname="tablet:translate-x-28"
             text1="Artificial"
-            text2="intelligence"
+            text2="Intelligence"
             description="Implementation of powerfull AI api's for you website or application for a extremly efficient workflow."
           />
         </div>
