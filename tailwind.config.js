@@ -32,8 +32,19 @@ export default {
         fadeOut: 'fadeOut 300ms ease-in forwards',
         progressInit: 'progressInit 1s ease-in forwards',
         float: 'float 3s ease-in-out infinite',
+        flyacross: 'fly-across 2s ease-in-out infinite',
+        flyoffscreen: 'flyoffscreen 3s ease-in-out forwards',
+        
       },
       keyframes: {
+        flyoffscreen: {
+          '0%': { transform: 'translate(0, 0) rotate(0deg)' },
+          '20%': { transform: 'translate(100px, -50px) rotate(20deg)' },
+          '40%': { transform: 'translate(300px, 100px) rotate(-15deg)' },
+          '60%': { transform: 'translate(-400px, -200px) rotate(30deg)' },
+          '80%': { transform: 'translate(800px, -150px) rotate(-25deg)' },
+          '100%': { transform: 'translate(1200px, -1400px) rotate(60deg)' },
+        },
         ownpulse:{
           '0%':
           {
