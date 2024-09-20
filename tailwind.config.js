@@ -39,8 +39,8 @@ export default {
       },
       keyframes: {
         flyIn: {
-          '0%': { transform: 'translateY(-200%)', opacity: '0' },
-          '50%': { transform: 'translateY(10%)', opacity: '1' },
+          '0%': { transform: 'translateY(-200%)' },
+          '50%': { transform: 'translateY(10%)' },
           '100%': { transform: 'translateY(0)' },
         },
         flyoffscreen: {

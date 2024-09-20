@@ -12,8 +12,8 @@ export const OfferSite = () => {
                 Ein neues Projekt starten
               </p>
               <p className="text-white mt-[2%] mobile:mt-[10%] text-[1.4rem] mobile:text-[1.2rem] font-sharemono">
-                Lerne mich und meine Arbeit in einem unverbindlichen Erstgespräch
-                kennen und stelle mir dein Projekt im Detail vor.
+                Lerne uns und unsere Arbeit in einem unverbindlichen Erstgespräch
+                kennen und stelle uns dein Projekt im Detail vor.
               </p>
               <p className="text-[#8f8f8f] mt-[2%] text-[1.4rem] mobile:mt-[10%] mobile:text-[1.2rem] font-sharemono">
                 Hierzu erstelle einfach eine Projektanfrage und erzähle mir einige
