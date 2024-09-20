@@ -28,7 +28,7 @@ export const OfferSite = () => {
                     1
                   </div>
                   <p className="text-[1.2rem] mobile:text-[1rem] font-sharemono ml-8 text-[#8b8b8b]">
-                    Ausfüllen des Kontaktformulars.
+                    Art der Anfrage und Budget wählen.
                   </p>
                 </div>
                 <div className="w-full flex items-center">
@@ -36,7 +36,7 @@ export const OfferSite = () => {
                     2
                   </div>
                   <p className="text-[1.2rem] mobile:text-[1rem] font-sharemono ml-8 text-[#8b8b8b]">
-                    Vereinbarung eines Erstgespräches.
+                    Kontaktformular ausfüllen.
                   </p>
                 </div>
                 <div className="w-full flex items-center">
@@ -45,7 +45,16 @@ export const OfferSite = () => {
                   </div>
 
                   <p className="text-[1.2rem] mobile:text-[1rem] font-sharemono ml-8 text-[#8b8b8b]">
-                    Start des Projektes!
+                    Erstgespräch vereinbaren!
+                  </p>
+                </div>
+                <div className="w-full flex items-center">
+                  <div className="w-[4rem] h-[4rem] mobile:w-[3rem] mobile:h-[3rem] text-[1.3rem] mobile:text-[1rem] shadow-[5px_5px_0px_0px_rgba(109,40,217)] font-bold font-sharemono rounded-full bg-[#98f144] my-2 flex justify-center items-center">
+                    4
+                  </div>
+
+                  <p className="text-[1.2rem] mobile:text-[1rem] font-sharemono ml-8 text-[#8b8b8b]">
+                    Start deines Projektes!
                   </p>
                 </div>
               </div>

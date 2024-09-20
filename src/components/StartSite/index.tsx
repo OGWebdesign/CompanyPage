@@ -47,7 +47,7 @@ export const StartSite = (props: {
           />
           <CardWhite
             classname="tablet:translate-x-28"
-            text1="FlexDev &"
+            text1="DevOps &"
             text2="Admin"
             description="Do you need developers at short notice for a project that is already in the development phase?"
           />
