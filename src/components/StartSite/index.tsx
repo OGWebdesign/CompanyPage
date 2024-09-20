@@ -13,6 +13,7 @@ export const StartSite = (props: {
   TextAndButtonbt: JSX.Element | JSX.Element[] | string,
   BlackCardButton: JSX.Element | JSX.Element[] | string,
   WhiteCardButton: JSX.Element | JSX.Element[] | string,
+  ProposalButton:JSX.Element | JSX.Element[] | string,
 }) => {
   return (
     <div className="animate-fadeIn"> 
@@ -73,6 +74,7 @@ export const StartSite = (props: {
         head2="Whether big or small."
         text2="You can entrust us with any project proposal, we will find a solution that will ensure your complete satisfaction. Don't hesitate to come to us with small ideas. The biggest companies in the world started in a garage. Dream big, start even bigger."
         classname="bg-[#98f144]"
+        button={props.ProposalButton}
       />
 
 

@@ -57,6 +57,12 @@ function App() {
       : "hover:border-b-8 hover:border-b-slate-200 text-[#747474]";
 
   // ---------------------------   Button for order meeting for component TextAndButton for working with one Page technologie
+  const Proposal = () =>(
+      <div onClick={()=>setIndicatorNav(3)} className="tablet:w-[20rem] border-2  duration-300 hover:font-semibold hover:text-[#000000] hover:bg-[#98f144] mobile:w-[10rem] flex justify-center items-center text-center font-mono text-[#98f144] h-[3rem] ml-4 mt-14 bg-[#000000] rounded-lg border-[#151515]">
+          Get your free proposal
+      </div>
+  
+  )
   const orderMeetingbt = (text: string) => (
     <div
       onClick={() => setIndicatorNav(4)}
@@ -65,6 +71,7 @@ function App() {
       {text}
     </div>
   );
+
 
   const BlackCardbt1 = () => (
     <div className="w-full h-1/2 flex justify-center items-center">
@@ -93,7 +100,7 @@ function App() {
       </div>
     </div>
   );
-
+ 
   const Maintenancebt = () => (
     <div
       onClick={() => setIndicatorNav(1)}
@@ -352,6 +359,7 @@ function App() {
                   TextAndButtonbt={orderMeetingbt("Book a consultation")}
                   BlackCardButton={BlackCardbt1()}
                   WhiteCardButton={WhiteCardbt1()}
+                  ProposalButton={Proposal()}
                 ></StartSite>
               )}
               {indicatorNav === 2 && <CompanySite></CompanySite>}
