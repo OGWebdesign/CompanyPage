@@ -3,7 +3,7 @@ type TextAndButtonProps = {
   buttonText?: string;
   classNameContainer?: string;
   reference?: string;
-  children?:JSX.Element |JSX.Element[]|string;
+  children?: JSX.Element | JSX.Element[] | string;
 };
 
 export const TextAndButton = (props: TextAndButtonProps) => {
