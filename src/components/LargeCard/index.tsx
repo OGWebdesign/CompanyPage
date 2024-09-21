@@ -9,6 +9,7 @@ export const LargeCard = (props: {
     text2Style?: string,
     withButton?: boolean,
     classname?:string
+    button:JSX.Element
 }) => {
 
 
@@ -35,9 +36,7 @@ export const LargeCard = (props: {
 
                 </div>
                 {props.withButton && (
-                    <div className="tablet:w-[20rem] border-2  duration-300 hover:font-semibold hover:text-[#151515] hover:bg-[#98f144] mobile:w-[10rem] flex justify-center items-center text-center font-mono text-[#98f144] h-[3rem] ml-4 mt-14 bg-[#151515] rounded-lg border-[#151515]">
-                        Get your free proposal
-                    </div>
+                    props.button
                 )}
                 <div className="h-4">
 

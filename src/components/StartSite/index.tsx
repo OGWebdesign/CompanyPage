@@ -10,9 +10,10 @@ import { TextComponent } from "../TextComponent"
 
 
 export const StartSite = (props: {
-  TextAndButtonbt: JSX.Element | JSX.Element[] | string,
-  BlackCardButton: JSX.Element | JSX.Element[] | string,
-  WhiteCardButton: JSX.Element | JSX.Element[] | string,
+  TextAndButtonbt: JSX.Element,
+  BlackCardButton: JSX.Element,
+  WhiteCardButton: JSX.Element,
+  ProposalButton:JSX.Element,
 }) => {
   return (
     <div className="animate-fadeIn"> 
@@ -46,7 +47,7 @@ export const StartSite = (props: {
           />
           <CardWhite
             classname="tablet:translate-x-28"
-            text1="FlexDev &"
+            text1="DevOps &"
             text2="Admin"
             description="Do you need developers at short notice for a project that is already in the development phase?"
           />
@@ -73,6 +74,7 @@ export const StartSite = (props: {
         head2="Whether big or small."
         text2="You can entrust us with any project proposal, we will find a solution that will ensure your complete satisfaction. Don't hesitate to come to us with small ideas. The biggest companies in the world started in a garage. Dream big, start even bigger."
         classname="bg-[#98f144]"
+        button={props.ProposalButton}
       />
 
 
