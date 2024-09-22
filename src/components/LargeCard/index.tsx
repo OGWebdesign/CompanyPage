@@ -9,7 +9,7 @@ export const LargeCard = (props: {
     text2Style?: string,
     withButton?: boolean,
     classname?:string
-    button:JSX.Element
+    button?:JSX.Element
 }) => {
 
 
