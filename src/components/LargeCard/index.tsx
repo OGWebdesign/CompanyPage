@@ -13,6 +13,7 @@ export const LargeCard = (props: {
 }) => {
 
 
+    
 
     return (
         <div className="w-full flex justify-center items-center select-none leading-none mt-[10rem]">
