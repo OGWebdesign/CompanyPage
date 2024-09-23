@@ -45,10 +45,6 @@ export const LargeCard = (props: {
 
             </div>
 
-
-
-
-
         </div>
 
     )
