@@ -37,8 +37,7 @@ const PriceCalculator = () => {
                 <MinusIcon className="w-[1.2rem]" />
             </div>
             <span className={` font-sharemono text-[1.3rem] ${underborder ? "text-red-500" : "text-[#98f144]"}`}>{price}€</span>
-            <div 
-            onClick={() => {
+            <div onClick={() => {
                 increase_sound.play();
                 setPrice(price + 100);
             }}
