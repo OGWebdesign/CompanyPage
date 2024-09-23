@@ -3,7 +3,7 @@
 export const EmployeeCard = () => {
     return (
         <div className="w-full flex justify-center items-center">
-            <div className="w-full desktop:max-w-[70rem] items-center flex flex-col cursor-none duration-300  rounded-2xl p-6 justify-center font-mono gap-20 mt-[5%] border-white">
+            <div className="w-full desktop:max-w-[100rem] items-center flex flex-col cursor-none duration-300  rounded-2xl p-6 justify-center font-mono border-white">
 
                 {/* Left Side */}
                 <div className="w-full flex tablet:flex-row group mobile:justify-center mobile:items-center mobile:flex-col-reverse ">
