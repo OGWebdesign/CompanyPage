@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const IconCard = (props: { icon : React.ReactElement, title : string}) => {
 
     const [clicked, setClicked] = React.useState(false);
-    const [select_sound] = useState(new Audio("/sounds/select 5.mp3"));
+    const [select_sound] = useState(new Audio("/sounds/select 3.mp3"));
 
     const clickEffect = "bg-[#c5c5c5] shadow-[5px_5px_0px_0px_rgba(152,241,68)]"
 
