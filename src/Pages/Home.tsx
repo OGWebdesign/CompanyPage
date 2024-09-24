@@ -200,12 +200,12 @@ function App() {
       >
         <div className="w-full flex justify-center ">
           {/* Start Page Layout */}
-          <div className="w-full mobile:p-2 bg-black rot tablet:px-5 flex justify-center items-center relative">
-            <div className="mobile:w-full tablet:w-full desktop:w-[75%] desktop-xl:w-[45%]">
-              <div className="w-full duration-500 flex flex-col cursor-none ">
+          <div className="w-full flex justify-center items-center relative">
+            <div className="mobile:w-full tablet:w-full ">
+              <div className="w-full duration-500 flex flex-col items-center cursor-none ">
                 {/* Begin NavigationBar Integration for One Page Technologie */}
                 {/* Navbar Item Wrapper */}
-                <div className="w-full flex justify-between duration-500">
+                <div className="w-3/4 flex justify-between duration-500 h-[4rem] overflow-visible z-50 bg-transparent">
                   {/* Navbar Logo Wrapper */}
                   <div className="tablet:w-1/2 duration-500">
                     {/* Navbar Logo Wrapper End*/}
@@ -402,9 +402,9 @@ function App() {
                   to us and <span className="text-[#98f144]">talk</span> with
                   us!
                 </span>
-                <div onClick={() => setIndicatorNav(4)} className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039]">
+                <a onClick={() => setIndicatorNav(4)} href="mailto:info@og-webdesign.de"  className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039]">
                   Contact us
-                </div>
+                </a>
               </div>
               <div className="laptop:w-[25%] mobile:w-full h-full flex mobile:my-[1.5rem] laptop:my-0 laptop:flex-col laptop:justify-center mobile:justify-around items-end p-5">
                 <span onClick={() => setIndicatorNav(2)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">

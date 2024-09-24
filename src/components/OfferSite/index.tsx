@@ -3,11 +3,11 @@ import PriceCalculator from "../PriceCalculator";
 
 export const OfferSite = () => {
   return (
-    <>
-      <div className="flex mobile:flex-col laptop:flex-row justify-around">
-        <div className="w-full h-[50rem] flex items-center">
+    <div className="w-full flex flex-col justify-center items-center">
+      <div className="flex mobile:flex-col laptop:flex-row justify-around w-3/4">
+        <div className="w-3/4 h-[50rem] flex items-center">
           <div className="p-1">
-            <div className="offertext mt-[10%] max-w-[30rem]">
+            <div className="offertext mt-[60%] max-w-[30rem]">
               <p className="font-bold text-white text-[2.5rem] font-sharemono">
                 Ein neues Projekt starten
               </p>
@@ -70,9 +70,9 @@ export const OfferSite = () => {
           <PriceCalculator />
         </div>
       </div>
-      <div className="mt-[5rem]">
+      <div className="mt-[10%]">
         <ContactForm />
       </div>
-    </>
+      </div>
   );
 };

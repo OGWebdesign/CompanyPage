@@ -1,32 +1,58 @@
 import { EmployeeCard } from "../EmployeeCard"
+import { CheckIcon, LightIcon, MedalIcon } from "../Icons"
 import { LargeCard } from "../LargeCard"
-import { ParagraphOG } from "../ParagraphOG"
-import { ParagraphOGLeft } from "../ParagraphOGLeft"
+
 
 export const CompanySite = () => {
     return (
-        <div className="animate-fadeIn">
-            <ParagraphOG classnamehead="inline-block bg-[#98f144] text-[#151515]" text="Hey, we're Max and Nils the creative duo behind OG Webdesign and we are very pleased to meet you. What is our job? To create cool and innovative digital solutions that not only look good, but also have a lot to offer.
-             With our know-how from studying computer science and design and a lot of experience under our belt, we bring your ideas to life online. Whether it's websites, bots, web apps, application software or AI services, we've got it!
-             Every project begins with a detailed discussion to understand your needs and goals. Based on this, we develop individual concepts that are tailored precisely to your company. Transparent communication and close cooperation are a matter of course for us."
-                head="Mission Control" animation={false} classname="text-right justify-end"></ParagraphOG>
+        <div className="w-full flex justify-center"> 
+        <div className="animate-fadeIn w-3/4 flex flex-col">
+            <div className="w-full mt-[10%] flex flex-col text-white">
+                <div className="w-full h-[4rem] flex items-center">
+                    <p className="font-sharemono font-bold text-[3rem]">Mission Control</p>
+                </div>
+                <article className="text-[1.6rem] font-sharemono">OG Webdesign steht für Innovation und maßgeschneiderte 
+                    digitale Lösungen, die mehr sind als nur Code. Wir verbinden 
+                    Kreativität mit Technologie, um atemberaubende Webseiten, 
+                    leistungsstarke APIs für künstliche Intelligenz und hochmoderne 
+                    Web-Apps zu entwickeln. Unsere Expertise im Bereich DevOps 
+                    ermöglicht es uns, stabile und skalierbare Infrastrukturen 
+                    zu schaffen, die den Anforderungen von heute und morgen 
+                    gerecht werden.</article>
+            </div>
 
-            <ParagraphOGLeft
-                classnamehead="bg-[#98f144] inline-block text-[#151515] mt-[3rem]"
-                text="The web offers countless opportunities to present yourself or your company in a contemporary and sensible manner. 
-            Despite this, many websites do not fully realize their potential. 
-            Websites are becoming increasingly important in the digital age and are often a key to success. 
-            We want to help you achieve this success and support you with our technical know-how. 
-            Even if functionality is your primary concern, we are the right partner for you. Web applications are becoming increasingly popular 
-            because they operate independently of operating systems. A web app can quickly be turned into a desktop application. Bots also play a 
-            crucial role on the web. Whether used to close security gaps or analyze website activities, they are universally applicable. 
-            Does it all seem a bit overwhelming? Or do you need expert opinions? We are happy to advise you on the advantages and disadvantages of 
-            various technologies and answer your questions."
-                head="#Motivation"
-                animation={false}
-            />
 
-            <EmployeeCard></EmployeeCard>
+            <EmployeeCard/>
+
+            <div className=" px-[5rem] my-[10%] flex flex-col justify-center items-center">
+                <span className="w-[60%] font-sharemono text-[#98f144] text-[3rem] text-center">Unsere Werte - Ihr Erfolg</span>
+                <p className="font-mono text-white text-[1.2rem] text-center mt-[1rem]">
+                    Wir bei OG Webdesign glauben daran, dass Technologie die Welt verändern kann – und zwar zum Besseren. 
+                    Unser Antrieb ist es, für unsere Kunden einzigartige digitale Erlebnisse zu schaffen, die begeistern, 
+                    beeindrucken und bleibende Eindrücke hinterlassen. Innovation, Qualität und ein Höchstmaß an Zuverlässigkeit 
+                    sind die Säulen unseres Schaffens.
+                </p>
+                <div className="w-full h-full grid place-content-center place-items-center laptop:grid-cols-3 laptop:grid-rows-1 mobile:grid-cols-1 mobile:grid-rows-3 gap-x-[2rem] mt-[3rem]">
+                    <div className="w-full h-full flex flex-col justify-start items-center py-[2.5rem]">
+                        <LightIcon className="w-[2rem] fill-white" />
+                        <span className="text-[1.5rem] text-white font-sharemono mt-[1rem]">Innovation</span>
+                        <p className="font-mono text-white text-[1rem] text-center mt-[1rem]">Wir streben stets nach neuen Wegen, um digitale Herausforderungen zu meistern. Standardlösungen? Nicht bei uns.</p>
+                    </div>
+                    <div className="laptop:border-x-2 laptop:border-x-2-[#151515] mobile:border-y-2 border-y-2-[#151515]">
+                    <div className="w-full h-full flex flex-col justify-start items-center py-[2.5rem] px-[1rem] shadow-[0_20px_50px_rgba(8,_100,_184,_0.7)] animate-pulse">
+                        <CheckIcon className="w-[2rem] fill-white" />
+                        <span className="text-[1.5rem] text-white font-sharemono mt-[1rem] animate-none">Zuverlässigkeit</span>
+                        <p className="font-mono text-white text-[1rem] text-center mt-[1rem] animate-none">Wir verstehen, wie wichtig Ihre digitalen Projekte sind. Deshalb können Sie sich darauf verlassen, dass wir stets liefern – und das mit höchster Präzision.</p>
+                    </div> 
+                    </div>
+                    <div className="w-full h-full flex flex-col justify-start items-center py-[2.5rem]">
+                        <MedalIcon className="w-[2rem] fill-white" />
+                        <span className="text-[1.5rem] text-white font-sharemono mt-[1rem]">Qualität</span>
+                        <p className="font-mono text-white text-[1rem] text-center mt-[1rem]">Unsere Lösungen sind nicht nur technisch einwandfrei, sondern auch darauf ausgelegt, Ihre Ziele zu übertreffen.</p>
+                    </div>
+                </div>
+            </div>
+
             <LargeCard
                 head1style="text-[#98f144] mt-10"
                 head2style="text-[#98f144] mt-10"
@@ -37,15 +63,7 @@ export const CompanySite = () => {
                 text2="At OG Webdesign, we believe that your website should be more than just a digital business card. It should tell your story, bring your brand to life and delight your customers. Our team consists of talented designers, developers and strategists who work with passion and creativity to turn your ideas into reality. Straight forward!"
                 text1="We look back on a short but successful past. We have implemented every project, every application, no matter how small with great care and an even greater sense of responsibility, always to the full satisfaction of our clients and beyond. We are thrilled to see how our websites and software products have transformed us into a completely different company, from the way we present ourselves online to how we operate our software products internally."></LargeCard>
 
-
-
-            <LargeCard classname="bg-slate-200 text-[#151515] mt-[3rem]"
-                head1="Creating new opportunities."
-                head2="Setting new standards in high-performance websites."
-                text1="We have very high standards for ourselves, whether it's performance optimization or design. The reason why we decided to focus on web development is simple. We want to put an end to the old-fashioned uniformity. It's time to try new things, to stand out and stand out."
-                text2="New technologies always offer the appeal of overcoming different challenges. They also usually bring new possibilities for software development. It is time to put aside the old habits and take new paths. The courage to create new user experiences will pay off because being the first always pays off.">
-            </LargeCard>
-
+        </div>
         </div>
     )
 }

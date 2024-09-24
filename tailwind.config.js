@@ -119,6 +119,7 @@ export default {
         "nils": "url('nils.png')",
         "max": "url('max.png')",
         "footer" : "url('./footer-bg.webp')",
+        "startbg":"url('./startbg1.jpg')"
       },
       fontFamily:{
         "sharemono" : ["Share Tech Mono", "normal"],
