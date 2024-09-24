@@ -200,7 +200,7 @@ function App() {
       >
         <div className="w-full flex justify-center ">
           {/* Start Page Layout */}
-          <div className="w-full mobile:p-2 bg-black rot tablet:px-5 flex justify-center items-center relative">
+          <div className="w-full mobile:p-2 tablet:px-5 flex justify-center items-center relative">
             <div className="mobile:w-full tablet:w-full desktop:w-[75%] desktop-xl:w-[45%]">
               <div className="w-full duration-500 flex flex-col cursor-none ">
                 {/* Begin NavigationBar Integration for One Page Technologie */}
