@@ -1,4 +1,6 @@
+import { motion } from "framer-motion"
 import { EmployeeCard } from "../EmployeeCard"
+import { BookIcon } from "../Icons"
 import { LargeCard } from "../LargeCard"
 
 
@@ -20,7 +22,37 @@ export const CompanySite = () => {
             </div>
 
 
-            <EmployeeCard></EmployeeCard>
+            <EmployeeCard/>
+
+            <div className=" px-[5rem] my-[10%] flex flex-col justify-center items-center">
+                <span className="w-[60%] font-sharemono text-[#98f144] text-[3rem] text-center">Unsere Werte - Ihr Erfolg</span>
+                <p className="font-mono text-white text-[1.2rem] text-center mt-[1rem]">
+                    Wir bei OG Webdesign glauben daran, dass Technologie die Welt verändern kann – und zwar zum Besseren. 
+                    Unser Antrieb ist es, für unsere Kunden einzigartige digitale Erlebnisse zu schaffen, die begeistern, 
+                    beeindrucken und bleibende Eindrücke hinterlassen. Innovation, Qualität und ein Höchstmaß an Zuverlässigkeit 
+                    sind die Säulen unseres Schaffens.
+                </p>
+                <div className="w-full h-full grid place-content-center place-items-center laptop:grid-cols-3 laptop:grid-rows-1 mobile:grid-cols-1 mobile:grid-rows-3 gap-x-[2rem] mt-[3rem]">
+                    <div className="w-full h-full flex flex-col justify-start items-center py-[2.5rem]">
+                        <BookIcon className="w-[2rem] fill-white" />
+                        <span className="text-[1.5rem] text-white font-sharemono mt-[1rem]">Innovation</span>
+                        <p className="font-mono text-white text-[1rem] text-center mt-[1rem]">Wir streben stets nach neuen Wegen, um digitale Herausforderungen zu meistern. Standardlösungen? Nicht bei uns.</p>
+                    </div>
+                    <div className="laptop:border-x-2 laptop:border-x-2-[#151515] mobile:border-y-2 border-y-2-[#151515]">
+                    <div className="w-full h-full flex flex-col justify-start items-center py-[2.5rem] px-[1rem] shadow-[0_20px_50px_rgba(8,_100,_184,_0.7)] animate-pulse">
+                        <BookIcon className="w-[2rem] fill-white" />
+                        <span className="text-[1.5rem] text-white font-sharemono mt-[1rem] animate-none">Zuverlässigkeit</span>
+                        <p className="font-mono text-white text-[1rem] text-center mt-[1rem] animate-none">Wir verstehen, wie wichtig Ihre digitalen Projekte sind. Deshalb können Sie sich darauf verlassen, dass wir stets liefern – und das mit höchster Präzision.</p>
+                    </div> 
+                    </div>
+                    <div className="w-full h-full flex flex-col justify-start items-center py-[2.5rem]">
+                        <BookIcon className="w-[2rem] fill-white" />
+                        <span className="text-[1.5rem] text-white font-sharemono mt-[1rem]">Qualität</span>
+                        <p className="font-mono text-white text-[1rem] text-center mt-[1rem]">Unsere Lösungen sind nicht nur technisch einwandfrei, sondern auch darauf ausgelegt, Ihre Ziele zu übertreffen.</p>
+                    </div>
+                </div>
+            </div>
+
             <LargeCard
                 head1style="text-[#98f144] mt-10"
                 head2style="text-[#98f144] mt-10"
