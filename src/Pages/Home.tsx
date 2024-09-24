@@ -200,12 +200,12 @@ function App() {
       >
         <div className="w-full flex justify-center ">
           {/* Start Page Layout */}
-          <div className="w-full mobile:p-2 tablet:px-5 flex justify-center items-center relative">
-            <div className="mobile:w-full tablet:w-full desktop:w-[75%] desktop-xl:w-[45%]">
+          <div className="w-full flex justify-center items-center relative">
+            <div className="mobile:w-full tablet:w-full ">
               <div className="w-full duration-500 flex flex-col cursor-none ">
                 {/* Begin NavigationBar Integration for One Page Technologie */}
                 {/* Navbar Item Wrapper */}
-                <div className="w-full flex justify-between duration-500">
+                <div className="w-full flex justify-between duration-500 h-[4rem] overflow-visible z-50 bg-transparent">
                   {/* Navbar Logo Wrapper */}
                   <div className="tablet:w-1/2 duration-500">
                     {/* Navbar Logo Wrapper End*/}
