@@ -10,6 +10,10 @@ const IconCard = (props: { icon : React.ReactElement, title : string}) => {
     const notClicked = "hover:bg-[#c5c5c5] hover:shadow-[5px_5px_0px_0px_rgba(152,241,68)]"
 
 
+
+    
+
+
     return(
         <div onClick={() => {
             select_sound.play();
@@ -23,6 +27,7 @@ const IconCard = (props: { icon : React.ReactElement, title : string}) => {
             <div className={`w-full text-center mobile:text-[0.8rem] tablet:text-[1rem] mt-[0.3rem] font-sharemono group-hover:text-black duration-500 ${clicked ? "text-black" : "text-white"}`}>
                <p>{props.title}</p> 
             </div>
+
         </div>
     )
 }
