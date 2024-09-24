@@ -5,7 +5,8 @@ import { LargeCard } from "../LargeCard"
 
 export const CompanySite = () => {
     return (
-        <div className="animate-fadeIn">
+        <div className="w-full flex justify-center"> 
+        <div className="animate-fadeIn w-3/4 flex flex-col">
             <div className="w-full mt-[10%] flex flex-col text-white">
                 <div className="w-full h-[4rem] flex items-center">
                     <p className="font-sharemono font-bold text-[3rem]">Mission Control</p>
@@ -62,6 +63,7 @@ export const CompanySite = () => {
                 text2="At OG Webdesign, we believe that your website should be more than just a digital business card. It should tell your story, bring your brand to life and delight your customers. Our team consists of talented designers, developers and strategists who work with passion and creativity to turn your ideas into reality. Straight forward!"
                 text1="We look back on a short but successful past. We have implemented every project, every application, no matter how small with great care and an even greater sense of responsibility, always to the full satisfaction of our clients and beyond. We are thrilled to see how our websites and software products have transformed us into a completely different company, from the way we present ourselves online to how we operate our software products internally."></LargeCard>
 
+        </div>
         </div>
     )
 }
