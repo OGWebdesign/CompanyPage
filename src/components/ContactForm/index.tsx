@@ -53,6 +53,15 @@ export const ContactForm = () => {
 
       </div>
 
+
+
+        
+
+
+
+
+
+
     {/* MY MAIL IS ______ */}
       <div className={`w-full flex mt-5 ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>
 
@@ -85,6 +94,26 @@ export const ContactForm = () => {
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">FIRMA</span> IS </span>
        
         <input name="emailfield" type="input" placeholder="Firma" className=" cursor-none
+
+        mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
+
+         text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
+        placeholder-[#777777] flex justify-center items-center "
+        />
+
+      </div>
+
+
+      <div className={`w-full flex mt-5 ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>
+
+        <span className="text-white 
+        
+        mobile:w-full tablet:w-[65%]  tablet-contact:ml-[3rem] laptop:ml-[10rem] 
+        mobile:text-[1.8rem] tablet:text-[2rem] laptop:text-[2.3rem] 
+        
+        leading-none">MY <span className="bg-[#98f144] text-[#151515]">PHONE</span> IS </span>
+       
+        <input name="emailfield" type="input" placeholder="Telefon*" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
