@@ -20,7 +20,7 @@ export const StartSite = (props: {
       
       <div className="w-full h-screen z-50  flex flex-col items-center">
         
-        <div className="w-3/4 mt-[23rem]">
+        <div className="w-3/4 mt-[23rem] mobile:mt-[10%]">
           <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
           <TextAndButton children={props.TextAndButtonbt}
 
