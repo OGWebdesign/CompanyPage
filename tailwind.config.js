@@ -33,16 +33,24 @@ export default {
         progressInit: 'progressInit 1s ease-in forwards',
         float: 'float 3s ease-in-out infinite',
         floatJupiter: 'float 10s ease-in-out infinite',
+        floatIcePlanet: 'float 8s ease-in-out infinite',
         flyacross: 'fly-across 2s ease-in-out infinite',
         flyoffscreen: 'flyoffscreen 3s ease-in-out forwards',
         flyIn: 'flyIn 3s ease-out forwards',
         spotUp: 'spotUp 12s infinite ease-out',
         spotDown: 'spotDown 12s infinite ease-out',
+        'shake-fast': 'shake 0.1s ease-in-out infinite',
       },
       borderRadius: {
         'custom-1': '50% 40% 30% 50% / 50% 40% 30% 50%', // Uneinheitliche Formen
       },
       keyframes: {
+        shake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '25%': { transform: 'translateX(-3px)' },
+          '50%': { transform: 'translateX(3px)' },
+          '75%': { transform: 'translateX(-3px)' },
+        },
         flyIn: {
           '0%': { transform: 'translateY(-200%)' },
           '50%': { transform: 'translateY(10%)' },

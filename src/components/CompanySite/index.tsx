@@ -7,13 +7,14 @@ export const CompanySite = () => {
     return (
 
         <div className="w-full flex justify-center">
-            <img src="Planets/jupiter.png" alt="Jupiter" className="absolute w-[45rem] desktop-xl:w-[50rem] top-[4rem] right-[4rem] z-10 animate-floatJupiter" />
+            <img src="Planets/jupiter.png" alt="Jupiter" className="absolute w-[45rem] desktop-xl:w-[50rem] top-[6rem] right-[4rem] z-10 animate-floatJupiter" />
+            <img src="Planets/icePlanet.png" alt="Jupiter" className="absolute w-[30rem] desktop-xl:w-[50rem] top-[57%] left-[35%] z-10 animate-floatIcePlanet" />
             <div className="animate-fadeIn w-3/4 max-w-[100rem] flex flex-col z-30">
                 <div className="w-full mt-[10%] flex flex-col text-white">
                     <div className="w-full h-[4rem] flex items-center">
                         <p className="font-sharemono font-bold text-[3rem]">Mission Control</p>
                     </div>
-                    <article className="text-[1.6rem] w-[80%] font-sharemono">OG Webdesign steht für Innovation und maßgeschneiderte
+                    <article className="text-[1.6rem] w-[70%] font-sharemono">OG Webdesign steht für Innovation und maßgeschneiderte
                         digitale Lösungen, die mehr sind als nur Code. Wir verbinden
                         Kreativität mit Technologie, um atemberaubende Webseiten,
                         leistungsstarke APIs für künstliche Intelligenz und hochmoderne
