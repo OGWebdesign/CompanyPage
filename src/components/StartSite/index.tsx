@@ -1,3 +1,4 @@
+import { Element, Link } from "react-scroll"
 import { CardBlack } from "../CardBlack"
 import { CardWhite } from "../CardWhite"
 import { Heading } from "../Heading"
@@ -31,21 +32,27 @@ export const StartSite = (props: {
         <div className="w-3/4 h-[30rem] flex justify-end items-center">
           <div className="w-[30rem] duration-300 h-[6rem] desktop-l:mr-[10rem] desktop-l:mt-[15rem] desktop-xxl:mr-[20rem] desktop-xxl:mt-[20rem] rounded-2xl bg-[#9a53d49c] flex">
            
+           <Link to="tech" spy={true} smooth={true} offset={-70} duration={500}>
             <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center rounded-l-2xl flex-col">
               <Screw className="fill-white w-8 h-8"></Screw>
               <p className="text-white mt-2">Technologie</p>
             </div>
-            
+            </Link>
+
+            <Link to="services" spy={true} smooth={true} offset={-70} duration={500}>
             <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col">
               <Paper className="fill-white w-8 h-8"></Paper>
               <p className="text-white mt-2">Überblick</p>
             </div>
+            </Link>
 
+            <Link to="development" spy={true} smooth={true} offset={-70} duration={500}>
             <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col">
               <Laptop className="fill-white w-8 h-8"></Laptop>
               <p className="text-white mt-2">Entwicklung</p>
             </div>
-
+            </Link>
+            
             <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col rounded-r-2xl">
               <Help className="fill-white w-8 h-8"></Help>
               <p className="text-white mt-2">Hilfe</p>
@@ -56,6 +63,7 @@ export const StartSite = (props: {
 
       {/* WrapperLayout */}
       <div className="w-full flex flex-col  justify-center items-center mt-[10rem]">
+       <Element name="services"/>
         <span className="text-[3rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
           Was bieten wir an?
         </span>
@@ -183,6 +191,7 @@ export const StartSite = (props: {
 
 
     <div className="flex flex-col justify-center items-center mt-[10%]">
+    <Element name="tech"/>
       <span className="text-[3rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
           Welche Technologien nutzen wir?
         </span>
@@ -205,6 +214,7 @@ export const StartSite = (props: {
 
 
     <div className="flex flex-col justify-center items-center mt-[10%]">
+    <Element name="development"/>
       <span className="text-[3rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
           Wie entwickeln wir?
         </span>
