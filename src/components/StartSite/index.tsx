@@ -15,8 +15,12 @@ export const StartSite = (props: {
   ProposalButton: JSX.Element;
 }) => {
   return (
+    <>
+    <video autoPlay loop muted className="absolute object-cover h-screen w-full overflow-hidden" src="video/3130284-uhd_3840_2160_30fps.mp4"></video>
     <div className="animate-fadeIn">
-      <div className="w-full h-screen bg-startbg bg-cover flex flex-col items-center">
+      
+      <div className="w-full h-screen z-50  flex flex-col items-center">
+        
         <div className="w-3/4 mt-[23rem]">
           <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
           <TextAndButton children={props.TextAndButtonbt}
@@ -26,7 +30,7 @@ export const StartSite = (props: {
           />
         </div>
         <div className="w-3/4 h-[30rem] flex justify-end items-center">
-          <div className="w-[30rem] duration-300 h-[6rem] desktop-l:mr-[10rem] desktop-l:mt-[15rem] desktop-xxl:mr-[20rem] desktop-xxl:mt-[20rem] border rounded-2xl bg-[#202020] backdrop-filter backdrop-blur-lg bg-opacity-10 flex">
+          <div className="w-[30rem] duration-300 h-[6rem] desktop-l:mr-[10rem] desktop-l:mt-[15rem] desktop-xxl:mr-[20rem] desktop-xxl:mt-[20rem] rounded-2xl bg-[#9a53d49c] flex">
            
             <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center rounded-l-2xl flex-col">
               <Screw className="fill-white w-8 h-8"></Screw>
@@ -208,5 +212,6 @@ export const StartSite = (props: {
         button={props.ProposalButton}
       />
     </div>
+    </>
   );
 };

@@ -211,11 +211,7 @@ function App() {
                     {/* Navbar Logo Wrapper End*/}
 
                     {/* Navbar Logo */}
-                    <img
-                      className="mobile:w-28 mobile:h-28 tablet:w-36 mobile:m-4 mobile:scale-110 tablet:h-36 desktop:w-36 desktop:h-36 duration-500"
-                      src="logo.jpeg"
-                      alt="logoGraphic"
-                    />
+                    <img/> {/* Logo Hier Einfügen !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
                   </div>
                   {/* Navbar Logo End*/}
 
