@@ -1,4 +1,3 @@
-import { div } from "framer-motion/client"
 import { CardBlack } from "../CardBlack"
 import { CardWhite } from "../CardWhite"
 import { Heading } from "../Heading"
