@@ -18,14 +18,33 @@ export const StartSite = (props: {
 
     <div className="animate-fadeIn">
       <div className="w-full h-screen bg-startbg bg-cover flex flex-col items-center">
-        <div className="w-3/4 mt-[25rem]">
-          <Heading headstyle="text-slate-200 " heading="Discover the power of modern web and software development" />
+        <div className="w-3/4 mt-[23rem]">
+          <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
           <TextAndButton children={props.TextAndButtonbt}
 
             text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
             reference="/contact"
           />
+        </div>
+        <div className="w-3/4 h-[20rem] flex justify-end items-center">
+          <div className="w-[30rem] h-[6rem] border rounded-2xl bg-[#202020] backdrop-filter backdrop-blur-lg bg-opacity-10 flex">
+           
+            <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] rounded-l-2xl">
 
+            </div>
+            
+            <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0]">
+
+            </div>
+
+            <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0]">
+
+            </div>
+
+            <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] rounded-r-2xl">
+            
+            </div>
+          </div>
         </div>
       </div>
 
