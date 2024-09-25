@@ -32,27 +32,27 @@ export const StartSite = (props: {
         <div className="w-3/4 h-[30rem] flex justify-end items-center">
           <div className="w-[30rem] duration-300 h-[6rem] desktop-l:mr-[10rem] desktop-l:mt-[15rem] desktop-xxl:mr-[20rem] desktop-xxl:mt-[20rem] rounded-2xl bg-[#9a53d49c] flex">
            
-           <Link to="tech" spy={true} smooth={true} offset={-70} duration={500}>
-            <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center rounded-l-2xl flex-col">
+           <Link className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center rounded-l-2xl flex-col" to="tech" spy={true} smooth={true} offset={-70} duration={500}>
+            <div className="flex flex-col justify-center items-center">
               <Screw className="fill-white w-8 h-8"></Screw>
               <p className="text-white mt-2">Technologie</p>
             </div>
             </Link>
 
-            <Link to="services" spy={true} smooth={true} offset={-70} duration={500}>
-            <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col">
+            <Link className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col" to="services" spy={true} smooth={true} offset={-70} duration={500}>
+            <div className="flex flex-col justify-center items-center">
               <Paper className="fill-white w-8 h-8"></Paper>
               <p className="text-white mt-2">Überblick</p>
             </div>
             </Link>
 
-            <Link to="development" spy={true} smooth={true} offset={-70} duration={500}>
-            <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col">
+            <Link className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center  flex-col" to="development" spy={true} smooth={true} offset={-70} duration={500}>
+            <div className="flex flex-col justify-center items-center">
               <Laptop className="fill-white w-8 h-8"></Laptop>
               <p className="text-white mt-2">Entwicklung</p>
             </div>
             </Link>
-            
+
             <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col rounded-r-2xl">
               <Help className="fill-white w-8 h-8"></Help>
               <p className="text-white mt-2">Hilfe</p>
