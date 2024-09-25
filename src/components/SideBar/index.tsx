@@ -35,7 +35,7 @@ export const SideBar = (props: SideBarProps) => {
     }, [click])
 
     return (
-        <div className={`fixed z-20 w-[20rem] top-1/2 right-0 translate-y-[-7rem] bg-[#98f144] text-[#151515] pr-4
+        <div className={`fixed z-50 w-[20rem] top-1/2 right-0 translate-y-[-7rem] bg-[#98f144] text-[#151515] pr-4
         rounded-l-lg flex justify-start items-center shadow-lg hover:shadow-2xl duration-500 
         ${height && activeStyle} ${!height && inactiveStyle} overflow-hidden `}>
 

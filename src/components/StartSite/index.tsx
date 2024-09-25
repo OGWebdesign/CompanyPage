@@ -16,12 +16,12 @@ export const StartSite = (props: {
 }) => {
   return (
     <>
-    <video autoPlay playsInline loop muted className="absolute object-cover h-screen w-full overflow-hidden" src="video/3130284-uhd_3840_2160_30fps.mp4"></video>
+    <video autoPlay playsInline loop muted className="absolute object-cover h-screen w-full overflow-hidden" src="video/bgvideo.mp4"></video>
     <div className="animate-fadeIn">
       
       <div className="w-full h-screen z-50  flex flex-col items-center">
         
-        <div className="w-3/4 mt-[23rem] mobile:mt-[10%]">
+        <div className="w-3/4 mt-[23rem] desktop:mt-[10%] mobile:mt-[10%]">
           <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
           <TextAndButton children={props.TextAndButtonbt}
 
