@@ -18,19 +18,15 @@ export const StartSite = (props: {
   return (
 
     <div className="animate-fadeIn">
-      <div className="w-full h-screen bg-startbg bg-cover flex flex-col justify-center items-center">
-        <div className="w-3/4">
-        <Heading headstyle="text-slate-200 mt-[20%]" heading="Discover the power of modern web and software development" />
-        <TextAndButton children={props.TextAndButtonbt}
+      <div className="w-full h-screen bg-startbg bg-cover flex flex-col items-center">
+        <div className="w-3/4 mt-[25rem]">
+          <Heading headstyle="text-slate-200 " heading="Discover the power of modern web and software development" />
+          <TextAndButton children={props.TextAndButtonbt}
 
-          text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
-          reference="/contact"
-        />
+            text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
+            reference="/contact"
+          />
 
-        <TextComponent
-          headline="High-speed performance for websites and web applications on the next level."
-          text="We have consciously decided against content management solutions when developing websites. On the one hand, we have set ourselves the task of revolutionizing the Internet with highly customized customer projects. We want to help companies that have understood how to stand out from the competition to offer an alternative to offers that mainly consist of content management systems. On the other hand, full control over the project is important. It is particularly important for perfectionist developers like us to be able to change even the finer details. Performance and maintainability are particularly guaranteed by the technologies we use. We can log all development steps of a project and reset them if necessary. Nothing unexpected happens here! We make no compromises when it comes to performance. The code base, the media, and even the fonts are professionally compressed so that quality losses are not visible. All packed together in a state-of-the-art and reliable ecosystem with the highest level of care for maintainability. 80% of a software product consists of maintenance and care."
-        ></TextComponent>
         </div>
       </div>
 
@@ -68,7 +64,10 @@ export const StartSite = (props: {
 
         </div>
       </div>
-
+      <TextComponent
+        headline="High-speed performance for websites and web applications on the next level."
+        text="We have consciously decided against content management solutions when developing websites. On the one hand, we have set ourselves the task of revolutionizing the Internet with highly customized customer projects. We want to help companies that have understood how to stand out from the competition to offer an alternative to offers that mainly consist of content management systems. On the other hand, full control over the project is important. It is particularly important for perfectionist developers like us to be able to change even the finer details. Performance and maintainability are particularly guaranteed by the technologies we use. We can log all development steps of a project and reset them if necessary. Nothing unexpected happens here! We make no compromises when it comes to performance. The code base, the media, and even the fonts are professionally compressed so that quality losses are not visible. All packed together in a state-of-the-art and reliable ecosystem with the highest level of care for maintainability. 80% of a software product consists of maintenance and care."
+      ></TextComponent>
       <TechStripe />
 
       <LargeCard withButton={true}
