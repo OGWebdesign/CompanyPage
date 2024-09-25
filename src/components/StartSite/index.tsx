@@ -1,6 +1,7 @@
 import { CardBlack } from "../CardBlack"
 import { CardWhite } from "../CardWhite"
 import { Heading } from "../Heading"
+import { Help, Laptop, Paper, Screw } from "../Icons"
 import { LargeCard } from "../LargeCard"
 import { TechStripe } from "../TechStripe"
 import { TextAndButton } from "../TextAndButton"
@@ -18,14 +19,37 @@ export const StartSite = (props: {
 
     <div className="animate-fadeIn">
       <div className="w-full h-screen bg-startbg bg-cover flex flex-col items-center">
-        <div className="w-3/4 mt-[25rem]">
-          <Heading headstyle="text-slate-200 " heading="Discover the power of modern web and software development" />
+        <div className="w-3/4 mt-[23rem]">
+          <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
           <TextAndButton children={props.TextAndButtonbt}
 
             text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
             reference="/contact"
           />
+        </div>
+        <div className="w-3/4 h-[30rem] flex justify-end items-center">
+          <div className="w-[30rem] duration-300 h-[6rem] desktop-l:mr-[10rem] desktop-l:mt-[15rem] desktop-xxl:mr-[20rem] desktop-xxl:mt-[20rem] border rounded-2xl bg-[#202020] backdrop-filter backdrop-blur-lg bg-opacity-10 flex">
+           
+            <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center rounded-l-2xl flex-col">
+              <Screw className="fill-white w-8 h-8"></Screw>
+              <p className="text-white mt-2">Technologie</p>
+            </div>
+            
+            <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col">
+              <Paper className="fill-white w-8 h-8"></Paper>
+              <p className="text-white mt-2">Überblick</p>
+            </div>
 
+            <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col">
+              <Laptop className="fill-white w-8 h-8"></Laptop>
+              <p className="text-white mt-2">Entwicklung</p>
+            </div>
+
+            <div className="w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col rounded-r-2xl">
+              <Help className="fill-white w-8 h-8"></Help>
+              <p className="text-white mt-2">Hilfe</p>
+            </div>
+          </div>
         </div>
       </div>
 
