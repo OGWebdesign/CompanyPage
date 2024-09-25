@@ -35,6 +35,8 @@ export default {
         flyacross: 'fly-across 2s ease-in-out infinite',
         flyoffscreen: 'flyoffscreen 3s ease-in-out forwards',
         flyIn: 'flyIn 3s ease-out forwards',
+        spotUp: 'spotUp 7s infinite ease-out',
+        spotDown: 'spotDown 7s infinite ease-out',
       },
       borderRadius: {
         'custom-1': '50% 40% 30% 50% / 50% 40% 30% 50%', // Uneinheitliche Formen
@@ -44,6 +46,16 @@ export default {
           '0%': { transform: 'translateY(-200%)' },
           '50%': { transform: 'translateY(10%)' },
           '100%': { transform: 'translateY(0)' },
+        },
+        spotUp:{
+          '0%, 100%':{transform:'translate(0,25%)'},
+          '33%':{transform:'translate(0, 25%)'},
+          '66%':{transform:'translate(0,-25%)'},
+        },
+        spotDown:{
+          '0%, 100%':{transform:'translate(0,-25%)'},
+          '33%':{transform:'translate(0,-25%)'},
+          '66%':{transform:'translate(0,25%)'},
         },
         flyoffscreen: {
           '0%': { transform: 'translate(0, 0) rotate(0deg)' },

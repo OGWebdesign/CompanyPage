@@ -34,6 +34,8 @@ export const EmployeeCard = () => {
                 alt="Astronaut"
                 className=" z-50 w-[20rem] rounded-xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] border-white"
               />
+              <div className="w-[20rem] h-[20rem] top-0 right-[1rem] animate-spotUp  z-30  bg-[#29e36d] absolute rounded-[30rem] blur-xl "></div>
+              <div className="w-[20rem] h-[20rem] bottom-0 right-[1rem] animate-spotDown  z-30  mt-[20rem] bg-[#6f27eb] absolute rounded-[30rem] blur-xl"></div>
             </div>
           </div> 
 
@@ -46,6 +48,8 @@ export const EmployeeCard = () => {
                 alt="Astronaut"
                 className=" z-50 w-[21rem] rounded-xl shadow-[0_20px_50px_rgba(8,_152,_184,_0.7)]  border-white"
               />
+              <div className="w-[20rem] h-[20rem] animate-spotUp top-0 left-[2rem] z-30  bg-[#29e36d] absolute rounded-[30rem] blur-xl "></div>
+              <div className="w-[20rem] h-[20rem] animate-spotDown bottom-0 left-[2rem] z-30  mt-[20rem] bg-[#6f27eb] absolute rounded-[30rem] blur-xl"></div>
             </div>
             <div className="text-slate-200 w-full p-5">
               <p className="font-mono font-bold text-[3rem] text-[#98f144] ">
