@@ -4,14 +4,14 @@
 export const CardBlack = (props:{
     text1 : string,
     text2 : string,
-    description:string,
+    description?:string,
     classname?:string,
     children?:JSX.Element | JSX.Element[] | string,
     
 })=>{
     
     return(
-        <div className={`w-full ${props.classname} select-none max-w-[30rem] min-w-[25rem] h-[15rem] bg-[#000000] border p-3 rounded-2xl flex border-b-8 `}>
+        <div className={`w-full ${props.classname} select-none max-w-[30rem] min-w-[25rem] mobile:h-[35rem] tablet:h-[30rem] bg-[#000000] border p-3 rounded-2xl flex border-b-8 `}>
             
             <div className="flex flex-col w-full text-[#151515]">
 
