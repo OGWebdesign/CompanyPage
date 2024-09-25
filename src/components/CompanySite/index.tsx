@@ -6,7 +6,8 @@ import { LargeCard } from "../LargeCard"
 export const CompanySite = () => {
     return (
         <div className="w-full flex justify-center"> 
-        <div className="animate-fadeIn w-3/4 flex flex-col">
+        <img src="Planets/jupiter.png" alt="Jupiter" className="absolute w-[35rem] top-[4rem] right-[3rem] z-10 animate-floatJupiter" />
+        <div className="animate-fadeIn w-3/4 flex flex-col z-50">
             <div className="w-full mt-[10%] flex flex-col text-white">
                 <div className="w-full h-[4rem] flex items-center">
                     <p className="font-sharemono font-bold text-[3rem]">Mission Control</p>

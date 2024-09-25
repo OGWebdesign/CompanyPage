@@ -32,6 +32,7 @@ export default {
         fadeOut: 'fadeOut 300ms ease-in forwards',
         progressInit: 'progressInit 1s ease-in forwards',
         float: 'float 3s ease-in-out infinite',
+        floatJupiter: 'float 10s ease-in-out infinite',
         flyacross: 'fly-across 2s ease-in-out infinite',
         flyoffscreen: 'flyoffscreen 3s ease-in-out forwards',
         flyIn: 'flyIn 3s ease-out forwards',

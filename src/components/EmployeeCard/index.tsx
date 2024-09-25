@@ -4,6 +4,7 @@ export const EmployeeCard = () => {
   return (
     <>
       <div className="w-full flex justify-center items-center ">
+
         <div className="w-full desktop:max-w-[100rem] items-center flex flex-col cursor-none duration-300  rounded-2xl p-6 justify-center font-mono border-white">
           {/* Left Side */}
 
