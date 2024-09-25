@@ -22,7 +22,7 @@ export const CompanySite = () => {
                     gerecht werden.</article>
             </div>
 
-
+            <img src="graphics/astro.png" alt="Jupiter" className="absolute w-[25rem] top-[56%] right-[5%] z-10 animate-floatJupiter" />
             <EmployeeCard/>
 
             <div className=" px-[5rem] my-[10%] flex flex-col justify-center items-center">
@@ -53,6 +53,8 @@ export const CompanySite = () => {
                     </div>
                 </div>
             </div>
+
+            <img src="Planets/comet.png" alt="Comet" className="absolute w-[15rem] bottom-[10rem] left-[5rem] z-10 animate-floatComet" />
 
             <LargeCard
                 head1style="text-[#98f144] mt-10"
