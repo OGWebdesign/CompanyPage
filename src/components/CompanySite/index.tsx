@@ -6,7 +6,8 @@ import { LargeCard } from "../LargeCard"
 export const CompanySite = () => {
     return (
         <div className="w-full flex justify-center"> 
-        <div className="animate-fadeIn w-3/4 flex flex-col">
+        <img src="Planets/jupiter.png" alt="Jupiter" className="absolute w-[35rem] top-[4rem] right-[3rem] z-10 animate-floatJupiter" />
+        <div className="animate-fadeIn w-3/4 flex flex-col z-50">
             <div className="w-full mt-[10%] flex flex-col text-white">
                 <div className="w-full h-[4rem] flex items-center">
                     <p className="font-sharemono font-bold text-[3rem]">Mission Control</p>
@@ -21,7 +22,7 @@ export const CompanySite = () => {
                     gerecht werden.</article>
             </div>
 
-
+            <img src="graphics/astro.png" alt="Jupiter" className="absolute w-[25rem] top-[56%] right-[5%] z-10 animate-floatJupiter" />
             <EmployeeCard/>
 
             <div className=" px-[5rem] my-[10%] flex flex-col justify-center items-center">
@@ -52,6 +53,8 @@ export const CompanySite = () => {
                     </div>
                 </div>
             </div>
+
+            <img src="Planets/comet.png" alt="Comet" className="absolute w-[15rem] bottom-[10rem] left-[5rem] z-10 animate-floatComet" />
 
             <LargeCard
                 head1style="text-[#98f144] mt-10"

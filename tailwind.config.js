@@ -32,10 +32,12 @@ export default {
         fadeOut: 'fadeOut 300ms ease-in forwards',
         progressInit: 'progressInit 1s ease-in forwards',
         float: 'float 3s ease-in-out infinite',
+        floatJupiter: 'float 10s ease-in-out infinite',
         flyacross: 'fly-across 2s ease-in-out infinite',
         flyoffscreen: 'flyoffscreen 3s ease-in-out forwards',
         flyIn: 'flyIn 3s ease-out forwards',
-        lightMove: 'lightMove 5s infinite alternate',
+        spotUp: 'spotUp 12s infinite ease-out',
+        spotDown: 'spotDown 12s infinite ease-out',
       },
       borderRadius: {
         'custom-1': '50% 40% 30% 50% / 50% 40% 30% 50%', // Uneinheitliche Formen
@@ -46,11 +48,15 @@ export default {
           '50%': { transform: 'translateY(10%)' },
           '100%': { transform: 'translateY(0)' },
         },
-        lightMove: {
-          '0%, 100%': { transform: 'translate(0, 0)' },
-          '25%': { transform: 'translate(-10px, -10px)' },
-          '50%': { transform: 'translate(10px, 10px)' },
-          '75%': { transform: 'translate(-5px, 5px)' },
+        spotUp:{
+          '0%, 100%':{transform:'translate(0,1%)'},
+          '33%':{transform:'translate(0, 30%)'},
+          '66%':{transform:'translate(0,-3%)', height:'95%'},
+        },
+        spotDown:{
+          '0%, 100%':{transform:'translate(0,-1%)'},
+          '33%':{transform:'translate(0,-30%)'},
+          '66%':{transform:'translate(0,3%)', height:'95%'},
         },
         flyoffscreen: {
           '0%': { transform: 'translate(0, 0) rotate(0deg)' },
