@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 export const EmployeeCard = () => {
   return (
     <>
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full flex justify-center items-center ">
         <div className="w-full desktop:max-w-[100rem] items-center flex flex-col cursor-none duration-300  rounded-2xl p-6 justify-center font-mono border-white">
           {/* Left Side */}
 
-          <div className=" flex tablet:flex-row group mobile:justify-center mobile:items-center mobile:flex-col-reverse mt-[10%] duration-500">
-            <div className="text-slate-200">
+          <div className=" flex rounded-xl tablet:flex-row group mobile:justify-center mobile:items-center mobile:flex-col-reverse mt-[10%] duration-500">
+            <div className="text-slate-200 w-full p-5">
               <p className="font-mono font-bold text-[3rem] text-[#98f144] ">
                 Hi, I'm Nils.
               </p>
-              <motion.p className="text-[1rem] mt-[1.5rem] w-[80%]">
+              <motion.p className="text-[1rem] mt-[1.5rem]">
                 Informatics has fascinated me ever since. I always wanted to
                 understand how computers and programs work on them. The world of
                 the web, in particular, captivates me. Almost nothing is
@@ -26,36 +26,33 @@ export const EmployeeCard = () => {
                 My skills
               </div>
             </div>
-            <div className="relative w-full flex justify-center items-center">
+            <div className="relative w-full flex justify-end items-center p-5"> 
               {/** ------------------------------PLACE KOSMONAUT HERE------------------------------ */}
-              <div className="absolute w-[20rem] h-[20rem] z-50 bg-black">
+              
               <img
-                src="astro1.webp"
+                src="/graphics/nils.jpg"
                 alt="Astronaut"
-                className="absolute w-full rounded-xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] border border-white"
+                className=" z-50 w-[20rem] rounded-xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] border-white"
               />
-              </div>
-              <div className="w-[25rem] animate-lightMove z-30 h-[25rem] bg-[#29e36d] absolute rounded-[30rem] blur-xl "></div>
-              <div className="w-[25rem] animate-lightMove z-30 h-[25rem] mt-[20rem] bg-[#6f27eb] absolute rounded-[30rem] blur-xl"></div>
             </div>
           </div> 
 
           {/* Right Side */}
           <div className=" flex tablet:flex-row group mobile:flex-col mobile:justify-center mobile:items-center duration-500 mt-[10%]">
-            <div className="">
+          <div className="relative w-full flex justify-start items-center p-5"> 
               {/** ------------------------------PLACE KOSMONAUT HERE------------------------------ */}
               <img
-                src="astro2.webp"
-                alt="Max"
-                className="w-[150rem] ml-[1rem] rounded-xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] border border-white"
+                src="/graphics/max.jpg"
+                alt="Astronaut"
+                className=" z-50 w-[21rem] rounded-xl shadow-[0_20px_50px_rgba(8,_152,_184,_0.7)]  border-white"
               />
             </div>
-            <div className="text-slate-200">
+            <div className="text-slate-200 w-full p-5">
               <p className="font-mono font-bold text-[3rem] text-[#98f144] ">
                 Hi, I'm Max.
               </p>
-              <motion.p className="text-[1rem] mt-[1.5rem] w-[75%]">
-                I am a passionate programmer and after my active service as a
+              <motion.p className="text-[1rem] mt-[1.5rem]">
+              I am a passionate programmer and after my active service as a
                 soldier I decided to study computer science and start my own
                 business in web and application development. I have a lot of
                 experience in web applications and frontend development, but I
@@ -73,6 +70,6 @@ export const EmployeeCard = () => {
           </div>
         </div>
       </div>
-    </>
+    </> 
   );
 };

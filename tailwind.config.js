@@ -35,7 +35,6 @@ export default {
         flyacross: 'fly-across 2s ease-in-out infinite',
         flyoffscreen: 'flyoffscreen 3s ease-in-out forwards',
         flyIn: 'flyIn 3s ease-out forwards',
-        lightMove: 'lightMove 5s infinite alternate',
       },
       borderRadius: {
         'custom-1': '50% 40% 30% 50% / 50% 40% 30% 50%', // Uneinheitliche Formen
@@ -45,12 +44,6 @@ export default {
           '0%': { transform: 'translateY(-200%)' },
           '50%': { transform: 'translateY(10%)' },
           '100%': { transform: 'translateY(0)' },
-        },
-        lightMove: {
-          '0%, 100%': { transform: 'translate(0, 0)' },
-          '25%': { transform: 'translate(-10px, -10px)' },
-          '50%': { transform: 'translate(10px, 10px)' },
-          '75%': { transform: 'translate(-5px, 5px)' },
         },
         flyoffscreen: {
           '0%': { transform: 'translate(0, 0) rotate(0deg)' },
