@@ -7,8 +7,8 @@ export const CompanySite = () => {
     return (
 
         <div className="w-full flex justify-center">
-            <img src="Planets/jupiter.png" alt="Jupiter" className="absolute w-[45rem] desktop-xl:w-[50rem] top-[6rem] right-[4rem] z-10 animate-floatJupiter" />
-            <img src="Planets/icePlanet.png" alt="Jupiter" className="absolute w-[30rem] desktop-xl:w-[50rem] top-[57%] left-[35%] z-10 animate-floatIcePlanet" />
+            <img src="Planets/jupiter.webp" alt="Jupiter" className="absolute w-[45rem] desktop-xl:w-[50rem] top-[6rem] right-[4rem] z-10 animate-floatJupiter" />
+            <img src="Planets/icePlanet.webp" alt="IcePlanet" className="absolute w-[30rem] desktop-xl:w-[50rem] top-[57%] left-[35%] z-10 animate-floatIcePlanet" />
             <div className="animate-fadeIn w-3/4 max-w-[100rem] flex flex-col z-30">
                 <div className="w-full mt-[10%] flex flex-col text-white">
                     <div className="w-full h-[4rem] flex items-center">
@@ -24,7 +24,7 @@ export const CompanySite = () => {
                         gerecht werden.</article>
                 </div>
 
-                <img src="graphics/astro.png" alt="a little cute astronaut" className="absolute w-[25rem] top-[56%] right-[5%] z-10 animate-float" />
+                <img src="graphics/astro.webp" alt="a little cute astronaut" className="absolute w-[25rem] top-[56%] right-[5%] z-10 animate-float" />
                 <EmployeeCard />
 
                 <div className=" px-[5rem] my-[10%] flex flex-col justify-center items-center">
@@ -56,7 +56,7 @@ export const CompanySite = () => {
                     </div>
                 </div>
 
-                <img src="Planets/comet.png" alt="Comet" className="absolute w-[15rem] bottom-[10rem] left-[5rem] z-10 animate-floatComet" />
+                <img src="Planets/comet.webp" alt="Comet" className="absolute w-[15rem] bottom-[10rem] left-[5rem] z-10 animate-floatComet" />
 
                 <LargeCard
                     head1style="text-[#98f144] mt-10"
