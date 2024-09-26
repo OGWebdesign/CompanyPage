@@ -117,7 +117,7 @@ export const OfferSite = () => {
     <div className="w-full h-full flex flex-col items-center">
 
       {/* SUCCESS WINDOW*/}
-      <div className={`w-[45rem] h-[15rem] bg-[#303030] font-sharemono absolute bottom-[10%] ${sendSuccess ? "animate-flyoffscreen block" : "hidden"} ${firstAnimation ? "animate-fadeIn" : ""} z-30 flex justify-center items-center rounded-xl`}>
+      <div className={`w-[45rem] h-[15rem] bg-[#000000]  font-sharemono absolute bottom-[10%] ${sendSuccess ? "animate-flyoffscreen block" : "hidden"} ${firstAnimation ? "animate-fadeIn" : ""} z-30 flex justify-center items-center rounded-xl`}>
         <span className="text-[#98f144] text-[3rem] text-center">
           Nachricht erfolgreich gesendet!
         </span>
