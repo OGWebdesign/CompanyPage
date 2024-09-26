@@ -196,6 +196,7 @@ function App() {
       {/* Wrapper */}
       <div
         id="navigator "
+        
         className="w-full  bg-black cursor-none overflow-hidden"
       >
         <div className="w-full flex justify-center ">
