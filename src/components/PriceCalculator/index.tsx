@@ -19,7 +19,7 @@ const PriceCalculator = () => {
             setUnderborder(false);
         }
     },[price])
-    return (
+    return ( 
         <div className="w-full flex flex-col p-3 items-center">
         <div className="w-full flex tablet:justify-evenly mobile:justify-between items-center">
             <IconCard onClick={() => {}} title="Website" icon={<CodeIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
