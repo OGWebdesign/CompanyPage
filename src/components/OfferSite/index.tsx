@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { BookIcon, CodeIcon, ComputerIcon, MinusIcon, PlusIcon, WebAppIcon } from "../Icons";
-import IconCard from "../IconCard";
 import React from "react";
 import axios from "axios";
 
@@ -19,6 +18,16 @@ export const OfferSite = () => {
     const [phone, setPhone] = useState<string>("");
     const [message, setMessage] = useState<string>("");
     /* States Email End */
+
+    const [send, setSend] = useState<boolean>(false);
+    const [sendSuccess, setSendSuccess] = useState<boolean>(false);
+    const [firstAnimation, setFirstAnimation] = useState<boolean>(false);
+
+    const [select_sound] = useState(new Audio("/sounds/select 3.mp3"));
+
+    const clickEffect = "bg-[#c5c5c5] shadow-[5px_5px_0px_0px_rgba(152,241,68)]"
+
+    const notClicked = "hover:bg-[#c5c5c5] hover:shadow-[5px_5px_0px_0px_rgba(152,241,68)]"
 
     const [underborder, setUnderborder] = useState(false);
     const [increase_sound] = useState(new Audio("/sounds/increase.mp3"));
@@ -56,26 +65,66 @@ export const OfferSite = () => {
 
 
     const sendRequest = async () => {
+        setSend(true);
         if (!name || !email || !phone || !message || (select1 == false && select2 == false && select3 == false && select4 == false)) {
             alert("Bitte fülle alle Felder aus!");
+            setSend(false);
             return;
         } 
-        try {
-          await axios.post('https://bauteam-server.vercel.app/api/og/sendFormular', {name, email, company, phone, message, price, select1, select2, select3, select4})
+          await axios.post('https://og-api-mu.vercel.app/contact/send-formular', {name, email, company, phone, message, price, select1, select2, select3, select4})
           .then((res) => {
             console.log(res.data);
+            setTimeout(() => {
+              setFirstAnimation(true);
+            }, 500);
+            setTimeout(() => {
+              setSendSuccess(true);
+            }, 500);
+            setName("");
+            setEmail("");
+            setCompany("");
+            setPhone("");
+            setMessage("");
+            setSelect1(false);
+            setSelect2(false);
+            setSelect3(false);
+            setSelect4(false);
+            setPrice(1000);
+            setSend(false);
+            setSendSuccess(false);
+            setFirstAnimation(false);
           })
           .catch((error) => {
             console.error('Error sending data:', error);
+            alert("Fehler beim Senden der Nachricht. Bitte versuche es erneut.");
+            setName("");
+            setEmail("");
+            setCompany("");
+            setPhone("");
+            setMessage("");
+            setSelect1(false);
+            setSelect2(false);
+            setSelect3(false);
+            setSelect4(false);
+            setPrice(1000);
+            setSend(false);
+            setSendSuccess(false);
           });
-        } catch (error) {
-          console.error('Error sending data:', error);
-        }
+        
     }
     
   return (
     <div className="w-full h-full flex flex-col items-center">
-    <div className=" desktop:w-full desktop-l:w-[80%] mobile:w-full flex flex-col justify-center items-center">
+
+      {/* SUCCESS WINDOW*/}
+      <div className={`w-[45rem] h-[15rem] bg-[#303030] font-sharemono absolute bottom-[10%] ${sendSuccess ? "animate-flyoffscreen block" : "hidden"} ${firstAnimation ? "animate-fadeIn" : ""} z-30 flex justify-center items-center rounded-xl`}>
+        <span className="text-[#98f144] text-[3rem] text-center">
+          Nachricht erfolgreich gesendet!
+        </span>
+      </div>
+      
+      
+         <div className=" desktop:w-full desktop-l:w-[80%] mobile:w-full flex flex-col justify-center items-center">
       <div className="flex mobile:flex-col laptop:flex-row justify-around w-3/4">
         <div className="w-3/4 mobile:w-full h-[50rem] flex items-center">
           <div className="p-1">
@@ -134,8 +183,6 @@ export const OfferSite = () => {
           </div>
         </div>
 
-
-
         <div className="w-full laptop:h-[50rem] laptop:mt-24 desktop-l:mt-[20%] laptop:m-0 mobile:mt-[5rem] flex items-center flex-col">
           <img className="h-[20rem] mobile:h-[15rem] animate-flyIn" src="graphics\astro.webp" alt="a little cute astronaut" onAnimationEnd={(e) => {
           const target = e.target as HTMLImageElement;
@@ -144,10 +191,56 @@ export const OfferSite = () => {
         }}/>
           <div className="w-full flex flex-col items-center">
         <div className="w-full flex tablet:justify-evenly gap-4 mobile:justify-between items-center">
-            <IconCard onClick={() => {setSelect1(!select1)}} title="Website" icon={<CodeIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
-            <IconCard onClick={() => {setSelect2(!select2)}} title="Web-App" icon={<WebAppIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
-            <IconCard onClick={() => {setSelect3(!select3)}} title="Consulting" icon={<BookIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
-            <IconCard onClick={() => {setSelect4(!select4)}} title="Dev-Ops" icon={<ComputerIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
+        <div onClick={() => {
+            select_sound.play();
+            setSelect1(!select1)
+            }} 
+            className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select1 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+            <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select1 ? "fill-black" : "fill-white"} `}>
+                <CodeIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>
+            </div>
+            <div className={`w-full text-center mobile:text-[0.8rem] tablet:text-[1rem] mt-[0.3rem] font-sharemono group-hover:text-black duration-500 ${select1 ? "text-black" : "text-white"}`}>
+               <p>Webseiten</p> 
+            </div>
+          </div>
+
+          <div onClick={() => {
+            select_sound.play();
+            setSelect2(!select2)
+            }} 
+            className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select2 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+            <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select2 ? "fill-black" : "fill-white"} `}>
+                <WebAppIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>
+            </div>
+            <div className={`w-full text-center mobile:text-[0.8rem] tablet:text-[1rem] mt-[0.3rem] font-sharemono group-hover:text-black duration-500 ${select2 ? "text-black" : "text-white"}`}>
+               <p>Web-App</p> 
+            </div>
+          </div>
+
+          <div onClick={() => {
+            select_sound.play();
+            setSelect3(!select3);
+            }} 
+            className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select3 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+            <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select3 ? "fill-black" : "fill-white"} `}>
+                <BookIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>
+            </div>
+            <div className={`w-full text-center mobile:text-[0.8rem] tablet:text-[1rem] mt-[0.3rem] font-sharemono group-hover:text-black duration-500 ${select3 ? "text-black" : "text-white"}`}>
+               <p>Consulting</p> 
+            </div>
+          </div>
+
+          <div onClick={() => {
+            setSelect4(!select4);
+            }} 
+            className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select4 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+            <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select4 ? "fill-black" : "fill-white"} `}>
+                <ComputerIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>
+            </div>
+            <div className={`w-full text-center mobile:text-[0.8rem] tablet:text-[1rem] mt-[0.3rem] font-sharemono group-hover:text-black duration-500 ${select4 ? "text-black" : "text-white"}`}>
+               <p>Dev-Ops</p> 
+            </div>
+          </div>
         </div>
         <div className={`w-[65%] h-[3rem] mobile:w-full bg-[#151515] mt-[4rem]  flex justify-between items-center rounded-xl  `}>   
             <div onClick={() => {
@@ -171,7 +264,7 @@ export const OfferSite = () => {
         </div>
         </div>
       </div>
-      <div className="mt-[15%]">
+      <div className="">
       <div className="w-full flex flex-col mt-5 
   mobile:px-2 tablet:px-8 
   font-mono">
@@ -190,7 +283,7 @@ export const OfferSite = () => {
 
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">NAME</span> IS </span>
 
-        <input name="namefield"  type="input" placeholder="Name*" className=" cursor-none
+        <input name="namefield" value={name} type="input" placeholder="Name*" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem] 
 
@@ -225,7 +318,7 @@ export const OfferSite = () => {
         
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">MAIL</span> IS </span>
        
-        <input name="emailfield" type="input" placeholder="Email*" className=" cursor-none
+        <input name="emailfield" value={email} type="input" placeholder="Email*" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
@@ -250,7 +343,7 @@ export const OfferSite = () => {
         
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">FIRMA</span> IS </span>
        
-        <input name="emailfield" type="input" placeholder="Firma" className=" cursor-none
+        <input name="emailfield" value={company} type="input" placeholder="Firma" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
@@ -274,7 +367,7 @@ export const OfferSite = () => {
         
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">PHONE</span> IS </span>
        
-        <input name="emailfield" type="input" placeholder="Telefon*" className=" cursor-none
+        <input name="emailfield" value={phone} type="input" placeholder="Telefon*" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
@@ -313,6 +406,7 @@ export const OfferSite = () => {
         onChange={(e: React.FormEvent<HTMLTextAreaElement>) => {
           setMessage(e.currentTarget.value);
         }}
+        value={message}
         />
       </div>
     </div>
@@ -328,7 +422,7 @@ export const OfferSite = () => {
       onClick={() => sendRequest() }
        className={`text-[#161616] select-none border-none bg-[#98f144] font-semibold py-2 px-4 mt-8 rounded-lg shadow-xl 
       hover:bg-[#6ba039] cursor-none font-mono transition duration-700 ease-in-out ${check && "-translate-y-12"}`}>
-      Send Request
+      {!send ? "Senden" : "wird gesendet..."}
       </button>
 
       </div>
