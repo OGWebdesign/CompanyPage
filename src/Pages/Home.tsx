@@ -205,7 +205,7 @@ function App() {
               <div className="w-full duration-500 flex flex-col items-center cursor-none ">
                 {/* Begin NavigationBar Integration for One Page Technologie */}
                 {/* Navbar Item Wrapper */}
-                <div className="w-3/4 flex justify-between duration-500 h-[4rem] overflow-visible z-50 bg-transparent">
+                <div className="w-full flex justify-between duration-500 h-[5rem] overflow-visible z-50 bg-transparent">
                   {/* Navbar Logo Wrapper */}
                   <div className="tablet:w-1/2 duration-500">
                     {/* Navbar Logo Wrapper End*/}
@@ -253,7 +253,7 @@ function App() {
                         className={`w-10 h-w-10 ${rotation} duration-300  hover:fill-[#98f144] flex`}
                       ></DotsIcon>
                       <p
-                        className={` ${textindicator} text-[#e0e0e0] mt-4 text-[0.7rem] font-mono`}
+                        className={` ${textindicator} text-[#e0e0e0] text-[0.7rem] font-mono`}
                       >
                         {indicator}
                       </p>
