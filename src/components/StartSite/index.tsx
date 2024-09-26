@@ -68,11 +68,11 @@ export const StartSite = (props: {
           Was bieten wir an?
         </span>
 
-        <div className="border-2 border-[#606060] shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-lg p-5 mb-[10%]">
+        <div className="border-2 border-[#606060] shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-lg p-5 mb-[5%]">
           <Paper className="w-[3rem] fill-[#98f144]" />
         </div>
 
-        <div className="laptop:w-[40%] desktop-xl:w-[40%] p-3 grid tablet:gap-10 mobile:gap-20  mobile:grid-rows-4 mobile:grid-cols-1 tablet:grid-cols-1 tablet:grid-rows-2 desktop:grid-rows-1 desktop:grid-cols-2 place-content-center place-items-center mb-[5%]">
+        <div className="laptop:w-[75%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%]">
           <CardBlack
             classname="tablet:-translate-x-28"
             text1="Webseiten & "
@@ -88,16 +88,19 @@ export const StartSite = (props: {
               </span>{" "}
               landen. Nach durchschnittlich 3 Sekunden Ladezeit entscheidet der
               Besucher, ob er auf Ihrer Webseite bleibt oder das Laden abbricht
-              und sich woanders umschaut. <br />
-              Danach wird er sich je nach Design und Inhalt für oder gegen Ihr
-              Unternehmen entscheiden. Wir helfen Ihnen dabei, dass der{" "}
-              <span className="text-[#98f144]">Besucher zum Kunden</span> wird
-              oder Ihre Webseite ein{" "}
-              <span className="text-[#98f144]">Aushängeschild</span> für Ihre
-              Tätigkeit wird und fertigen Ihnen eine maßgeschneiderte Webseite
-              an, die sich von der Masse{" "}
-              <span className="bg-[#98f144] font-bold text-black">abhebt</span>.{" "}
+              und sich woanders umschaut. Diese Ladezeit erreichen wir mit unseren selbstprogrammierten 
+              Webseiten ohne Probleme, wohingegen Content Management Systeme, wie z.B. Wordpress, meist schlechtere Ladezeiten 
+              aufweisen. 
+               <br />
+              Danach wird sich der Besucher je nach Design und Inhalt für oder gegen Ihr
+              Unternehmen entscheiden. Sieht Ihre Webseite wie aus dem Katalog aus, ist das nicht sehr 
+              einprägsam und wird schnell wieder vergessen. Mit Webseiten von OG-Webdesign stechen Sie aus der Masse heraus und haben 
+              ein einzigartiges Aushängeschild für Ihr Unternehmen oder Ihre Tätigkeit. 
               <br />
+              Eine weitere Stärke von selbstprogrammierten Webseiten ist der Sicherheitsaspekt. Unsere verwendeten Technologien 
+              sind stets aktuell und sicher. Bei Content Management Systemen ist das nicht immer der Fall. Hält man diese nicht 
+              auf dem neuesten Stand, kann es schnell zu Sicherheitslücken kommen. Diese können von Hackern ausgenutzt werden, um
+              Schaden anzurichten oder Daten zu stehlen. <br/>
               Benötigen Sie sonstige{" "}
               <span className="bg-white text-black font-bold">
                 Programmierarbeiten
@@ -108,15 +111,15 @@ export const StartSite = (props: {
             </p>
           </CardBlack>
           <CardWhite
-            classname="tablet:translate-x-28"
+            classname="tablet:translate-x-28 my-[5%]"
             text1="DevOps &"
             text2="Admin"
           >
-            <p className="text-black font-mono text-[0.9rem]">
+            <p className="text-white font-mono text-[0.9rem]">
               Sie haben ein Projekt welches bereits in der Entwicklung ist oder
-              kurz davor steht, veröffentlicht zu werden? Wir helfen Ihnen
+              kurz davor steht, veröffentlicht zu werden? Wir, OG-Webdesign, helfen Ihnen
               dabei, Ihr Projekt auf die{" "}
-              <span className="bg-[#98f144]">Zielgerade</span> zu bringen. Wir
+              <span className="bg-[#98f144] text-black">Zielgerade</span> zu bringen. Wir
               bieten Ihnen professionelle Unterstützung bei der{" "}
               <span className="font-bold">
                 Entwicklung und Veröffentlichung
@@ -124,33 +127,35 @@ export const StartSite = (props: {
               Ihres Projektes. Dabei halten wir engen Kontakt zu Ihnen, um
               sicherzustellen, dass das Projekt auch genau Ihren Vorstellungen
               entspricht. <br />
-              ADMIN???
+              Benötigen Sie Administratoren für ein bereits fertiges Produkt kann OG-Webdesign dies für 
+              Sie übernehmen. Wir kümmern uns um die Wartung und Pflege Ihrer Anwendung. Ob Webseiten, 
+              Web-Anwendungen oder Apps, wir sorgen dafür, dass Ihre Anwendung immer auf dem neuesten Stand ist und
+              einwandfrei funktioniert. 
             </p>
           </CardWhite>
           <CardWhite
-            classname="tablet:-translate-x-28"
+            classname="tablet:-translate-x-28 mb-[5%]"
             text1="Anwendungsentwicklung"
             text2=""
           >
-            <p className="text-black font-mono text-[0.9rem]">
-              Wenn Sie nicht vordergründig auf Aussehen und Design wertlegen,
-              sondern auf{" "}
-              <span className="bg-[#98f144]">
+            <p className="text-white font-mono text-[0.9rem]">
+              Wenn Sie auf{" "}
+              <span className="bg-[#98f144] text-black">
                 Funktionalität und Benutzerfreundlichkeit
               </span>{" "}
-              setzen, sind Sie bei uns genau richtig. Wir entwickeln für Sie
+              setzen, sind Sie bei OG-Webdesign genau richtig. Wir entwickeln für Sie
               individuelle{" "}
               <span className="bg-black text-[#98f144] font-bold">
                 Web-Anwendungen
               </span>
-              , die genau auf Ihre Bedürfnisse zugeschnitten sind. Dabei achten
+              ,die genau auf Ihre Bedürfnisse zugeschnitten sind. Dabei achten
               wir darauf, dass die Anwendung{" "}
               <span className="font-bold">
                 so einfach wie möglich zu bedienen
               </span>{" "}
               ist und dennoch alle Funktionen bietet, die Sie benötigen. <br />
               Ein großer Vorteil von Web-Anwendungen ist die{" "}
-              <span className="bg-[#98f144]">Plattformunabhängigkeit</span>.
+              <span className="bg-[#98f144] text-black">Plattformunabhängigkeit</span>.
               Egal ob als Desktop-Anwendung, Web-Anwendung oder als App, wir
               entwickeln für Sie die passende Lösung.
             </p>
@@ -158,7 +163,7 @@ export const StartSite = (props: {
           <CardBlack
             classname="tablet:translate-x-28"
             text1="Künstliche"
-            text2="Inteligenz"
+            text2="Intelligenz"
           >
             <p className="text-white font-mono text-[0.9rem]">
               Künstliche Intelligenz ist in aller Munde. Doch was ist KI

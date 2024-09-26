@@ -11,15 +11,13 @@ export const CardBlack = (props:{
 })=>{
     
     return(
-        <div className={`w-full ${props.classname} select-none max-w-[35rem] min-w-[30rem] mobile:h-[35rem] tablet:h-[30rem] bg-[#000000] border p-3 rounded-2xl flex border-b-8 `}>
+        <div className={`w-full ${props.classname} select-none max-w-[35rem] min-w-[30rem] p-3 rounded-2xl flex `}>
             
             <div className="flex flex-col w-full text-[#151515]">
 
-                <div className="mobile:p-2 p-4 w-full ">
-                    <p className="inline-block bg-[#98f144] p-1 font-mono font-semibold mobile:text-[1.1rem] text-[1.3rem]">{props.text1} {props.text2}</p>
-                    <article className="h-full duration-300 text-[0.95rem] tablet:text-[1rem] mobile:text-[0.9rem] desktop:text-[1rem] text-slate-200 p-3 flex items-center font-mono font-semibold">
+                <div className=" w-full ">
+                    <p className="inline-block mb-[0.5rem] bg-[#98f144] p-1 font-mono font-semibold mobile:text-[1.1rem] text-[1.3rem]">{props.text1} {props.text2}</p>
                     {props.description}
-                    </article>
                 </div>
 
               {props.children}
