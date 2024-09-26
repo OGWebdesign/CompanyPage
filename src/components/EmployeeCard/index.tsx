@@ -9,8 +9,8 @@ export const EmployeeCard = () => {
           {/* Left Side */}
 
           <div className=" flex rounded-xl laptop:flex-row group mobile:justify-center mobile:items-center mobile:flex-col-reverse mt-[10%] duration-500">
-            <div className="text-slate-200 w-full p-5">
-              <p className="font-mono font-bold text-[3rem] text-[#98f144] ">
+            <div className="text-slate-200 w-full py-5">
+              <p className="font-mono font-bold text-[3rem] mobile:text-[2rem] text-[#98f144] ">
                 Hi, I'm Nils.
               </p>
               <motion.p className="text-[1rem] mt-[1.5rem]">
@@ -27,9 +27,9 @@ export const EmployeeCard = () => {
                 My skills
               </div>
             </div>
-            <div className="relative w-full flex justify-end items-center p-5"> 
+            <div className="relative w-full flex justify-end mobile:justify-center items-center ">
               {/** ------------------------------PLACE KOSMONAUT HERE------------------------------ */}
-              
+
               <img
                 src="/graphics/nils.jpg"
                 alt="Astronaut"
@@ -38,11 +38,11 @@ export const EmployeeCard = () => {
               <div className="w-[20.5rem] h-[15rem] top-0 right-[1rem] animate-spotUp  z-30  bg-[#29e36d] absolute rounded-[30rem] blur-xl "></div>
               <div className="w-[20.5rem] h-[15rem] bottom-0 right-[1rem] animate-spotDown  z-30  mt-[20rem] bg-[#6f27eb] absolute rounded-[30rem] blur-xl"></div>
             </div>
-          </div> 
+          </div>
 
           {/* Right Side */}
           <div className=" flex laptop:flex-row group mobile:flex-col mobile:justify-center mobile:items-center duration-500 mt-[10%]">
-          <div className="relative w-full flex justify-start items-center p-5"> 
+            <div className="relative w-full flex justify-start mobile:justify-center items-center py-5">
               {/** ------------------------------PLACE KOSMONAUT HERE------------------------------ */}
               <img
                 src="/graphics/max.jpg"
@@ -52,12 +52,12 @@ export const EmployeeCard = () => {
               <div className="w-[20.5rem] h-[15rem] animate-spotUp top-0 left-[2rem] z-30  bg-[#29e36d] absolute rounded-[30rem] blur-xl "></div>
               <div className="w-[20.5rem] h-[15rem] animate-spotDown bottom-0 left-[2rem] z-30  mt-[20rem] bg-[#6f27eb] absolute rounded-[30rem] blur-xl"></div>
             </div>
-            <div className="text-slate-200 w-full p-5 z-30">
-              <p className="font-mono font-bold text-[3rem] text-[#98f144] ">
+            <div className="text-slate-200 w-full py-5 z-30">
+              <p className="font-mono font-bold text-[3rem] mobile:text-[2rem] text-[#98f144] ">
                 Hi, I'm Max.
               </p>
-              <motion.p className="text-[1rem] mt-[1.5rem]">
-              I am a passionate programmer and after my active service as a
+              <motion.p className="text-[1rem] mobile:text- mt-[1.5rem]">
+                I am a passionate programmer and after my active service as a
                 soldier I decided to study computer science and start my own
                 business in web and application development. I have a lot of
                 experience in web applications and frontend development, but I
@@ -75,6 +75,6 @@ export const EmployeeCard = () => {
           </div>
         </div>
       </div>
-    </> 
+    </>
   );
 };

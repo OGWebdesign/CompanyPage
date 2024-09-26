@@ -7,10 +7,10 @@ type SideBarProps = {
     handleCompany: () => void,
     handleOffer: () => void,
     handleMail: () => void,
-    houseIcon: JSX.Element | JSX.Element[] | string,
-    companyIcon: JSX.Element | JSX.Element[] | string,
-    offerIcon: JSX.Element | JSX.Element[] | string,
-    mailIcon: JSX.Element | JSX.Element[] | string,
+    houseIcon: JSX.Element | JSX.Element[] ,
+    companyIcon: JSX.Element | JSX.Element[] ,
+    offerIcon: JSX.Element | JSX.Element[] ,
+    mailIcon: JSX.Element | JSX.Element[] ,
 }
 
 

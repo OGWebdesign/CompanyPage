@@ -21,7 +21,7 @@ export const StartSite = (props: {
 
         <div className="w-full h-screen z-50  flex flex-col items-center">
 
-          <div className="w-3/4 mobile:w-full mt-[23rem] desktop:mt-[10%] mobile:mt-[10%]">
+          <div className="mobile:w-full tablet:w-3/4 mt-[23rem] desktop:mt-[10%] mobile:mt-[10%]">
             <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
             <TextAndButton children={props.TextAndButtonbt}
 
@@ -29,7 +29,7 @@ export const StartSite = (props: {
               reference="/contact"
             />
           </div>
-          <div className="w-3/4 mobile:w-[95%] h-[30rem] flex justify-end items-center">
+          <div className="w-3/4 mobile:w-[95%] h-[20rem] flex tablet:justify-center desktop:justify-end items-center">
             <div className="w-[30rem] duration-300 h-[6rem] desktop-l:mr-[10rem] desktop-l:mt-[15rem] desktop-xxl:mr-[20rem] desktop-xxl:mt-[20rem] backdrop-blur-lg rounded-2xl bg-[#6b6b6b15] flex">
 
               <Link className="group hover:shadow-xl w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center hover:scale-110 group items-center rounded-l-2xl flex-col" to="tech" spy={true} smooth={true} offset={-70} duration={500}>
