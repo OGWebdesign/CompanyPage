@@ -57,7 +57,7 @@ export const CompanySite = () => {
                     </div>
                 </div>
 
-                <img src="Planets/comet.webp" alt="Comet" className="absolute w-[15rem] mobile:bottom-[12%] tablet:bottom-[10%] desktop:bottom-[10%]  bottom-[3%] laptop:bottom-[15%] left-[5%] desktop-xl:left-[25%] animate-floatComet" />
+                <img src="Planets/comet.webp" alt="Comet" className="absolute w-[15rem] mobile:bottom-[13%] tablet:bottom-[10%] desktop:bottom-[10%]  bottom-[3%] laptop:bottom-[15%] left-[5%] desktop-xl:left-[25%] animate-floatComet" />
 
                 <LargeCard
                     head1style="text-[#98f144] mt-10"
