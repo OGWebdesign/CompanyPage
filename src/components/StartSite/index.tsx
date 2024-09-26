@@ -22,10 +22,10 @@ export const StartSite = (props: {
         <div className="w-full h-screen z-50  flex flex-col items-center">
 
           <div className="mobile:w-full desktop:w-3/4 mt-[23rem] desktop:mt-[10%] mobile:mt-[10%]">
-            <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
+            <Heading headstyle="text-slate-200" heading="Entdecke die POWER der modernen Web- und Software Entwicklung" />
             <TextAndButton children={props.TextAndButtonbt}
 
-              text="Web development at an academic level and the latest web and application technologies give your company unimaginable power in its web presence or internal company processes."
+              text="Webentwicklung auf akademischem Niveau und neueste Web- und Anwendungstechnologien verleihen Ihrem Unternehmen ungeahnte Kraft in seinem Webauftritt oder in unternehmensinternen Prozessen."
               reference="/contact"
             />
           </div>

@@ -14,14 +14,7 @@ export const EmployeeCard = () => {
                 Hi, I'm Nils.
               </p>
               <motion.p className="text-[1rem] mt-[1.5rem]">
-                Informatics has fascinated me ever since. I always wanted to
-                understand how computers and programs work on them. The world of
-                the web, in particular, captivates me. Almost nothing is
-                impossible, and the possibilities are becoming increasingly
-                diverse. Max and I met during our studies and decided to start a
-                company together to realize our ideas and visions. Whether it's
-                large or small websites/web apps, consulting, bots, or AI
-                interfaces, we are here for you.
+              Informatik fasziniert mich schon seit jeher. Ich wollte immer verstehen, wie Computer und Programme darauf funktionieren. Besonders die Welt des Webs fesselt mich. Fast nichts ist unmöglich, und die Möglichkeiten werden immer vielfältiger. Max und ich haben uns während unseres Studiums kennengelernt und beschlossen, gemeinsam eine Firma zu gründen, um unsere Ideen und Visionen zu verwirklichen. Ob große oder kleine Webseiten/Web-Apps, Beratung, Bots oder KI-Schnittstellen – wir sind für Sie da.
               </motion.p>
               <div className="w-[8rem] text-[#151515] text-center cursor-none select-none border-none bg-[#98f144] font-semibold mt-8 py-2 px-4 rounded-lg hover:bg-[#6ba039] font-mono transition duration-300 ease-in-out">
                 My skills
@@ -57,16 +50,7 @@ export const EmployeeCard = () => {
                 Hi, I'm Max.
               </p>
               <motion.p className="text-[1rem] mobile:text- mt-[1.5rem]">
-                I am a passionate programmer and after my active service as a
-                soldier I decided to study computer science and start my own
-                business in web and application development. I have a lot of
-                experience in web applications and frontend development, but I
-                am also familiar with bot networks and interfaces for artificial
-                intelligence. Be it React, Typescript, Java or C#. We have
-                extensive experience in various front- and back-end technologies
-                and have programmed everything from small web applications or
-                websites to cooperative app development projects with the
-                healthcare sector.
+              Ich bin ein leidenschaftlicher Programmierer und habe nach meinem aktiven Dienst als Soldat beschlossen, Informatik zu studieren und mit Nils an meiner Seite unser eigenes Unternehmen in der Web- und Anwendungsentwicklung zu gründen. Ich habe viel Erfahrung mit Webanwendungen und Frontend-Entwicklung, bin aber auch mit Bot-Netzwerken und Schnittstellen für Künstliche Intelligenz vertraut. Ob React, TypeScript, Java oder C# – wir verfügen über umfangreiche Erfahrung in verschiedenen Frontend- und Backend-Technologien und haben alles programmiert, von kleinen Webanwendungen oder Websites bis hin zu kooperativen App-Entwicklungsprojekten im Gesundheitssektor.
               </motion.p>
               <div className="w-[8rem] text-[#151515] text-center cursor-none select-none border-none bg-[#98f144] font-semibold mt-8 py-2 px-4 rounded-lg hover:bg-[#6ba039] font-mono transition duration-300 ease-in-out">
                 My skills
