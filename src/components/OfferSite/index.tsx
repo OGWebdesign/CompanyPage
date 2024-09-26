@@ -316,7 +316,10 @@ export const OfferSite = () => {
 
     
     {/* BUTTON */}
-      <div className="w-full flex justify-center mb-10 ">
+      
+      
+    </form>
+    <div className="w-full flex justify-center mb-10 ">
 
       <button 
       onClick={() => sendRequest() }
@@ -326,8 +329,6 @@ export const OfferSite = () => {
       </button>
 
       </div>
-      
-    </form>
   </div>
   </div>
       </div>
