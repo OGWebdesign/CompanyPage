@@ -79,7 +79,7 @@ export const OfferSite = () => {
       <div className="flex mobile:flex-col laptop:flex-row justify-around w-3/4">
         <div className="w-3/4 mobile:w-full h-[50rem] flex items-center">
           <div className="p-1">
-            <div className="offertext mt-[100%] max-w-[40rem]">
+            <div className="offertext mt-[100%] tablet:mt-[10%] max-w-[40rem]">
               <p className="font-bold text-white text-[2.5rem] mobile:text-[1.6rem] font-sharemono">
                 Ein neues Projekt starten
               </p>
@@ -149,7 +149,7 @@ export const OfferSite = () => {
             <IconCard onClick={() => {setSelect3(!select3)}} title="Consulting" icon={<BookIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
             <IconCard onClick={() => {setSelect4(!select4)}} title="Dev-Ops" icon={<ComputerIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
         </div>
-        <div className={`w-[65%] h-[3rem] bg-[#151515] mt-[4rem]  flex justify-between items-center rounded-xl  `}>   
+        <div className={`w-[65%] h-[3rem] mobile:w-full bg-[#151515] mt-[4rem]  flex justify-between items-center rounded-xl  `}>   
             <div onClick={() => {
                 decrease_sound.play();
                 if(price >= 100){
