@@ -59,7 +59,7 @@ function App() {
   // ---------------------------   Button for order meeting for component TextAndButton for working with one Page technologie
   const Proposal = () =>(
       <div onClick={()=>setIndicatorNav(3)} className="tablet:w-[20rem] border-2  duration-300 hover:font-semibold hover:text-[#000000] hover:bg-[#98f144] mobile:w-[10rem] flex justify-center items-center text-center font-mono text-[#98f144] h-[3rem] ml-4 mt-14 bg-[#000000] rounded-lg border-[#151515]">
-          Get your free proposal
+          Beratungstermin vereinbaren.
       </div>
   
   )
@@ -398,7 +398,7 @@ function App() {
                   Haben Sie eine schöne <span className="text-[#98f144]">Idee</span>? <span className="text-[#98f144]">Sprechen</span> Sie mit uns!
                 </span>
                 <a onClick={() => setIndicatorNav(4)} href="mailto:info@og-webdesign.de"  className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039]">
-                  Contact us
+                  Anfrage
                 </a>
               </div>
               <div className="laptop:w-[25%] mobile:w-full h-full flex mobile:my-[1.5rem] laptop:my-0 laptop:flex-col laptop:justify-center mobile:justify-around items-end p-5">

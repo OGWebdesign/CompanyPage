@@ -249,16 +249,16 @@ export const StartSite = (props: {
 
 
         <TextComponent
-          headline="High-speed performance for websites and web applications on the next level."
-          text="We have consciously decided against content management solutions when developing websites. On the one hand, we have set ourselves the task of revolutionizing the Internet with highly customized customer projects. We want to help companies that have understood how to stand out from the competition to offer an alternative to offers that mainly consist of content management systems. On the other hand, full control over the project is important. It is particularly important for perfectionist developers like us to be able to change even the finer details. Performance and maintainability are particularly guaranteed by the technologies we use. We can log all development steps of a project and reset them if necessary. Nothing unexpected happens here! We make no compromises when it comes to performance. The code base, the media, and even the fonts are professionally compressed so that quality losses are not visible. All packed together in a state-of-the-art and reliable ecosystem with the highest level of care for maintainability. 80% of a software product consists of maintenance and care."
+          headline="Hochgeschwindigkeitsleistung für Websites und Webanwendungen auf dem nächsten Level."
+          text="Wir haben uns bewusst gegen Content-Management-Lösungen bei der Entwicklung von Websites entschieden. Einerseits haben wir uns die Aufgabe gestellt, das Internet mit hochgradig individuellen Kundenprojekten zu revolutionieren. Wir wollen Unternehmen helfen, die verstanden haben, wie man sich von der Konkurrenz abhebt, und eine Alternative zu Angeboten bieten, die hauptsächlich aus Content-Management-Systemen bestehen. Andererseits ist die vollständige Kontrolle über das Projekt wichtig. Für perfektionistische Entwickler wie uns ist es besonders wichtig, selbst die kleinsten Details ändern zu können. Leistung und Wartbarkeit werden durch die Technologien, die wir einsetzen, besonders gewährleistet. Wir können alle Entwicklungsschritte eines Projekts protokollieren und bei Bedarf zurücksetzen. Hier passiert nichts Unerwartetes! Wir machen keine Kompromisse bei der Leistung. Der Code, die Medien und sogar die Schriftarten werden professionell komprimiert, sodass keine Qualitätsverluste sichtbar sind. Alles wird in einem hochmodernen und zuverlässigen Ökosystem gebündelt, das mit höchster Sorgfalt auf Wartbarkeit ausgelegt ist. 80 % eines Softwareprodukts bestehen aus Wartung und Pflege."
         ></TextComponent>
 
         <LargeCard
           withButton={true}
-          head1="Let`s make things happen!"
-          text1="No matter what your idea is, we can be the right partner for you. Send us your request and we will find a suitable solution for each of your concerns."
-          head2="Whether big or small."
-          text2="You can entrust us with any project proposal, we will find a solution that will ensure your complete satisfaction. Don't hesitate to come to us with small ideas. The biggest companies in the world started in a garage. Dream big, start even bigger."
+          head1="Lass Dinge geschehen!"
+          text1="Egal, was Ihre Idee ist, wir können der richtige Partner für Sie sein. Senden Sie uns Ihre Anfrage und wir finden für jedes Ihrer Anliegen eine passende Lösung."
+          head2="Egal ob groß oder klein!"
+          text2="Sie können uns jedes Projekt anvertrauen, wir finden eine Lösung, die Ihre volle Zufriedenheit garantiert. Zögern Sie nicht, mit kleinen Ideen zu uns zu kommen. Die größten Unternehmen der Welt haben in einer Garage begonnen. Träumen Sie groß, starten Sie noch größer."
           classname="bg-[#98f144]"
           button={props.ProposalButton}
         />

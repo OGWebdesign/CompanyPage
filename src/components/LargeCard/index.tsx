@@ -16,7 +16,7 @@ export const LargeCard = (props: {
     
 
     return (
-        <div className="w-full flex justify-center items-center select-none leading-none">
+        <div className="w-full flex justify-center items-center select-none leading-none mt-[10%]">
             <div className={`flex-col p-4 max-w-[60rem] min-h-[15em] ${props.classname} rounded-2xl`}>
                 <div className="w-full flex desktop:flex-row mobile:flex-col gap-x-[2rem]">
                     <div className="w-1/2 mobile:w-full flex-row  mobile:flex-col">
