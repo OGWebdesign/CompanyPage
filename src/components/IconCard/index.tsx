@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const IconCard = (props: { icon : React.ReactElement, title : string}) => {
+const IconCard = (props: { icon : React.ReactElement, title : string, onClick : () => void}) => {
 
     const [clicked, setClicked] = React.useState(false);
     const [select_sound] = useState(new Audio("/sounds/select 3.mp3"));
@@ -18,6 +18,7 @@ const IconCard = (props: { icon : React.ReactElement, title : string}) => {
         <div onClick={() => {
             select_sound.play();
             setClicked(!clicked);
+            props.onClick();
             console.log(clicked);
             }} 
             className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${clicked ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
