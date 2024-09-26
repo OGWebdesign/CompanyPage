@@ -72,13 +72,13 @@ export const StartSite = (props: {
             <Paper className="w-[3rem] fill-[#98f144]" />
           </div>
 
-          <div className="laptop:w-[75%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%]">
+          <div className="laptop:w-[65%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%]">
           <CardBlack
             classname="tablet:-translate-x-28"
             text1="Webseiten & "
             text2="Programmierung"
           >
-            <p className="text-white font-mono text-[0.9rem]">
+            <p className="text-white font-mono text-[1.1rem]">
               Webseiten sind die{" "}
               <span className="text-[#98f144]">Visitenkarten</span> Ihres
               Unternehmens. Versucht jemand Ihr Unternehmen im Internet zu
@@ -115,7 +115,7 @@ export const StartSite = (props: {
             text1="DevOps &"
             text2="Admin"
           >
-            <p className="text-white font-mono text-[0.9rem]">
+            <p className="text-white font-mono text-[1.1rem]">
               Sie haben ein Projekt welches bereits in der Entwicklung ist oder
               kurz davor steht, veröffentlicht zu werden? Wir, OG-Webdesign, helfen Ihnen
               dabei, Ihr Projekt auf die{" "}
@@ -138,7 +138,7 @@ export const StartSite = (props: {
             text1="Anwendungsentwicklung"
             text2=""
           >
-            <p className="text-white font-mono text-[0.9rem]">
+            <p className="text-white font-mono text-[1.1rem]">
               Wenn Sie auf{" "}
               <span className="bg-[#98f144] text-black">
                 Funktionalität und Benutzerfreundlichkeit
@@ -165,7 +165,7 @@ export const StartSite = (props: {
             text1="Künstliche"
             text2="Intelligenz"
           >
-            <p className="text-white font-mono text-[0.9rem]">
+            <p className="text-white font-mono text-[1.1rem]">
               Künstliche Intelligenz ist in aller Munde. Doch was ist KI
               eigentlich? KI ist die Fähigkeit eines Computers,{" "}
               <span className="bg-[#98f144] font-bold text-black">

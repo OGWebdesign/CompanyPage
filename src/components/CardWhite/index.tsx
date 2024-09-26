@@ -8,7 +8,7 @@ export const CardWhite = (props: {
 }) => {
 
     return (
-        <div className={`w-full ${props.classname} select-none  max-w-[35rem] min-w-[30rem] p-5 rounded-2xl flex `}>
+        <div className={`w-full ${props.classname} select-none  w-[60%d] p-5 rounded-2xl flex `}>
 
             <div className="flex flex-col">
 
