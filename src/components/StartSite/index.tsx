@@ -62,14 +62,14 @@ export const StartSite = (props: {
         </div>
 
         {/* WrapperLayout */}
-        <div className="w-full flex flex-col  justify-center items-center mt-[10rem]">
+        <div className="w-full flex flex-col  justify-center items-center mt-[10%]">
           <Element name="services" />
-          <span className="text-[3rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
+          <span className="text-[2.3rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
             Was bieten wir an?
           </span>
 
-          <div className="border-2 border-[#606060] shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-lg p-5 mb-[10%]">
-            <Paper className="w-[3rem] fill-[#98f144]" />
+          <div className="border-2 border-[#606060] shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-lg p-5 mb-[7%]">
+            <Paper className="w-[2rem] fill-[#98f144]" />
           </div>
 
           <div className="laptop:w-[65%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%]">
