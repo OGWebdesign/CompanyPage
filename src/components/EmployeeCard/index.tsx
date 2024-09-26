@@ -5,10 +5,10 @@ export const EmployeeCard = () => {
     <>
       <div className="w-full flex justify-center items-center ">
 
-        <div className="w-full z-30 desktop:max-w-[100rem] items-center flex flex-col cursor-none duration-300  rounded-2xl p-6 justify-center font-mono border-white">
+        <div className="w-full z-30 desktop:max-w-[80rem] items-center flex flex-col cursor-none duration-300  rounded-2xl p-6 justify-center font-mono border-white">
           {/* Left Side */}
 
-          <div className=" flex rounded-xl tablet:flex-row group mobile:justify-center mobile:items-center mobile:flex-col-reverse mt-[10%] duration-500">
+          <div className=" flex rounded-xl laptop:flex-row group mobile:justify-center mobile:items-center mobile:flex-col-reverse mt-[10%] duration-500">
             <div className="text-slate-200 w-full p-5">
               <p className="font-mono font-bold text-[3rem] text-[#98f144] ">
                 Hi, I'm Nils.
@@ -41,7 +41,7 @@ export const EmployeeCard = () => {
           </div> 
 
           {/* Right Side */}
-          <div className=" flex tablet:flex-row group mobile:flex-col mobile:justify-center mobile:items-center duration-500 mt-[10%]">
+          <div className=" flex laptop:flex-row group mobile:flex-col mobile:justify-center mobile:items-center duration-500 mt-[10%]">
           <div className="relative w-full flex justify-start items-center p-5"> 
               {/** ------------------------------PLACE KOSMONAUT HERE------------------------------ */}
               <img

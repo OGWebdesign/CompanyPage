@@ -7,14 +7,14 @@ export const CompanySite = () => {
     return (
 
         <div className="w-full flex justify-center">
-            <img src="Planets/jupiter.webp" alt="Jupiter" className="absolute w-[45rem] desktop-xl:w-[50rem] top-[6rem] right-[4rem] z-10 animate-floatJupiter" />
+            <img src="Planets/jupiter.webp" alt="Jupiter" className="absolute w-[45rem] desktop-xl:w-[50rem]  top-[6rem] mobile:left-[40%] laptop:left-[60%] desktop:left-[60%] z-10 animate-floatJupiter" />
             <img src="Planets/icePlanet.webp" alt="IcePlanet" className="absolute w-[30rem] desktop-xl:w-[50rem] top-[57%] left-[35%] z-10 animate-floatIcePlanet" />
-            <div className="animate-fadeIn w-3/4 max-w-[100rem] flex flex-col z-30">
+            <div className="animate-fadeIn w-3/4 mobile:w-[90%] max-w-[100rem] flex flex-col z-30">
                 <div className="w-full mt-[10%] flex flex-col text-white">
                     <div className="w-full h-[4rem] flex items-center">
-                        <p className="font-sharemono font-bold text-[3rem]">Mission Control</p>
+                        <p className="font-sharemono font-bold text-[3rem] mobile:text-[2rem]">Mission Control</p>
                     </div>
-                    <article className="text-[1.6rem] w-[70%] font-sharemono">OG Webdesign steht für Innovation und maßgeschneiderte
+                    <article className="text-[1.6rem] w-[70%] mobile:text-[1.1rem] font-sharemono">OG Webdesign steht für Innovation und maßgeschneiderte
                         digitale Lösungen, die mehr sind als nur Code. Wir verbinden
                         Kreativität mit Technologie, um atemberaubende Webseiten,
                         leistungsstarke APIs für künstliche Intelligenz und hochmoderne
@@ -24,10 +24,10 @@ export const CompanySite = () => {
                         gerecht werden.</article>
                 </div>
 
-                <img src="graphics/astro.webp" alt="a little cute astronaut" className="absolute w-[25rem] top-[56%] right-[5%] z-10 animate-float" />
+                <img src="graphics/astro.webp" alt="a little cute astronaut" className="absolute w-[20rem] top-[60%] right-[15%] mobile:right-0 mobile:top-[54%] desktop:top-[60%] desktop:right-[10%] desktop-xl:right-[25%] z-10 animate-float" />
                 <EmployeeCard />
 
-                <div className=" px-[5rem] my-[10%] flex flex-col justify-center items-center">
+                <div className="mobile:p-0 my-[10%] flex flex-col justify-center items-center mt-[20%]">
                     <span className="w-[60%] font-sharemono text-[#98f144] text-[3rem] text-center">Unsere Werte - Ihr Erfolg</span>
                     <p className="font-mono text-white text-[1.2rem] text-center mt-[1rem]">
                         Wir bei OG Webdesign glauben daran, dass Technologie die Welt verändern kann – und zwar zum Besseren.
@@ -56,7 +56,7 @@ export const CompanySite = () => {
                     </div>
                 </div>
 
-                <img src="Planets/comet.webp" alt="Comet" className="absolute w-[15rem] bottom-[10rem] left-[5rem] z-10 animate-floatComet" />
+                <img src="Planets/comet.webp" alt="Comet" className="absolute w-[15rem] mobile:bottom-[11%] bottom-[3%] left-[5%] desktop-xl:left-[25%] z-10 animate-floatComet" />
 
                 <LargeCard
                     head1style="text-[#98f144] mt-10"
