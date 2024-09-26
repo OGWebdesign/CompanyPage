@@ -28,8 +28,8 @@ export const EmployeeCard = () => {
                 alt="Astronaut"
                 className=" z-50 w-[20rem] rounded-xl shadow-[0_20px_50px_rgba(39.22,25.49,64.71,_0.7)] border-white"
               />
-              <div className="w-[20.5rem] h-[15rem] top-0 right-[1rem] animate-spotUp  z-30  bg-[#29e36d] absolute rounded-[30rem] blur-xl "></div>
-              <div className="w-[20.5rem] h-[15rem] bottom-0 right-[1rem] animate-spotDown  z-30  mt-[20rem] bg-[#6f27eb] absolute rounded-[30rem] blur-xl"></div>
+              <div className="w-[20.5rem] h-[15rem] tablet:right-[30%] top-0 right-[1rem] animate-spotUp  z-30  bg-[#29e36d] absolute rounded-[30rem] blur-xl "></div>
+              <div className="w-[20.5rem] h-[15rem] tablet:right-[30%] bottom-0 right-[1rem] animate-spotDown  z-30  mt-[20rem] bg-[#6f27eb] absolute rounded-[30rem] blur-xl"></div>
             </div>
           </div>
 
@@ -42,8 +42,8 @@ export const EmployeeCard = () => {
                 alt="Astronaut"
                 className=" z-50 w-[21rem] rounded-xl shadow-[0_20px_50px_rgba(8,_152,_184,_0.7)]  border-white"
               />
-              <div className="w-[20.5rem] h-[15rem] animate-spotUp top-0 left-[2rem] z-30  bg-[#29e36d] absolute rounded-[30rem] blur-xl "></div>
-              <div className="w-[20.5rem] h-[15rem] animate-spotDown bottom-0 left-[2rem] z-30  mt-[20rem] bg-[#6f27eb] absolute rounded-[30rem] blur-xl"></div>
+              <div className="w-[20.5rem] h-[15rem] tablet:left-[30%] animate-spotUp top-0 left-[2rem] z-30  bg-[#29e36d] absolute rounded-[30rem] blur-xl "></div>
+              <div className="w-[20.5rem] h-[15rem] tablet:left-[30%] animate-spotDown bottom-0 left-[2rem] z-30  mt-[20rem] bg-[#6f27eb] absolute rounded-[30rem] blur-xl"></div>
             </div>
             <div className="text-slate-200 w-full py-5 z-30">
               <p className="font-mono font-bold text-[3rem] mobile:text-[2rem] text-[#98f144] ">

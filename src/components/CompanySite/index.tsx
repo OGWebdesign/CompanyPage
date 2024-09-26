@@ -25,7 +25,7 @@ export const CompanySite = () => {
                         gerecht werden.</article>
                 </div>
 
-                <img src="graphics/astro.webp" alt="a little cute astronaut" className="absolute w-[20rem] top-[60%] right-[15%] mobile:right-[-20%] mobile:top-[54%] desktop:top-[60%] desktop:right-[10%] desktop-xl:right-[25%] z-10 animate-float" />
+                <img src="graphics/astro.webp" alt="a little cute astronaut" className="absolute w-[20rem] top-[60%]  right-[15%] mobile:right-[-20%] tablet:left-[60%] mobile:top-[54%] desktop:top-[55%] desktop:right-[10%] desktop-xl:right-[25%] z-10 animate-float" />
                 <EmployeeCard />
 
                 <div className="mobile:p-0 my-[10%] z-10 flex flex-col justify-center items-center mt-[20%]">
@@ -57,7 +57,7 @@ export const CompanySite = () => {
                     </div>
                 </div>
 
-                <img src="Planets/comet.webp" alt="Comet" className="absolute w-[15rem] mobile:bottom-[12%] bottom-[3%] laptop:bottom-[1%] left-[5%] desktop-xl:left-[25%] animate-floatComet" />
+                <img src="Planets/comet.webp" alt="Comet" className="absolute w-[15rem] mobile:bottom-[12%] tablet:bottom-[10%] desktop:bottom-[10%]  bottom-[3%] laptop:bottom-[15%] left-[5%] desktop-xl:left-[25%] animate-floatComet" />
 
                 <LargeCard
                     head1style="text-[#98f144] mt-10"
