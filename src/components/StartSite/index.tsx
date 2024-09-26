@@ -235,12 +235,12 @@ export const StartSite = (props: {
 
         <div className="flex flex-col justify-center items-center mt-[10%]">
           <Element name="development" />
-          <span className="text-[3rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
+          <span className="text-[3rem] mobile:text-[1.8rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
             Wie entwickeln wir?
           </span>
 
           <div className="border-2 border-[#606060] shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-lg p-5">
-            <Laptop className="w-[3rem] fill-[#98f144]" />
+            <Laptop className="w-[3rem] mobile:w-[1rem] fill-[#98f144]" />
           </div>
 
         </div>
