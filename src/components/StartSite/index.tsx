@@ -21,7 +21,7 @@ export const StartSite = (props: {
 
         <div className="w-full h-screen z-50  flex flex-col items-center">
 
-          <div className="w-3/4 mt-[23rem] desktop:mt-[10%] mobile:mt-[10%]">
+          <div className="w-3/4 mobile:w-full mt-[23rem] desktop:mt-[10%] mobile:mt-[10%]">
             <Heading headstyle="text-slate-200" heading="Discover the power of modern web and software development" />
             <TextAndButton children={props.TextAndButtonbt}
 
@@ -29,7 +29,7 @@ export const StartSite = (props: {
               reference="/contact"
             />
           </div>
-          <div className="w-3/4 h-[30rem] flex justify-end items-center">
+          <div className="w-3/4 mobile:w-[95%] h-[30rem] flex justify-end items-center">
             <div className="w-[30rem] duration-300 h-[6rem] desktop-l:mr-[10rem] desktop-l:mt-[15rem] desktop-xxl:mr-[20rem] desktop-xxl:mt-[20rem] backdrop-blur-lg rounded-2xl bg-[#6b6b6b15] flex">
 
               <Link className="group hover:shadow-xl w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center hover:scale-110 group items-center rounded-l-2xl flex-col" to="tech" spy={true} smooth={true} offset={-70} duration={500}>
@@ -64,12 +64,12 @@ export const StartSite = (props: {
         {/* WrapperLayout */}
         <div className="w-full flex flex-col  justify-center items-center mt-[10%]">
           <Element name="services" />
-          <span className="text-[2.3rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
+          <span className="text-[2.3rem] mobile:text-[1.8rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
             Was bieten wir an?
           </span>
 
           <div className="border-2 border-[#606060] shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-lg p-5 mb-[7%]">
-            <Paper className="w-[2rem] fill-[#98f144]" />
+            <Paper className="w-[2rem] mobile:w-[1rem] fill-[#98f144]" />
           </div>
 
           <div className="laptop:w-[65%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%]">
@@ -196,34 +196,34 @@ export const StartSite = (props: {
 
         <div className="flex flex-col justify-center items-center mt-[10%]">
           <Element name="tech" />
-          <span className="text-[2.3rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
-            Welche Technologien nutzen wir?
+          <span className="text-[2.3rem] mobile:text-[1.8rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
+            Welche Technologien <br></br> nutzen wir?
           </span>
 
           <div className="border-2 border-[#606060] shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-lg p-5">
-            <Screw className="w-[2rem] fill-[#98f144]" />
+            <Screw className="w-[2rem] mobile:w-[1rem] fill-[#98f144]" />
           </div>
 
-          <p className="text-white font-sharemono w-[65%] mt-[5%] mb-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono w-[65%] mobile:w-[90%] mt-[5%] mb-[2%] text-[1.2rem] text-left">
             Beim erstellen von Webseiten haben wir uns bewusst gegen ein Content Management System wie Wordpress oder Typo3 entschieden,
             denn wir wollen Webseiten erstellen, die sich von den Konkurenzwebseiten unserer Klienten unterscheiden.
             In Wordpress dagegen werden oftmals auf Plugins und Themes zurückgegriffen. Dies sind keine guten Grundlagen für ein digitales, hoch individuelles Aushängeschild eines Unternehmens.
 
           </p>
 
-          <p className="text-white font-sharemono w-[65%] my-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left">
             Ebenso die langen Ladezeiten, die bei Wordpress durch das veraltete PHP Konstrukt kaum zu verhindern sind.
             Zumal machen die ganzen Plugins eine Wartung an solchen Webseiten sehr schwierig durch die hohen Anzahlen an Seiteneffekten.
           </p>
 
-          <p className="text-white font-sharemono w-[65%] my-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left">
             Außerdem sind bei Wordpress Webseiten selten echte Experten am Werk.
             Man benötigt keine Programmierkenntnisse für ein Content Management System und somit auch keine Programmierer.
             In der Regel sind es Leihen, die sich Wordpress autodidaktisch beigebracht haben und selten ein tiefes Verständnis für Webtechnologien und Sicherheitskonzepte beherschen.
             Diese Eigenschafte bilden keine gute Grundlage für die Erstellung Ihrer Webseite.
           </p>
 
-          <p className="text-white font-sharemono w-[65%] my-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left">
             Deswegen haben wir uns bei OG Webdesign dazu entschieden, Webseiten mit den gleichen Technologien wie Facebook und Instagram zu produzieren.  Wir haben einen sehr hohen Anspruch wenn es um die Sicherheit eines Systems geht. Gerade deswegen verfolgen wir den Ansatz, eigenen Code zu schreiben und die volle Kontrolle über das Projekt zu haben.
           </p>          
           <div className="w-3/4 mt-10">
