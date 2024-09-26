@@ -16,7 +16,7 @@ export const TechStripe = () => {
       });
     return (
         <>
-            <div className="w-full text-[#b9b9b9] select-none font-mono flex justify-center items-center">
+            <div className="w-full max-w-[100rem] text-[#b9b9b9] select-none font-mono flex justify-center items-center">
                 <p>verwendete Technologien: <span className="text-[#98f144] text-[1.2rem]">{typeEffect}</span></p>
             </div>
             <div className="w-full flex flex-col justify-center items-center select-none">

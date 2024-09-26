@@ -204,26 +204,26 @@ export const StartSite = (props: {
             <Screw className="w-[2rem] mobile:w-[1rem] fill-[#98f144]" />
           </div>
 
-          <p className="text-white font-sharemono w-[65%] mobile:w-[90%] mt-[5%] mb-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[90%] mt-[5%] mb-[2%] text-[1.2rem] text-left">
             Beim erstellen von Webseiten haben wir uns bewusst gegen ein Content Management System wie Wordpress oder Typo3 entschieden,
             denn wir wollen Webseiten erstellen, die sich von den Konkurenzwebseiten unserer Klienten unterscheiden.
             In Wordpress dagegen werden oftmals auf Plugins und Themes zurückgegriffen. Dies sind keine guten Grundlagen für ein digitales, hoch individuelles Aushängeschild eines Unternehmens.
 
           </p>
 
-          <p className="text-white font-sharemono w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left">
             Ebenso die langen Ladezeiten, die bei Wordpress durch das veraltete PHP Konstrukt kaum zu verhindern sind.
             Zumal machen die ganzen Plugins eine Wartung an solchen Webseiten sehr schwierig durch die hohen Anzahlen an Seiteneffekten.
           </p>
 
-          <p className="text-white font-sharemono w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left">
             Außerdem sind bei Wordpress Webseiten selten echte Experten am Werk.
             Man benötigt keine Programmierkenntnisse für ein Content Management System und somit auch keine Programmierer.
             In der Regel sind es Leihen, die sich Wordpress autodidaktisch beigebracht haben und selten ein tiefes Verständnis für Webtechnologien und Sicherheitskonzepte beherschen.
             Diese Eigenschafte bilden keine gute Grundlage für die Erstellung Ihrer Webseite.
           </p>
 
-          <p className="text-white font-sharemono w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left">
             Deswegen haben wir uns bei OG Webdesign dazu entschieden, Webseiten mit den gleichen Technologien wie Facebook und Instagram zu produzieren.  Wir haben einen sehr hohen Anspruch wenn es um die Sicherheit eines Systems geht. Gerade deswegen verfolgen wir den Ansatz, eigenen Code zu schreiben und die volle Kontrolle über das Projekt zu haben.
           </p>          
           <div className="w-3/4 mt-10">
