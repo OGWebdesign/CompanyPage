@@ -7,9 +7,9 @@ export const CompanySite = () => {
     return (
 
         <div className="w-full flex justify-center">
-            <img src="Planets/jupiter.webp" alt="Jupiter" className="absolute w-[45rem] desktop-xl:w-[50rem]  top-[6rem] mobile:left-[40%] laptop:left-[60%] desktop:left-[60%] z-10 animate-floatJupiter" />
+            <img src="Planets/jupiter.webp" alt="Jupiter" className="absolute w-[45rem] desktop-xl:w-[50rem] top-[6rem] mobile:left-[40%] laptop:left-[60%] desktop:left-[60%] animate-floatJupiter" />
             <img src="Planets/icePlanet.webp" alt="IcePlanet" className="absolute w-[30rem] desktop-xl:w-[50rem] top-[57%] left-[35%] z-10 animate-floatIcePlanet" />
-            <div className="animate-fadeIn w-3/4 mobile:w-[90%] max-w-[100rem] flex flex-col z-30">
+            <div className="animate-fadeIn w-3/4 mobile:w-[90%] max-w-[100rem] flex flex-col z-20">
                 <div className="w-full mt-[10%] flex flex-col text-white">
                     <div className="w-full h-[4rem] flex items-center">
                         <p className="font-sharemono font-bold text-[3rem] mobile:text-[2rem]">Mission Control</p>

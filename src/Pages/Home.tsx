@@ -196,7 +196,7 @@ function App() {
       {/* Wrapper */}
       <div
         id="navigator"
-        className="w-full bg-black cursor-none overflow-hidden"
+        className="w-full  bg-black cursor-none overflow-hidden"
       >
         <div className="w-full flex justify-center ">
           {/* Start Page Layout */}
@@ -205,7 +205,7 @@ function App() {
               <div className="w-full duration-500 flex flex-col items-center cursor-none ">
                 {/* Begin NavigationBar Integration for One Page Technologie */}
                 {/* Navbar Item Wrapper */}
-                <div className="w-full flex justify-between duration-500 h-[5rem] overflow-visible z-50 bg-transparent">
+                <div className="w-full flex justify-between duration-500 h-[5rem] overflow-visible bg-transparent">
                   {/* Navbar Logo Wrapper */}
                   <div className="tablet:w-1/2 duration-500">
                     {/* Navbar Logo Wrapper End*/}
@@ -265,7 +265,7 @@ function App() {
                 {/* Scroll Bar Wrapper */}
 
                 <div
-                  className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle : notVisibleStyle
+                  className={`w-full mobile:opacity-100 tablet:opacity-100 desktop:opacity-0 z-40 desktop:h-0 flex flex-col justify-center items-center ${visible ? visibleStyle : notVisibleStyle
                     } duration-300 bg-black`}
                 >
                   {/* Scroll Bar Item I */}
