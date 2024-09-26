@@ -13,8 +13,6 @@ export const TechStripe = () => {
         delaySpeed: 100,
         
 
-      
-
       });
     return (
         <>
