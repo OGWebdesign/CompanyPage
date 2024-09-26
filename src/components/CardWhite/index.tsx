@@ -8,15 +8,12 @@ export const CardWhite = (props: {
 }) => {
 
     return (
-        <div className={`w-full ${props.classname} select-none h-[30rem]  max-w-[35rem] min-w-[30rem] p-5 border rounded-2xl flex border-b-8 bg-slate-200`}>
+        <div className={`w-full ${props.classname} select-none  max-w-[35rem] min-w-[30rem] p-5 rounded-2xl flex `}>
 
             <div className="flex flex-col">
 
-                <div className="mobile:p-2 p-4 w-full  text-[#151515]">
-                    <p className="inline-block p-1 font-mono font-semibold mobile:text-[1.1rem] tablet:text-[1.2rem] text-[1.3rem]">{props.text1} {props.text2}</p>
-                    <article className="h-full  duration-300 text-[0.95rem] tablet:text-[1rem] mobile:text-[0.9rem] desktop:text-[1rem] p-3 flex items-center font-mono font-semibold">
-                    {props.description}
-                </article>
+                <div className=" w-full  text-white">
+                    <p className="inline-block p-1 mb-[0.5rem] font-mono font-semibold mobile:text-[1.1rem] tablet:text-[1.2rem] text-[1.3rem]">{props.text1} {props.text2}</p>
                 </div>
                 {props.children}
             </div>
