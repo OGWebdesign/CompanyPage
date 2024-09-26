@@ -264,7 +264,7 @@ export const OfferSite = () => {
         </div>
         </div>
       </div>
-      <div className="mt-[15%]">
+      <div className="">
       <div className="w-full flex flex-col mt-5 
   mobile:px-2 tablet:px-8 
   font-mono">
