@@ -206,13 +206,13 @@ function App() {
               <div className="w-full duration-500 flex flex-col items-center cursor-none ">
                 {/* Begin NavigationBar Integration for One Page Technologie */}
                 {/* Navbar Item Wrapper */}
-                <div className="w-full flex justify-between duration-500 h-[5rem] overflow-visible bg-transparent">
+                <div className="w-full flex justify-between duration-500 h-[4rem] text-slate-200 overflow-visible bg-transparent">
                   {/* Navbar Logo Wrapper */}
-                  <div className="tablet:w-1/2 duration-500">
+                  <div className="tablet:w-1/2 duration-500 flex items-center ml-[10%]">
                     {/* Navbar Logo Wrapper End*/}
 
                     {/* Navbar Logo */}
-                    <img/> {/* Logo Hier Einfügen !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
+                    <p className="text-white font-bold text-[2rem]">OG Webdesign</p>{/* Logo Hier Einfügen !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
                   </div>
                   {/* Navbar Logo End*/}
 
