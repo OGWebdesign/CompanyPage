@@ -77,7 +77,7 @@ export const OfferSite = () => {
     <div className="w-full h-full flex flex-col items-center">
     <div className=" desktop:w-full desktop-l:w-[80%] mobile:w-full flex flex-col justify-center items-center">
       <div className="flex mobile:flex-col laptop:flex-row justify-around w-3/4">
-        <div className="w-3/4 h-[50rem] flex items-center">
+        <div className="w-3/4 mobile:w-full h-[50rem] flex items-center">
           <div className="p-1">
             <div className="offertext mt-[100%] max-w-[40rem]">
               <p className="font-bold text-white text-[2.5rem] mobile:text-[1.6rem] font-sharemono">
