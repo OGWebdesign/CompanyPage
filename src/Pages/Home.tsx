@@ -326,7 +326,7 @@ function App() {
                       }}
                       className="p-3 mx-3 cursor-none hover:text-[#98f144]"
                     >
-                      Information
+                      Unterstützung
                     </div>
                   </div>
                   <div
