@@ -247,11 +247,12 @@ export const StartSite = (props: {
 
 
 
-
+      <div className="w-full flex justify-center items-center">
         <TextComponent
           headline="Hochgeschwindigkeitsleistung für Websites und Webanwendungen auf dem nächsten Level."
           text="Wir haben uns bewusst gegen Content-Management-Lösungen bei der Entwicklung von Websites entschieden. Einerseits haben wir uns die Aufgabe gestellt, das Internet mit hochgradig individuellen Kundenprojekten zu revolutionieren. Wir wollen Unternehmen helfen, die verstanden haben, wie man sich von der Konkurrenz abhebt, und eine Alternative zu Angeboten bieten, die hauptsächlich aus Content-Management-Systemen bestehen. Andererseits ist die vollständige Kontrolle über das Projekt wichtig. Für perfektionistische Entwickler wie uns ist es besonders wichtig, selbst die kleinsten Details ändern zu können. Leistung und Wartbarkeit werden durch die Technologien, die wir einsetzen, besonders gewährleistet. Wir können alle Entwicklungsschritte eines Projekts protokollieren und bei Bedarf zurücksetzen. Hier passiert nichts Unerwartetes! Wir machen keine Kompromisse bei der Leistung. Der Code, die Medien und sogar die Schriftarten werden professionell komprimiert, sodass keine Qualitätsverluste sichtbar sind. Alles wird in einem hochmodernen und zuverlässigen Ökosystem gebündelt, das mit höchster Sorgfalt auf Wartbarkeit ausgelegt ist. 80 % eines Softwareprodukts bestehen aus Wartung und Pflege."
         ></TextComponent>
+        </div>
 
         <LargeCard
           withButton={true}
