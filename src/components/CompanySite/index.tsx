@@ -10,11 +10,11 @@ export const CompanySite = () => {
             <img src="Planets/jupiter.webp" alt="Jupiter" className="absolute w-[45rem] desktop-xl:w-[50rem] top-[6rem] mobile:left-[40%] laptop:left-[60%] desktop:left-[60%] animate-floatJupiter" />
             <img src="Planets/icePlanet.webp" alt="IcePlanet" className="absolute w-[30rem] desktop-xl:w-[50rem] top-[57%] left-[35%] z-10 animate-floatIcePlanet" />
             <div className="animate-fadeIn w-3/4 mobile:w-[90%] tablet:w-[] max-w-[100rem] flex flex-col z-20">
-                <div className="w-full tablet:mt-[10%] mobile:mt-[30%] flex flex-col text-white">
+                <div className="w-full tablet:w-3/4 laptop:w-[55%] tablet:mt-[10%] mobile:mt-[30%] flex flex-col text-white">
                     <div className="w-full flex items-center">
                         <p className="font-sharemono font-bold desktop:text-[4rem] m mobile:text-[2rem]">Mission Control</p>
                     </div>
-                    <article className="text-[1.6rem] w-[70%] mobile:mt-16 laptop:mt-1
+                    <article className="tablet:text-[1.1rem] w-[70%] mobile:mt-16 laptop:mt-1
                      mobile:w-full mobile:text-[0.9rem] font-sharemono">OG Webdesign steht für Innovation und maßgeschneiderte
                         digitale Lösungen, die mehr sind als nur Code. Wir verbinden
                         Kreativität mit Technologie, um atemberaubende Webseiten,
@@ -28,7 +28,7 @@ export const CompanySite = () => {
                 <img src="graphics/astro.webp" alt="a little cute astronaut" className="absolute w-[20rem] top-[60%] right-[15%] mobile:right-[-20%] mobile:top-[54%] desktop:top-[60%] desktop:right-[10%] desktop-xl:right-[25%] z-10 animate-float" />
                 <EmployeeCard />
 
-                <div className="mobile:p-0 my-[10%] flex flex-col justify-center items-center mt-[20%]">
+                <div className="mobile:p-0 my-[10%] z-10 flex flex-col justify-center items-center mt-[20%]">
                     <span className="w-[60%] font-sharemono text-[#98f144] mobile:text-[2rem] text-[3rem] text-center">Unsere Werte Ihr Erfolg</span>
                     <p className="font-mono text-white text-[1.2rem] text-center mt-[1rem]">
                         Wir bei OG Webdesign glauben daran, dass Technologie die Welt verändern kann – und zwar zum Besseren.
@@ -57,7 +57,7 @@ export const CompanySite = () => {
                     </div>
                 </div>
 
-                <img src="Planets/comet.webp" alt="Comet" className="absolute w-[15rem] mobile:bottom-[11%] bottom-[3%] left-[5%] desktop-xl:left-[25%] z-10 animate-floatComet" />
+                <img src="Planets/comet.webp" alt="Comet" className="absolute w-[15rem] mobile:bottom-[12%] bottom-[3%] laptop:bottom-[1%] left-[5%] desktop-xl:left-[25%] animate-floatComet" />
 
                 <LargeCard
                     head1style="text-[#98f144] mt-10"
@@ -66,8 +66,8 @@ export const CompanySite = () => {
                     text2Style="text-[#b9b9b9]"
                     head2="Young and unconventional"
                     head1="Since XX23"
-                    text2="At OG Webdesign, we believe that your website should be more than just a digital business card. It should tell your story, bring your brand to life and delight your customers. Our team consists of talented designers, developers and strategists who work with passion and creativity to turn your ideas into reality. Straight forward!"
-                    text1="We look back on a short but successful past. We have implemented every project, every application, no matter how small with great care and an even greater sense of responsibility, always to the full satisfaction of our clients and beyond. We are thrilled to see how our websites and software products have transformed us into a completely different company, from the way we present ourselves online to how we operate our software products internally."></LargeCard>
+                    text2="Wir bei OG Webdesign glauben, dass Ihre Website mehr als nur eine digitale Visitenkarte sein sollte. Es soll Ihre Geschichte erzählen, Ihre Marke zum Leben erwecken und Ihre Kunden begeistern. Unser Team besteht aus talentierten Designern, Entwicklern und Strategen, die mit Leidenschaft und Kreativität daran arbeiten, Ihre Ideen in die Realität umzusetzen. Direkt!"
+                    text1="Wir blicken auf eine kurze, aber erfolgreiche Vergangenheit zurück. Wir haben jedes Projekt, jede noch so kleine Anwendung mit großer Sorgfalt und noch größerem Verantwortungsbewusstsein umgesetzt, immer zur vollsten Zufriedenheit unserer Kunden und darüber hinaus. Wir sind begeistert zu sehen, wie unsere Websites und Softwareprodukte unserer Kunden in ein völlig anderes Unternehmen verwandelt haben, von der Art und Weise, wie Sie sich online präsentieren, bis hin zur Art und Weise, wie Sie unsere Softwareprodukte intern betreiben."></LargeCard>
 
             </div>
         </div>

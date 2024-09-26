@@ -35,7 +35,7 @@ function App() {
     ? "fill-[#98f144] rotate-[630deg]"
     : "rotate-[180deg] fill-slate-300";
   // indicator change per state
-  const indicator = visible ? "on" : "off";
+  const indicator = visible ? "Menü an" : "Menü aus";
   // Text color indicator change per state
   const textindicator = visible ? "text-slate-200" : "text-[#777777]";
   // make border unvisible in unwrap state
@@ -224,7 +224,7 @@ function App() {
                       className={`${homeActive} mobile:-z-10 cursor-none tablet:-z-10 desktop:z-0 flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
                     mobile:opacity-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`}
                     >
-                      Home
+                      Start
                     </div>
 
                     {/* Navbar Item II */}
@@ -233,7 +233,7 @@ function App() {
                       className={`${companyActive} mobile:-z-10 cursor-none tablet:-z-10 desktop:z-0 flex justify-center items-center tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
                     mobile:opacity-0 mobile:w-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`}
                     >
-                      Company
+                      Über uns
                     </div>
 
                     {/* Navbar Item III */}
@@ -242,7 +242,7 @@ function App() {
                       className={`${offerActive} mobile:-z-10 cursor-none tablet:-z-10 desktop:z-0 flex justify-center items-center mobile:w-[0rem] tablet:w-[8rem] h-[2rem] mobile:mx-0.8 tablet:mx-2 font-mono tablet:font-semibold mobile:text-[0rem] tablet:text-[0rem] desktop:text-[1.2rem]
                      mobile:opacity-0 desktop:opacity-100 border-[#151515] hover:text-white hover:border-b-8 rounded-lg duration-300`}
                     >
-                      Offer
+                      Anfrage
                     </div>
 
                     {/* Burger Menu Button */}
@@ -287,7 +287,7 @@ function App() {
                       setVisible(!visible);
                     }}
                   >
-                    Company
+                    Über uns
                   </div>
                   {/* Scroll Bar Item III */}
                   <div
@@ -297,7 +297,7 @@ function App() {
                       setVisible(!visible);
                     }}
                   >
-                    Offer
+                    Anfrage
                   </div>
 
                   <div className="w-full h-5  flex justify-center text-[0.8rem] mt-10 items-center text-[#858585] overflow-hidden font-mono">
@@ -308,7 +308,7 @@ function App() {
                       }}
                       className="p-3 mx-3 cursor-none hover:text-[#98f144]"
                     >
-                      Imprint
+                      Impressum
                     </div>
                     <div
                       onClick={() => {
@@ -317,7 +317,7 @@ function App() {
                       }}
                       className="p-3 mx-3 cursor-none hover:text-[#98f144]"
                     >
-                      Privacy
+                      Datenschutz
                     </div>
                     <div
                       onClick={() => {
@@ -326,7 +326,7 @@ function App() {
                       }}
                       className="p-3 mx-3 cursor-none hover:text-[#98f144]"
                     >
-                      Procedure
+                      Information
                     </div>
                   </div>
                   <div
@@ -353,7 +353,7 @@ function App() {
               {/* get you component for linkship and add an onCLick event. Now you can render dynamicly with an indicator Number */}
               {indicatorNav === 1 && (
                 <StartSite
-                  TextAndButtonbt={orderMeetingbt("Book a consultation")}
+                  TextAndButtonbt={orderMeetingbt("Gespräch vereinbaren")}
                   BlackCardButton={BlackCardbt1()}
                   WhiteCardButton={WhiteCardbt1()}
                   ProposalButton={Proposal()}
@@ -382,7 +382,7 @@ function App() {
             laptop:flex-row mobile:flex-col">
               <div className="laptop:w-[25%] mobile:w-full laptop:h-[10rem] flex flex-col justify-center p-5
               mobile:justify-between">
-                <span className="text-[1.3rem] text-[#98f144]">Question?</span>
+                <span className="text-[1.3rem] text-[#98f144]">Fragen?</span>
                 <span className="mt-[2rem] laptop:text-[2rem] mobile:text-[1.3rem] text-slate-200">
                   info
                   <span className="text-[#98f144]">@</span>
@@ -395,9 +395,7 @@ function App() {
               <div className="laptop:w-[50%] h-full flex flex-col justify-center items-center laptop:text-[2rem] mobile:text-[1.7rem] text-center
               mobile:mt-[1rem] mobile:w-full tablet:w-[70%] laptop:m-0">
                 <span className="text-slate-200">
-                  Got a nice <span className="text-[#98f144]">Idea</span>? Come
-                  to us and <span className="text-[#98f144]">talk</span> with
-                  us!
+                  Haben Sie eine schöne <span className="text-[#98f144]">Idee</span>? <span className="text-[#98f144]">Sprechen</span> Sie mit uns!
                 </span>
                 <a onClick={() => setIndicatorNav(4)} href="mailto:info@og-webdesign.de"  className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039]">
                   Contact us
@@ -405,13 +403,13 @@ function App() {
               </div>
               <div className="laptop:w-[25%] mobile:w-full h-full flex mobile:my-[1.5rem] laptop:my-0 laptop:flex-col laptop:justify-center mobile:justify-around items-end p-5">
                 <span onClick={() => setIndicatorNav(2)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
-                  About us
+                  Über uns
                 </span>
                 <span onClick={() => setIndicatorNav(3)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] laptop:my-[1rem] hover:text-[#98f144] transition-all duration-500">
-                  Pricing
+                  Anfrage
                 </span>
                 <span onClick={() => setIndicatorNav(6)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
-                  Imprint
+                  Impressum
                 </span>
               </div>
             </div>
@@ -421,7 +419,7 @@ function App() {
                 <span className="text-[#98f144] px-2">©</span> 2024 <span className="text-[#98f144] pl-2">OG</span>-Webdesign
               </div>
               <div className="laptop:w-1/3 flex justify-center items-center text-slate-200 text-[1.3rem]">
-                <span onClick={() => setIndicatorNav(8)} className="border-b-[#98f144] border-b-2 hover:animate-ownpulse transition-all ease-in-out duration-500 mobile:my-[1.2rem] laptop:my-0">Datasecure</span>
+                <span onClick={() => setIndicatorNav(8)} className="border-b-[#98f144] border-b-2 hover:animate-ownpulse transition-all ease-in-out duration-500 mobile:my-[1.2rem] laptop:my-0">Datenschutz</span>
               </div>
               <div className="laptop:w-1/3 mobile:w-1/2 flex justify-evenly items-center">
                 <div className="w-[25rem] flex justify-evenly">
@@ -432,7 +430,7 @@ function App() {
               </div>
             </div>
             <span className="w-full text-center pt-[3rem] text-slate-200 laptop:text-[5rem] mobile:text-[2rem] font-bold">
-              LET'S <span className="text-[#98f144]">WORK</span> TOGETHER!
+              Lass uns <span className="text-[#98f144]">ZUSAMMEN</span> arbeiten!
             </span>
           </div>
         </div>
