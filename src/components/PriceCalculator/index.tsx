@@ -22,10 +22,10 @@ const PriceCalculator = () => {
     return (
         <div className="w-full flex flex-col p-3 items-center">
         <div className="w-full flex tablet:justify-evenly mobile:justify-between items-center">
-            <IconCard title="Website" icon={<CodeIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
-            <IconCard title="Web-App" icon={<WebAppIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
-            <IconCard title="Consulting" icon={<BookIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
-            <IconCard title="Dev-Ops" icon={<ComputerIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
+            <IconCard onClick={() => {}} title="Website" icon={<CodeIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
+            <IconCard onClick={() => {}} title="Web-App" icon={<WebAppIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
+            <IconCard onClick={() => {}} title="Consulting" icon={<BookIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
+            <IconCard onClick={() => {}} title="Dev-Ops" icon={<ComputerIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]"/>} />
         </div>
         <div className={`w-[65%] h-[3rem] bg-[#151515] mt-[4rem]  flex justify-between items-center rounded-xl  `}>   
             <div onClick={() => {
