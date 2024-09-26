@@ -194,7 +194,7 @@ export const StartSite = (props: {
         </div>
       </div>
 
-        <div className="flex flex-col justify-center items-center mt-[10%]">
+        <div className="flex flex-col justify-center items-center mt-[3%]">
           <Element name="tech" />
           <span className="text-[2.3rem] mobile:text-[1.8rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
             Welche Technologien <br></br> nutzen wir?
