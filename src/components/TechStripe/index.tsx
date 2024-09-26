@@ -16,11 +16,11 @@ export const TechStripe = () => {
       });
     return (
         <>
-            <div className="w-full max-w-[100rem] text-[#b9b9b9] select-none font-mono flex justify-center items-center">
+            <div className="w-full  text-[#b9b9b9] select-none font-mono flex justify-center items-center">
                 <p>verwendete Technologien: <span className="text-[#98f144] text-[1.2rem]">{typeEffect}</span></p>
             </div>
             <div className="w-full flex flex-col justify-center items-center select-none">
-                <div className="w-full p-8 mt-4 gap-20 grid desktop:grid-rows-1 desktop:grid-cols-6 tablet:grid-rows-2 tablet:grid-cols-3 mobile:grid-rows-3 mobile:grid-cols-2">
+                <div className="w-full max-w-[100rem] p-8 mt-4 gap-20 grid desktop:grid-rows-1 desktop:grid-cols-6 tablet:grid-rows-2 tablet:grid-cols-3 mobile:grid-rows-3 mobile:grid-cols-2">
 
 
                     <div className="flex flex-col justify-center group items-center">
@@ -61,7 +61,7 @@ export const TechStripe = () => {
 
             </div>
             <div className="w-full flex flex-col justify-center items-center select-none">
-                <div className="w-full p-8 mt-4 gap-20 grid desktop:grid-rows-1 desktop:grid-cols-6 tablet:grid-rows-2 tablet:grid-cols-3 mobile:grid-rows-3 mobile:grid-cols-2">
+                <div className="w-full p-8 mt-4 max-w-[100rem] gap-20 grid desktop:grid-rows-1 desktop:grid-cols-6 tablet:grid-rows-2 tablet:grid-cols-3 mobile:grid-rows-3 mobile:grid-cols-2">
 
 
                     <div className="flex flex-col justify-center group items-center">
