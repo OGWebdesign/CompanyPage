@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 export const ContactForm = () => {
 
@@ -6,6 +7,17 @@ export const ContactForm = () => {
   const [hTextBox, setHTextBox] = React.useState<boolean>(false);
 
   const textAreaRef = React.useRef<HTMLTextAreaElement>(null);
+
+    const [name, setName] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+    const [company, setCompany] = useState<string>("");
+    const [phone, setPhone] = useState<string>("");
+    const [message, setMessage] = useState<string>("");
+
+
+    const [send, setSend] = useState<boolean>(false);
+    const [sendSuccess, setSendSuccess] = useState<boolean>(false);
+    const [firstAnimation, setFirstAnimation] = useState<boolean>(false);
 
   const messageHandler = () => {
       setCheck(true);
@@ -21,11 +33,59 @@ export const ContactForm = () => {
     }
   }
 
+  const handleSubmit = async () => {
+    setSend(true);
+    console.log(name, email, company, phone, message);
+        if (!name || !email || !phone || !message) {
+            alert("Bitte fülle alle Felder aus!");
+            setSend(false);
+            return;
+        } 
+          await axios.post('https://og-api-mu.vercel.app/contact/send-email', {name, email, company, phone, message})
+          .then((res) => {
+            console.log(res.data);
+            setTimeout(() => {
+              setFirstAnimation(true);
+            }, 500);
+            setTimeout(() => {
+              setSendSuccess(true);
+            }, 500);
+            setName("");
+            setEmail("");
+            setCompany("");
+            setPhone("");
+            setMessage("");
+            setSend(false);
+            setSendSuccess(false);
+            setFirstAnimation(false);
+          })
+          .catch((error) => {
+            console.error('Error sending data:', error);
+            alert("Fehler beim Senden der Nachricht. Bitte versuche es erneut.");
+            setName("");
+            setEmail("");
+            setCompany("");
+            setPhone("");
+            setMessage("");
+            setSend(false);
+            setSendSuccess(false);
+          });
+  }
+
 
   return (
   <div className="w-full flex flex-col mt-5 
   mobile:px-2 tablet:px-8 
   font-mono">
+
+    {/* SUCCESS WINDOW*/}
+    <div className={`w-[45rem] h-[15rem] bg-[#000000]  font-sharemono absolute bottom-[10%] ${sendSuccess ? "animate-flyoffscreen block" : "hidden"} ${firstAnimation ? "animate-fadeIn" : ""} z-30 flex justify-center items-center rounded-xl`}>
+        <span className="text-[#98f144] text-[3rem] text-center">
+          Nachricht erfolgreich gesendet!
+        </span>
+      </div>
+
+
     <h1 className={`text-white mobile:text-[2rem] tablet:text-[2.3rem] laptop:text-[3rem] mobile:ml-[4rem] laptop:ml-[15rem] font-bold font-mono transition-all duration-700 ease-in-out ${check && "-translate-y-14"}`}>HELLO,</h1>
     <form id="form1" className="flex flex-col items-start">
 
@@ -41,7 +101,7 @@ export const ContactForm = () => {
 
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">NAME</span> IS </span>
 
-        <input name="namefield"  type="input" placeholder="Name*" className=" cursor-none
+        <input name="namefield" value={name} type="input" placeholder="Name*" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem] 
 
@@ -49,6 +109,10 @@ export const ContactForm = () => {
         placeholder-[#777777] "
         
         required
+
+        onChange={(e: React.FormEvent<HTMLInputElement>) => {
+          setName(e.currentTarget.value);
+        }}
         />
 
       </div>
@@ -72,7 +136,7 @@ export const ContactForm = () => {
         
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">MAIL</span> IS </span>
        
-        <input name="emailfield" type="input" placeholder="Email*" className=" cursor-none
+        <input name="emailfield" value={email} type="input" placeholder="Email*" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
@@ -80,6 +144,10 @@ export const ContactForm = () => {
         placeholder-[#777777] flex justify-center items-center "
         
         required
+
+        onChange={(e: React.FormEvent<HTMLInputElement>) => {
+          setEmail(e.currentTarget.value);
+        }}
         />
 
       </div>
@@ -93,12 +161,17 @@ export const ContactForm = () => {
         
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">FIRMA</span> IS </span>
        
-        <input name="emailfield" type="input" placeholder="Firma" className=" cursor-none
+        <input name="emailfield" value={company} type="input" placeholder="Firma" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
          text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
         placeholder-[#777777] flex justify-center items-center "
+
+
+        onChange={(e: React.FormEvent<HTMLInputElement>) => {
+          setCompany(e.currentTarget.value);
+        }}
         />
 
       </div>
@@ -113,12 +186,18 @@ export const ContactForm = () => {
         
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">PHONE</span> IS </span>
        
-        <input name="emailfield" type="input" placeholder="Telefon*" className=" cursor-none
+        <input name="emailfield" value={phone} type="input" placeholder="Telefon*" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
          text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
         placeholder-[#777777] flex justify-center items-center "
+
+        required
+
+        onChange={(e: React.FormEvent<HTMLInputElement>) => {
+          setPhone(e.currentTarget.value);
+        }}
         />
 
       </div>
@@ -143,21 +222,25 @@ export const ContactForm = () => {
         onBlur={() =>blurHandler()}
         ref={textAreaRef}
         required
+        value={message}
+        onChange = {(e: React.FormEvent<HTMLTextAreaElement>) => {
+          setMessage(e.currentTarget.value);
+        }
+        }
         />
       </div>
     </div>
-
+    </form>
     
     {/* BUTTON */}
-      <div className="w-full flex justify-center mb-10 ">
+    <div className="w-full flex justify-center mb-10 ">
 
-      <button type="submit" className={`text-[#161616] select-none border-none bg-[#98f144] font-semibold py-2 px-4 mt-8 rounded-lg shadow-xl 
+      <button onClick={() => handleSubmit()} type="submit" className={`text-[#161616] select-none border-none bg-[#98f144] font-semibold py-2 px-4 mt-8 rounded-lg shadow-xl 
       hover:bg-[#6ba039] cursor-none font-mono transition duration-700 ease-in-out ${check && "-translate-y-12"}`}>
-      Send Request
+      {!send ? "Senden" : "wird gesendet..."}
       </button>
 
       </div>
-    </form>
   </div>
   );
 };
