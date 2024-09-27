@@ -58,14 +58,14 @@ function App() {
 
   // ---------------------------   Button for order meeting for component TextAndButton for working with one Page technologie
   const Proposal = () =>(
-      <div onClick={()=>setIndicatorNav(3)} className="tablet:w-[20rem] border-2  duration-300 hover:font-semibold hover:text-[#000000] hover:bg-[#98f144] mobile:w-[10rem] flex justify-center items-center text-center font-mono text-[#98f144] h-[3rem] ml-4 mt-14 bg-[#000000] rounded-lg border-[#151515]">
+      <div onClick={()=>{setIndicatorNav(3);window.scrollTo({top:0,behavior:'smooth'});}} className="tablet:w-[20rem] border-2  duration-300 hover:font-semibold hover:text-[#000000] hover:bg-[#98f144] mobile:w-[10rem] flex justify-center items-center text-center font-mono text-[#98f144] h-[3rem] ml-4 mt-14 bg-[#000000] rounded-lg border-[#151515]">
           Beratungstermin vereinbaren
       </div>
   
   )
   const orderMeetingbt = (text: string) => (
     <div
-      onClick={() => setIndicatorNav(4)}
+      onClick={() => {setIndicatorNav(4);window.scrollTo({top:0,behavior:'smooth'});}}
       className="text-[#151515] cursor-none select-none border-none bg-[#98f144] font-semibold mt-8 py-2 px-4 rounded-lg hover:bg-[#6ba039] font-mono transition duration-300 ease-in-out"
     >
       {text}
@@ -80,7 +80,7 @@ function App() {
   const BlackCardbt1 = () => (
     <div className="w-full h-1/2 flex justify-center items-center">
       <div
-        onClick={() => setIndicatorNav(3)}
+        onClick={() => {setIndicatorNav(3);window.scrollTo({top:0,behavior:'smooth'});}}
         className="w-[8rem] h-12 rounded-xl duration-300 group border-2 bg-slate-100 hover:bg-[#98f144] hover:border-[#e9e9e9]  flex justify-center items-center"
       >
         <p className="font-mono text-[1.1rem] font-semibold text-[#151515] group-hover:text-[#151515] mr-3 ">
@@ -94,7 +94,7 @@ function App() {
   const WhiteCardbt1 = () => (
     <div className="w-full h-1/2 flex justify-center items-center">
       <div
-        onClick={() => setIndicatorNav(3)}
+        onClick={() => {setIndicatorNav(3);window.scrollTo({top:0,behavior:'smooth'});}}
         className="w-[8rem] group h-12 rounded-xl border-2 border-slate-200 duration-300 group hover:border-[#151515] bg-[#151515] hover:bg-[#98f144] flex justify-center items-center"
       >
         <p className="font-mono text-[1.1rem] font-semibold text-slate-200 group-hover:text-[#151515] mr-3 ">
@@ -107,7 +107,7 @@ function App() {
  
   const Maintenancebt = () => (
     <div
-      onClick={() => setIndicatorNav(1)}
+      onClick={() => {setIndicatorNav(1);window.scrollTo({top:0,behavior:'smooth'});}}
       className="w-[14rem] h-[3rem] hover:bg-[#6ba039] duration-300 rounded-lg mt-10 bg-[#98f144] flex justify-center items-center"
     >
       <p className="text-[#151515] font-mono font-bold">Back to Main Menu</p>
@@ -119,18 +119,22 @@ function App() {
   }
   const handleHome = () => {
     setIndicatorNav(1);
+    window.scrollTo({top:0,behavior:'smooth'});
   };
 
   const handleCompany = () => {
     setIndicatorNav(2);
+    window.scrollTo({top:0,behavior:'smooth'});
   };
 
   const handleOffer = () => {
     setIndicatorNav(3);
+    window.scrollTo({top:0,behavior:'smooth'});
   };
 
   const handleMail = () => {
     setIndicatorNav(4);
+    window.scrollTo({top:0,behavior:'smooth'});
   };
 
   // Side Bar Icons
@@ -403,18 +407,18 @@ function App() {
                 <span className="text-slate-200 z-50">
                   Haben Sie eine schöne <span className="text-[#98f144]">Idee</span>? <span className="text-[#98f144]">Sprechen</span> Sie mit uns!
                 </span>
-                <a onClick={() => setIndicatorNav(3)} className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039] z-50">
+                <a onClick={() => {setIndicatorNav(3);window.scrollTo({top:0,behavior:'smooth'});}} className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039] z-50">
                   Anfrage
                 </a>
               </div>
               <div className="laptop:w-[25%] mobile:w-full h-full flex mobile:my-[1.5rem] laptop:my-0 laptop:flex-col laptop:justify-center mobile:justify-around items-end p-5 z-50">
-                <span onClick={() => setIndicatorNav(2)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
+                <span onClick={() => {setIndicatorNav(2);window.scrollTo({top:0,behavior:'smooth'});}} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
                   Über uns
                 </span>
-                <span onClick={() => setIndicatorNav(4)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] laptop:my-[1rem] hover:text-[#98f144] transition-all duration-500">
+                <span onClick={() => {setIndicatorNav(4);window.scrollTo({top:0,behavior:'smooth'});}} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] laptop:my-[1rem] hover:text-[#98f144] transition-all duration-500">
                   Email
                 </span>
-                <span onClick={() => setIndicatorNav(6)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
+                <span onClick={() => {setIndicatorNav(6);window.scrollTo({top:0,behavior:'smooth'});}} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
                   Impressum
                 </span>
               </div>
@@ -425,7 +429,7 @@ function App() {
                 <span className="text-[#98f144] px-2">©</span> 2024 <span className="text-[#98f144] pl-2">OG</span>-Webdesign
               </div>
               <div className="laptop:w-1/3 flex justify-center items-center text-slate-200 text-[1.3rem]">
-                <span onClick={() => setIndicatorNav(8)} className="border-b-[#98f144] border-b-2 hover:animate-ownpulse transition-all ease-in-out duration-500 mobile:my-[1.2rem] laptop:my-0">Datenschutz</span>
+                <span onClick={() => {setIndicatorNav(8);window.scrollTo({top:0,behavior:'smooth'});}} className="border-b-[#98f144] border-b-2 hover:animate-ownpulse transition-all ease-in-out duration-500 mobile:my-[1.2rem] laptop:my-0">Datenschutz</span>
               </div>
               <div className="laptop:w-1/3 mobile:w-1/2 flex justify-evenly items-center">
                 <div className="w-[25rem] flex justify-evenly">
