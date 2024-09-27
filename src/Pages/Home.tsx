@@ -72,6 +72,10 @@ function App() {
     </div>
   );
 
+  const openHelpcenter= () => {
+    setIndicatorNav(10);
+  }
+
 
   const BlackCardbt1 = () => (
     <div className="w-full h-1/2 flex justify-center items-center">
@@ -321,12 +325,12 @@ function App() {
                     </div>
                     <div
                       onClick={() => {
-                        setIndicatorNav(4);
+                        setIndicatorNav(10);
                         setVisible(!visible);
                       }}
                       className="p-3 mx-3 cursor-none hover:text-[#98f144]"
                     >
-                      Unterstützung
+                      Hilfecenter
                     </div>
                   </div>
                   <div
@@ -357,6 +361,7 @@ function App() {
                   BlackCardButton={BlackCardbt1()}
                   WhiteCardButton={WhiteCardbt1()}
                   ProposalButton={Proposal()}
+                  openHelpcenter={openHelpcenter}
                 ></StartSite>
               )}
               {indicatorNav === 2 && <CompanySite></CompanySite>}
@@ -364,6 +369,7 @@ function App() {
               {indicatorNav === 3 && <OfferSite></OfferSite>}
               {indicatorNav === 6 && <Impressum></Impressum>}
               {indicatorNav === 8 && <Privacy></Privacy>}
+              {indicatorNav === 10 && <Maintenance></Maintenance>}
               {/*------------------------------------------------------------------------ End Dynamic Render Area -------------------------------------------------------*/}
             </div>
           </div>
@@ -394,19 +400,19 @@ function App() {
               </div>
               <div className="laptop:w-[50%] h-full flex flex-col justify-center items-center laptop:text-[2rem] mobile:text-[1.7rem] text-center
               mobile:mt-[1rem] mobile:w-full tablet:w-[70%] laptop:m-0">
-                <span className="text-slate-200">
+                <span className="text-slate-200 z-50">
                   Haben Sie eine schöne <span className="text-[#98f144]">Idee</span>? <span className="text-[#98f144]">Sprechen</span> Sie mit uns!
                 </span>
-                <a onClick={() => setIndicatorNav(4)} href="mailto:info@og-webdesign.de"  className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039]">
+                <a onClick={() => setIndicatorNav(3)} className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039] z-50">
                   Anfrage
                 </a>
               </div>
-              <div className="laptop:w-[25%] mobile:w-full h-full flex mobile:my-[1.5rem] laptop:my-0 laptop:flex-col laptop:justify-center mobile:justify-around items-end p-5">
+              <div className="laptop:w-[25%] mobile:w-full h-full flex mobile:my-[1.5rem] laptop:my-0 laptop:flex-col laptop:justify-center mobile:justify-around items-end p-5 z-50">
                 <span onClick={() => setIndicatorNav(2)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
                   Über uns
                 </span>
-                <span onClick={() => setIndicatorNav(3)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] laptop:my-[1rem] hover:text-[#98f144] transition-all duration-500">
-                  Anfrage
+                <span onClick={() => setIndicatorNav(4)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] laptop:my-[1rem] hover:text-[#98f144] transition-all duration-500">
+                  Email
                 </span>
                 <span onClick={() => setIndicatorNav(6)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
                   Impressum
@@ -414,7 +420,7 @@ function App() {
               </div>
             </div>
             {/* Lower Content Wrapper (Copyright, Datasecure, Social Media Icons) */}
-            <div className="w-full laptop:h-[5rem] flex mobile:flex-col mobile:items-center laptop:flex-row mobile:mt-[0.5rem] laptop:mt-0">
+            <div className="w-full laptop:h-[5rem] flex mobile:flex-col mobile:items-center laptop:flex-row mobile:mt-[0.5rem] laptop:mt-0 z-50">
               <div className="laptop:w-1/3 flex justify-center items-center  text-slate-200 text-[1.3rem]">
                 <span className="text-[#98f144] px-2">©</span> 2024 <span className="text-[#98f144] pl-2">OG</span>-Webdesign
               </div>

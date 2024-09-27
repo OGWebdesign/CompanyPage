@@ -16,9 +16,6 @@ export const EmployeeCard = () => {
               <motion.p className="text-[1rem] mt-[1.5rem]">
               Informatik fasziniert mich schon seit jeher. Ich wollte immer verstehen, wie Computer und Programme darauf funktionieren. Besonders die Welt des Webs fesselt mich. Fast nichts ist unmöglich, und die Möglichkeiten werden immer vielfältiger. Max und ich haben uns während unseres Studiums kennengelernt und beschlossen, gemeinsam eine Firma zu gründen, um unsere Ideen und Visionen zu verwirklichen. Ob große oder kleine Webseiten/Web-Apps, Beratung, Bots oder KI-Schnittstellen – wir sind für Sie da.
               </motion.p>
-              <div className="w-[8rem] text-[#151515] text-center cursor-none select-none border-none bg-[#98f144] font-semibold mt-8 py-2 px-4 rounded-lg hover:bg-[#6ba039] font-mono transition duration-300 ease-in-out">
-                My skills
-              </div>
             </div>
             <div className="relative w-full flex justify-end mobile:justify-center items-center ">
               {/** ------------------------------PLACE KOSMONAUT HERE------------------------------ */}
@@ -52,9 +49,6 @@ export const EmployeeCard = () => {
               <motion.p className="text-[1rem] mobile:text- mt-[1.5rem]">
               Ich bin ein leidenschaftlicher Programmierer und habe nach meinem aktiven Dienst als Soldat beschlossen, Informatik zu studieren und mit Nils an meiner Seite unser eigenes Unternehmen in der Web- und Anwendungsentwicklung zu gründen. Ich habe viel Erfahrung mit Webanwendungen und Frontend-Entwicklung, bin aber auch mit Bot-Netzwerken und Schnittstellen für Künstliche Intelligenz vertraut. Ob React, TypeScript, Java oder C# – wir verfügen über umfangreiche Erfahrung in verschiedenen Frontend- und Backend-Technologien und haben alles programmiert, von kleinen Webanwendungen oder Websites bis hin zu kooperativen App-Entwicklungsprojekten im Gesundheitssektor.
               </motion.p>
-              <div className="w-[8rem] text-[#151515] text-center cursor-none select-none border-none bg-[#98f144] font-semibold mt-8 py-2 px-4 rounded-lg hover:bg-[#6ba039] font-mono transition duration-300 ease-in-out">
-                My skills
-              </div>
             </div>
           </div>
         </div>
