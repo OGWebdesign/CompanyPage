@@ -59,7 +59,7 @@ function App() {
   // ---------------------------   Button for order meeting for component TextAndButton for working with one Page technologie
   const Proposal = () =>(
       <div onClick={()=>setIndicatorNav(3)} className="tablet:w-[20rem] border-2  duration-300 hover:font-semibold hover:text-[#000000] hover:bg-[#98f144] mobile:w-[10rem] flex justify-center items-center text-center font-mono text-[#98f144] h-[3rem] ml-4 mt-14 bg-[#000000] rounded-lg border-[#151515]">
-          Beratungstermin vereinbaren.
+          Beratungstermin vereinbaren
       </div>
   
   )
