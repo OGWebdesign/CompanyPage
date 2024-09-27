@@ -8,7 +8,7 @@ export const ContactSite = () => {
 
             <img src="Planets/icePlanet.webp" alt="" className="w-[40rem] absolute desktop:top-[10%] desktop:right-[10%] laptop:top-[10%] laptop:right-[0%] mobile:top-[70%] animate-floatIcePlanet"/>
 
-            <img src="/graphics/astro.webp" alt="" className="w-[20rem] absolute z-10 mobile:bottom-[-15%] mobile:right-[-20%] tablet:bottom-[-10%] tablet:right-[10%] animate-float" />
+            <img src="/graphics/astro2.webp" alt="" className="w-[20rem] absolute z-10 mobile:bottom-[-15%] mobile:right-[-20%] tablet:bottom-[-10%] tablet:right-[10%] animate-float" />
 
             <div className="animate-fadeIn mobile:w-full tablet:w-3/4 w-3/4 mt-[5%] flex justify-center items-center flex-col">
             
