@@ -21,11 +21,11 @@ export const StartSite = (props: {
       <div className="animate-fadeIn">
 
 
-        <img src="Planets/mars.webp" alt="Mars" className="w-[25rem] z-10 absolute top-[17%] right-[5%] animate-floatJupiter" />
+        <img src="Planets/mars.webp" alt="Mars" className="w-[45rem] z-10 absolute top-[20%] right-[-5%] animate-floatJupiter" />
         <img src="Planets/jupiter.webp" alt="Jupiter" className="w-[35rem] z-10 absolute top-[30%] left-[5%] animate-floatJupiter " />
         <img src="Planets/comet.webp" alt="Comet" className="w-[15rem] z-10 absolute desktop:top-[45%] laptop:top-[43%] tablet:top-[46%] mobile:top-[46.2%]  right-[10%]  animate-floatComet" />
-        <img src="graphics/astro.webp" alt="" className="laptop:w-[20rem] mobile:w-0 z-10 absolute top-[68%] left-[10%] animate-float" />
-        <img src="Planets/satelite.webp" alt="" className="w-[10rem] z-10 absolute tablet:bottom-[-4%] mobile:bottom-[-1%] mobile:right-[5%] tablet:right-[18%] animate-float" />
+        <img src="graphics/astro.webp" alt="" className="laptop:w-[20rem] mobile:w-0 z-10 absolute mobile:top-[70%] left-[10%] animate-float" />
+        <img src="Planets/satelite.webp" alt="" className="w-[10rem] z-10 absolute tablet:bottom-[-4%] mobile:bottom-[-2%] mobile:right-[5%] tablet:right-[18%] animate-float" />
 
 
         <div className="w-full h-screen z-50 flex flex-col items-center">

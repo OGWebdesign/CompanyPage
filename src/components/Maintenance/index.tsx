@@ -6,8 +6,8 @@ export const Maintenance = (props: {
     return (
         <div className="w-full h-screen animate-fadeIn cursor-none flex items-center  justify-center flex-col z-10 bg-black">
             <div className="flex flex-col mobile:p-10">
-                <p className="text-white font-mono text-[2rem] inline-block bg-[#]">Maintenance work in progress in this area</p>
-                <p className="text-white w-[25rem] font-mono text-[1rem]">This area of ​​the site is undergoing maintenance and will therefore be unavailable for a while.</p>
+                <p className="text-white font-mono text-[2.4rem] inline-block bg-[#]">Wartungsarbeiten im Gange.</p>
+                <p className="text-white w-[25rem] font-mono text-[1rem]">Unsere Website befindet sich gerade in der Wartung, um Ihnen eine noch bessere Nutzererfahrung zu bieten. Wir arbeiten intensiv daran, neue Features zu integrieren und bestehende Funktionen zu optimieren. Wieder verfügbar: 3. Oktober 2024</p>
                 {props.children}
                 
                 <div className="w-full flex justify-center mt-[10%]">
