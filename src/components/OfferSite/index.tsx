@@ -116,6 +116,10 @@ export const OfferSite = () => {
   return (
     <div className="w-full h-full flex flex-col items-center">
 
+
+      <img src="Planets/sun.png" className="w-[40rem] z-10 absolute top-[50%] right-[10%] animate-floatJupiter" alt="sun" />
+      <img src="Planets/spacestation.webp" className="laptop:w-[20rem] mobile:w-[10rem] tablet:w-[15rem] z-10 absolute laptop:bottom-[-10%] laptop:left-[5%] mobile:bottom-[-10%] mobile:right-[5%] animate-float" alt="spacestation" />
+
       {/* SUCCESS WINDOW*/}
       <div className={`w-[45rem] h-[15rem] bg-[#000000]  font-sharemono absolute bottom-[10%] ${sendSuccess ? "animate-flyoffscreen block" : "hidden"} ${firstAnimation ? "animate-fadeIn" : ""} z-30 flex justify-center items-center rounded-xl`}>
         <span className="text-[#98f144] text-[3rem] text-center">
@@ -124,7 +128,7 @@ export const OfferSite = () => {
       </div>
       
       
-         <div className=" desktop:w-full desktop-l:w-[80%] mobile:w-full flex flex-col justify-center items-center">
+         <div className=" desktop:w-full desktop-l:w-[80%] mobile:w-full flex flex-col justify-center items-center z-30">
       <div className="flex mobile:flex-col laptop:flex-row justify-around w-3/4">
         <div className="w-3/4 mobile:w-full h-[50rem] flex items-center">
           <div className="p-1">
