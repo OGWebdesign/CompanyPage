@@ -25,7 +25,7 @@ export const Impressum = () => {
 
                     <p className="text-[#151515] text-[1rem] text-left w-full mb-2">
                         <span className="font-bold text-[1.1rem] border-b-2 border-b-[#98f144]">Telefon:</span> 
-                        {" "} 015570271669
+                        {" "} 015170271669
                     </p>
 
                     <p className="text-[#151515] text-[1rem] text-center w-full mb-2">
