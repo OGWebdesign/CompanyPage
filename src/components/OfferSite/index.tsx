@@ -117,7 +117,7 @@ export const OfferSite = () => {
     <div className="w-full h-full flex flex-col items-center">
 
 
-      <img src="Planets/sun.png" className="w-[40rem] z-10 absolute top-[50%] right-[10%] animate-floatJupiter" alt="sun" />
+      <img src="Planets/sun.png" className="w-[40rem] z-10 absolute top-[40%] right-[10%] animate-floatJupiter" alt="sun" />
       <img src="Planets/spacestation.webp" className="laptop:w-[20rem] mobile:w-[10rem] tablet:w-[15rem] z-10 absolute laptop:bottom-[-10%] laptop:left-[5%] mobile:bottom-[-10%] mobile:right-[5%] animate-float" alt="spacestation" />
 
       {/* SUCCESS WINDOW*/}
