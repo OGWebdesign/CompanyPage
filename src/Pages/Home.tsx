@@ -404,7 +404,7 @@ function App() {
                 <span className="text-slate-200">
                   Haben Sie eine schöne <span className="text-[#98f144]">Idee</span>? <span className="text-[#98f144]">Sprechen</span> Sie mit uns!
                 </span>
-                <a onClick={() => setIndicatorNav(4)} href="mailto:info@og-webdesign.de"  className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039]">
+                <a onClick={() => setIndicatorNav(3)} className="px-4 py-2 rounded-xl text-[1.2rem] font-bold bg-[#98f144] mt-[1rem] hover:bg-[#6ba039]">
                   Anfrage
                 </a>
               </div>
@@ -412,8 +412,8 @@ function App() {
                 <span onClick={() => setIndicatorNav(2)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
                   Über uns
                 </span>
-                <span onClick={() => setIndicatorNav(3)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] laptop:my-[1rem] hover:text-[#98f144] transition-all duration-500">
-                  Anfrage
+                <span onClick={() => setIndicatorNav(4)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] laptop:my-[1rem] hover:text-[#98f144] transition-all duration-500">
+                  Email
                 </span>
                 <span onClick={() => setIndicatorNav(6)} className="text-slate-200 mobile:text-[1.3rem] laptop:text-[2rem] hover:text-[#98f144] transition-all duration-500">
                   Impressum
