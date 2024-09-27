@@ -20,6 +20,7 @@ import { Maintenance } from "../components/Maintenance";
 import { Privacy } from "../components/Privacy";
 import { SideBar } from "../components/SideBar";
 import { Link } from "react-scroll";
+import { Helpcenter } from "../components/Helpcenter";
 
 function App() {
   // state for animation
@@ -71,6 +72,10 @@ function App() {
       {text}
     </div>
   );
+
+  const openHelpcenter= () => {
+    setIndicatorNav(10);
+  }
 
 
   const BlackCardbt1 = () => (
@@ -321,12 +326,12 @@ function App() {
                     </div>
                     <div
                       onClick={() => {
-                        setIndicatorNav(4);
+                        setIndicatorNav(10);
                         setVisible(!visible);
                       }}
                       className="p-3 mx-3 cursor-none hover:text-[#98f144]"
                     >
-                      Unterstützung
+                      Hilfecenter
                     </div>
                   </div>
                   <div
@@ -357,6 +362,7 @@ function App() {
                   BlackCardButton={BlackCardbt1()}
                   WhiteCardButton={WhiteCardbt1()}
                   ProposalButton={Proposal()}
+                  openHelpcenter={openHelpcenter}
                 ></StartSite>
               )}
               {indicatorNav === 2 && <CompanySite></CompanySite>}
@@ -364,6 +370,7 @@ function App() {
               {indicatorNav === 3 && <OfferSite></OfferSite>}
               {indicatorNav === 6 && <Impressum></Impressum>}
               {indicatorNav === 8 && <Privacy></Privacy>}
+              {indicatorNav === 10 && <Helpcenter></Helpcenter>}
               {/*------------------------------------------------------------------------ End Dynamic Render Area -------------------------------------------------------*/}
             </div>
           </div>

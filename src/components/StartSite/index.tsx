@@ -13,6 +13,7 @@ export const StartSite = (props: {
   BlackCardButton: JSX.Element;
   WhiteCardButton: JSX.Element;
   ProposalButton: JSX.Element;
+  openHelpcenter:() => void;
 }) => {
   return (
     <>
@@ -53,7 +54,7 @@ export const StartSite = (props: {
                 </div>
               </Link>
 
-              <div className="group hover:shadow-xl w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col rounded-r-2xl hover:scale-110 group">
+              <div onClick={props.openHelpcenter} className="group hover:shadow-xl w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center items-center flex-col rounded-r-2xl hover:scale-110 group">
                 <Help className="fill-white w-8 h-8 group-hover:fill-black"></Help>
                 <p className="text-white mt-2 group-hover:text-black font-sharemono">Hilfe</p>
               </div>
