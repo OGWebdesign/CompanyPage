@@ -390,7 +390,7 @@ function App() {
                   <span className="text-[#98f144]">.</span>
                   de
                 </span>
-                <span className="text-slate-200 laptop:text-[2rem] mobile:text-[1.3rem]">01515123124</span>
+                <span className="text-slate-200 laptop:text-[2rem] mobile:text-[1.3rem]">015170271669</span>
               </div>
               <div className="laptop:w-[50%] h-full flex flex-col justify-center items-center laptop:text-[2rem] mobile:text-[1.7rem] text-center
               mobile:mt-[1rem] mobile:w-full tablet:w-[70%] laptop:m-0">
