@@ -20,7 +20,6 @@ import { Maintenance } from "../components/Maintenance";
 import { Privacy } from "../components/Privacy";
 import { SideBar } from "../components/SideBar";
 import { Link } from "react-scroll";
-import { Helpcenter } from "../components/Helpcenter";
 
 function App() {
   // state for animation
@@ -370,7 +369,7 @@ function App() {
               {indicatorNav === 3 && <OfferSite></OfferSite>}
               {indicatorNav === 6 && <Impressum></Impressum>}
               {indicatorNav === 8 && <Privacy></Privacy>}
-              {indicatorNav === 10 && <Helpcenter></Helpcenter>}
+              {indicatorNav === 10 && <Maintenance></Maintenance>}
               {/*------------------------------------------------------------------------ End Dynamic Render Area -------------------------------------------------------*/}
             </div>
           </div>
