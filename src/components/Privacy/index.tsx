@@ -5,7 +5,8 @@ export const Privacy = () => {
     return (
 
 
-        <div className="w-full flex flex-col justify-center ">
+        <div className="w-full flex flex-col justify-center items-center mt-[10%] max-w-[100rem]">
+            <div className="w-3/4">
             <Heading heading="Datenschutzrichtlinie" headstyle="text-[#151515] bg-[#98f144]" />
             <PrivacyParagraph
                 headline="Allgemeine Informationen"
@@ -245,6 +246,7 @@ export const Privacy = () => {
 ></PrivacyParagraph>
 
 
+        </div>
         </div>
     )
 }
