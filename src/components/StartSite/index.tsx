@@ -20,7 +20,15 @@ export const StartSite = (props: {
       <video autoPlay playsInline loop muted className="absolute object-cover h-screen w-full overflow-hidden" src="video/bgvideo.mp4"></video>
       <div className="animate-fadeIn">
 
-        <div className="w-full h-screen z-50  flex flex-col items-center">
+
+        <img src="Planets/mars.webp" alt="Mars" className="w-[25rem] z-10 absolute top-[15%] right-[5%] animate-floatJupiter" />
+        <img src="Planets/jupiter.webp" alt="Jupiter" className="w-[35rem] z-10 absolute top-[30%] left-[5%] animate-floatJupiter " />
+        <img src="Planets/comet.webp" alt="Comet" className="w-[15rem] z-10 absolute tablet:top-[47%] mobile:top-[46.2%]  right-[10%]  animate-floatComet" />
+        <img src="graphics/astro.webp" alt="" className="laptop:w-[20rem] mobile:w-0 z-10 absolute top-[68%] left-[10%] animate-float" />
+        <img src="Planets/satelite.webp" alt="" className="w-[10rem] z-10 absolute tablet:bottom-[-4%] mobile:bottom-[-1%] mobile:right-[5%] tablet:right-[18%] animate-float" />
+
+
+        <div className="w-full h-screen z-50 flex flex-col items-center">
 
           <div className="mobile:w-full desktop:w-3/4 mt-[23rem] animate-fadeIn desktop:mt-[10%] mobile:mt-[10%]">
             <Heading headstyle="text-slate-200" heading="Entdecke die POWER der modernen Web- und Software Entwicklung" />
@@ -30,7 +38,7 @@ export const StartSite = (props: {
               reference="/contact"
             />
           </div>
-          <div className="w-3/4 mobile:w-[95%] h-[20rem] flex tablet:justify-center desktop:justify-end items-center">
+          <div className="w-3/4 mobile:w-[95%] h-[20rem] flex tablet:justify-center desktop:justify-end items-center z-50">
             <div className="w-[30rem] duration-300 h-[6rem] desktop-l:mr-[10rem] desktop-l:mt-[15rem] desktop-xxl:mr-[20rem] desktop-xxl:mt-[20rem] backdrop-blur-lg rounded-2xl bg-[#6b6b6b15] flex">
 
               <Link className="group hover:shadow-xl w-1/4 h-full duration-300 hover:bg-[#98f144c0] flex justify-center hover:scale-110 group items-center rounded-l-2xl flex-col" to="tech" spy={true} smooth={true} offset={-70} duration={500}>
@@ -63,7 +71,7 @@ export const StartSite = (props: {
         </div>
 
         {/* WrapperLayout */}
-        <div className="w-full flex flex-col  justify-center items-center mt-[4%]">
+        <div className="w-full flex flex-col  justify-center items-center mt-[4%] z-50">
           <Element name="services" />
           <span className="text-[2.3rem] mobile:text-[1.8rem] font-sharemono font-bold text-[#98f144] mb-[2%] text-center">
             Was bieten wir an?
@@ -73,7 +81,7 @@ export const StartSite = (props: {
             <Paper className="w-[2rem] mobile:w-[1rem] fill-[#98f144]" />
           </div>
 
-          <div className="laptop:w-[65%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%]">
+          <div className="laptop:w-[65%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%] z-50">
           <CardBlack
             classname="desktop:-translate-x-28"
             text1="Webseiten & "
@@ -195,7 +203,7 @@ export const StartSite = (props: {
         </div>
       </div>
 
-        <div className="flex flex-col justify-center items-center mt-[3%]">
+        <div className="flex flex-col justify-center items-center mt-[3%] z-50">
           <Element name="tech" />
           <span className="text-[2.3rem] mobile:text-[1.8rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
             Welche Technologien <br></br> nutzen wir?
@@ -224,7 +232,7 @@ export const StartSite = (props: {
             Diese Eigenschafte bilden keine gute Grundlage für die Erstellung Ihrer Webseite.
           </p>
 
-          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left z-50">
             Deswegen haben wir uns bei OG Webdesign dazu entschieden, Webseiten mit den gleichen Technologien wie Facebook und Instagram zu produzieren.  Wir haben einen sehr hohen Anspruch wenn es um die Sicherheit eines Systems geht. Gerade deswegen verfolgen wir den Ansatz, eigenen Code zu schreiben und die volle Kontrolle über das Projekt zu haben.
           </p>          
           <div className="w-3/4 mt-10">
@@ -234,7 +242,7 @@ export const StartSite = (props: {
         </div>
 
 
-        <div className="flex flex-col justify-center items-center mt-[10%]">
+        <div className="flex flex-col justify-center items-center mt-[10%] z-50">
           <Element name="development" />
           <span className="text-[3rem] mobile:text-[1.8rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
             Wie entwickeln wir?
@@ -248,9 +256,10 @@ export const StartSite = (props: {
 
 
 
-      <div className="w-full flex justify-center items-center">
+      <div className="w-full flex justify-center items-center z-50">
         <TextComponent
-          headline="Hochgeschwindigkeitsleistung für Websites und Webanwendungen auf dem nächsten Level."
+        
+        headline="Hochgeschwindigkeitsleistung für Websites und Webanwendungen auf dem nächsten Level."
           text="Unsere Arbeit beginnt nicht mit Code, sondern mit Zuhören. Wir nehmen uns die Zeit, Ihre Vision zu verstehen und erarbeiten gemeinsam eine Strategie, die perfekt auf Ihre Ziele zugeschnitten ist. Unser Prozess basiert auf agilen Methoden, die es uns ermöglichen, flexibel und reaktionsschnell auf Veränderungen zu reagieren. In einer digitalen Welt, die sich ständig weiterentwickelt, ist es entscheidend, flexibel zu bleiben. Unser DevOps-Team sorgt dafür, dass Ihre Projekte nicht nur entwickelt, sondern auch optimal bereitgestellt und überwacht werden. Mit unserer Hilfe verkürzen Sie Entwicklungszyklen, automatisieren Ihre Infrastruktur und schaffen einen nahtlosen Übergang von der Entwicklung in den Betrieb. Unsere Arbeitsweise als Softwareentwickler zeichnet sich durch einen strukturierten und detaillierten Ansatz aus, der von Beginn an auf eine enge Zusammenarbeit mit dem Kunden setzt. Der erste Schritt in jedem Projekt ist ein intensives Kundengespräch, bei dem wir uns die Zeit nehmen, die Vision, Anforderungen und Ziele des Kunden umfassend zu verstehen. Wir stellen dabei sicher, dass alle relevanten Details erfasst werden, um ein präzises Bild des gewünschten Endprodukts zu entwickeln.
 Nach diesem Gespräch erstellen wir ein ausführliches Lastenheft, das als zentrale Grundlage für die weitere Entwicklung dient. Dieses Dokument enthält alle funktionalen und nicht-funktionalen Anforderungen des Projekts und bietet dem Kunden volle Transparenz über den geplanten Projektumfang. Auf dieser Basis beginnen wir dann mit der Anfertigung von Mockups, die die geplante Benutzeroberfläche und Benutzererfahrung visualisieren. Diese dienen als erste greifbare Entwürfe, die den Kunden in die Entscheidungsfindung einbinden und eine solide Grundlage für das finale Design bieten.
 Zusätzlich entwickeln wir UML-Diagramme, um die Architektur des Systems klar zu definieren und sicherzustellen, dass alle technischen Komponenten nahtlos zusammenarbeiten. Darauf aufbauend entwickeln wir Prototypen, die als funktionale Modelle fungieren und es ermöglichen, frühzeitig Feedback zu sammeln und Anpassungen vorzunehmen, bevor die endgültige Umsetzung beginnt.
