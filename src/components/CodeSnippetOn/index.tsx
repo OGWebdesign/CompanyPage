@@ -7,8 +7,7 @@ export const CodeSnippet = ({ code }: any) => {
         <SyntaxHighlighter customStyle={{
             backgroundColor: '#000',
             borderRadius: '8px',
-            fontSize: '0.3rem',
-            overflowX: 'auto', // Ermöglicht horizontales Scrollen bei schmalen Geräten
+            fontSize: '0.1rem',
           }} language='typescript' style={vscDarkPlus}>
             {code}
         </SyntaxHighlighter>
