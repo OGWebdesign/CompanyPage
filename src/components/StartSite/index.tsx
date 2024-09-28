@@ -44,7 +44,7 @@ export const StartSite = (props: {
         <img src="Planets/mars.webp" alt="Mars" className="w-[45rem] z-10 absolute top-[20%] right-[-5%] animate-floatJupiter" />
         <img src="Planets/jupiter.webp" alt="Jupiter" className="w-[35rem] z-10 absolute top-[30%] left-[5%] animate-floatJupiter " />
         <img src="Planets/comet.webp" alt="Comet" className="w-[15rem] mobile:w-0 tablet:w-[15rem] z-10 absolute desktop:top-[45%] laptop:top-[43%] tablet:top-[46%] mobile:top-[46.2%]  right-[10%]  animate-floatComet" />
-        <img src="graphics/astro.webp" alt="" className="laptop:w-[20rem] mobile:w-0 z-10 absolute mobile:top-[70%] right-[5%] animate-float" />
+        <img src="graphics/astro.webp" alt="" className="laptop:w-[20rem] desktop-xl:right-[35%]  desktop-l:right-[15%] tablet:top-[75%] mobile:w-0 z-10 absolute mobile:top-[70%] right-[5%] animate-float" />
         <img src="Planets/satelite.webp" alt="" className="w-[10rem] z-10 absolute tablet:bottom-[-4%] mobile:bottom-[-2%] mobile:right-[5%] tablet:right-[18%] animate-float" />
 
 
@@ -288,7 +288,7 @@ export const StartSite = (props: {
 
             headline="Planung und Umsetzung"
             text="Unsere Arbeit beginnt mit Zuhören und dem Verständnis Ihrer Vision. Gemeinsam erarbeiten wir eine Strategie, die perfekt auf Ihre Ziele abgestimmt ist. Durch agile Methoden bleiben wir flexibel in einer sich ständig verändernden digitalen Welt.
-            Nach dem Gespräch erstellen wir ein Lastenheft, das alle Anforderungen enthält und Transparenz bietet. Auf dieser Grundlage fertigen wir Mockups an, um die Benutzeroberfläche zu visualisieren, und binden den Kunden in die Entscheidungsfindung ein. Zusätzlich entwickeln wir UML-Diagramme zur Systemarchitektur und erstellen Prototypen, um frühzeitig Feedback zu erhalten und Anpassungen vorzunehmen."></TextComponent>
+            Nach dem Gespräch erstellen wir ein Lastenheft, das alle Anforderungen enthält und Transparenz bietet. Auf dieser Grundlage fertigen wir Mockups an, um die Benutzeroberfläche zu visualisieren, und binden den Kunden in die Entscheidungsfindung ein. Zusätzlich entwickeln wir UML-Diagramme zur Systemarchitektur und erstellen Prototypen, um frühzeitig Feedback zu erhalten und Anpassungen vorzunehmen. Dann beginnt die Umsetzung wobei dort immer der Entwicklungsstand einzusehen ist. Außerdem finden wärend des gesamten Entwicklungsprozesses regelmäßige Meetings statt."></TextComponent>
         </div>
 
         <div className="w-full flex justify-center items-center">
