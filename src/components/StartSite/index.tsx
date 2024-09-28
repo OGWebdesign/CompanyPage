@@ -18,20 +18,19 @@ export const StartSite = (props: {
 
 }) => {
   const sampleCode = `
-    import React from 'react';
-
-    const Lebenseinstellung = () => {
+    const Lebenseinstellung = (props:{
+      UnserePrinzipien: JSX.Element | JSX.Element[] | string | null;
+    }) => {
     //  Dinge die Sie wissen sollten.
       return(
-      //  Nummer Eins
+      {/**Nummer Eins*/}
       <p>"Wir nutzen lieber Code als Content Management Systeme."</p>
-      //  Nummer Zwei
+      {/**Nummer Zwei*/}
       <p>"Versionskontrolle und Planung ist das A und O."</p>
-      //  Nummer Drei
+      {/**Nummer Drei*/}
       <p>"Als Programmierer hört man nie mit dem lernen auf."</p>
       ); 
-    };
-
+    }; 
     export default Lebenseinstellung;
   `;
   return (
