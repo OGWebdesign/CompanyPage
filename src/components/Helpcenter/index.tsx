@@ -8,7 +8,7 @@ export const Helpcenter = () => {
 
     const[requestActive, setRequestActive] = useState<boolean>(false);
     const[problemActive, setProblemActive] = useState<boolean>(false);
-    const activeProblemKindSelector = "rotate-12 scale-110 animate-bounceRotate";
+    const activeProblemKindSelector = "bg-[#88ff27] text-black w-[10rem] h-[10rem]";
 
     const handleRequest = () => {
         setRequestActive(true);
@@ -35,10 +35,10 @@ export const Helpcenter = () => {
                 <div className="h-[10rem] w-full flex justify-center animate-fadeIn mt-20">
 
                     <div className="w-[50rem] h-[10rem] gap-14 text-[1.1rem] text-black font-sharemono  font-semibold rounded-2xl flex justify-center items-center">
-                        <div onClick={handleRequest} className={`${requestActive && activeProblemKindSelector} w-[10rem] h-[10rem] hover:scale-105 duration-300 rounded-2xl bg-[#88ff27] flex justify-center items-center`}>
+                        <div onClick={handleRequest} className={`${requestActive ? activeProblemKindSelector:"text-white border-2 border-dashed w-[7rem] h-[7rem]"} hover:scale-105 duration-300 rounded-2xl hover:bg-[#88ff27] hover:text-black hover:border-none flex justify-center items-center`}>
                             <p>Anfrage</p>
                         </div>
-                        <div onClick={handleProblem} className={`${problemActive && activeProblemKindSelector} w-[10rem] h-[10rem] hover:scale-105 duration-300 rounded-2xl bg-[#88ff27] flex justify-center items-center`}>
+                        <div onClick={handleProblem} className={`${problemActive ? activeProblemKindSelector:"text-white border-2 border-dashed w-[7rem] h-[7rem]" }   hover:scale-105 duration-300 rounded-2xl hover:bg-[#88ff27] hover:text-black hover:border-none flex justify-center items-center`}>
                             <p>Navigation</p>
                         </div>
                     </div>
