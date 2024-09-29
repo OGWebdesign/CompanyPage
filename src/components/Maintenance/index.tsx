@@ -13,7 +13,7 @@ export const Maintenance = (props: {
                 <div className="w-full flex justify-center mt-[10%]">
                     <GearIcon className="w-[10rem] fill-slate-200 animate-spin">
 
-                    </GearIcon>
+                    </GearIcon> 
                 </div>
             </div>
         </div>
