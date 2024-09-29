@@ -40,6 +40,8 @@ export default {
         spotUp: 'spotUp 12s infinite ease-out',
         spotDown: 'spotDown 12s infinite ease-out',
         'shake-fast': 'shake 0.1s ease-in-out infinite',
+        bounceRotate: 'bounceRotate 2s ease-in-out infinite',
+        zeptaEffect:'zepta 1s ease-in-out'
       },
       borderRadius: {
         'custom-1': '50% 40% 30% 50% / 50% 40% 30% 50%', // Uneinheitliche Formen
@@ -51,10 +53,16 @@ export default {
           '50%': { transform: 'translateX(3px)' },
           '75%': { transform: 'translateX(-3px)' },
         },
+        zepta:{'0%':{height:0},'100%':{heigth:'40rem'}},
         flyIn: {
           '0%': { transform: 'translateY(-200%)' },
           '50%': { transform: 'translateY(10%)' },
           '100%': { transform: 'translateY(0)' },
+        },
+        bounceRotate: {
+          '0%, 100%': { transform: 'rotate(0deg)', boxShadow: '0 0 10px #88ff27' },
+          '50%': { transform: 'rotate(25deg)', boxShadow: '0 0 20px #88ff27' }, // leicht überdrehen + stärkerer Schatten
+          '75%': { transform: 'rotate(20deg)', boxShadow: '0 0 15px #88ff27' }, // zurück auf 20 Grad + mittlerer Schatten
         },
         spotUp:{
           '0%, 100%':{transform:'translate(0,1%)'},
