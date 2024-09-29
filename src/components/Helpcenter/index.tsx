@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { RequestContent } from "../RequestContent";
 import { ProblemContent } from "../ProblemContent";
 
