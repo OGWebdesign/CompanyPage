@@ -105,7 +105,7 @@ export const StartSite = (props: {
 
           <div className="laptop:w-[95%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%] z-50">
             <CardBlack
-              classname="desktop:-translate-x-28"
+              classname="w-[90%]"
               text1="Webseiten & "
               text2="Programmierung"
             >
@@ -142,7 +142,7 @@ export const StartSite = (props: {
               </p>
             </CardBlack>
             <CardWhite
-              classname="desktop:translate-x-28 my-[5%]"
+              classname="w-[90%] my-[5%]"
               text1="DevOps &"
               text2="Admin"
             >
@@ -165,7 +165,7 @@ export const StartSite = (props: {
               </p>
             </CardWhite>
             <CardWhite
-              classname="desktop:-translate-x-28 mb-[5%]"
+              classname="w-[90%] mb-[5%]"
               text1="Anwendungsentwicklung"
               text2=""
             >
@@ -192,7 +192,7 @@ export const StartSite = (props: {
               </p>
             </CardWhite>
             <CardBlack
-              classname="desktop:translate-x-28"
+              classname="w-[90%]"
               text1="Künstliche"
               text2="Intelligenz"
             >
