@@ -19,9 +19,7 @@ export const Helpcenter = () => {
         setRequestActive(false);
         setProblemActive(true);
     }
-
     
-
     return (
         // Layoutwrapper
         <div className="w-full flex justify-center items-center flex-col bg-black">
