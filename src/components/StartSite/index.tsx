@@ -103,7 +103,7 @@ export const StartSite = (props: {
             <Paper className="w-[2rem] mobile:w-[1rem] fill-[#98f144]" />
           </div>
 
-          <div className="laptop:w-[65%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%] z-50">
+          <div className="laptop:w-[95%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%] z-50">
             <CardBlack
               classname="desktop:-translate-x-28"
               text1="Webseiten & "
