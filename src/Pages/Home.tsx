@@ -20,7 +20,6 @@ import { Maintenance } from "../components/Maintenance";
 import { Privacy } from "../components/Privacy";
 import { SideBar } from "../components/SideBar";
 import { Link } from "react-scroll";
-import { Helpcenter } from "../components/Helpcenter";
 
 function App() {
   // state for animation
