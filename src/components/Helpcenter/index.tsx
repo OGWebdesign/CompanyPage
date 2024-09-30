@@ -4,7 +4,13 @@ import { ProblemContent } from "../ProblemContent";
 
 
 
-export const Helpcenter = () => {
+export const Helpcenter = (props:{
+    aboutUsLink?:() => void,
+    requestLink?:() => void,
+    mailLink?:() => void,
+    imprintLink?:() => void,
+    dataSecureLink?:() => void,
+}) => {
 
     const[requestActive, setRequestActive] = useState<boolean>(false);
     const[problemActive, setProblemActive] = useState<boolean>(false);
@@ -44,7 +50,7 @@ export const Helpcenter = () => {
                 <div className="w-full justify-center items-center mt-10">
                     {/**Dynamic Component Content. */}
                     {requestActive && (<RequestContent></RequestContent>)}
-                    {problemActive && (<ProblemContent></ProblemContent>)}
+                    {problemActive && (<ProblemContent requestLink={props.requestLink} mailLink={props.mailLink} imprintLink={props.imprintLink} aboutUsLink={props.aboutUsLink} dataSecureLink={props.dataSecureLink}></ProblemContent>)}
                 </div>
             </div>
         </div>
