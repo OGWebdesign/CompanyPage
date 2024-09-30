@@ -14,7 +14,7 @@ export const Helpcenter = (props:{
 
     const[requestActive, setRequestActive] = useState<boolean>(false);
     const[problemActive, setProblemActive] = useState<boolean>(false);
-    const activeProblemKindSelector = "bg-[#88ff27] text-black w-[10rem] h-[10rem]";
+    const activeProblemKindSelector = "bg-[#88ff27] text-black tablet:w-[10rem] tablet:h-[10rem] mobile:w-[9rem] mobile:h-[9rem] ";
 
     const handleRequest = () => {
         setRequestActive(true);
@@ -29,10 +29,10 @@ export const Helpcenter = (props:{
     return (
         // Layoutwrapper
         <div className="w-full flex justify-center items-center flex-col bg-black">
-            <div className="w-3/4 flex justify-center items-center flex-col">
-                <div className="font-sharemono mt-[10%]">
-                    <p className="font-bold text-white text-[3rem]">Willkommen im Hilfecenter</p>
-                    <p className="w-1/2 text-slate-300 text-[1.2rem]">Haben Sie Schwierigkeiten sich zurecht zu finden oder benötigen Sie Hilfe bei einer Anfrage ? Kein Problem! Hier finden Sie eine Übersicht zur Navigation oder Unterstützung bei Ihrer Anfrage.</p>
+            <div className="laptop:w-3/4 p-3 mobile:w-full flex justify-center items-center flex-col">
+                <div className="font-sharemono mt-[10%] mb-[5%]">
+                    <p className="font-bold text-white mobile:text-[2rem] tablet:text-[3rem]">Willkommen im Hilfecenter</p>
+                    <p className="tablet:w-1/2  text-slate-300 mt-5 text-[1rem]">Haben Sie Schwierigkeiten sich zurecht zu finden oder benötigen Sie Hilfe bei einer Anfrage ? Kein Problem! Hier finden Sie eine Übersicht zur Navigation oder Unterstützung bei Ihrer Anfrage.</p>
                 </div>
                 <p className="text-slate-300 text-[1.2rem] font-sharemono mt-20">Wobei benötigen Sie Hilfe ?</p>
                 {/*Begin Helpcenter*/}
