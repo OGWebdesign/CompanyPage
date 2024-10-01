@@ -10,7 +10,7 @@ export const ProblemContent = (props: {
     return (
         //Wrapper
         <div className="w-full flex justify-center items-center ">
-            <div className="full flex-col mobile:h-[150rem] tablet:h-[110rem] laptop:h-[100rem] desktop:h-[90rem] desktop-l:h-[80rem] animate-zeptaEffect overflow-hidden rounded-2xl text-white font-sharemono text-[2rem] font-bold flex items-center">
+            <div className="full flex-col mobile:h-[150rem] tablet:h-[120rem] laptop:h-[110rem] desktop:h-[100rem] desktop-l:h-[90rem] animate-zeptaEffect overflow-hidden rounded-2xl text-white font-sharemono text-[2rem] font-bold flex items-center">
                 {/**Headline and Title */}
                 <div className="max-w-[100rem]">
                     <div className="w-full tablet:p-8 mobile:p-2">
@@ -66,10 +66,16 @@ export const ProblemContent = (props: {
                             <span className="text-[#88ff27]">Datenschutz</span>
                             <p className="text-[1rem] w-3/4 pt-4 font-normal text-slate-300">Bei der Datenschutzseite handelt es sich um eine Auflistung aller rechtskräftigen Informationen über Daten, Cookies und Drittanbieterrichtlinien.</p>
                         </div>
-                        <div onClick={props.dataSecureLink} className="tablet:w-[15rem] mobile:w-[10rem] mobile:w-[10rem] h-[3rem] mobile:mt-8 tablet-mt-0 hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] laptop:mr-[10rem] flex justify-center items-center rounded-2xl">
+                        <div onClick={props.dataSecureLink} className="tablet:w-[15rem] mobile:w-[10rem] h-[3rem] mobile:mt-8 tablet-mt-0 hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] laptop:mr-[10rem] flex justify-center items-center rounded-2xl">
                             <p className="text-[1rem] text-black  font-semibold ">Datenschutz</p>
                         </div>
 
+                    </div>
+                    <div className="w-full flex-col text-[1.4rem] flex justify-center mt-10 items-center">
+                        <p className="">Zurück zur Startseite</p>
+                        <div className="w-[12rem] h-[3rem] mt-6 flex justify-center items-center rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27]">
+                            <p className="text-[1rem] text-black  font-semibold">Startseite</p>
+                        </div>
                     </div>
                 </div>
             </div>
