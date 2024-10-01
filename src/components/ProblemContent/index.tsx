@@ -6,6 +6,7 @@ export const ProblemContent = (props: {
     mailLink?: () => void,
     imprintLink?: () => void,
     dataSecureLink?: () => void,
+    startLink?:() => void,
 }) => {
     return (
         //Wrapper
@@ -73,7 +74,7 @@ export const ProblemContent = (props: {
                     </div>
                     <div className="w-full flex-col text-[1.4rem] flex justify-center mt-10 items-center">
                         <p className="">Zurück zur Startseite</p>
-                        <div className="w-[12rem] h-[3rem] mt-6 flex justify-center items-center rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27]">
+                        <div onClick={props.startLink} className="w-[12rem] h-[3rem] mt-6 flex justify-center items-center rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27]">
                             <p className="text-[1rem] text-black  font-semibold">Startseite</p>
                         </div>
                     </div>

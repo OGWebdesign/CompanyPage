@@ -379,7 +379,8 @@ function App() {
                 requestLink=   {() => { setIndicatorNav(3); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                 imprintLink=   {() => { setIndicatorNav(6); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                 dataSecureLink={() => { setIndicatorNav(8); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                aboutUsLink=   {() => { setIndicatorNav(2); window.scrollTo({ top: 0, behavior: 'smooth' }); }}></Helpcenter>}
+                aboutUsLink=   {() => { setIndicatorNav(2); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                startLink=     {()=>  { setIndicatorNav(1); window.scrollTo({ top: 0, behavior: 'smooth' });}}></Helpcenter>}
               {/*------------------------------------------------------------------------ End Dynamic Render Area -------------------------------------------------------*/}
             </div>
           </div>

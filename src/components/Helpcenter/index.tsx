@@ -10,6 +10,7 @@ export const Helpcenter = (props:{
     mailLink?:() => void,
     imprintLink?:() => void,
     dataSecureLink?:() => void,
+    startLink?:() => void,
 }) => {
 
     const[requestActive, setRequestActive] = useState<boolean>(false);
@@ -50,7 +51,7 @@ export const Helpcenter = (props:{
                 <div className="w-full justify-center items-center mt-10">
                     {/**Dynamic Component Content. */}
                     {requestActive && (<RequestContent></RequestContent>)}
-                    {problemActive && (<ProblemContent requestLink={props.requestLink} mailLink={props.mailLink} imprintLink={props.imprintLink} aboutUsLink={props.aboutUsLink} dataSecureLink={props.dataSecureLink}></ProblemContent>)}
+                    {problemActive && (<ProblemContent startLink={props.startLink} requestLink={props.requestLink} mailLink={props.mailLink} imprintLink={props.imprintLink} aboutUsLink={props.aboutUsLink} dataSecureLink={props.dataSecureLink}></ProblemContent>)}
                 </div>
             </div>
         </div>
