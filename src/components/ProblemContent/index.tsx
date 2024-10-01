@@ -1,5 +1,3 @@
-
-
 export const ProblemContent = (props: {
     aboutUsLink?: () => void,
     requestLink?: () => void,

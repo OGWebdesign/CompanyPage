@@ -3,7 +3,6 @@ import { RequestContent } from "../RequestContent";
 import { ProblemContent } from "../ProblemContent";
 
 
-
 export const Helpcenter = (props:{
     aboutUsLink?:() => void,
     requestLink?:() => void,
