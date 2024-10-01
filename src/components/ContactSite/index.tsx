@@ -21,7 +21,7 @@ export const ContactSite = () => {
                 />
 
                 {/* Contact Formular */}
-                <div className="max-w-[100rem] desktop:mt-[5%]">
+                <div className="max-w-[100rem] w-full desktop:mt-[5%]">
                 <ContactForm />
                 </div>
             </div>
