@@ -75,6 +75,7 @@ function App() {
 
   const openHelpcenter = () => {
     setIndicatorNav(10);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 
