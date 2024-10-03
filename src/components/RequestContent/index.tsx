@@ -10,11 +10,17 @@ export const RequestContent = () => {
     const [questActive6, setQuestActive6] = useState(false);
 
     // tablet:h-[35rem] mobile:h-[60rem] desktop:h-[30rem]
-    const inactiveStyleSheet = "h-[5rem]";
-    const activeSmallStyleSheet = "h-[35rem]"
-    const activeverySmallStyleSheet = "h-[50rem]"
-    const activeStyleSheet   = "h-[30rem]";
+    const inactiveStyleSheet ="h-[5rem]";
 
+
+
+    const contactActiveStyle ="tablet:h-[35rem] mobile:h-[45rem]"
+    const loadingActiveStyle ="tablet:h-[40rem] laptop:h-[30rem] mobile:h-[42rem]"
+    const serviceActiveStyle ="tablet:h-[30rem] laptop:h-[20rem] mobile:h-[30rem]"
+    const konsultationActiveStyle ="laptop:h-[23rem] mobile:h-[25rem]"
+    const techActiveStyle ="laptop:h-[45rem] tablet:h-[45rem] mobile:h-[45rem]"
+    
+    const wrapperHeight = !questActive1 && !questActive2 && !questActive3 && !questActive4 && !questActive5 && !questActive6 ? "h-[65rem]":"h-[85rem]"
 
 
     const activeHandler = (selector: number) => {
@@ -72,10 +78,10 @@ export const RequestContent = () => {
 
 
     return (
-        <div className="w-full flex-col h-[65rem] animate-zeptaEffect overflow-hidden text-white font-sharemono text-[2rem] font-bold rounded-2xl flex items-center ">
+        <div className={`w-full flex-col ${wrapperHeight} animate-zeptaEffect overflow-hidden text-white font-sharemono text-[2rem] font-bold rounded-2xl flex items-center `}>
             <div className="laptop:max-w-[100rem] tablet:max-w-[80%] mobile:max-w-full">
 
-                <div className={`${questActive1 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center jsutify duration-300`}>
+                <div className={`${questActive1 ? contactActiveStyle : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center jsutify duration-300`}>
                     <div onClick={() => activeHandler(1)} className="flex w-full items-center justify-between">
                         <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full ">Wie kann ich Kontakt zu euch aufnehmen?</p>
                         <div className="w-[9rem] h-[3rem] mobile:hidden desktop:flex mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
@@ -102,7 +108,7 @@ export const RequestContent = () => {
                 </div>
 
 
-                <div className={`${questActive2 ? activeSmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
+                <div className={`${questActive2 ? loadingActiveStyle : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(2)} className="flex w-full items-center justify-between">
                         <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full">Warum wird die Seite nicht korrekt geladen oder angezeigt?</p>
                         <div className="w-[9rem] h-[3rem] mobile:hidden desktop:flex mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
@@ -131,7 +137,7 @@ export const RequestContent = () => {
 
 
 
-                <div className={`${questActive3 ? activeSmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
+                <div className={`${questActive3 ? serviceActiveStyle : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(3)} className="flex w-full items-center justify-between">
                         <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full">Kann ich mich von euch über eure Dienstleistungen beraten lassen?</p>
 
@@ -154,7 +160,7 @@ export const RequestContent = () => {
 
 
 
-                <div className={`${questActive4 ? activeSmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
+                <div className={`${questActive4 ? konsultationActiveStyle : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(4)} className="flex w-full items-center justify-between">
                         <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full">Wann sind eure Sprechzeiten?</p>
                         <div className="w-[9rem] h-[3rem] mr-4 mobile:hidden desktop:flex rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
@@ -200,7 +206,7 @@ export const RequestContent = () => {
 
 
 
-                <div className={`${questActive5 ? activeverySmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
+                <div className={`${questActive5 ? techActiveStyle : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(5)} className="flex w-full items-center justify-between">
                         <p className="mobile:ml-0 tablet:ml-8 text-[1.2rem] mobile:w-[80%] desktop:w-full">Welche Technologien nutzt ihr zur Entwicklung?</p>
                         <div className="w-[9rem] h-[3rem] mr-4 mobile:hidden desktop:flex rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
@@ -241,7 +247,7 @@ export const RequestContent = () => {
 
 
 
-                <div className={`${questActive6 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
+                <div className={`${questActive6 ? techActiveStyle : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(6)} className="flex w-full items-center justify-between">
                         <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full">Wie lange dauert der Entwicklungsprozess?</p>
                         <div className="w-[9rem] h-[3rem] mobile:hidden desktop:flex mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
