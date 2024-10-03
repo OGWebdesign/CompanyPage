@@ -345,7 +345,7 @@ export const OfferSite = () => {
         mobile:w-full tablet:w-[65%]  tablet-contact:ml-[3rem] laptop:ml-[10rem] 
         mobile:text-[1.8rem] tablet:text-[2rem] laptop:text-[2.3rem] 
         
-        leading-none">MY <span className="bg-[#98f144] text-[#151515]">FIRMA</span> IS </span>
+        leading-none">MY <span className="bg-[#98f144] text-[#151515]">FIRM</span> IS </span>
 
                 <input name="emailfield" value={company} type="input" placeholder="Firma" className=" cursor-none
 
@@ -397,7 +397,7 @@ export const OfferSite = () => {
           leading-none ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>MY <span className="bg-[#98f144] text-[#151515]">MESSAGE</span> IS.. </span>
 
                 <div className="w-full flex justify-center items-center">
-                  <textarea placeholder="Message*" className={`
+                  <textarea placeholder="Nachricht*" className={`
 
         mobile:w-full tablet:w-[65%] laptop:w-1/2 cursor-none
 
