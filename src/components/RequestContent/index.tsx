@@ -9,6 +9,7 @@ export const RequestContent = () => {
     const [questActive5, setQuestActive5] = useState(false);
     const [questActive6, setQuestActive6] = useState(false);
 
+    
     const inactiveStyleSheet = "h-[5rem]";
     const activeSmallStyleSheet = "h-[25rem]"
     const activeverySmallStyleSheet = "h-[20rem]"
