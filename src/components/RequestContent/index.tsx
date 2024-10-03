@@ -93,16 +93,16 @@ export const RequestContent = (props:{
                         <ArrowIcon className={`w-[1.5rem] fill-white mr-[1.5rem] ${questActive1 && "rotate-90"} duration-300 mobile:block desktop:hidden `} />
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
-                        <article className="ml-6 mt-4">
+                        <article className="mobile:ml-0 tablet:ml-6 mt-4">
                             Wir bieten Ihnen zwei Möglichkeiten an, um den Kontakt herzustellen.
                         </article>
                         <div className="flex flex-col w-full">
-                            <p className="ml-8 mt-4 tablet:w-3/4 mobile:w-full">
+                            <p className="mobile:ml-0 tablet:ml-8 mt-4 tablet:w-3/4 mobile:w-full">
                                 Wenn Sie eine ganz allgemeine Frage über unsere Angebote an Dienstleisungen oder über unsere verwendeten Technologien haben.
                                 Hierfür nutzen Sie bitte unser Kontaktformular.
                             </p>
                             <div onClick={props.contactShift} className="w-[10rem] h-[3rem] hover:bg-[#52cc34] hover:scale-110 duration-300 ml-8 mt-4 bg-[#88ff27] rounded-2xl flex justify-center items-center text-black font-sharemono">Kontaktformular</div>
-                            <p className="ml-8 mt-14 w-3/4">
+                            <p className="mobile:ml-0 tablet:ml-8 mt-14 tablet:w-3/4 mobile:w-full">
                                 Haben Sie bereits feste Vorstellungen über Ihr Projekt oder der gewünschten Dienstleistung, können Sie uns direkt eine Anfrage über unser Anfrageformular zukommen lassen.
                             </p>
                             <div onClick={props.requestShift} className="w-[10rem] h-[3rem] hover:bg-[#52cc34] hover:scale-110 duration-300 ml-8 mt-4 bg-[#88ff27] rounded-2xl flex justify-center items-center text-black font-sharemono">Anfrageformular</div>
@@ -120,19 +120,19 @@ export const RequestContent = (props:{
                         <ArrowIcon className={`w-[1.5rem] mr-[1.5rem] fill-white ${questActive2 && "rotate-90"} duration-300 mobile:block desktop:hidden `} />
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
-                        <article className="ml-6 mt-4 tablet:w-3/4 mobile:w-full">
+                        <article className="mobile:ml-0 tablet:ml-6 mt-4 tablet:w-3/4 mobile:w-full">
                             Es kann verschiedene Gründe dafür geben, dass Ihre Seite nicht korrekt dargestellt wird.
 
                         </article>
-                        <p className="ml-8 mt-6 tablet:w-3/4 mobile:w-full">
+                        <p className="mobile:ml-0 tablet:ml-8 mt-6 tablet:w-3/4 mobile:w-full">
                             Unsere Website ist für moderne Browser wie Chrome, Firefox, Safari oder Edge optimiert,
                             und die Nutzung eines weniger verbreiteten oder älteren Browsers kann zu Problemen führen.
                         </p>
-                        <p className="ml-8 mt-6 tablet:w-3/4 mobile:w-full">
+                        <p className="mobile:ml-0 tablet:ml-8 mt-6 tablet:w-3/4 mobile:w-full">
                             Ein weiterer Grund sind veraltete Daten im Browser-Cache,
                             die eine fehlerhafte Anzeige verursachen können. Versuchen Sie daher, den Cache zu leeren.
                         </p>
-                        <p className="ml-8 mt-6 tablet:w-3/4 mobile:w-full">
+                        <p className="mobile:ml-0 tablet:ml-8 mt-6 tablet:w-3/4 mobile:w-full">
                             Stellen Sie bitte außerdem sicher, das Sie in Ihren Browser Scripte erlauben. Unsere Webseite verwendet viel Typescript und Javascript.
                         </p>
                     </div>
@@ -150,10 +150,10 @@ export const RequestContent = (props:{
                         <ArrowIcon className={`w-[1.5rem] mr-[1.5rem] fill-white ${questActive3 && "rotate-90"} duration-300 mobile:block desktop:hidden `} />
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
-                        <article className="ml-6 mt-4 tablet:w-3/4 mobile:w-full">
+                        <article className="mobile:ml-0 tablet:ml-6 mt-4 tablet:w-3/4 mobile:w-full">
                             Ganz einfach!
                         </article>
-                        <p className="ml-8 mt-6 tablet:w-3/4 mobile:w-full">
+                        <p className="mobile:ml-0 tablet:ml-8 mt-6 tablet:w-3/4 mobile:w-full">
                             Wir haben es uns zur Aufgabe gemacht, mit hochmodernen Technologien Software und Webseiten zu produzieren.
                             Jedes unserer Projekte durchläuft daher eine intensive Beratungs- und Planungsphase. Sie können über unser Kontaktformular
                             jederzeit mit uns Kontakt aufnehmen. Außerdem stehen wir Ihnen im Rahmen unserer Sprechzeiten auch telefonisch zur Verfügung.
@@ -259,16 +259,16 @@ export const RequestContent = (props:{
                         <ArrowIcon className={`w-[1.5rem] mr-[1.5rem] fill-white ${questActive6 && "rotate-90"} duration-300 mobile:block desktop:hidden`} />
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
-                        <article className="ml-4 mt-4 tablet:w-3/4 mobile:w-full">
+                        <article className="mobile:ml-0 tablet:ml-4 mt-4 tablet:w-3/4 mobile:w-full">
                             Darauf gibt es leider keine allgemein gültige Antwort.
                         </article>
-                        <p className="ml-8 mt-4 tablet:w-3/4 mobile:w-full">
+                        <p className="mobile:ml-0 tablet:ml-8 mt-4 tablet:w-3/4 mobile:w-full">
                             Eine einfache Onepage Webseite kann bereits in einer Woche aus der Konzeptions- und Planungsphase weiter in die Umsetzungsphase übergehen, welche bei diesen Umfang auch nach ungefähr einer Woche zum Abschluss kommt.
                         </p>
-                        <p className="ml-8 mt-4 tablet:w-3/4 mobile:w-full">
+                        <p className="mobile:ml-0 tablet:ml-8 mt-4 tablet:w-3/4 mobile:w-full">
                             Eine komplexe, nicht statische Webseite mit vielen Unterseiten dagegen kann schonmal mit Konzeption, Planung- und Umsetzungsphase 2-3 Monate in Anspruch nehmen.
                         </p>
-                        <p className="ml-8 mt-4 tablet:w-3/4 mobile:w-full">
+                        <p className="mobile:ml-0 tablet:ml-8 mt-4 tablet:w-3/4 mobile:w-full">
                             Da jedes Projekt bei uns mit einem intensiven Beratungsgespräch beginnt, können wir Ihnen auch anschließend diese Frage genauer beantworten.
                         </p>
                     </div>
