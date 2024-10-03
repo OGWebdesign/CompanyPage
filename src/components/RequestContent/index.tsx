@@ -7,7 +7,10 @@ export const RequestContent = () => {
     const [questActive4, setQuestActive4] = useState(false);
     const [questActive5, setQuestActive5] = useState(false);
     const [questActive6, setQuestActive6] = useState(false);
+
     const inactiveStyleSheet = "h-[5rem]";
+    const activeSmallStyleSheet = "h-[25rem]"
+    const activeverySmallStyleSheet = "h-[20rem]"
     const activeStyleSheet   = "h-[30rem]";
 
 
@@ -96,7 +99,7 @@ export const RequestContent = () => {
                 </div>
 
 
-                <div className={`${questActive2 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
+                <div className={`${questActive2 ? activeSmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(2)} className="flex w-full items-center justify-between">
                         <p className="ml-8 text-[1.2rem]">Warum wird die Seite nicht korrekt geladen oder angezeigt?</p>
                         <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
@@ -124,7 +127,7 @@ export const RequestContent = () => {
 
 
 
-                <div className={`${questActive3 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
+                <div className={`${questActive3 ? activeSmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(3)} className="flex w-full items-center justify-between">
                         <p className="ml-8 text-[1.2rem]">Kann ich mich von euch über eure Dienstleistungen beraten lassen?</p>
 
@@ -146,7 +149,7 @@ export const RequestContent = () => {
 
 
 
-                <div className={`${questActive4 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
+                <div className={`${questActive4 ? activeSmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(4)} className="flex w-full items-center justify-between">
                         <p className="ml-8 text-[1.2rem]">Wann sind eure Sprechzeiten?</p>
                         <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
@@ -191,7 +194,7 @@ export const RequestContent = () => {
 
 
 
-                <div className={`${questActive5 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
+                <div className={`${questActive5 ? activeverySmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(5)} className="flex w-full items-center justify-between">
                         <p className="ml-8 text-[1.2rem]">Welche Technologien nutzt ihr zur Entwicklung?</p>
                         <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
