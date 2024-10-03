@@ -1,20 +1,39 @@
 import { useState } from "react";
-
-
-
-
-
-
 export const RequestContent = () => {
 
     const [questActive1, setQuestActive1] = useState(false);
     const [questActive2, setQuestActive2] = useState(false);
+    const [questActive3, setQuestActive3] = useState(false);
+    const [questActive4, setQuestActive4] = useState(false);
     const [questActive5, setQuestActive5] = useState(false);
     const [questActive6, setQuestActive6] = useState(false);
-    const [questActive7, setQuestActive7] = useState(false);
-    const [questActive8, setQuestActive8] = useState(false);
     const inactiveStyleSheet = "h-[5rem]";
     const activeStyleSheet = "h-[30rem]";
+
+
+
+    const activeHandler = (selector: number) => {
+        switch (selector) {
+            case 1:
+                setQuestActive1(!questActive1);
+                break;
+            case 2:
+                setQuestActive1(!questActive1);
+                break;
+            case 3:
+                setQuestActive1(!questActive1);
+                break;
+            case 4:
+                setQuestActive1(!questActive1);
+                break;
+            case 5:
+                setQuestActive1(!questActive1);
+                break;
+            case 6:
+                setQuestActive1(!questActive1);
+                break;
+        }
+    }
 
     return (
         <div className="w-full flex-col h-[65rem] animate-zeptaEffect overflow-hidden text-white font-sharemono text-[2rem] font-bold rounded-2xl flex items-center ">
@@ -75,7 +94,7 @@ export const RequestContent = () => {
 
 
                 <div className={`${questActive5 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
-                    <div onClick={() => setQuestActive5(!questActive5)} className="flex w-full items-center justify-between">
+                    <div onClick={() => setQuestActive3(!questActive3)} className="flex w-full items-center justify-between">
                         <p className="ml-8 text-[1.2rem]">Kann ich mich von euch über eure Dienstleistungen beraten lassen?</p>
 
                         <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
@@ -97,7 +116,7 @@ export const RequestContent = () => {
 
 
                 <div className={`${questActive6 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
-                    <div onClick={() => setQuestActive6(!questActive6)} className="flex w-full items-center justify-between">
+                    <div onClick={() => setQuestActive4(!questActive4)} className="flex w-full items-center justify-between">
                         <p className="ml-8 text-[1.2rem]">Wann sind eure Sprechzeiten?</p>
                         <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
@@ -141,8 +160,8 @@ export const RequestContent = () => {
 
 
 
-                <div className={`${questActive7 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
-                    <div onClick={() => setQuestActive7(!questActive7)} className="flex w-full items-center justify-between">
+                <div className={`${questActive5 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
+                    <div onClick={() => setQuestActive5(!questActive5)} className="flex w-full items-center justify-between">
                         <p className="ml-8 text-[1.2rem]">Welche Technologien nutzt ihr zur Entwicklung?</p>
                         <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
@@ -181,8 +200,8 @@ export const RequestContent = () => {
 
 
 
-                <div className={`${questActive8 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
-                    <div onClick={() => setQuestActive8(!questActive8)} className="flex w-full items-center justify-between">
+                <div className={`${questActive6 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
+                    <div onClick={() => setQuestActive6(!questActive6)} className="flex w-full items-center justify-between">
                         <p className="ml-8 text-[1.2rem]">Wie lange dauert der Entwicklungsprozess?</p>
                         <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
