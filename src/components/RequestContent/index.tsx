@@ -20,7 +20,7 @@ export const RequestContent = () => {
     const konsultationActiveStyle ="laptop:h-[23rem] mobile:h-[25rem]"
     const techActiveStyle ="laptop:h-[45rem] tablet:h-[45rem] mobile:h-[45rem]"
     
-    const wrapperHeight = !questActive1 && !questActive2 && !questActive3 && !questActive4 && !questActive5 && !questActive6 ? "h-[65rem]":"h-[85rem]"
+    const wrapperHeight = !questActive1 && !questActive2 && !questActive3 && !questActive4 && !questActive5 && !questActive6 ? "h-[35rem]":"mobile:h-[70rem] tablet:h-[65rem]"
 
 
     const activeHandler = (selector: number) => {
@@ -256,16 +256,16 @@ export const RequestContent = () => {
                         <ArrowIcon className={`w-[1.5rem] mr-[1.5rem] fill-white ${questActive6 && "rotate-90"} duration-300 mobile:block desktop:hidden`} />
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
-                        <article className="ml-6 mt-4 w-3/4">
-                            Darauf gibt es leider keine allgemein gültige Antwort, da die Fertigstellung der App oder Webseite stark davon beeinflusst ist, wie umfangreich das Projekt ist.
+                        <article className="ml-4 mt-4 w-3/4">
+                            Darauf gibt es leider keine allgemein gültige Antwort.
                         </article>
-                        <p className="ml-8 mt-6 w-3/4">
+                        <p className="ml-8 mt-4 w-3/4">
                             Eine einfache Onepage Webseite kann bereits in einer Woche aus der Konzeptions- und Planungsphase weiter in die Umsetzungsphase übergehen, welche bei diesen Umfang auch nach ungefähr einer Woche zum Abschluss kommt.
                         </p>
-                        <p className="ml-8 mt-6 w-3/4">
+                        <p className="ml-8 mt-4 w-3/4">
                             Eine komplexe, nicht statische Webseite mit vielen Unterseiten dagegen kann schonmal mit Konzeption, Planung- und Umsetzungsphase 2-3 Monate in Anspruch nehmen.
                         </p>
-                        <p className="ml-8 mt-6 w-3/4">
+                        <p className="ml-8 mt-4 w-3/4">
                             Da jedes Projekt bei uns mit einem intensiven Beratungsgespräch beginnt, können wir Ihnen auch anschließend diese Frage genauer beantworten.
                         </p>
                     </div>
