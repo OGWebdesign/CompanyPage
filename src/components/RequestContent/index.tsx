@@ -24,7 +24,7 @@ export const RequestContent = () => {
                 break;
             case 2:  
                 setQuestActive1(false);
-                setQuestActive2(true);
+                setQuestActive2(!questActive2);
                 setQuestActive3(false);
                 setQuestActive4(false);
                 setQuestActive5(false);
@@ -33,7 +33,7 @@ export const RequestContent = () => {
             case 3:
                 setQuestActive1(false);
                 setQuestActive2(false);
-                setQuestActive3(true);
+                setQuestActive3(!questActive3);
                 setQuestActive4(false);
                 setQuestActive5(false);
                 setQuestActive6(false);
@@ -42,7 +42,7 @@ export const RequestContent = () => {
                 setQuestActive1(false);
                 setQuestActive2(false);
                 setQuestActive3(false);
-                setQuestActive4(true);
+                setQuestActive4(!questActive4);
                 setQuestActive5(false);
                 setQuestActive6(false);
                 break;
@@ -51,7 +51,7 @@ export const RequestContent = () => {
                 setQuestActive2(false);
                 setQuestActive3(false);
                 setQuestActive4(false);
-                setQuestActive5(true);
+                setQuestActive5(!questActive5);
                 setQuestActive6(false);
                 break;
             case 6:
@@ -60,7 +60,7 @@ export const RequestContent = () => {
                 setQuestActive3(false);
                 setQuestActive4(false);
                 setQuestActive5(false);
-                setQuestActive6(true);
+                setQuestActive6(!questActive6);
                 break;
         }
     }
