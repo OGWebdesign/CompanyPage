@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { ArrowIcon } from "../Icons";
-export const RequestContent = () => {
+export const RequestContent = (props:{
+    contactShift:() => void,
+    requestShift:() => void,
+}) => {
 
     const [questActive1, setQuestActive1] = useState(false);
     const [questActive2, setQuestActive2] = useState(false);
@@ -84,7 +87,7 @@ export const RequestContent = () => {
                 <div className={`${questActive1 ? contactActiveStyle : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center jsutify duration-300`}>
                     <div onClick={() => activeHandler(1)} className="flex w-full items-center justify-between">
                         <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full ">Wie kann ich zu OG Webdesign Kontakt aufnehmen?</p>
-                        <div className="w-[9rem] h-[3rem] mobile:hidden desktop:flex mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
+                        <div  className="w-[9rem] h-[3rem] mobile:hidden desktop:flex mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
                         <ArrowIcon className={`w-[1.5rem] fill-white mr-[1.5rem] ${questActive1 && "rotate-90"} duration-300 mobile:block desktop:hidden `} />
@@ -98,11 +101,11 @@ export const RequestContent = () => {
                                 Wenn Sie eine ganz allgemeine Frage über unsere Angebote an Dienstleisungen oder über unsere verwendeten Technologien haben.
                                 Hierfür nutzen Sie bitte unser Kontaktformular.
                             </p>
-                            <div className="w-[10rem] h-[3rem] ml-8 mt-4 bg-[#88ff27] rounded-2xl flex justify-center items-center text-black font-sharemono">Kontaktformular</div>
+                            <div onClick={props.contactShift} className="w-[10rem] h-[3rem] hover:bg-[#52cc34] hover:scale-110 duration-300 ml-8 mt-4 bg-[#88ff27] rounded-2xl flex justify-center items-center text-black font-sharemono">Kontaktformular</div>
                             <p className="ml-8 mt-14 w-3/4">
                                 Haben Sie bereits feste Vorstellungen über Ihr Projekt oder der gewünschten Dienstleistung, können Sie uns direkt eine Anfrage über unser Anfrageformular zukommen lassen.
                             </p>
-                            <div className="w-[10rem] h-[3rem] ml-8 mt-4 bg-[#88ff27] rounded-2xl flex justify-center items-center text-black font-sharemono">Anfrageformular</div>
+                            <div onClick={props.requestShift} className="w-[10rem] h-[3rem] hover:bg-[#52cc34] hover:scale-110 duration-300 ml-8 mt-4 bg-[#88ff27] rounded-2xl flex justify-center items-center text-black font-sharemono">Anfrageformular</div>
                         </div>
                     </div>
                 </div>

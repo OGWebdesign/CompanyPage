@@ -374,7 +374,9 @@ function App() {
               {indicatorNav === 3 && <OfferSite></OfferSite>}
               {indicatorNav === 6 && <Impressum></Impressum>}
               {indicatorNav === 8 && <Privacy></Privacy>}
-              {indicatorNav === 10 && <Helpcenter
+              {indicatorNav === 10 && <Helpcenter 
+                requestShift=  {() => {setIndicatorNav(3); window.scrollTo({ top: 0, behavior: 'smooth' });}}
+                contactShift=  {() => {setIndicatorNav(4); window.scrollTo({ top: 0, behavior: 'smooth' });}}
                 mailLink=      {() => { setIndicatorNav(4); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                 requestLink=   {() => { setIndicatorNav(3); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                 imprintLink=   {() => { setIndicatorNav(6); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
