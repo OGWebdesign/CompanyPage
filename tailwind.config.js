@@ -53,7 +53,7 @@ export default {
           '50%': { transform: 'translateX(3px)' },
           '75%': { transform: 'translateX(-3px)' },
         },
-        zepta:{'0%':{height:0},'100%':{heigth:'40rem'}},
+        zepta:{'0%':{height:0},'100%':{height:'40rem'}},
         flyIn: {
           '0%': { transform: 'translateY(-200%)' },
           '50%': { transform: 'translateY(10%)' },
