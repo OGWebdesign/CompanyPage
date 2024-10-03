@@ -14,16 +14,12 @@ export const RequestContent = (props:{
 
     // tablet:h-[35rem] mobile:h-[60rem] desktop:h-[30rem]
     const inactiveStyleSheet ="mobile:h-[5.5rem] tablet:h-[5rem]";
-
-
-
     const contactActiveStyle ="tablet:h-[35rem] mobile:h-[50rem]"
     const loadingActiveStyle ="tablet:h-[40rem] laptop:h-[30rem] mobile:h-[48rem]"
     const serviceActiveStyle ="tablet:h-[30rem] laptop:h-[20rem] mobile:h-[30rem]"
     const konsultationActiveStyle ="laptop:h-[23rem] mobile:h-[25rem]"
     const techActiveStyle ="laptop:h-[45rem] tablet:h-[45rem] mobile:h-[45rem]"
-    
-    const wrapperHeight = !questActive1 && !questActive2 && !questActive3 && !questActive4 && !questActive5 && !questActive6 ? "h-[35rem]":"mobile:h-[70rem] tablet:h-[70rem]"
+    const wrapperHeight = !questActive1 && !questActive2 && !questActive3 && !questActive4 && !questActive5 && !questActive6 ? "h-[35rem]":"mobile:h-[75rem] tablet:h-[75rem]"
 
 
     const activeHandler = (selector: number) => {

@@ -9,7 +9,7 @@ export const ProblemContent = (props: {
     return (
         //Wrapper
         <div className="w-full flex justify-center items-center ">
-            <div className="full flex-col mobile:h-[150rem] tablet:h-[120rem] laptop:h-[110rem] desktop:h-[100rem] desktop-l:h-[90rem] animate-zeptaEffect overflow-hidden rounded-2xl text-white font-sharemono text-[2rem] font-bold flex items-center">
+            <div className="full flex-col mobile:h-[150rem] tablet:h-[130rem] laptop:h-[120rem] desktop:h-[100rem] desktop-l:h-[90rem] animate-zeptaEffect overflow-hidden rounded-2xl text-white font-sharemono text-[2rem] font-bold flex items-center">
                 {/**Headline and Title */}
                 <div className="max-w-[100rem]">
                     <div className="w-full tablet:p-8 mobile:p-2">
