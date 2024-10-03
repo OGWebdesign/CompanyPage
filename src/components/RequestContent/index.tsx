@@ -35,6 +35,7 @@ export const RequestContent = () => {
         }
     }
 
+    
     return (
         <div className="w-full flex-col h-[65rem] animate-zeptaEffect overflow-hidden text-white font-sharemono text-[2rem] font-bold rounded-2xl flex items-center ">
             <div className="max-w-[100rem]">
