@@ -8,7 +8,7 @@ export const RequestContent = () => {
     const [questActive5, setQuestActive5] = useState(false);
     const [questActive6, setQuestActive6] = useState(false);
     const inactiveStyleSheet = "h-[5rem]";
-    const activeStyleSheet = "h-[30rem]";
+    const activeStyleSheet   = "h-[30rem]";
 
 
 
