@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ArrowIcon } from "../Icons";
 export const RequestContent = () => {
 
     const [questActive1, setQuestActive1] = useState(false);
@@ -71,14 +72,15 @@ export const RequestContent = () => {
 
     return (
         <div className="w-full flex-col h-[65rem] animate-zeptaEffect overflow-hidden text-white font-sharemono text-[2rem] font-bold rounded-2xl flex items-center ">
-            <div className="max-w-[100rem]">
+            <div className="desktop:max-w-[100rem] mobile:max-w-full">
 
                 <div className={`${questActive1 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(1)} className="flex w-full items-center justify-between">
-                        <p className="ml-8 text-[1.2rem]">Wie kann ich Kontakt zu euch aufnehmen?</p>
-                        <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
+                        <p className="ml-8 text-[1.2rem] mobile:w-[80%] desktop:w-full ">Wie kann ich Kontakt zu euch aufnehmen?</p>
+                        <div className="w-[9rem] h-[3rem] mobile:hidden desktop:flex mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
+                        <ArrowIcon className={`w-[1rem] fill-white ${questActive1 && "rotate-90"} duration-300 mobile:block desktop:hidden `} />
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
                         <article className="ml-6 mt-4">
@@ -101,10 +103,11 @@ export const RequestContent = () => {
 
                 <div className={`${questActive2 ? activeSmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(2)} className="flex w-full items-center justify-between">
-                        <p className="ml-8 text-[1.2rem]">Warum wird die Seite nicht korrekt geladen oder angezeigt?</p>
-                        <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
+                        <p className="ml-8 text-[1.2rem] mobile:w-[80%] desktop:w-full">Warum wird die Seite nicht korrekt geladen oder angezeigt?</p>
+                        <div className="w-[9rem] h-[3rem] mobile:hidden desktop:flex mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
+                        <ArrowIcon className={`w-[1rem] fill-white ${questActive2 && "rotate-90"} duration-300 mobile:block desktop:hidden `} />
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
                         <article className="ml-6 mt-4 w-3/4">
@@ -129,11 +132,12 @@ export const RequestContent = () => {
 
                 <div className={`${questActive3 ? activeSmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(3)} className="flex w-full items-center justify-between">
-                        <p className="ml-8 text-[1.2rem]">Kann ich mich von euch über eure Dienstleistungen beraten lassen?</p>
+                        <p className="ml-8 text-[1.2rem] mobile:w-[80%] desktop:w-full">Kann ich mich von euch über eure Dienstleistungen beraten lassen?</p>
 
-                        <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
+                        <div className="w-[9rem] h-[3rem] mobile:hidden desktop:flex mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
+                        <ArrowIcon className={`w-[1rem] fill-white ${questActive3 && "rotate-90"} duration-300 mobile:block desktop:hidden `} />
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
                         <article className="ml-6 mt-4 w-3/4">
@@ -151,10 +155,11 @@ export const RequestContent = () => {
 
                 <div className={`${questActive4 ? activeSmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(4)} className="flex w-full items-center justify-between">
-                        <p className="ml-8 text-[1.2rem]">Wann sind eure Sprechzeiten?</p>
-                        <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
+                        <p className="ml-8 text-[1.2rem] mobile:w-[80%] desktop:w-full">Wann sind eure Sprechzeiten?</p>
+                        <div className="w-[9rem] h-[3rem] mr-4 mobile:hidden desktop:flex rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
+                        <ArrowIcon className={`w-[1rem] fill-white ${questActive4 && "rotate-90"} duration-300 mobile:block desktop:hidden `} />
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
                         <article className="ml-6 mt-4 w-3/4">
@@ -196,10 +201,11 @@ export const RequestContent = () => {
 
                 <div className={`${questActive5 ? activeverySmallStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(5)} className="flex w-full items-center justify-between">
-                        <p className="ml-8 text-[1.2rem]">Welche Technologien nutzt ihr zur Entwicklung?</p>
-                        <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
+                        <p className="ml-8 text-[1.2rem] mobile:w-[80%] desktop:w-full">Welche Technologien nutzt ihr zur Entwicklung?</p>
+                        <div className="w-[9rem] h-[3rem] mr-4 mobile:hidden desktop:flex rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
+                        <ArrowIcon className={`w-[1rem] fill-white ${questActive5 && "rotate-90"} duration-300 mobile:block desktop:hidden`} />
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
                         <div className="w-full flex gap-6">
@@ -236,10 +242,11 @@ export const RequestContent = () => {
 
                 <div className={`${questActive6 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(6)} className="flex w-full items-center justify-between">
-                        <p className="ml-8 text-[1.2rem]">Wie lange dauert der Entwicklungsprozess?</p>
-                        <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
+                        <p className="ml-8 text-[1.2rem] mobile:w-[80%] desktop:w-full">Wie lange dauert der Entwicklungsprozess?</p>
+                        <div className="w-[9rem] h-[3rem] mobile:hidden desktop:flex mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
+                        <ArrowIcon className={`w-[1rem] fill-white ${questActive6 && "rotate-90"} duration-300 mobile:block desktop:hidden`} />
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
                         <article className="ml-6 mt-4 w-3/4">
