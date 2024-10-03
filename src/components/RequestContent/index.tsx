@@ -77,7 +77,7 @@ export const RequestContent = () => {
                 <div className={`${questActive5 ? activeStyleSheet : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => setQuestActive5(!questActive5)} className="flex w-full items-center justify-between">
                         <p className="ml-8 text-[1.2rem]">Kann ich mich von euch über eure Dienstleistungen beraten lassen?</p>
-                        
+
                         <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
@@ -87,8 +87,8 @@ export const RequestContent = () => {
                             Selbstverständlich!
                         </article>
                         <p className="ml-8 mt-6 w-3/4">
-                            Wir haben es uns zur Aufgabe gemacht, mit hochmodernen Technologien Software und Webseiten zu produzieren. 
-                            Jedes unserer Projekte durchläuft daher eine intensive Beratungs- und Planungsphase. Sie können über unser Kontaktformular 
+                            Wir haben es uns zur Aufgabe gemacht, mit hochmodernen Technologien Software und Webseiten zu produzieren.
+                            Jedes unserer Projekte durchläuft daher eine intensive Beratungs- und Planungsphase. Sie können über unser Kontaktformular
                             jederzeit mit uns Kontakt aufnehmen. Außerdem stehen wir Ihnen im Rahmen unserer Sprechzeiten auch telefonisch zur Verfügung.
                         </p>
                     </div>
@@ -148,6 +148,35 @@ export const RequestContent = () => {
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
                     </div>
+                    <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
+                        <div className="w-full flex gap-6">
+                            <div className="w-[13rem] p-5">
+                                <article className="ml-6 mt-4">
+                                    Backend
+                                </article>
+                                <p className="ml-8 mt-2">Node.js</p>
+                                <p className="ml-8 mt-2">Express</p>
+                                <p className="ml-8 mt-2">Next.js</p>
+                                <p className="ml-8 mt-2">Fastify</p>
+                            </div>
+
+                            <div className="w-[13rem] p-5">
+                                <article className="ml-6 mt-4">
+                                    Frontend
+                                </article>
+                                <p className="ml-8 mt-2">React</p>
+                                <p className="ml-8 mt-2">React Native</p>
+                                <p className="ml-8 mt-2">Tailwind CSS</p>
+                            </div>
+                            <div className="w-[13rem] p-5">
+                                <article className="ml-6 mt-4">
+                                    Datenbanken
+                                </article>
+                                <p className="ml-8 mt-2">Mongo DB</p>
+                                <p className="ml-8 mt-2">SQL</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -158,6 +187,20 @@ export const RequestContent = () => {
                         <div className="w-[9rem] h-[3rem] mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
+                    </div>
+                    <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
+                        <article className="ml-6 mt-4 w-3/4">
+                            Darauf gibt es leider keine allgemein gültige Antwort, da die Fertigstellung der App oder Webseite stark davon beeinflusst ist, wie umfangreich das Projekt ist.
+                        </article>
+                        <p className="ml-8 mt-6 w-3/4">
+                            Eine einfache Onepage Webseite kann bereits in einer Woche aus der Konzeptions- und Planungsphase weiter in die Umsetzungsphase übergehen, welche bei diesen Umfang auch nach ungefähr einer Woche zum Abschluss kommt.
+                        </p>
+                        <p className="ml-8 mt-6 w-3/4">
+                            Eine komplexe, nicht statische Webseite mit vielen Unterseiten dagegen kann schonmal mit Konzeption, Planung- und Umsetzungsphase 2-3 Monate in Anspruch nehmen.
+                        </p>
+                        <p className="ml-8 mt-6 w-3/4">
+                            Da jedes Projekt bei uns mit einem intensiven Beratungsgespräch beginnt, können wir Ihnen auch anschließend diese Frage genauer beantworten.
+                        </p>
                     </div>
                 </div>
             </div>
