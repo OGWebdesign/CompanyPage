@@ -14,8 +14,8 @@ export const ProblemContent = (props: {
                 <div className="max-w-[100rem]">
                     <div className="w-full tablet:p-8 mobile:p-2">
                         <p className="mobile:text-[1.5rem]">Unterstützung bei der Navigation</p>
-                        <p className="text-[1rem] tablet:w-3/4 mobile:w-full pt-4 font-normal text-slate-300">Sie finden hier den gesamten Inhalt unserer Webseite im Überblick.
-                            Links steht der Title und die dazugehörige Beschreibung und Rechts ist der Knopf, der Sie zu der von Ihnen gewünschten Seite bringt. Auf den Knopf ganz unten gelangen Sie wieder zurück zur Startseite.
+                        <p className="text-[1rem] tablet:w-3/4 mobile:w-full pt-4 font-normal text-slate-300">Sie finden hier alle Unterseiten unserer Webseite auf einem Überblick.
+                            Auf der linken Seite finden Sie den Title und die dazugehörige Beschreibung und Rechts ist der Knopf, der Sie zu der von Ihnen gewünschten Seite führt. Unten finden Sie einen Knopf, der Sie wieder zurück zur Startseite führt.
                         </p>
                     </div>
 
@@ -32,7 +32,7 @@ export const ProblemContent = (props: {
                     <div className="w-full tablet:p-8 mobile:p-2 tablet:mt-5 mobile:mt-10 flex justify-center items-center tablet:flex-row mobile:flex-col">
                         <div className="w-full flex flex-col">
                             <span className="text-[#88ff27]">Anfrage</span>
-                            <p className="text-[1rem] w-3/4 pt-4 font-normal text-slate-300">Hier können Sie uns die Art Ihrer gewünschten Dienstleistung, die höhe Ihres vorhandenen Budget´s und Details über Ihrer Projektidee oder ein spezifisches Problem, welches mit hilfe von Software zu lösen gilt mitteilen. Wir melden uns dann schnellstmöglich bei Ihnen.</p>
+                            <p className="text-[1rem] w-3/4 pt-4 font-normal text-slate-300">Hier können Sie uns die Art Ihrer gewünschten Dienstleistung, die Höhe Ihres vorhandenen Budget´s und Details über Ihre Projektidee oder ein spezifisches Problem, welches mit Hilfe von Software zu lösen gilt mitteilen. Wir melden uns schnellstmöglich bei Ihnen.</p>
                         </div>
                         <div onClick={props.requestLink} className="tablet:w-[15rem] mobile:w-[10rem] h-[3rem] mobile:mt-8 tablet-mt-0 hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] laptop:mr-[10rem] flex justify-center items-center rounded-2xl">
                             <p className="text-[1rem] text-black  font-semibold ">Anfrage</p>
@@ -42,7 +42,7 @@ export const ProblemContent = (props: {
                     <div className="w-full tablet:p-8 mobile:p-2 tablet:mt-5 mobile:mt-10 flex justify-center items-center tablet:flex-row mobile:flex-col">
                         <div className="w-full flex flex-col">
                             <span className="text-[#88ff27]">Email</span>
-                            <p className="text-[1rem] w-3/4 pt-4 font-normal text-slate-300">Auf der Seite Email können Sie uns ganz allgemeine Fragen über unsere Dienstleistungen stellen. Hier können wir Sie auch beraten falls Sie noch nicht genau wissen, welche Dienstleistung Ihnen helfen könnte.</p>
+                            <p className="text-[1rem] w-3/4 pt-4 font-normal text-slate-300">Auf der Seite "Email" können Sie uns allgemeine Fragen über unsere Dienstleistungen stellen. Hier können wir Sie auch beraten falls Sie sich unsicher darüber sind, welche Dienstleistungen Ihnen helfen könnten.</p>
                         </div>
                         <div onClick={props.mailLink} className="tablet:w-[15rem] mobile:w-[10rem] h-[3rem] mobile:mt-8 tablet-mt-0 hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] laptop:mr-[10rem] flex justify-center items-center rounded-2xl">
                             <p className="text-[1rem] text-black  font-semibold ">Email</p>
@@ -52,7 +52,7 @@ export const ProblemContent = (props: {
                     <div className="w-full tablet:p-8 mobile:p-2 tablet:mt-5 mobile:mt-10 flex justify-center items-center tablet:flex-row mobile:flex-col">
                         <div className="w-full flex flex-col">
                             <span className="text-[#88ff27]">Impressum</span>
-                            <p className="text-[1rem] w-3/4 pt-4 font-normal text-slate-300">Im Impressum stehen alle für Sie wichtigen Informationen von uns bereit. Hier finden Sie Telefonnummer, Emailadresse und Anschrift.</p>
+                            <p className="text-[1rem] w-3/4 pt-4 font-normal text-slate-300">Im Impressum stehen alle für Sie wichtigen Informationen von uns bereit. Hier finden Sie Telefonnummer, Emailadressen und Anschriften.</p>
                         </div>
                         <div onClick={props.imprintLink} className="tablet:w-[15rem] mobile:w-[10rem] h-[3rem] mobile:mt-8 tablet-mt-0 hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] laptop:mr-[10rem] flex justify-center items-center rounded-2xl">
                             <p className="text-[1rem] text-black  font-semibold ">Impressum</p>

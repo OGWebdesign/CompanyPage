@@ -20,7 +20,7 @@ export const RequestContent = () => {
     const konsultationActiveStyle ="laptop:h-[23rem] mobile:h-[25rem]"
     const techActiveStyle ="laptop:h-[45rem] tablet:h-[45rem] mobile:h-[45rem]"
     
-    const wrapperHeight = !questActive1 && !questActive2 && !questActive3 && !questActive4 && !questActive5 && !questActive6 ? "h-[35rem]":"mobile:h-[70rem] tablet:h-[65rem]"
+    const wrapperHeight = !questActive1 && !questActive2 && !questActive3 && !questActive4 && !questActive5 && !questActive6 ? "h-[35rem]":"mobile:h-[70rem] tablet:h-[70rem]"
 
 
     const activeHandler = (selector: number) => {
@@ -83,7 +83,7 @@ export const RequestContent = () => {
 
                 <div className={`${questActive1 ? contactActiveStyle : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center jsutify duration-300`}>
                     <div onClick={() => activeHandler(1)} className="flex w-full items-center justify-between">
-                        <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full ">Wie kann ich Kontakt zu euch aufnehmen?</p>
+                        <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full ">Wie kann ich zu OG Webdesign Kontakt aufnehmen?</p>
                         <div className="w-[9rem] h-[3rem] mobile:hidden desktop:flex mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
@@ -91,7 +91,7 @@ export const RequestContent = () => {
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
                         <article className="ml-6 mt-4">
-                            Wir bieten Ihnen zwei Möglichkeiten an, um mit uns in Kontakt zu treten.
+                            Wir bieten Ihnen zwei Möglichkeiten an, um den Kontakt herzustellen.
                         </article>
                         <div className="flex flex-col w-full">
                             <p className="ml-8 mt-4 w-3/4">
@@ -126,7 +126,7 @@ export const RequestContent = () => {
                             und die Nutzung eines weniger verbreiteten oder älteren Browsers kann zu Problemen führen.
                         </p>
                         <p className="ml-8 mt-6 w-3/4">
-                            Ein weiterer häufiger Grund sind veraltete Daten im Browser-Cache,
+                            Ein weiterer Grund sind veraltete Daten im Browser-Cache,
                             die eine fehlerhafte Anzeige verursachen können. Versuchen Sie daher, den Cache zu leeren.
                         </p>
                         <p className="ml-8 mt-6 w-3/4">
@@ -139,7 +139,7 @@ export const RequestContent = () => {
 
                 <div className={`${questActive3 ? serviceActiveStyle : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(3)} className="flex w-full items-center justify-between">
-                        <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full">Kann ich mich von euch über eure Dienstleistungen beraten lassen?</p>
+                        <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full">Wie kann ich mich bei der Wahl einer Dienstleistung beraten lassen?</p>
 
                         <div className="w-[9rem] h-[3rem] mobile:hidden desktop:flex mr-4 rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
@@ -148,7 +148,7 @@ export const RequestContent = () => {
                     </div>
                     <div className="w-full flex flex-col text-[1rem] text-slate-400 p-4 justify-between">
                         <article className="ml-6 mt-4 w-3/4">
-                            Selbstverständlich!
+                            Ganz einfach!
                         </article>
                         <p className="ml-8 mt-6 w-3/4">
                             Wir haben es uns zur Aufgabe gemacht, mit hochmodernen Technologien Software und Webseiten zu produzieren.
@@ -162,7 +162,7 @@ export const RequestContent = () => {
 
                 <div className={`${questActive4 ? konsultationActiveStyle : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(4)} className="flex w-full items-center justify-between">
-                        <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full">Wann sind eure Sprechzeiten?</p>
+                        <p className="mobile:ml-0 tablet:ml-8 mobile:text-[1rem] tablet:text-[1.2rem] mobile:w-[80%] desktop:w-full">Wie sind die Sprechzeiten von OG Webdesign?</p>
                         <div className="w-[9rem] h-[3rem] mr-4 mobile:hidden desktop:flex rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
@@ -208,7 +208,7 @@ export const RequestContent = () => {
 
                 <div className={`${questActive5 ? techActiveStyle : inactiveStyleSheet} w-full p-4 overflow-hidden flex flex-col items-center duration-300`}>
                     <div onClick={() => activeHandler(5)} className="flex w-full items-center justify-between">
-                        <p className="mobile:ml-0 tablet:ml-8 text-[1.2rem] mobile:w-[80%] desktop:w-full">Welche Technologien nutzt ihr zur Entwicklung?</p>
+                        <p className="mobile:ml-0 tablet:ml-8 text-[1.2rem] mobile:w-[80%] desktop:w-full">Welche Technologien nutzt OG Webdesign für die Entwicklung?</p>
                         <div className="w-[9rem] h-[3rem] mr-4 mobile:hidden desktop:flex rounded-2xl hover:bg-[#52cc34] hover:scale-110 duration-300 bg-[#88ff27] flex justify-center items-center">
                             <p className="text-[1.2rem] text-black">Antwort</p>
                         </div>
