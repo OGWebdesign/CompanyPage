@@ -21,7 +21,7 @@ export const EmployeeCard = () => {
               {/** ------------------------------PLACE KOSMONAUT HERE------------------------------ */}
 
               <img
-                src="/graphics/nils.jpg"
+                src="/graphics/nils.webp"
                 alt="Astronaut"
                 className=" z-50 w-[20rem] rounded-xl shadow-[0_20px_50px_rgba(39.22,25.49,64.71,_0.7)] border-white"
               />
