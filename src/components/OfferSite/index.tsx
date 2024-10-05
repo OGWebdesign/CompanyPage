@@ -38,6 +38,8 @@ export const OfferSite = () => {
 
   const borderDashed = "border-dashed border-red-500 border-2 duration-500";
 
+  const borderGreenDashed = "border-dashed border-[#98f144] border-2 duration-500";
+
 
   const clickEffect = "bg-[#c5c5c5] shadow-[5px_5px_0px_0px_rgba(152,241,68)]"
 
@@ -83,9 +85,7 @@ export const OfferSite = () => {
   const sendRequest = async () => {
     setSend(true);
     if (price < 500) {
-      alert("Dein Budget ist zu niedrig. Bitte wähle ein Budget von mindestens 500€ aus.");
       setSend(false);
-      return;
     }
     if (!name || !email || !phone || !message || (select1 == false && select2 == false && select3 == false && select4 == false)) {
       alert("Bitte fülle alle Felder aus!");
@@ -240,7 +240,7 @@ export const OfferSite = () => {
                     setNoTechSelected(false);
                   }
                 }}
-                  className={`${noTechSelected ? borderDashed : ""}  tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select1 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : borderGreenDashed}  tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select1 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select1 ? "fill-black" : "fill-white"} `}>
                     <CodeIcon className={`mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]`} />
                   </div>
@@ -256,7 +256,7 @@ export const OfferSite = () => {
                     setNoTechSelected(false);
                   }
                 }}
-                  className={`${noTechSelected ? borderDashed : ""} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select2 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : borderGreenDashed} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select2 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select2 ? "fill-black" : "fill-white"} `}>
                     <WebAppIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]" />
                   </div>
@@ -272,7 +272,7 @@ export const OfferSite = () => {
                     setNoTechSelected(false);
                   }
                 }}
-                  className={`${noTechSelected ? borderDashed : ""} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select3 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : borderGreenDashed} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select3 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select3 ? "fill-black" : "fill-white"} `}>
                     <BookIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]" />
                   </div>
@@ -287,7 +287,7 @@ export const OfferSite = () => {
                     setNoTechSelected(false);
                   }
                 }}
-                  className={`${noTechSelected ? borderDashed : ""} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select4 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : borderGreenDashed} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select4 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select4 ? "fill-black" : "fill-white"} `}>
                     <ComputerIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]" />
                   </div>
@@ -358,7 +358,7 @@ export const OfferSite = () => {
             </div>
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full mt-[5rem]">
           <div className="w-full flex flex-col mt-5 
   mobile:px-2 tablet:px-8 
   font-mono">
