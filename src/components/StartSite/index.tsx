@@ -27,7 +27,7 @@ export const StartSite = (props: {
       {/**Nummer Zwei*/}
       <p>"Versionskontrolle und Planung ist das A und O."</p>
       {/**Nummer Drei*/}
-      <p>"Als Programmierer hört man nie mit dem lernen auf."</p>
+      <p>"Als Programmierer hört man nie mit dem Lernen auf."</p>
       ); 
     }; 
     export default Lebenseinstellung;
