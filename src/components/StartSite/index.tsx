@@ -8,6 +8,7 @@ import { TechStripe } from "../TechStripe"
 import { TextAndButton } from "../TextAndButton"
 import { TextComponent } from "../TextComponent"
 import { CodeSnippet } from "../CodeSnippetOn"
+import { DynamicContentCard } from "../DynamicContentCard"
 
 export const StartSite = (props: {
   TextAndButtonbt: JSX.Element;
@@ -40,8 +41,8 @@ export const StartSite = (props: {
       <div className="animate-fadeIn">
 
 
-        <img src="Planets/mars.webp" alt="Mars" className="w-[45rem] z-10 absolute top-[20%] right-[-5%] animate-floatJupiter" />
-        <img src="Planets/jupiter.webp" alt="Jupiter" className="w-[35rem] z-10 absolute top-[30%] left-[5%] animate-floatJupiter " />
+        <img src="Planets/mars.webp" alt="Mars" className="w-[45rem] absolute top-[20%] right-[-5%] animate-floatJupiter" />
+        <img src="Planets/jupiter.webp" alt="Jupiter" className="w-[35rem] absolute top-[30%] left-[5%] animate-floatJupiter " />
         <img src="Planets/comet.webp" alt="Comet" className="w-[15rem] mobile:w-0 tablet:w-[15rem] z-10 absolute desktop:top-[45%] laptop:top-[43%] tablet:top-[46%] mobile:top-[46.2%]  right-[10%]  animate-floatComet" />
         <img src="graphics/astro.webp" alt="" className="laptop:w-[20rem] desktop-xl:right-[35%]  desktop-l:right-[15%] tablet:top-[75%] mobile:w-0 z-10 absolute mobile:top-[70%] right-[5%] animate-float" />
         <img src="Planets/satelite.webp" alt="" className="w-[10rem] z-10 absolute tablet:bottom-[-4%] mobile:bottom-[-2%] mobile:right-[5%] tablet:right-[18%] animate-float" />
@@ -102,6 +103,15 @@ export const StartSite = (props: {
           <div className="border-2 border-[#606060] shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] rounded-lg p-5 mb-[2%]">
             <Paper className="w-[2rem] mobile:w-[1rem] fill-[#98f144]" />
           </div>
+
+
+          {/**Card New */}
+
+          <DynamicContentCard></DynamicContentCard>
+
+
+
+
 
           <div className="laptop:w-[95%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%] z-50">
             <CardBlack
@@ -165,7 +175,7 @@ export const StartSite = (props: {
               </p>
             </CardWhite>
             <CardWhite
-              classname="w-[90%] mb-[5%]"
+              classname="w-[95%] mb-[5%]"
               text1="Anwendungsentwicklung"
               text2=""
             >
@@ -192,7 +202,7 @@ export const StartSite = (props: {
               </p>
             </CardWhite>
             <CardBlack
-              classname="w-[90%]"
+              classname="w-[95%]"
               text1="Künstliche"
               text2="Intelligenz"
             >
@@ -235,26 +245,26 @@ export const StartSite = (props: {
             <Screw className="w-[2rem] mobile:w-[1rem] fill-[#98f144]" />
           </div>
 
-          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[90%] mt-[5%] mb-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono max-w-[100rem]  mobile:w-[95%] mt-[5%] mb-[2%] text-[1.2rem] text-left">
             Beim erstellen von Webseiten haben wir uns bewusst gegen ein Content Management System wie Wordpress oder Typo3 entschieden,
             denn wir wollen Webseiten erstellen, die sich von den Konkurenzwebseiten unserer Klienten unterscheiden.
             In Wordpress dagegen werden oftmals auf Plugins und Themes zurückgegriffen. Dies sind keine guten Grundlagen für ein digitales, hoch individuelles Aushängeschild eines Unternehmens.
 
           </p>
 
-          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[95%]  my-[2%] text-[1.2rem] text-left">
             Ebenso die langen Ladezeiten, die bei Wordpress durch das veraltete PHP Konstrukt kaum zu verhindern sind.
             Zumal machen die ganzen Plugins eine Wartung an solchen Webseiten sehr schwierig durch die hohen Anzahlen an Seiteneffekten.
           </p>
 
-          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left z-50">
+          <p className="text-white font-sharemono max-w-[100rem] mobile:w-[95%]  my-[2%] text-[1.2rem] text-left z-50">
             Außerdem sind bei Wordpress Webseiten selten echte Experten am Werk.
             Man benötigt keine Programmierkenntnisse für ein Content Management System und somit auch keine Programmierer.
             In der Regel sind es Leihen, die sich Wordpress autodidaktisch beigebracht haben und selten ein tiefes Verständnis für Webtechnologien und Sicherheitskonzepte beherschen.
             Diese Eigenschafte bilden keine gute Grundlage für die Erstellung Ihrer Webseite.
           </p>
 
-          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[90%]  my-[2%] text-[1.2rem] text-left z-50">
+          <p className="text-white font-sharemono max-w-[100rem] mobile:w-[95%]  my-[2%] text-[1.2rem] text-left z-50">
             Deswegen haben wir uns bei OG Webdesign dazu entschieden, Webseiten mit den gleichen Technologien wie Facebook und Instagram zu produzieren.  Wir haben einen sehr hohen Anspruch wenn es um die Sicherheit eines Systems geht. Gerade deswegen verfolgen wir den Ansatz, eigenen Code zu schreiben und die volle Kontrolle über das Projekt zu haben.
           </p>
           <div className="w-3/4 mt-10">
