@@ -39,7 +39,7 @@ export const StartSite = (props: {
       <div className="animate-fadeIn">
 
 
-        <img src="Planets/mars.webp" alt="Mars" className="w-[45rem] absolute top-[20%] right-[-5%] animate-floatJupiter" />
+        <img src="Planets/mars.webp" alt="Mars" className="w-[45rem] absolute top-[25%] right-[-5%] animate-floatJupiter" />
         <img src="Planets/jupiter.webp" alt="Jupiter" className="w-[35rem] absolute top-[30%] left-[5%] animate-floatJupiter " />
         <img src="Planets/comet.webp" alt="Comet" className="w-[15rem] mobile:w-0 tablet:w-[15rem] absolute desktop:top-[45%] laptop:top-[43%] tablet:top-[46%] mobile:top-[46.2%]  right-[10%]  animate-floatComet" />
         <img src="graphics/astro.webp" alt="" className="laptop:w-[20rem] desktop-xl:right-[35%]  desktop-l:right-[15%] tablet:top-[75%] mobile:w-0 z-10 absolute mobile:top-[70%] right-[5%] animate-float" />

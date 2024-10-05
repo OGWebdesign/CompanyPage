@@ -53,30 +53,30 @@ export const DynamicContentCard = () => {
 
     return (
 
-        <div className="w-full flex justify-center items-center">
-            <div className="w-[85%] max-w-[100rem] bg-[#f3d8d800] mt-4 bg-opacity-[50%] backdrop-blur-3xl border rounded-3xl flex shadow-[0_20px_50px_rgba(8,_100,_184,_0.7)] laptop:flex-row mobile:flex-col" >
+        <div className="w-full flex justify-center items-center mb-[5%]">
+            <div className="w-[85%] max-w-[80rem] bg-[#f3d8d800] mt-4 bg-opacity-[50%] backdrop-blur-3xl border rounded-3xl flex shadow-[0_20px_50px_rgba(8,_100,_184,_0.7)] laptop:flex-row mobile:flex-col" >
                 {/**selector screen */}
                 <div className="mobile:w-full laptop:w-[35%] mobile:rounded-t-3xl laptop:rounded-l-3xl laptop:rounded-tr-none bg-[#080808] h-full flex flex-col">
                     <div onClick={()=>activateDisplayState(1)} className="duration-300 w-full mobile:h-[3rem] laptop:h-[5rem] mobile:rounded-t-3xl laptop:rounded-tl-3xl flex items-center laptop:justify-between mobile:justify-center laptop:flex-row mobile:flex-col">
-                        <p className="laptop:text-[1.4rem] font-sharemono text-white laptop:pl-6">
+                        <p className="laptop:text-[1.4rem] hover:text-[#98f144] font-sharemono text-white laptop:pl-6">
                             Webseiten
                         </p>
                         <div className={`laptop:w-[0.5rem] laptop:h-full mobile:w-[6rem] mobile:h-[0.2rem] h-full duration-200 ${websiteActive? "bg-[#98f144]":"bg-transparent"}`}></div>
                     </div>
                     <div onClick={()=>activateDisplayState(2)} className="duration-300 w-full mobile:h-[3rem] laptop:h-[5rem] flex items-center laptop:justify-between mobile:justify-center laptop:flex-row mobile:flex-col">
-                        <p className="laptop:text-[1.4rem] font-sharemono text-white laptop:pl-6 mobile:p-0">
+                        <p className="laptop:text-[1.4rem] hover:text-[#98f144] font-sharemono text-white laptop:pl-6 mobile:p-0">
                             DevOps &  Admin
                         </p>
                         <div className={`laptop:w-[0.5rem] laptop:h-full mobile:w-[6rem] mobile:h-[0.2rem] h-full duration-200 ${devOpsActive? "bg-[#98f144]":"bg-transparent"}`}></div>
                     </div>
                     <div onClick={()=>activateDisplayState(3)} className="duration-300 w-full mobile:h-[3rem] laptop:h-[5rem] flex items-center laptop:justify-between mobile:justify-center laptop:flex-row mobile:flex-col">
-                        <p className="laptop:text-[1.4rem] font-sharemono text-white laptop:pl-6 mobile:p-0">
+                        <p className="laptop:text-[1.4rem] hover:text-[#98f144] font-sharemono text-white laptop:pl-6 mobile:p-0">
                             Apps
                         </p>
                         <div className={`laptop:w-[0.5rem] laptop:h-full mobile:w-[6rem] mobile:h-[0.2rem] h-full duration-200 ${softwareDevActive? "bg-[#98f144]":"bg-transparent"}`}></div>
                     </div>
                     <div onClick={()=>activateDisplayState(4)} className="duration-300 w-full mobile:h-[3rem] laptop:h-[5rem] mobile:rounded-bl-none laptop:rounded-bl-3xl flex items-center laptop:justify-between mobile:justify-center laptop:flex-row mobile:flex-col">
-                        <p className="laptop:text-[1.4rem] font-sharemono text-white laptop:pl-6 mobile:p-0">
+                        <p className="laptop:text-[1.4rem] hover:text-[#98f144] font-sharemono text-white laptop:pl-6 mobile:p-0">
                             K.I.
                         </p>
                         <div className={`laptop:w-[0.5rem] laptop:h-full mobile:w-[6rem] mobile:h-[0.2rem] h-full duration-200 ${artificalIntelligentActive? "bg-[#98f144]":"bg-transparent"}`}></div>
