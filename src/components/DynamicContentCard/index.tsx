@@ -54,7 +54,7 @@ export const DynamicContentCard = () => {
     return (
 
         <div className="w-full flex justify-center items-center mb-[5%]">
-            <div className="w-[85%] max-w-[80rem] bg-[#f3d8d800] mt-4 bg-opacity-[50%] backdrop-blur-3xl border rounded-3xl flex shadow-[0_20px_50px_rgba(8,_100,_184,_0.7)] laptop:flex-row mobile:flex-col" >
+            <div className="w-[85%] max-w-[60rem] bg-[#f3d8d800] mt-4 bg-opacity-[50%] backdrop-blur-3xl border rounded-3xl flex shadow-[0_20px_50px_rgba(8,_100,_184,_0.7)] laptop:flex-row mobile:flex-col" >
                 {/**selector screen */}
                 <div className="mobile:w-full laptop:w-[35%] mobile:rounded-t-3xl laptop:rounded-l-3xl laptop:rounded-tr-none bg-[#080808] h-full flex flex-col">
                     <div onClick={()=>activateDisplayState(1)} className="duration-300 w-full mobile:h-[3rem] laptop:h-[5rem] mobile:rounded-t-3xl laptop:rounded-tl-3xl flex items-center laptop:justify-between mobile:justify-center laptop:flex-row mobile:flex-col">
