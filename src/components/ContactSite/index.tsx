@@ -4,7 +4,7 @@ import { Heading } from "../Heading"
 
 export const ContactSite = () => {
     return (
-        <div className="w-full flex justify-center items-center">
+        <div className="w-full flex flex-col justify-center items-center">
 
             <img src="Planets/icePlanet.webp" alt="" className="w-[40rem] absolute desktop:top-[10%] desktop:right-[10%] laptop:top-[10%] laptop:right-[0%] mobile:top-[70%] animate-floatIcePlanet"/>
 
@@ -20,11 +20,12 @@ export const ContactSite = () => {
                     text="Wenn Sie Fragen zu einem Software-Produkt haben oder noch keine genaue Vorstellung über das Budget oder die Art des Auftrags besitzen, zögern Sie nicht, uns zu kontaktieren. Wir stehen Ihnen gerne zur Verfügung, um Ihre Ideen zu besprechen und gemeinsam eine passende Lösung zu finden. Egal, ob es um erste Informationen, individuelle Beratung oder eine detaillierte Planung geht – wir unterstützen Sie bei jedem Schritt auf dem Weg zu Ihrem erfolgreichen Projekt."
                 />
 
-                {/* Contact Formular */}
-                <div className="max-w-[100rem] w-full desktop:mt-[5%]">
+                
+            </div>
+            {/* Contact Formular */}
+            <div className="z-30 desktop:max-w-[100rem] tablet:w-full mobile:max-w-full desktop:mt-[5%]">
                 <ContactForm />
                 </div>
-            </div>
         </div >
     )
 }
