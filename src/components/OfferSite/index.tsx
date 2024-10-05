@@ -25,6 +25,22 @@ export const OfferSite = () => {
 
   const [select_sound] = useState(new Audio("/sounds/select 3.mp3"));
 
+  const [noTechSelected, setNoTechSelected] = useState<boolean>(false);
+  const [select100, setSelect100] = useState<boolean>(true);
+  const [select500, setSelect500] = useState<boolean>(false);
+  const [select1000, setSelect1000] = useState<boolean>(false);
+  const [noName, setNoName] = useState<boolean>(false);
+  const [noEmail, setNoEmail] = useState<boolean>(false);
+  const [noPhone, setNoPhone] = useState<boolean>(false);
+  const [noMessage, setNoMessage] = useState<boolean>(false);
+
+  const numberToAdd = select100 ? 100 : select500 ? 500 : 1000;
+
+  const borderDashed = "border-dashed border-red-500 border-2 duration-500";
+
+  const borderGreenDashed = "border-dashed border-[#98f144] border-2 duration-500";
+
+
   const clickEffect = "bg-[#c5c5c5] shadow-[5px_5px_0px_0px_rgba(152,241,68)]"
 
   const notClicked = "hover:bg-[#c5c5c5] hover:shadow-[5px_5px_0px_0px_rgba(152,241,68)]"
@@ -38,6 +54,8 @@ export const OfferSite = () => {
   const [hTextBox, setHTextBox] = React.useState<boolean>(false);
 
   const textAreaRef = React.useRef<HTMLTextAreaElement>(null);
+
+
 
 
   const messageHandler = () => {
@@ -66,9 +84,29 @@ export const OfferSite = () => {
 
   const sendRequest = async () => {
     setSend(true);
+    if (price < 500) {
+      setSend(false);
+    }
     if (!name || !email || !phone || !message || (select1 == false && select2 == false && select3 == false && select4 == false)) {
       alert("Bitte fülle alle Felder aus!");
       setSend(false);
+      if (!select1 && !select2 && !select3 && !select4) {
+        setNoTechSelected(true);
+      }
+      if (!name) {
+        setNoName(true);
+      }
+      if (!email) {
+        setNoEmail(true);
+      }
+      if (!phone) {
+        setNoPhone(true);
+      }
+      if (!message) {
+        setNoMessage(true);
+      }
+
+
       return;
     }
     await axios.post('https://og-api-mu.vercel.app/contact/send-formular', { name, email, company, phone, message, price, select1, select2, select3, select4 })
@@ -117,7 +155,7 @@ export const OfferSite = () => {
     <div className="w-full h-full flex flex-col items-center">
 
 
-      <img src="Planets/sun.webp" className="w-[40rem] z-10 absolute top-[40%] right-[10%] animate-floatJupiter" alt="sun" />
+      <img src="Planets/sun.webp" className="w-[40rem] z-10 absolute top-[35%] right-[10%] animate-floatJupiter" alt="sun" />
       <img src="Planets/spacestation.webp" className="laptop:w-[20rem] mobile:w-[10rem] tablet:w-[15rem] z-10 absolute laptop:bottom-[-10%] laptop:left-[5%] mobile:bottom-[-10%] mobile:right-[5%] animate-float" alt="spacestation" />
 
       {/* SUCCESS WINDOW*/}
@@ -198,10 +236,13 @@ export const OfferSite = () => {
                 <div onClick={() => {
                   select_sound.play();
                   setSelect1(!select1)
+                  if (!select1){
+                    setNoTechSelected(false);
+                  }
                 }}
-                  className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select1 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : borderGreenDashed}  tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select1 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select1 ? "fill-black" : "fill-white"} `}>
-                    <CodeIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]" />
+                    <CodeIcon className={`mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]`} />
                   </div>
                   <div className={`w-full text-center mobile:text-[0.8rem] tablet:text-[1rem] mt-[0.3rem] font-sharemono group-hover:text-black duration-500 ${select1 ? "text-black" : "text-white"}`}>
                     <p>Webseiten</p>
@@ -211,8 +252,11 @@ export const OfferSite = () => {
                 <div onClick={() => {
                   select_sound.play();
                   setSelect2(!select2)
+                  if (!select2){
+                    setNoTechSelected(false);
+                  }
                 }}
-                  className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select2 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : borderGreenDashed} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select2 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select2 ? "fill-black" : "fill-white"} `}>
                     <WebAppIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]" />
                   </div>
@@ -224,8 +268,11 @@ export const OfferSite = () => {
                 <div onClick={() => {
                   select_sound.play();
                   setSelect3(!select3);
+                  if (!select3){
+                    setNoTechSelected(false);
+                  }
                 }}
-                  className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select3 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : borderGreenDashed} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select3 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select3 ? "fill-black" : "fill-white"} `}>
                     <BookIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]" />
                   </div>
@@ -236,39 +283,82 @@ export const OfferSite = () => {
 
                 <div onClick={() => {
                   setSelect4(!select4);
+                  if (!select4){
+                    setNoTechSelected(false);
+                  }
                 }}
-                  className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select4 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : borderGreenDashed} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select4 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select4 ? "fill-black" : "fill-white"} `}>
                     <ComputerIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]" />
                   </div>
                   <div className={`w-full text-center mobile:text-[0.8rem] tablet:text-[1rem] mt-[0.3rem] font-sharemono group-hover:text-black duration-500 ${select4 ? "text-black" : "text-white"}`}>
                     <p>Dev-Ops</p>
                   </div>
-                </div>
+                </div> 
               </div>
-              <div className={`w-[65%] h-[3rem] mobile:w-full bg-[#151515] mt-[4rem]  flex justify-between items-center rounded-xl  `}>
+
+              {/* Nachricht, wenn keine Technologie ausgewählt */}
+
+
+              {noTechSelected && <span className="text-red-500 text-[1.1rem] mt-[2rem] font-sharemono animate-fadeIn duration-300">Bitte wähle mindestens eine Technologie aus!</span>}
+              
+
+              {/* Stufenauswahl Budget */}
+
+              <div className={`w-full flex justify-evenly items-center mt-[4rem] `}>
+                <span 
+                onClick={() => {
+                  setSelect100(true);
+                  setSelect500(false);
+                  setSelect1000(false);
+                }}
+                className={` font-sharemono text-[1.1rem] p-5 rounded-xl hover:text-black duration-300 ${select100 ? clickEffect + " text-black" : notClicked + " text-white"}`}>100€</span>
+
+                <span 
+                onClick={() => {
+                  setSelect100(false);
+                  setSelect500(true);
+                  setSelect1000(false);
+                }}
+                className={`font-sharemono text-[1.1rem] p-5 rounded-xl hover:text-black duration-300 ${select500 ? clickEffect + " text-black" : notClicked + " text-white"}`}>500€</span>
+
+
+                <span 
+                onClick={() => {
+                  setSelect100(false);
+                  setSelect500(false);
+                  setSelect1000(true);
+                }}
+                className={`font-sharemono text-[1.1rem] p-5 rounded-xl hover:text-black duration-300 ${select1000 ? clickEffect + " text-black" : notClicked + " text-white"}`}>1000€</span>
+              </div>
+              
+              <div className={`w-[65%] h-[3rem] mobile:w-full bg-[#151515] mt-[2rem]  flex justify-between items-center rounded-xl  `}>
                 <div onClick={() => {
                   decrease_sound.play();
-                  if (price >= 100) {
-                    setPrice(price - 100);
+                  if (price - numberToAdd < 100) {
+                    setPrice(100);
+                  } else {
+                    setPrice(price - numberToAdd);
                   }
-                }} className="w-[3.5rem] h-[3.5rem] flex justify-center items-center rounded-xl bg-[#c5c5c5] hover:bg-red-500">
+                }} className={` w-[3.5rem] h-[3.5rem] flex justify-center items-center rounded-xl bg-[#c5c5c5] hover:bg-red-500`}>
                   <MinusIcon className="w-[1.2rem]" />
                 </div>
                 <span className={` font-sharemono text-[1.3rem] ${underborder ? "text-red-500" : "text-[#98f144]"}`}>{price}€</span>
                 <div onClick={() => {
                   increase_sound.play();
-                  setPrice(price + 100);
+                  setPrice(price + numberToAdd);
                 }}
                   className="w-[3.5rem] h-[3.5rem] p-5 flex justify-center items-center rounded-xl bg-[#c5c5c5] hover:bg-[#98f144]">
                   <PlusIcon className="w-[1.2rem]" />
                 </div>
               </div>
-              <span className="text-white mt-[1rem] font-sharemono">Dein Budget</span>
+              <span className={`mt-[1rem] font-sharemono ${price < 500 ? "text-red-500" : "text-white"} `}>
+                { price < 500 ? "Gute Arbeit erfordert seinen Preis!" : "Dein Budget"}
+                </span>
             </div>
           </div>
         </div>
-        <div className="">
+        <div className="w-full mt-[5rem]">
           <div className="w-full flex flex-col mt-5 
   mobile:px-2 tablet:px-8 
   font-mono">
@@ -285,18 +375,23 @@ export const OfferSite = () => {
 
         mobile:w-full tablet:w-[65%] tablet-contact:ml-[3rem] laptop:ml-[10rem] mobile:text-[1.8rem] tablet:text-[2rem] laptop:text-[2.3rem]
 
-        leading-none">MY <span className="bg-[#98f144] text-[#151515]">NAME</span> IS </span>
+        leading-none">MY <span className={` text-[#151515] ${noName ? "bg-red-500" : "bg-[#98f144]"} duration-300`}>NAME</span> IS </span>
 
-                <input name="namefield" value={name} type="input" placeholder="Name*" className=" cursor-none
+                <input name="namefield" value={name} type="input" placeholder="Name*" className={` cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem] 
 
-        text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
-        placeholder-[#777777] "
+        text-center bg-[#151515] text-[#98f144] border-b-2 leading-none 
+        placeholder-[#777777] ${noName ? "border-red-500" : ""} duration-300 `}
 
                   required
 
                   onChange={(e: React.FormEvent<HTMLInputElement>) => {
+                    if(e.currentTarget.value){
+                      setNoName(false);
+                    } else {
+                      setNoName(true);
+                    }
                     setName(e.currentTarget.value);
                   }}
                 />
@@ -320,18 +415,23 @@ export const OfferSite = () => {
         mobile:w-full tablet:w-[65%]  tablet-contact:ml-[3rem] laptop:ml-[10rem] 
         mobile:text-[1.8rem] tablet:text-[2rem] laptop:text-[2.3rem] 
         
-        leading-none">MY <span className="bg-[#98f144] text-[#151515]">MAIL</span> IS </span>
+        leading-none">MY <span className={` text-[#151515] duration-300 ${noEmail ? "bg-red-500" : "bg-[#98f144]"}`}>MAIL</span> IS </span>
 
-                <input name="emailfield" value={email} type="input" placeholder="Email*" className=" cursor-none
+                <input name="emailfield" value={email} type="input" placeholder="Email*" className={` cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
          text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
-        placeholder-[#777777] flex justify-center items-center "
+        placeholder-[#777777] flex justify-center items-center duration-300 ${noEmail ? "border-red-500" : ""} `}
 
                   required
 
                   onChange={(e: React.FormEvent<HTMLInputElement>) => {
+                    if(e.currentTarget.value){
+                      setNoEmail(false);
+                    } else {
+                      setNoEmail(true);
+                    }
                     setEmail(e.currentTarget.value);
                   }}
                 />
@@ -369,18 +469,23 @@ export const OfferSite = () => {
         mobile:w-full tablet:w-[65%]  tablet-contact:ml-[3rem] laptop:ml-[10rem] 
         mobile:text-[1.8rem] tablet:text-[2rem] laptop:text-[2.3rem] 
         
-        leading-none">MY <span className="bg-[#98f144] text-[#151515]">PHONE</span> IS </span>
+        leading-none">MY <span className={`text-[#151515] duration-300 ${noPhone ? "bg-red-500" : "bg-[#98f144]"}`}>PHONE</span> IS </span>
 
-                <input name="emailfield" value={phone} type="input" placeholder="Telefon*" className=" cursor-none
+                <input name="emailfield" value={phone} type="input" placeholder="Telefon*" className={` cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
          text-center bg-[#151515] text-[#98f144] border-b-2 leading-none
-        placeholder-[#777777] flex justify-center items-center "
+        placeholder-[#777777] flex justify-center items-center duration-300 ${noPhone ? "border-red-500" : ""} `}
 
                   required
 
                   onChange={(e: React.FormEvent<HTMLInputElement>) => {
+                    if(e.currentTarget.value){
+                      setNoPhone(false);
+                    } else {
+                      setNoPhone(true);
+                    }
                     setPhone(e.currentTarget.value);
                   }}
                 />
@@ -394,7 +499,7 @@ export const OfferSite = () => {
           
           mobile:w-full tablet:w-[60%] mobile:text-[1.8rem] tablet-contact:ml-[3rem] tablet:text-[2rem] laptop:text-[2.3rem] laptop:ml-[10rem] 
           
-          leading-none ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>MY <span className="bg-[#98f144] text-[#151515]">MESSAGE</span> IS.. </span>
+          leading-none ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>MY <span className={` text-[#151515] duration-300 ${noMessage ? "bg-red-500" : "bg-[#98f144]"}`}>MESSAGE</span> IS.. </span>
 
                 <div className="w-full flex justify-center items-center">
                   <textarea placeholder="Nachricht*" className={`
@@ -402,12 +507,19 @@ export const OfferSite = () => {
         mobile:w-full tablet:w-[65%] laptop:w-1/2 cursor-none
 
         text-center bg-[#151515] text-[#98f144] border-b-2 leading-none mt-6
-        placeholder-[#777777] transition-all duration-700 ease-in-out p-2  ${check && "-translate-y-14"} ${hTextBox && "h-[8rem]"}`}
+        placeholder-[#777777] transition-all duration-700 ease-in-out p-2  ${check && "-translate-y-14"} ${hTextBox && "h-[8rem]"}
+        ${noMessage ? "border-red-500" : ""}
+        `}
                     onClick={() => messageHandler()}
                     onBlur={() => blurHandler()}
                     ref={textAreaRef}
                     required
                     onChange={(e: React.FormEvent<HTMLTextAreaElement>) => {
+                      if(e.currentTarget.value){
+                        setNoMessage(false);
+                      } else {
+                        setNoMessage(true);
+                      }
                       setMessage(e.currentTarget.value);
                     }}
                     value={message}
