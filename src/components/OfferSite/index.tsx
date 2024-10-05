@@ -159,7 +159,7 @@ export const OfferSite = () => {
       <img src="Planets/spacestation.webp" className="laptop:w-[20rem] mobile:w-[10rem] tablet:w-[15rem] z-10 absolute laptop:bottom-[-10%] laptop:left-[5%] mobile:bottom-[-10%] mobile:right-[5%] animate-float" alt="spacestation" />
 
       {/* SUCCESS WINDOW*/}
-      <div className={`w-[45rem] h-[15rem] bg-[#000000]  font-sharemono absolute bottom-[10%] ${sendSuccess ? "animate-flyoffscreen block" : "hidden"} ${firstAnimation ? "animate-fadeIn" : ""} z-30 flex justify-center items-center rounded-xl`}>
+      <div className={`w-[45rem] h-[15rem] bg-[#000000]  font-sharemono absolute bottom-[10%] ${sendSuccess ? "animate-flyoffscreen block" : "hidden"} ${firstAnimation ? "animate-fadeIn" : ""} z-50 flex justify-center items-center rounded-xl`}>
         <span className="text-[#98f144] text-[3rem] text-center">
           Nachricht erfolgreich gesendet!
         </span>
