@@ -1,6 +1,4 @@
 import { Element, Link } from "react-scroll"
-import { CardBlack } from "../CardBlack"
-import { CardWhite } from "../CardWhite"
 import { Heading } from "../Heading"
 import { Help, Laptop, Paper, Screw } from "../Icons"
 import { LargeCard } from "../LargeCard"
@@ -96,7 +94,7 @@ export const StartSite = (props: {
         {/* WrapperLayout */}
         <div className="w-full flex flex-col  justify-center items-center mt-[4%] z-50">
           <Element name="services" />
-          <span className="text-[2.3rem] mobile:text-[1.8rem] font-sharemono font-bold text-[#98f144] mb-[2%] text-center">
+          <span className="text-[2.3rem] mobile:text-[1.8rem] z-50 font-sharemono font-bold text-[#98f144] mb-[2%] text-center">
             Was bieten wir an?
           </span>
 
@@ -107,137 +105,12 @@ export const StartSite = (props: {
 
           {/**Card New */}
 
-          <DynamicContentCard></DynamicContentCard>
-
-
-
-
-
-          <div className="laptop:w-[95%] desktop-xl:w-[40%] p-3 flex flex-col justify-center items-center mb-[5%] z-50">
-            <CardBlack
-              classname="w-[90%]"
-              text1="Webseiten & "
-              text2="Programmierung"
-            >
-              <p className="text-white font-mono text-[1.1rem]">
-                Webseiten sind die{" "}
-                <span className="text-[#98f144]">Visitenkarten</span> Ihres
-                Unternehmens. Versucht jemand Ihr Unternehmen im Internet zu
-                finden, wird er zuerst auf Ihrer{" "}
-                <span className="bg-[#98f144] text-black inline-block font-bold">
-                  Webseite
-                </span>{" "}
-                landen. Nach durchschnittlich 3 Sekunden Ladezeit entscheidet der
-                Besucher, ob er auf Ihrer Webseite bleibt oder das Laden abbricht
-                und sich woanders umschaut. Diese Ladezeit erreichen wir mit unseren selbstprogrammierten
-                Webseiten ohne Probleme, wohingegen Content Management Systeme, wie z.B. Wordpress, meist schlechtere Ladezeiten
-                aufweisen.
-                <br />
-                Danach wird sich der Besucher je nach Design und Inhalt für oder gegen Ihr
-                Unternehmen entscheiden. Sieht Ihre Webseite wie aus dem Katalog aus, ist das nicht sehr
-                einprägsam und wird schnell wieder vergessen. Mit Webseiten von OG-Webdesign stechen Sie aus der Masse heraus und haben
-                ein einzigartiges Aushängeschild für Ihr Unternehmen oder Ihre Tätigkeit.
-                <br />
-                Eine weitere Stärke von selbstprogrammierten Webseiten ist der Sicherheitsaspekt. Unsere verwendeten Technologien
-                sind stets aktuell und sicher. Bei Content Management Systemen ist das nicht immer der Fall. Hält man diese nicht
-                auf dem neuesten Stand, kann es schnell zu Sicherheitslücken kommen. Diese können von Hackern ausgenutzt werden, um
-                Schaden anzurichten oder Daten zu stehlen. <br />
-                Benötigen Sie sonstige{" "}
-                <span className="bg-white text-black font-bold">
-                  Programmierarbeiten
-                </span>
-                , sind wir auch hier der richtige Ansprechpartner. Mit unserer{" "}
-                <span className="font-bold">Expertise und Erfahrung</span> können
-                wir Ihnen bei jedem Problem helfen.
-              </p>
-            </CardBlack>
-            <CardWhite
-              classname="w-[90%] my-[5%]"
-              text1="DevOps &"
-              text2="Admin"
-            >
-              <p className="text-white font-mono text-[1.1rem]">
-                Sie haben ein Projekt welches bereits in der Entwicklung ist oder
-                kurz davor steht, veröffentlicht zu werden? Wir, OG-Webdesign, helfen Ihnen
-                dabei, Ihr Projekt auf die{" "}
-                <span className="bg-[#98f144] text-black">Zielgerade</span> zu bringen. Wir
-                bieten Ihnen professionelle Unterstützung bei der{" "}
-                <span className="font-bold">
-                  Entwicklung und Veröffentlichung
-                </span>{" "}
-                Ihres Projektes. Dabei halten wir engen Kontakt zu Ihnen, um
-                sicherzustellen, dass das Projekt auch genau Ihren Vorstellungen
-                entspricht. <br />
-                Benötigen Sie Administratoren für ein bereits fertiges Produkt kann OG-Webdesign dies für
-                Sie übernehmen. Wir kümmern uns um die Wartung und Pflege Ihrer Anwendung. Ob Webseiten,
-                Web-Anwendungen oder Apps, wir sorgen dafür, dass Ihre Anwendung immer auf dem neuesten Stand ist und
-                einwandfrei funktioniert.
-              </p>
-            </CardWhite>
-            <CardWhite
-              classname="w-[95%] mb-[5%]"
-              text1="Anwendungsentwicklung"
-              text2=""
-            >
-              <p className="text-white font-mono text-[1.1rem]">
-                Wenn Sie auf{" "}
-                <span className="bg-[#98f144] text-black">
-                  Funktionalität und Benutzerfreundlichkeit
-                </span>{" "}
-                setzen, sind Sie bei OG-Webdesign genau richtig. Wir entwickeln für Sie
-                individuelle{" "}
-                <span className="bg-black text-[#98f144] font-bold">
-                  Web-Anwendungen
-                </span>
-                ,die genau auf Ihre Bedürfnisse zugeschnitten sind. Dabei achten
-                wir darauf, dass die Anwendung{" "}
-                <span className="font-bold">
-                  so einfach wie möglich zu bedienen
-                </span>{" "}
-                ist und dennoch alle Funktionen bietet, die Sie benötigen. <br />
-                Ein großer Vorteil von Web-Anwendungen ist die{" "}
-                <span className="bg-[#98f144] text-black">Plattformunabhängigkeit</span>.
-                Egal ob als Desktop-Anwendung, Web-Anwendung oder als App, wir
-                entwickeln für Sie die passende Lösung.
-              </p>
-            </CardWhite>
-            <CardBlack
-              classname="w-[95%]"
-              text1="Künstliche"
-              text2="Intelligenz"
-            >
-              <p className="text-white font-mono text-[1.1rem]">
-                Künstliche Intelligenz ist in aller Munde. Doch was ist KI
-                eigentlich? KI ist die Fähigkeit eines Computers,{" "}
-                <span className="bg-[#98f144] font-bold text-black">
-                  selbstständig
-                </span>{" "}
-                zu lernen und{" "}
-                <span className="bg-[#98f144] font-bold text-black">
-                  Entscheidungen
-                </span>{" "}
-                zu treffen. Dabei kann KI in den verschiedensten Bereichen
-                eingesetzt werden. Ob in der Medizin, in der Industrie oder im
-                Alltag, KI wird immer wichtiger. <br />
-                Wir können Ihren Programmen und Webseiten{" "}
-                <span className="bg-white text-black font-bold">
-                  KI-Funktionalitäten
-                </span>{" "}
-                hinzufügen, die Ihnen oder Ihren Kunden das Leben erleichtern.
-                Dies kann beispielsweise eine Nachrichten-KI auf Ihrer Webseite
-                sein, welche dem Nutzer hilft, durch die Flut an Informationen zu
-                kommen und sich zurechtzufinden. <br />
-                Lassen Sie uns gemeinsam die{" "}
-                <span className="text-[#98f144]">Zukunft</span> gestalten und KI
-                in Ihre Projekte integrieren.
-              </p>
-            </CardBlack>
-          </div>
+          <DynamicContentCard></DynamicContentCard>   
         </div>
 
         <div className="flex flex-col justify-center items-center mt-[3%] z-50">
           <Element name="tech" />
-          <span className="text-[2.3rem] mobile:text-[1.8rem] font-sharemono font-bold text-[#98f144] mb-[3%] text-center">
+          <span className="text-[2.3rem] mobile:text-[1.8rem] font-sharemono font-bold text-[#98f144] mb-[3%] z-50 text-center">
             Welche Technologien <br></br> nutzen wir?
           </span>
 
