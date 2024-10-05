@@ -43,17 +43,13 @@
 
 ::-webkit-scrollbar {
     width: 8px;
-    /* Breite der Scrollleiste */
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #98f144;
-    /* Farbe der Scrollleiste */
     border-radius: 4px;
-    /* Abgerundete Ecken */
 }
 
 ::-webkit-scrollbar-track {
     background: black;
-    /* Hintergrund der Scrollleiste */
 }
