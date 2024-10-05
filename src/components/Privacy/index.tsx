@@ -6,7 +6,7 @@ export const Privacy = () => {
 
 
         <div className="w-full flex flex-col justify-center items-center mt-[10%] max-w-[100rem]">
-            <div className="w-3/4">
+            <div className="mobile:w-[95%] laptop:w-3/4">
             <Heading heading="Datenschutzrichtlinie" headstyle="text-[#151515] bg-[#98f144]" />
             <PrivacyParagraph
                 headline="Allgemeine Informationen"

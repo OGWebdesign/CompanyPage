@@ -222,7 +222,7 @@ function App() {
                     {/* Navbar Logo Wrapper End*/}
 
                     {/* Navbar Logo */}
-                    <p className="text-white font-bold text-[2rem]">OG Webdesign</p>{/* Logo Hier Einfügen !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
+                    <p className="text-white font-bold mobile:text-[1.2rem] tablet:text-[2rem]">OG Webdesign</p>{/* Logo Hier Einfügen !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
                   </div>
                   {/* Navbar Logo End*/}
 
