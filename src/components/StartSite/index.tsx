@@ -41,7 +41,7 @@ export const StartSite = (props: {
 
         <img src="Planets/mars.webp" alt="Mars" className="w-[45rem] absolute top-[20%] right-[-5%] animate-floatJupiter" />
         <img src="Planets/jupiter.webp" alt="Jupiter" className="w-[35rem] absolute top-[30%] left-[5%] animate-floatJupiter " />
-        <img src="Planets/comet.webp" alt="Comet" className="w-[15rem] mobile:w-0 tablet:w-[15rem] z-10 absolute desktop:top-[45%] laptop:top-[43%] tablet:top-[46%] mobile:top-[46.2%]  right-[10%]  animate-floatComet" />
+        <img src="Planets/comet.webp" alt="Comet" className="w-[15rem] mobile:w-0 tablet:w-[15rem] absolute desktop:top-[45%] laptop:top-[43%] tablet:top-[46%] mobile:top-[46.2%]  right-[10%]  animate-floatComet" />
         <img src="graphics/astro.webp" alt="" className="laptop:w-[20rem] desktop-xl:right-[35%]  desktop-l:right-[15%] tablet:top-[75%] mobile:w-0 z-10 absolute mobile:top-[70%] right-[5%] animate-float" />
         <img src="Planets/satelite.webp" alt="" className="w-[10rem] z-10 absolute tablet:bottom-[-4%] mobile:bottom-[-2%] mobile:right-[5%] tablet:right-[18%] animate-float" />
 
@@ -118,14 +118,14 @@ export const StartSite = (props: {
             <Screw className="w-[2rem] mobile:w-[1rem] fill-[#98f144]" />
           </div>
 
-          <p className="text-white font-sharemono max-w-[100rem]  mobile:w-[95%] mt-[5%] mb-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono max-w-[100rem]  mobile:w-[95%] mt-[5%] mb-[2%] text-[1.2rem] text-left z-50">
             Beim erstellen von Webseiten haben wir uns bewusst gegen ein Content Management System wie Wordpress oder Typo3 entschieden,
             denn wir wollen Webseiten erstellen, die sich von den Konkurenzwebseiten unserer Klienten unterscheiden.
             In Wordpress dagegen werden oftmals auf Plugins und Themes zurückgegriffen. Dies sind keine guten Grundlagen für ein digitales, hoch individuelles Aushängeschild eines Unternehmens.
 
           </p>
 
-          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[95%]  my-[2%] text-[1.2rem] text-left">
+          <p className="text-white font-sharemono max-w-[100rem] w-[65%] mobile:w-[95%]  my-[2%] text-[1.2rem] text-left z-50">
             Ebenso die langen Ladezeiten, die bei Wordpress durch das veraltete PHP Konstrukt kaum zu verhindern sind.
             Zumal machen die ganzen Plugins eine Wartung an solchen Webseiten sehr schwierig durch die hohen Anzahlen an Seiteneffekten.
           </p>
