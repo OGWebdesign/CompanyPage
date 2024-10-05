@@ -25,6 +25,16 @@ export const OfferSite = () => {
 
   const [select_sound] = useState(new Audio("/sounds/select 3.mp3"));
 
+  const [noTechSelected, setNoTechSelected] = useState<boolean>(false);
+  const [toLowBudget, setToLowBudget] = useState<boolean>(false);
+  const [noName, setNoName] = useState<boolean>(false);
+  const [noEmail, setNoEmail] = useState<boolean>(false);
+  const [noPhone, setNoPhone] = useState<boolean>(false);
+  const [noMessage, setNoMessage] = useState<boolean>(false);
+
+  const borderDashed = "border-dashed border-red-500 border-2 duration-500";
+
+
   const clickEffect = "bg-[#c5c5c5] shadow-[5px_5px_0px_0px_rgba(152,241,68)]"
 
   const notClicked = "hover:bg-[#c5c5c5] hover:shadow-[5px_5px_0px_0px_rgba(152,241,68)]"
@@ -38,6 +48,8 @@ export const OfferSite = () => {
   const [hTextBox, setHTextBox] = React.useState<boolean>(false);
 
   const textAreaRef = React.useRef<HTMLTextAreaElement>(null);
+
+
 
 
   const messageHandler = () => {
@@ -66,9 +78,18 @@ export const OfferSite = () => {
 
   const sendRequest = async () => {
     setSend(true);
+    if (price < 500) {
+      setToLowBudget(true);
+      return;
+    }
     if (!name || !email || !phone || !message || (select1 == false && select2 == false && select3 == false && select4 == false)) {
       alert("Bitte fülle alle Felder aus!");
       setSend(false);
+      if (!select1 && !select2 && !select3 && !select4) {
+        setNoTechSelected(true);
+      }
+
+
       return;
     }
     await axios.post('https://og-api-mu.vercel.app/contact/send-formular', { name, email, company, phone, message, price, select1, select2, select3, select4 })
@@ -198,10 +219,13 @@ export const OfferSite = () => {
                 <div onClick={() => {
                   select_sound.play();
                   setSelect1(!select1)
+                  if (!select1){
+                    setNoTechSelected(false);
+                  }
                 }}
-                  className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select1 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : ""}  tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select1 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select1 ? "fill-black" : "fill-white"} `}>
-                    <CodeIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]" />
+                    <CodeIcon className={`mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]`} />
                   </div>
                   <div className={`w-full text-center mobile:text-[0.8rem] tablet:text-[1rem] mt-[0.3rem] font-sharemono group-hover:text-black duration-500 ${select1 ? "text-black" : "text-white"}`}>
                     <p>Webseiten</p>
@@ -211,8 +235,11 @@ export const OfferSite = () => {
                 <div onClick={() => {
                   select_sound.play();
                   setSelect2(!select2)
+                  if (!select2){
+                    setNoTechSelected(false);
+                  }
                 }}
-                  className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select2 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : ""} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select2 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select2 ? "fill-black" : "fill-white"} `}>
                     <WebAppIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]" />
                   </div>
@@ -224,8 +251,11 @@ export const OfferSite = () => {
                 <div onClick={() => {
                   select_sound.play();
                   setSelect3(!select3);
+                  if (!select3){
+                    setNoTechSelected(false);
+                  }
                 }}
-                  className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select3 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : ""} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select3 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select3 ? "fill-black" : "fill-white"} `}>
                     <BookIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]" />
                   </div>
@@ -236,23 +266,27 @@ export const OfferSite = () => {
 
                 <div onClick={() => {
                   setSelect4(!select4);
+                  if (!select4){
+                    setNoTechSelected(false);
+                  }
                 }}
-                  className={`tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select4 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
+                  className={`${noTechSelected ? borderDashed : ""} tablet:w-[6rem] tablet:h-[6rem] mobile:w-[5rem] mobile:h-[5rem] ${select4 ? clickEffect : notClicked}  group duration-500 transition-all eas flex flex-col justify-center items-center rounded-xl`}>
                   <div className={`flex justify-center items-center group-hover:fill-black duration-500 ${select4 ? "fill-black" : "fill-white"} `}>
                     <ComputerIcon className="mobile:w-[2rem] mobile:h-[2rem] tablet:w-[2.5rem] tablet:h-[2.5rem]" />
                   </div>
                   <div className={`w-full text-center mobile:text-[0.8rem] tablet:text-[1rem] mt-[0.3rem] font-sharemono group-hover:text-black duration-500 ${select4 ? "text-black" : "text-white"}`}>
                     <p>Dev-Ops</p>
                   </div>
-                </div>
+                </div> 
               </div>
+              {noTechSelected && <span className="text-red-500 text-[1.1rem] mt-[2rem] font-sharemono animate-fadeIn duration-300">Bitte wähle mindestens eine Technologie aus!</span>}
               <div className={`w-[65%] h-[3rem] mobile:w-full bg-[#151515] mt-[4rem]  flex justify-between items-center rounded-xl  `}>
                 <div onClick={() => {
                   decrease_sound.play();
                   if (price >= 100) {
                     setPrice(price - 100);
                   }
-                }} className="w-[3.5rem] h-[3.5rem] flex justify-center items-center rounded-xl bg-[#c5c5c5] hover:bg-red-500">
+                }} className={` w-[3.5rem] h-[3.5rem] flex justify-center items-center rounded-xl bg-[#c5c5c5] hover:bg-red-500`}>
                   <MinusIcon className="w-[1.2rem]" />
                 </div>
                 <span className={` font-sharemono text-[1.3rem] ${underborder ? "text-red-500" : "text-[#98f144]"}`}>{price}€</span>
@@ -264,7 +298,9 @@ export const OfferSite = () => {
                   <PlusIcon className="w-[1.2rem]" />
                 </div>
               </div>
-              <span className="text-white mt-[1rem] font-sharemono">Dein Budget</span>
+              <span className={`mt-[1rem] font-sharemono ${price < 500 ? "text-red-500" : "text-white"} `}>
+                { (toLowBudget || price < 500) ? "Gute Arbeit erfordert seinen Preis!" : "Dein Budget"}
+                </span>
             </div>
           </div>
         </div>
