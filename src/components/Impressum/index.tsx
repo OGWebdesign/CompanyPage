@@ -20,7 +20,7 @@ export const Impressum = () => {
                     <p className="text-[#151515] text-[1rem] text-center w-full mb-2">
                         <span className="font-bold text-[1.1rem] bg-[#98f144]">Adresse</span> 
                         <br/>
-                        Universitätsstraße 12, 03046 Cottbus
+                        Universitätsstraße 5, 03046 Cottbus
                     </p>
 
                     <p className="text-[#151515] text-[1rem] text-left w-full mb-2">
