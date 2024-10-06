@@ -64,10 +64,10 @@ export const CompanySite = () => {
                     head2style="text-[#98f144] mt-10"
                     text1Style="text-[#b9b9b9]"
                     text2Style="text-[#b9b9b9]"
-                    head2="Young and unconventional"
-                    head1="Since XX23"
+                    head2="Jung und unkonventionell"
+                    head1="Seit XX23"
                     text2="Wir bei OG Webdesign glauben, dass Ihre Website mehr als nur eine digitale Visitenkarte sein sollte. Es soll Ihre Geschichte erzählen, Ihre Marke zum Leben erwecken und Ihre Kunden begeistern. Unser Team besteht aus talentierten Designern, Entwicklern und Strategen, die mit Leidenschaft und Kreativität daran arbeiten, Ihre Ideen in die Realität umzusetzen. Direkt!"
-                    text1="Wir blicken auf eine kurze, aber erfolgreiche Vergangenheit zurück. Wir haben jedes Projekt, jede noch so kleine Anwendung mit großer Sorgfalt und noch größerem Verantwortungsbewusstsein umgesetzt, immer zur vollsten Zufriedenheit unserer Kunden und darüber hinaus. Wir sind begeistert zu sehen, wie unsere Websites und Softwareprodukte unserer Kunden in ein völlig anderes Unternehmen verwandelt haben, von der Art und Weise, wie Sie sich online präsentieren, bis hin zur Art und Weise, wie Sie unsere Softwareprodukte intern betreiben."></LargeCard>
+                    text1="Wir blicken auf eine kurze, aber erfolgreiche Vergangenheit zurück. Jedes Projekt, jede noch so kleine Anwendung haben wir mit großer Sorgfalt und Verantwortung umgesetzt – stets zur Zufriedenheit unserer Kunden und oft darüber hinaus. Es begeistert uns zu sehen, wie unsere Websites und Softwareprodukte die Unternehmen unserer Kunden transformiert haben – von ihrer Online-Präsenz bis hin zur internen Nutzung unserer Softwarelösungen."></LargeCard>
 
             </div>
         </div>
