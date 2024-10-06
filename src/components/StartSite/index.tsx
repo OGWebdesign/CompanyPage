@@ -131,10 +131,7 @@ export const StartSite = (props: {
           </p>
 
           <p className="text-white font-sharemono max-w-[100rem] mobile:w-[95%]  my-[2%] text-[1.2rem] text-left z-50">
-            Außerdem sind bei Wordpress Webseiten selten echte Experten am Werk.
-            Man benötigt keine Programmierkenntnisse für ein Content Management System und somit auch keine Programmierer.
-            In der Regel sind es Leihen, die sich Wordpress autodidaktisch beigebracht haben und selten ein tiefes Verständnis für Webtechnologien und Sicherheitskonzepte beherschen.
-            Diese Eigenschafte bilden keine gute Grundlage für die Erstellung Ihrer Webseite.
+          Außerdem sind bei WordPress-Websites selten echte Experten beteiligt. Da für die Nutzung eines Content-Management-Systems wie WordPress keine Programmierkenntnisse erforderlich sind, sind oft keine professionellen Entwickler im Einsatz. Häufig fehlt ein tiefes Verständnis für Webtechnologien und Sicherheitskonzepte, was keine solide Grundlage für die Erstellung einer hochwertigen und sicheren Website bietet.
           </p>
 
           <p className="text-white font-sharemono max-w-[100rem] mobile:w-[95%]  my-[2%] text-[1.2rem] text-left z-50">
@@ -173,7 +170,7 @@ export const StartSite = (props: {
 
             headline="Planung und Umsetzung"
             text="Unsere Arbeit beginnt mit Zuhören und dem Verständnis Ihrer Vision. Gemeinsam erarbeiten wir eine Strategie, die perfekt auf Ihre Ziele abgestimmt ist. Durch agile Methoden bleiben wir flexibel in einer sich ständig verändernden digitalen Welt.
-            Nach dem Gespräch erstellen wir ein Lastenheft, das alle Anforderungen enthält und Transparenz bietet. Auf dieser Grundlage fertigen wir Mockups an, um die Benutzeroberfläche zu visualisieren, und binden den Kunden in die Entscheidungsfindung ein. Zusätzlich entwickeln wir UML-Diagramme zur Systemarchitektur und erstellen Prototypen, um frühzeitig Feedback zu erhalten und Anpassungen vorzunehmen. Dann beginnt die Umsetzung wobei dort immer der Entwicklungsstand einzusehen ist. Außerdem finden wärend des gesamten Entwicklungsprozesses regelmäßige Meetings statt."></TextComponent>
+            Nach einen ersten Beratungsgespräch erstellen wir ein Lastenheft, das alle Anforderungen enthält und Transparenz bietet. Auf dieser Grundlage fertigen wir Mockups an, um die Benutzeroberfläche zu visualisieren, und binden den Kunden in die Entscheidungsfindung ein. Zusätzlich entwickeln wir UML-Diagramme zur Systemarchitektur und erstellen Prototypen, um frühzeitig Feedback zu erhalten und Anpassungen vorzunehmen. Dann beginnt die Umsetzung wobei dort immer der Entwicklungsstand einzusehen ist. Außerdem finden wärend des gesamten Entwicklungsprozesses regelmäßige Meetings statt."></TextComponent>
         </div>
 
         <div className="w-full flex justify-center items-center">
