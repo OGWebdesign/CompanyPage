@@ -52,12 +52,12 @@ export const ContactForm = () => {
     }
     await axios.post('https://og-api-mu.vercel.app/contact/send-email', { name, email, company, phone, message })
       .then(() => {
-
+        setTimeout(() => {
           setFirstAnimation(true);
-
-
+        }, 500);
+        setTimeout(() => {
           setSendSuccess(true);
-
+        }, 500);
         setName("");
         setEmail("");
         setCompany("");
