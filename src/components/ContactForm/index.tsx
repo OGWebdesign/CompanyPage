@@ -40,6 +40,10 @@ export const ContactForm = () => {
   }
 
   const handleSubmit = async () => {
+    if (send == true){
+      return;
+    }
+
     setSend(true);
     if (!name || !email || !phone || !message) {
       alert("Bitte fülle alle Felder aus!");
@@ -110,7 +114,7 @@ export const ContactForm = () => {
 
         leading-none">MY <span className={` text-[#151515] ${noName ? "bg-red-500" : "bg-[#98f144]"} duration-300`}>NAME</span> IS </span>
 
-                <input name="name" value={name} type="input" placeholder="Name*" className={` cursor-none
+                <input name="name" value={name}  type="input" placeholder="Name*" className={` cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem] 
 
