@@ -82,6 +82,16 @@ export const OfferSite = () => {
     }
   }, [price]);
 
+
+  function isPhoneNumber(phone: string) {
+    return /^(\+?[1-9]\d{0,2})?[-.\s]?(\(?\d{1,4}\)?)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(phone);
+    ;
+  }
+
+  function isEmail(email: string) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
   const sendRequest = async () => {
     setSend(true);
     if (price < 500) {
@@ -117,6 +127,32 @@ export const OfferSite = () => {
 
       return;
     }
+
+    //check if email is valid
+    if(!isEmail(email)){
+      setEmail("");
+      setNoEmail(true);
+      //check if both is not valid
+      if(!isPhoneNumber(phone)){
+        setPhone("");
+        setNoPhone(true);
+        alert("Bitte gib eine gültige Email und eine gültige Telefonnummer ein!");
+      } else {
+        alert("Bitte gib eine gültige Email-Adresse ein!");
+      }
+      setSend(false);
+      return;
+    } 
+    //check if phone number is valid
+    else if (!isPhoneNumber(phone)){
+      setPhone("");
+      setNoPhone(true);
+      alert("Bitte gib eine gültige Telefonnummer ein!");
+      setSend(false);
+      return;
+    }
+
+    //proceed with sending the request
     await axios
       .post("https://og-api-mu.vercel.app/contact/send-formular", {
         name,
@@ -129,6 +165,9 @@ export const OfferSite = () => {
         select2,
         select3,
         select4,
+        Headers: {
+          'Authorization' : '*'
+        }
       })
       .then((res) => {
         console.log(res.data);
