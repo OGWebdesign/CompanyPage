@@ -52,12 +52,12 @@ export const ContactForm = () => {
     }
     await axios.post('https://og-api-mu.vercel.app/contact/send-email', { name, email, company, phone, message })
       .then(() => {
-        setTimeout(() => {
+
           setFirstAnimation(true);
-        }, 500);
-        setTimeout(() => {
+
+
           setSendSuccess(true);
-        }, 500);
+
         setName("");
         setEmail("");
         setCompany("");
@@ -110,7 +110,7 @@ export const ContactForm = () => {
 
         leading-none">MY <span className={` text-[#151515] ${noName ? "bg-red-500" : "bg-[#98f144]"} duration-300`}>NAME</span> IS </span>
 
-                <input name="namefield" value={name} type="input" placeholder="Name*" className={` cursor-none
+                <input name="name" value={name} type="input" placeholder="Name*" className={` cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem] 
 
@@ -150,7 +150,7 @@ export const ContactForm = () => {
         
         leading-none">MY <span className={` text-[#151515] duration-300 ${noEmail ? "bg-red-500" : "bg-[#98f144]"}`}>MAIL</span> IS </span>
 
-                <input name="emailfield" value={email} type="input" placeholder="Email*" className={` cursor-none
+                <input name="email" value={email} type="input" placeholder="Email*" className={` cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
@@ -180,7 +180,7 @@ export const ContactForm = () => {
         
         leading-none">MY <span className="bg-[#98f144] text-[#151515]">FIRM</span> IS </span>
 
-                <input name="emailfield" value={company} type="input" placeholder="Firma" className=" cursor-none
+                <input name="company" value={company} type="input" placeholder="Firma" className=" cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
@@ -204,7 +204,7 @@ export const ContactForm = () => {
         
         leading-none">MY <span className={`text-[#151515] duration-300 ${noPhone ? "bg-red-500" : "bg-[#98f144]"}`}>PHONE</span> IS </span>
 
-                <input name="emailfield" value={phone} type="input" placeholder="Telefon*" className={` cursor-none
+                <input name="phone" value={phone} type="input" placeholder="Telefon*" className={` cursor-none
 
         mobile:w-full tablet:mr-[2rem] tablet-contact:mr-[5.5rem] laptop:mr-[6rem] laptop:w-[50rem] desktop:w-[60rem]
 
@@ -235,7 +235,7 @@ export const ContactForm = () => {
           leading-none ${check && "-translate-y-14"} transition-all duration-700 ease-in-out`}>MY <span className={` text-[#151515] duration-300 ${noMessage ? "bg-red-500" : "bg-[#98f144]"}`}>MESSAGE</span> IS.. </span>
 
                 <div className="w-full flex justify-center items-center">
-                  <textarea placeholder="Nachricht*" className={`
+                  <textarea placeholder="Nachricht*" name="message" className={`
 
         mobile:w-full tablet:w-[65%] laptop:w-1/2 cursor-none
 
