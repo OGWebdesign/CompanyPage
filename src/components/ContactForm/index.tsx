@@ -41,7 +41,6 @@ export const ContactForm = () => {
 
   const handleSubmit = async () => {
     setSend(true);
-    console.log(name, email, company, phone, message);
     if (!name || !email || !phone || !message) {
       alert("Bitte fülle alle Felder aus!");
       if (!name) setNoName(true);
@@ -52,8 +51,7 @@ export const ContactForm = () => {
       return;
     }
     await axios.post('https://og-api-mu.vercel.app/contact/send-email', { name, email, company, phone, message })
-      .then((res) => {
-        console.log(res.data);
+      .then(() => {
         setTimeout(() => {
           setFirstAnimation(true);
         }, 500);
